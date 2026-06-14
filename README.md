@@ -3,7 +3,9 @@
 A Photoshop panel that expands your photo's canvas to a chosen print paper ratio
 **without ever cropping the image** — then helps you fit the photo to the new frame.
 
-![The Canvas Ratio panel in Photoshop](docs/panel.jpg)
+<p align="center">
+  <img src="docs/panel.jpg" alt="The Canvas Ratio panel in Photoshop" width="300">
+</p>
 
 ## Why you'd want it
 
