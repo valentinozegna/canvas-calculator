@@ -5,45 +5,45 @@
     font-family: var(--uxp-host-font-family, sans-serif);
     color: var(--uxp-host-text-color);
     margin: 0;
-    padding: 12px;
+    padding: 10px;
     font-size: 12px;
     height: 100%;
     box-sizing: border-box;
-    overflow-y: auto;
+    overflow-y: auto; /* safety net only; preferred sizes fit the content */
   }
   /* Rows lay fields out side by side; bottom-align so labels (top) and
      controls (bottom) line up across columns of equal control height. */
-  .row { display: flex; gap: 8px; margin-bottom: 10px; align-items: flex-end; }
+  .row { display: flex; gap: 8px; margin-bottom: 6px; align-items: flex-end; }
   .field { display: flex; flex-direction: column; flex: 1 1 0; min-width: 0; }
   .field.narrow { flex: 0.6 1 0; }
-  .field > label { font-size: 11px; opacity: 0.7; margin-bottom: 3px; }
+  .field > label { font-size: 11px; opacity: 0.7; margin-bottom: 2px; }
   sp-textfield, sp-picker { width: 100%; }
 
   .section {
     font-size: 11px; opacity: 0.55; text-transform: uppercase;
-    letter-spacing: 0.04em; margin: 14px 0 8px;
+    letter-spacing: 0.04em; margin: 9px 0 5px;
   }
 
-  #docnote { font-size: 11px; opacity: 0.85; margin: 2px 0 4px; line-height: 1.45; }
+  #docnote { font-size: 11px; opacity: 0.85; margin: 0 0 4px; line-height: 1.4; }
 
   /* Preview card: original -> new canvas before applying. */
   .preview {
     border: 1px solid var(--uxp-host-border-color, rgba(128,128,128,0.35));
-    border-radius: 6px; padding: 10px; margin-bottom: 10px;
+    border-radius: 6px; padding: 8px 10px; margin-bottom: 8px;
   }
-  .prow { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 1px; }
+  .prow { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
   .prow > span { opacity: 0.7; }
   .prow > b { font-size: 13px; }
-  .psub { font-size: 10px; opacity: 0.55; margin: 0 0 6px; text-align: right; }
-  .arrow { text-align: center; opacity: 0.5; font-size: 11px; margin: 2px 0; }
+  .psub { font-size: 10px; opacity: 0.55; margin: 0 0 4px; text-align: right; }
+  .arrow { text-align: center; opacity: 0.5; font-size: 11px; margin: 1px 0; }
   .delta {
-    margin-top: 6px; padding-top: 6px;
+    margin-top: 5px; padding-top: 5px;
     border-top: 1px solid var(--uxp-host-border-color, rgba(128,128,128,0.25));
     font-size: 11px;
   }
   .muted { opacity: 0.7; }
 
-  .fitrow { display: flex; gap: 8px; margin: 10px 0; }
+  .fitrow { display: flex; gap: 8px; margin: 8px 0; }
   .fitrow sp-button { flex: 1 1 0; min-width: 0; }
 </style>
 
