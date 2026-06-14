@@ -176,9 +176,10 @@ function renderPreview(t) {
   // part is the same aspectRatioLabel the dropdown shows.
   const a = parseFloat(els.pw.value), b = parseFloat(els.ph.value);
   const ratioLabel = `${fmt(a)}:${fmt(b)} (${aspectRatioLabel(a, b)})`;
+  const pxDelta = Math.round(t.delta * ppi);
   const deltaTxt = t.delta < 0.005
     ? "Already matches this ratio. No expansion needed."
-    : `Grow <b>${t.grow}</b> by <b>${fmt(fromInches(t.delta, u))} ${u}</b>. Nothing is clipped.` +
+    : `Grow <b>${t.grow}</b> by <b>${fmt(fromInches(t.delta, u))} ${u}</b> (${pxDelta} px). Nothing is clipped.` +
       `<br><span class="muted">Added canvas is transparent; a locked Background becomes a normal layer.</span>`;
 
   els.preview.className = "preview";
