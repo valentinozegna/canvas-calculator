@@ -162,14 +162,14 @@ function renderPreview(t) {
   const ratioLabel = t.paperLandscape ? `${fmt(lo)} : ${fmt(sh)}` : `${fmt(sh)} : ${fmt(lo)}`;
   const deltaTxt = t.delta < 0.005
     ? "Already matches this ratio. No expansion needed."
-    : `Grow <b>${t.grow}</b> by <b>${fmt(fromInches(t.delta, u))} ${u}</b>. Nothing is clipped.`;
+    : `Grow <b>${t.grow}</b> by <b>${fmt(fromInches(t.delta, u))} ${u}</b>. Nothing is clipped.` +
+      `<br><span class="muted">Added canvas is transparent; a locked Background becomes a normal layer.</span>`;
 
   els.preview.className = "preview";
   els.preview.innerHTML =
     `<div class="kv"><span class="k">Target ratio</span><span class="v">${ratioLabel}</span></div>` +
     `<div class="kv"><span class="k">Current size</span><span class="v">${fmt(oW)} × ${fmt(oH)} ${u}<small>${docState.wPx} × ${docState.hPx} px</small></span></div>` +
     `<div class="kv"><span class="k">New size</span><span class="v">${fmt(nW)} × ${fmt(nH)} ${u}<small>${nWpx} × ${nHpx} px</small></span></div>` +
-    `<div class="kv"><span class="k">Pixel density</span><span class="v">${Math.round(ppi)} ppi</span></div>` +
     `<div class="delta">${deltaTxt}</div>`;
 }
 
