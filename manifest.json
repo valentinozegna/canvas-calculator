@@ -14,8 +14,8 @@
       "id": "canvasRatioPanel",
       "label": { "default": "Canvas Ratio" },
       "minimumSize": { "width": 240, "height": 360 },
-      "preferredDockedSize": { "width": 280, "height": 760 },
-      "preferredFloatingSize": { "width": 300, "height": 760 }
+      "preferredDockedSize": { "width": 280, "height": 900 },
+      "preferredFloatingSize": { "width": 300, "height": 900 }
     }
   ],
   "icons": [
