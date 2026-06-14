@@ -101,6 +101,7 @@ function compute() {
     els.preview.className = "preview muted";
     els.preview.textContent = "Open a document and tap “Re-read document”.";
     current = null;
+    els.expand.disabled = true;
     return;
   }
   const { pw, ph, ok } = paperInchesFromInputs();
@@ -108,11 +109,14 @@ function compute() {
     els.preview.className = "preview muted";
     els.preview.textContent = "Enter a target paper size (e.g. 16 × 20).";
     current = null;
+    els.expand.disabled = true;
     return;
   }
   const mode = els.orient.value || "match";
   current = targetFor(docState.wIn, docState.hIn, [pw, ph], mode);
   renderPreview(current);
+  // Nothing to do when the canvas already matches the target ratio.
+  els.expand.disabled = current.delta < 0.005;
 }
 
 function renderPreview(t) {
@@ -175,28 +179,50 @@ async function expandCanvas() {
     vertical: { _enum: "verticalLocation", _value: anc.vertical },
     _options: { dialogOptions: "dontDisplay" }
   };
-  // White/black fill the added canvas with that solid color (valid
-  // canvasExtensionColorType values). Transparent has no extension color and
-  // requires a non-Background layer, handled below.
-  if (border !== "transparent") {
-    sizeDesc.canvasExtensionColorType = { _enum: "canvasExtensionColorType", _value: border };
-  }
 
   try {
     await core.executeAsModal(async () => {
-      if (border === "transparent") {
-        // A solid Background can't hold transparency — promote it to a normal
-        // layer first so the added canvas is transparent (no-op if no Background).
-        try {
-          await app.batchPlay([{
-            _obj: "set",
-            _target: [{ _ref: "layer", _property: "background" }],
-            to: { _obj: "layer" },
-            _options: { dialogOptions: "dontDisplay" }
-          }], {});
-        } catch (e) { /* no Background layer to promote */ }
+      // Promote any locked Background so the added canvas is transparent and a
+      // backing layer can sit behind everything (no-op if there is no Background).
+      // The canvasExtensionColorType fill only works for a locked Background, so
+      // we don't rely on it — we paint our own backing instead, which is reliable
+      // whether the doc started as a Background or as normal layers.
+      try {
+        await app.batchPlay([{
+          _obj: "set",
+          _target: [{ _ref: "layer", _property: "background" }],
+          to: { _obj: "layer" },
+          _options: { dialogOptions: "dontDisplay" }
+        }], {});
+      } catch (e) { /* no Background layer to promote */ }
+
+      await app.batchPlay([sizeDesc], {}); // adds transparent canvas
+
+      if (border !== "transparent") {
+        // Paint a full-canvas color backing behind the photo, using the Fill
+        // command's white/black presets (avoids RGB-channel naming quirks).
+        await app.batchPlay([{ _obj: "make", _target: [{ _ref: "layer" }], _options: { dialogOptions: "dontDisplay" } }], {});
+        await app.batchPlay([{
+          _obj: "move",
+          _target: [{ _ref: "layer", _enum: "ordinal", _value: "targetEnum" }],
+          to: { _ref: "layer", _enum: "ordinal", _value: "back" },
+          _options: { dialogOptions: "dontDisplay" }
+        }], {});
+        await app.batchPlay([{
+          _obj: "fill",
+          using: { _enum: "fillContents", _value: border },
+          opacity: { _unit: "percentUnit", _value: 100 },
+          mode: { _enum: "blendMode", _value: "normal" },
+          _options: { dialogOptions: "dontDisplay" }
+        }], {});
+        // Re-select the top (photo) layer so Fill/Fit act on it, not the backing.
+        await app.batchPlay([{
+          _obj: "select",
+          _target: [{ _ref: "layer", _enum: "ordinal", _value: "front" }],
+          makeVisible: false,
+          _options: { dialogOptions: "dontDisplay" }
+        }], {});
       }
-      await app.batchPlay([sizeDesc], {});
     }, { commandName: "Expand canvas to ratio" });
     readDoc();
   } catch (e) {
