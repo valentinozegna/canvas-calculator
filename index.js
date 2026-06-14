@@ -258,8 +258,6 @@ async function scaleLayer(mode) {
         const f = (mode === "fill" ? Math.max(cw / lw, ch / lh) : Math.min(cw / lw, ch / lh)) * 100;
         fx = fy = f;
       }
-      console.log("[CanvasRatio] scale", mode, { layer: layer.name, lw, lh, cw, ch, fx, fy });
-
       // Scale around the layer's own center via batchPlay (reliable across hosts).
       await app.batchPlay([{
         _obj: "transform",
