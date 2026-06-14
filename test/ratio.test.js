@@ -1,6 +1,6 @@
 const { test } = require("node:test");
 const assert = require("node:assert/strict");
-const { PAPER_SETS, paperInches, targetFor, toInches, fromInches } = require("../ratio.js");
+const { PAPER_SETS, paperInches, targetFor, toInches, fromInches, aspectRatioLabel } = require("../ratio.js");
 
 // Every (paper, orientation) combo across both systems must produce a canvas
 // that CONTAINS the image — the no-clip contract.
@@ -53,6 +53,22 @@ test("A4 produces an A-series aspect ratio", () => {
   const t = targetFor(8, 11, paperInches(a4), "match");
   const aspect = Math.max(t.Cw, t.Ch) / Math.min(t.Cw, t.Ch);
   assert.ok(Math.abs(aspect - Math.SQRT2) < 0.01, `aspect ${aspect}`);
+});
+
+// Aspect-ratio labels: tidy integer ratios for the common print sizes, and a
+// 1:x.xx decimal fallback for the A-series (which never reduces cleanly).
+test("aspectRatioLabel reduces common sizes and falls back for A-series", () => {
+  assert.equal(aspectRatioLabel(16, 20), "4:5");
+  assert.equal(aspectRatioLabel(20, 16), "4:5");   // order-independent
+  assert.equal(aspectRatioLabel(8, 10), "4:5");
+  assert.equal(aspectRatioLabel(4, 6), "2:3");
+  assert.equal(aspectRatioLabel(5, 7), "5:7");
+  assert.equal(aspectRatioLabel(8.5, 11), "17:22"); // 2-decimal input
+  assert.equal(aspectRatioLabel(18, 24), "3:4");
+  assert.equal(aspectRatioLabel(24, 36), "2:3");
+  // A4 (21 × 29.7 cm) reduces to 70:99, too large -> decimal form.
+  assert.equal(aspectRatioLabel(21, 29.7), "1:1.41");
+  assert.equal(aspectRatioLabel(59.4, 84.1), "1:1.42");
 });
 
 // Unit conversions round-trip.

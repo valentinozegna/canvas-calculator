@@ -51,6 +51,22 @@
     }
   };
 
+  // Aspect-ratio label for a paper, e.g. 16 × 20 -> "4:5", 8.5 × 11 -> "17:22".
+  // Unit-agnostic (a ratio is dimensionless). Reduces to a tidy integer ratio
+  // when both reduced terms stay small; otherwise (the A-series, whose ratio is
+  // ~1:1.41 and never reduces cleanly) falls back to a "1:x.xx" decimal form.
+  function gcd(x, y) { return y ? gcd(y, x % y) : x; }
+  function aspectRatioLabel(a, b) {
+    const s = Math.min(a, b), l = Math.max(a, b);
+    if (!(s > 0) || !(l > 0)) return "";
+    // Scale to integers (covers up to 2 decimals like 8.5) before reducing.
+    const si = Math.round(s * 100), li = Math.round(l * 100);
+    const g = gcd(si, li) || 1;
+    const rs = si / g, rl = li / g;
+    if (rs <= 30 && rl <= 30) return `${rs}:${rl}`;
+    return `1:${(l / s).toFixed(2)}`;
+  }
+
   // Canonical [short, long] inch dimensions for a paper, regardless of its
   // native unit — this is what the ratio math consumes.
   function paperInches(p) {
@@ -80,7 +96,7 @@
     return { Cw, Ch, grow, delta, label, ratioLabel, paperW, paperH, paperLandscape };
   }
 
-  const api = { PAPER_SETS, UNIT_TO_IN, toInches, fromInches, paperInches, targetFor };
+  const api = { PAPER_SETS, UNIT_TO_IN, toInches, fromInches, paperInches, targetFor, aspectRatioLabel };
 
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.RatioCore = api;

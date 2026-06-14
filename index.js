@@ -1,5 +1,5 @@
 const { app, core, action } = require("photoshop");
-const { PAPER_SETS, toInches, fromInches, targetFor } = RatioCore;
+const { PAPER_SETS, toInches, fromInches, targetFor, aspectRatioLabel } = RatioCore;
 
 const els = {
   pw: document.getElementById("pw"),
@@ -51,9 +51,11 @@ function buildPresets() {
     PAPER_SETS[key].papers.forEach((p) => {
       const item = document.createElement("sp-menu-item");
       item.setAttribute("value", `${p.a}|${p.b}|${p.unit}`);
-      item.textContent = p.name.includes("×")
+      const ratio = aspectRatioLabel(p.a, p.b);
+      const dims = p.name.includes("×")
         ? `${p.name} ${p.unit}`
-        : `${p.name} (${fmt(p.a)} × ${fmt(p.b)} ${p.unit})`;
+        : `${p.name} · ${fmt(p.a)} × ${fmt(p.b)} ${p.unit}`;
+      item.textContent = `${dims} (${ratio})`;
       menu.appendChild(item);
     });
   });
