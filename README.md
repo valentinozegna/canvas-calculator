@@ -13,23 +13,24 @@ When you mat a photo onto a fixed paper size (17×22, 16×20, A4, 5×7…), Phot
 **Canvas Size crops** the moment a target dimension is smaller than your image. There's
 no built-in "just add canvas to reach this ratio" command.
 
-Canvas Ratio does exactly that: it keeps your image's longer side fixed and grows **only
-the shorter side** until the canvas matches the paper ratio. Because it only ever *adds*
-canvas, **nothing is cropped** and the added border is transparent. You see the exact new
-size before you commit.
+Canvas Ratio does exactly that: it keeps your image as-is and grows **only the one side**
+needed to reach the paper ratio. Because it only ever *adds* canvas, **nothing is cropped**
+and the added border is transparent. You see the exact new size before you commit.
 
 ## How to use it
 
-1. **Open your photo.** The panel shows its current size at the top and keeps it current as
-   you work or switch documents.
-2. **Choose the paper size.** Pick from **Common sizes** (US frame sizes and EU A-series),
-   or type any **Width × Height** and choose your unit (in / cm / mm).
+1. **Open your photo.** The **Input** section shows its size, pixel dimensions, and pixel
+   density, and keeps them current as you edit or switch documents.
+2. **Choose the target paper size.** Pick a preset (US frame sizes and EU A-series; each
+   entry shows its aspect ratio, e.g. `16 × 20 in (4:5)`), or type any **Width × Height**
+   and choose your unit (in / cm / mm). Editing the fields switches the preset to **Custom…**.
 3. **Set the options:**
    - **Orientation:** match your photo, or force landscape / portrait.
-   - **Add canvas to:** center the photo (border on both sides) or push it to one edge.
-4. **Check the Preview.** It shows the target ratio, your original canvas, the computed new
-   canvas, and how much will be added, e.g. *"Grow width by 0.99 in · nothing is clipped."*
-   If your canvas already matches the ratio, **Expand canvas** is disabled.
+   - **Add canvas to:** both sides (centered) or biased to one edge.
+4. **Read the Output preview.** It shows the **target ratio** as raw plus reduced
+   (e.g. `20:16 (5:4)`), the **new size** in your unit and pixels, and how much canvas will
+   be added, e.g. *"Adds 0.99 in (238 px) of width, with nothing cropped."* If your canvas
+   already matches the ratio, **Expand canvas** is disabled.
 5. **Click Expand canvas.** The canvas grows to the ratio with a transparent border and your
    image is untouched. (A locked *Background* becomes a normal layer so the border can be
    transparent.) Undo (⌘Z) restores it.
@@ -42,9 +43,9 @@ ratio, not your print resolution; your photo keeps its original pixels and PPI.
 
 Scale your photo within the new frame:
 
-- **Fill:** enlarge to cover the whole canvas (edges may extend past the frame).
-- **Fit:** shrink to sit fully inside the canvas (transparent margins remain).
-- **Warp:** stretch to fill the canvas exactly (no cropping, slight distortion).
+- **Fill:** scale up to cover the whole canvas (anything past the edges is cropped).
+- **Fit:** scale to sit fully inside the canvas (transparent margins remain).
+- **Warp:** stretch to fill the canvas exactly (slight distortion, nothing cropped).
 
 ## Installing
 
