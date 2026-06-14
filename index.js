@@ -170,7 +170,6 @@ function compute() {
 function renderPreview(t) {
   const u = curUnit();
   const ppi = docState.ppi;
-  const oW = fromInches(docState.wIn, u), oH = fromInches(docState.hIn, u);
   const nW = fromInches(t.Cw, u), nH = fromInches(t.Ch, u);
   const nWpx = Math.round(t.Cw * ppi), nHpx = Math.round(t.Ch * ppi);
   const a = parseFloat(els.pw.value), b = parseFloat(els.ph.value);
@@ -184,7 +183,6 @@ function renderPreview(t) {
   els.preview.className = "preview";
   els.preview.innerHTML =
     `<div class="kv"><span class="k">Target ratio</span><span class="v">${ratioLabel}</span></div>` +
-    `<div class="kv"><span class="k">Current size</span><span class="v">${fmt(oW)} × ${fmt(oH)} ${u}<small>${docState.wPx} × ${docState.hPx} px</small></span></div>` +
     `<div class="kv"><span class="k">New size</span><span class="v">${fmt(nW)} × ${fmt(nH)} ${u}<small>${nWpx} × ${nHpx} px</small></span></div>` +
     `<div class="delta">${deltaTxt}</div>`;
 }
