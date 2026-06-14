@@ -19,14 +19,16 @@
   .field > label { font-size: 11px; opacity: 0.7; margin-bottom: 2px; }
   sp-textfield, sp-picker { width: 100%; }
 
-  /* Top-level grouping: the controls you set (Input) vs. the result and
-     actions (Output). Stronger than .section, with a divider rule. */
+  /* Top-level sections (Input / Processing / Output / Image fitting). Each is
+     preceded by a full-width divider line, like the native PS Properties panel.
+     Negative horizontal margins bleed the rule to the panel edges; the padding
+     restores the text inset. */
   .group {
-    font-size: 12px; font-weight: 600; letter-spacing: 0.02em;
-    margin: 13px 0 6px; padding-bottom: 4px;
-    border-bottom: 1px solid var(--uxp-host-border-color, rgba(128,128,128,0.35));
+    font-size: 14px; font-weight: 700; letter-spacing: 0.01em;
+    margin: 14px -10px 8px; padding: 11px 10px 0;
+    border-top: 1px solid var(--uxp-host-border-color, rgba(255,255,255,0.15));
   }
-  .group.first { margin-top: 2px; }
+  .group.first { margin-top: 0; padding-top: 2px; border-top: none; }
 
   .section {
     font-size: 11px; opacity: 0.55; text-transform: uppercase;
