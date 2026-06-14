@@ -172,9 +172,9 @@ function renderPreview(t) {
   const ppi = docState.ppi;
   const nW = fromInches(t.Cw, u), nH = fromInches(t.Ch, u);
   const nWpx = Math.round(t.Cw * ppi), nHpx = Math.round(t.Ch * ppi);
-  const a = parseFloat(els.pw.value), b = parseFloat(els.ph.value);
-  const lo = Math.max(a, b), sh = Math.min(a, b);
-  const ratioLabel = t.paperLandscape ? `${fmt(lo)} : ${fmt(sh)}` : `${fmt(sh)} : ${fmt(lo)}`;
+  // Same label the dropdown shows (reduced, orientation-neutral) so the two
+  // always agree. Orientation is conveyed by the New size dimensions below.
+  const ratioLabel = aspectRatioLabel(parseFloat(els.pw.value), parseFloat(els.ph.value));
   const deltaTxt = t.delta < 0.005
     ? "Already matches this ratio. No expansion needed."
     : `Grow <b>${t.grow}</b> by <b>${fmt(fromInches(t.delta, u))} ${u}</b>. Nothing is clipped.` +
