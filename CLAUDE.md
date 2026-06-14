@@ -6,10 +6,16 @@ A UXP panel that expands a photo's canvas to a print paper ratio without croppin
 ## Files
 - `ratio.js` — pure math (UMD: `window.RatioCore` in panel, `module.exports` in Node). No PS dep. `targetFor()` is load-bearing: result always contains the image (`Cw>=W, Ch>=H`) so it never clips. Holds `PAPER_SETS` (US in / EU cm) + unit helpers.
 - `index.html` / `index.js` — the panel UI + behavior. `manifest.json` v5, host PS 24.0.0.
-- `test/ratio.test.js` (`node --test`), `eslint.config.js` (flat), `tools/build-icons.js`, `icons/`.
+- `test/ratio.test.js` (`node --test`), `eslint.config.js` (flat), `tools/build-icons.js`, `tools/stage.js`, `icons/`.
 
 ## Verify locally (can't run PS here — only static checks)
 `npm test` · `npm run lint` · `node -e "require('./manifest.json')"`. Never claim runtime behavior works; give the user a manual check.
+
+## Packaging & distribution
+- **UDT Package packages the whole folder it points at.** Pointing it at the repo root bakes in `.git/` + `node_modules/` + tests (~750 KB, 267 files). Don't.
+- **`npm run stage`** (`tools/stage.js`) copies runtime-only files (manifest, index.html, index.js, ratio.js, LICENSE, icons/) into `build/canvas-ratio/`. In UDT do **Add Plugin → `build/canvas-ratio/manifest.json`** (remove the repo-root row first; same `id` confuses UDT), then **••• → Package**. Clean `.ccx` is ~10 KB / 9 files. `build/` is gitignored.
+- A `.ccx` is a signed zip; **only UDT can produce an installable one** (can't strip-and-rezip by hand, breaks the signature). UDT names the file after the plugin `id` (`com.valentino.canvasratio_PS.ccx`), not the `name` field; rename to `Canvas-Ratio-<ver>.ccx` after.
+- **Distribution = GitHub Release** with the `.ccx` attached (`gh release create`). End users **double-click the `.ccx`**; Creative Cloud installs it (no dev mode). README "Installing" links to `releases/latest`; UDT source-install is the fallback.
 
 ## UXP gotchas we discovered (the hard part)
 - **Panel height:** `minimumSize` is a BINDING floor; `preferredDockedSize`/`preferredFloatingSize` are advisory ("may not be honored"). A cached size ignores `preferred*` but can't go below `minimumSize` → set `minimumSize` to control height. Manifest changes need UDT **Unload→Load** (not Reload); a cached size needs workspace reset / PS relaunch. No programmatic resize; panels don't auto-fit content.
