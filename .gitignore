@@ -7,6 +7,9 @@ node_modules/
 # Packaged plugin artifacts
 *.ccx
 
+# Clean staging dir for UDT packaging (npm run stage)
+build/
+
 # Editor / OS cruft
 .idea/
 *.swp

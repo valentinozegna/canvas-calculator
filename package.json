@@ -8,7 +8,8 @@
   "scripts": {
     "test": "node --test",
     "lint": "eslint .",
-    "icons": "node tools/build-icons.js"
+    "icons": "node tools/build-icons.js",
+    "stage": "node tools/stage.js"
   },
   "devDependencies": {
     "eslint": "^9.0.0"

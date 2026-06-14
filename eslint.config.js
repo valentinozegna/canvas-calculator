@@ -26,7 +26,7 @@ const nodeGlobals = {
 };
 
 module.exports = [
-  { ignores: ["node_modules/**"] },
+  { ignores: ["node_modules/**", "build/**"] },
   js.configs.recommended,
   {
     rules: {

@@ -44,20 +44,27 @@ Scale your photo within the new frame:
 
 ## Installing
 
-Canvas Ratio isn't on the Adobe Marketplace yet, so you install it manually with Adobe's
-free **UXP Developer Tool (UDT)**:
-
-1. In the **Creative Cloud desktop app**, search for and install **UXP Developer Tool**.
-2. Enable **Settings → Plugins → Developer Mode** (if your Photoshop version shows it).
-3. [Download this plugin](https://github.com/valentinozegna/canvas-calculator) (green
-   **Code → Download ZIP**) and unzip it somewhere permanent.
-4. Open **Photoshop**, then open **UDT** → **Add Plugin** and select the plugin's
-   `manifest.json`.
-5. Click **Load**. The **Canvas Ratio** panel appears under Photoshop's **Plugins** menu.
+1. Download the latest **`Canvas-Ratio-x.y.z.ccx`** from the
+   [**Releases**](https://github.com/valentinozegna/canvas-calculator/releases/latest) page.
+2. Make sure the **Creative Cloud desktop app** is installed and running.
+3. **Double-click the `.ccx`.** Creative Cloud installs it automatically.
+4. Open **Photoshop**. The **Canvas Ratio** panel appears under the **Plugins** menu.
 
 > Requires Photoshop 2024 (24.0) or newer.
 
 Tip: dock the panel alongside your other Photoshop panels.
+
+<details>
+<summary>Install from source instead (UXP Developer Tool)</summary>
+
+1. In the **Creative Cloud desktop app**, install the free **UXP Developer Tool (UDT)**.
+2. [Download the source](https://github.com/valentinozegna/canvas-calculator) (green
+   **Code → Download ZIP**) and unzip it somewhere permanent.
+3. Open **Photoshop**, then in **UDT** click **Add Plugin** and select the plugin's
+   `manifest.json`.
+4. Click **Load**. The panel appears under Photoshop's **Plugins** menu.
+
+</details>
 
 ## Good to know
 
@@ -83,13 +90,15 @@ npm install     # dev tooling only (ESLint)
 npm test        # run the ratio math unit tests
 npm run lint    # ESLint
 npm run icons   # regenerate panel icons
+npm run stage   # copy runtime-only files into build/canvas-ratio/ for packaging
 ```
 
 - **Debug:** in UDT, use the plugin's ••• → **Debug** to open DevTools for the panel.
 - **Reload:** after editing source, click **Reload** in UDT. Manifest changes need a full
   unload/reload, plus a workspace reset or relaunch to pick up new panel sizes.
-- **Package:** UDT ••• → **Package** produces a signed `.ccx`; double-clicking it installs
-  via the Creative Cloud desktop app.
+- **Package:** run `npm run stage`, then in UDT **Add Plugin** → `build/canvas-ratio/manifest.json`
+  and ••• → **Package**. Staging keeps `.git/`, `node_modules/`, and tests out of the `.ccx`.
+  Double-clicking the resulting `.ccx` installs it via the Creative Cloud desktop app.
 - **Publishing:** a public Marketplace listing needs a real plugin ID from Adobe's
   [Developer Distribution](https://developer.adobe.com/distribution/) portal, replacing the
   placeholder `com.valentino.canvasratio` in [`manifest.json`](manifest.json).
