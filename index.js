@@ -8,14 +8,11 @@ const els = {
   orient: document.getElementById("orient"),
   anchor: document.getElementById("anchor"),
   preset: document.getElementById("preset"),
-  ppi: document.getElementById("ppi"),
-  refresh: document.getElementById("refresh"),
   docnote: document.getElementById("docnote"),
   preview: document.getElementById("preview"),
   expand: document.getElementById("expand"),
   fill: document.getElementById("fill"),
-  fit: document.getElementById("fit"),
-  resize: document.getElementById("resize")
+  fit: document.getElementById("fit")
 };
 
 // Current document canvas, in pixels + inches (null when no doc is open).
@@ -26,7 +23,6 @@ let current = null;
 // Round to 2 decimals, dropping trailing zeros (e.g. 22, 8.5, 21.6).
 function fmt(n) { return String(Math.round(n * 100) / 100); }
 function curUnit() { return els.unit.value || "in"; }
-function targetPpi() { const p = parseFloat(els.ppi.value); return p > 0 ? p : 300; }
 function errMsg(e) { return e && e.message ? e.message : String(e); }
 function status(msg) { els.docnote.textContent = msg; }
 
@@ -203,33 +199,6 @@ async function expandCanvas() {
   }
 }
 
-// Resample the whole image to the exact oriented paper size at the target PPI.
-async function resizeExact() {
-  if (!docState) { status("No open document."); return; }
-  if (!current) { status("Enter a target paper size first."); return; }
-  const ppi = targetPpi();
-  const wPx = Math.round(current.paperW * ppi);
-  const hPx = Math.round(current.paperH * ppi);
-
-  try {
-    await core.executeAsModal(async () => {
-      await app.batchPlay([{
-        _obj: "imageSize",
-        width: { _unit: "pixelsUnit", _value: wPx },
-        height: { _unit: "pixelsUnit", _value: hPx },
-        resolution: { _unit: "densityUnit", _value: ppi },
-        scaleStyles: true,
-        constrainProportions: true,
-        interpolation: { _enum: "interpolationType", _value: "automaticInterpolation" },
-        _options: { dialogOptions: "dontDisplay" }
-      }], {});
-    }, { commandName: "Resize to exact paper size" });
-    readDoc();
-  } catch (e) {
-    status("Resize failed: " + errMsg(e));
-  }
-}
-
 // Scale the active layer to FILL (cover) or FIT (contain) the current canvas,
 // aspect-locked, then recenter it.
 async function scaleLayer(fill) {
@@ -270,9 +239,7 @@ async function scaleLayer(fill) {
 
 buildPresets();
 
-els.refresh.addEventListener("click", readDoc);
 els.expand.addEventListener("click", expandCanvas);
-els.resize.addEventListener("click", resizeExact);
 els.fill.addEventListener("click", () => scaleLayer(true));
 els.fit.addEventListener("click", () => scaleLayer(false));
 els.preset.addEventListener("change", onPresetChange);

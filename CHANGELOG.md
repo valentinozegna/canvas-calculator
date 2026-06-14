@@ -21,7 +21,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Expand is disabled when the canvas already matches the target ratio.
 - "Fill canvas" / "Fit to canvas" actions that scale the active layer
   aspect-locked (auto-promoting a locked Background layer).
-- "Resize to exact paper size" action that resamples to the literal paper
-  dimensions at a configurable PPI (default 300).
+- Auto-sync: the panel re-reads the document on edits, undo/redo, and document
+  open/close/select, so the original size and preview stay current.
 - Pure-math core (`ratio.js`) with Node unit tests, ESLint config, and panel
   icons.

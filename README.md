@@ -2,7 +2,7 @@
 
 A Photoshop **UXP** panel that expands the active document's canvas to a chosen
 print aspect ratio **without ever clipping the image**, then helps fit the photo
-to the new frame and resize it to exact print dimensions.
+to the new frame.
 
 > Repo: `canvas-calculator` · Plugin id: `com.valentino.canvasratio` (placeholder — see [Distribution](#distribution))
 
@@ -46,8 +46,8 @@ resamples to the literal print size.
 - **Add canvas to** — both sides, or biased to one edge (maps to the canvas anchor).
 - **Fill / Fit** (optional, after expanding) — scale the active layer to cover or
   contain the canvas, aspect-locked (a locked Background layer is auto-promoted first).
-- **Resize → exact size** (optional) — resample to the literal paper dimensions at a
-  configurable PPI (default 300).
+- **Auto-sync** — the panel re-reads the document on edits, undo/redo, and document
+  open/close, so the original size and preview stay current automatically.
 
 ## How it works
 
@@ -91,16 +91,17 @@ The plugin can only be exercised inside Photoshop (it can't be auto-tested here)
 After sideloading:
 
 1. Open a wide landscape photo (e.g. **27.95 × 15.75 in @ 240 ppi**). The panel shows
-   the **Original document** size automatically (tap **Re-read document** if needed).
+   the **Original document** size automatically.
 2. Type a target paper size, e.g. **16 × 20** (or pick it from **Common sizes**).
 3. The **Preview** updates: target ratio, original canvas, and the new canvas with the
-   grow direction/amount — confirm it only grows one side.
-4. Tap **Expand canvas** → the canvas grows to the ratio with a band on the short axis;
-   the image is **uncropped**. **Undo** (⌘Z) restores the original.
+   grow direction/amount — confirm it only grows one side. **Expand canvas** is disabled
+   when the canvas already matches the target ratio.
+4. Tap **Expand canvas** → the canvas grows to the ratio with a transparent band on the
+   short axis; the image is **uncropped**. **Undo** (⌘Z) restores the original.
 5. (Optional) Tap **Fill canvas** / **Fit to canvas** → the active layer scales
    aspect-locked to cover / contain the frame.
-6. (Optional) Set **Resize PPI** and tap **Resize to exact paper size** → the document
-   lands on the literal print dimensions (e.g. 20 × 16 in @ 300 PPI = 6000 × 4800 px).
+6. **Undo** the expand, and confirm the panel's Original-document line and Preview
+   update on their own (auto-sync).
 7. Switch **Unit** to cm and confirm values convert; try an EU A-size from Common sizes.
 
 ## Packaging to `.ccx`
