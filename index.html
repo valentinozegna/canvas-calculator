@@ -43,26 +43,37 @@
   }
   .muted { opacity: 0.7; }
 
-  .fitrow { display: flex; gap: 8px; margin: 8px 0; }
+  .fitrow { display: flex; gap: 8px; margin-bottom: 6px; }
   .fitrow sp-button { flex: 1 1 0; min-width: 0; }
 
-  .ppirow { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .ppirow { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; }
   .ppilabel { font-size: 11px; opacity: 0.7; white-space: nowrap; }
   .ppirow sp-textfield { width: 80px; flex: 0 0 auto; }
+
+  .mb { margin-bottom: 6px; }
 </style>
 
+<!-- Source document (read automatically) -->
 <div id="docnote">Open a document and tap “Re-read document”.</div>
 <sp-button id="refresh" variant="secondary" size="s" style="width:100%;">Re-read document</sp-button>
 
-<div class="section">Target paper size</div>
+<!-- 1. Paper size: pick a preset (fills the fields) or type a custom size -->
+<div class="section">Paper size</div>
+
+<div class="field mb">
+  <label>Common sizes (quick fill)</label>
+  <sp-picker id="preset" size="s">
+    <sp-menu slot="options"></sp-menu>
+  </sp-picker>
+</div>
 
 <div class="row">
   <div class="field">
-    <label>Paper width</label>
+    <label>Width</label>
     <sp-textfield id="pw" type="number" size="s" placeholder="16" step="0.01" min="0.01"></sp-textfield>
   </div>
   <div class="field">
-    <label>Paper height</label>
+    <label>Height</label>
     <sp-textfield id="ph" type="number" size="s" placeholder="20" step="0.01" min="0.01"></sp-textfield>
   </div>
   <div class="field narrow">
@@ -77,6 +88,8 @@
   </div>
 </div>
 
+<!-- 2. Options that affect the expansion -->
+<div class="section">Options</div>
 <div class="row">
   <div class="field">
     <label>Orientation</label>
@@ -100,18 +113,14 @@
   </div>
 </div>
 
-<div class="field" style="margin-bottom:10px;">
-  <label>Common sizes (quick fill)</label>
-  <sp-picker id="preset" size="s">
-    <sp-menu slot="options"></sp-menu>
-  </sp-picker>
-</div>
-
+<!-- 3. Preview the computed canvas before applying -->
 <div class="section">Preview</div>
 <div id="preview" class="preview muted">Enter a target paper size to see the computed canvas.</div>
 
+<!-- 4. Apply -->
 <sp-button id="expand" variant="cta" style="width:100%;">Expand canvas</sp-button>
 
+<!-- 5. Optional follow-up steps once the canvas is expanded -->
 <div class="section">After expanding (optional)</div>
 
 <div class="fitrow">
