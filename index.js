@@ -180,16 +180,20 @@ async function expandCanvas() {
   try {
     await core.executeAsModal(async () => {
       // Promote a locked Background to a normal layer so the added canvas is
-      // transparent rather than filled with a solid color (no-op if there is no
-      // Background layer to convert).
-      try {
+      // transparent rather than filled with a solid color. Only attempt this
+      // when a Background actually exists — running "set" with no Background
+      // raises a "command not available" error that aborts the expand.
+      const doc = app.activeDocument;
+      let hasBackground = false;
+      try { hasBackground = Array.from(doc.layers).some((l) => l.isBackgroundLayer); } catch (e) { /* ignore */ }
+      if (hasBackground) {
         await app.batchPlay([{
           _obj: "set",
           _target: [{ _ref: "layer", _property: "background" }],
           to: { _obj: "layer" },
           _options: { dialogOptions: "dontDisplay" }
         }], {});
-      } catch (e) { /* no Background layer to promote */ }
+      }
 
       await app.batchPlay([sizeDesc], {}); // adds transparent canvas
     }, { commandName: "Expand canvas to ratio" });
