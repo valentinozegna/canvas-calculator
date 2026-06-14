@@ -13,7 +13,8 @@ const els = {
   expand: document.getElementById("expand"),
   fill: document.getElementById("fill"),
   fit: document.getElementById("fit"),
-  warp: document.getElementById("warp")
+  warp: document.getElementById("warp"),
+  fithint: document.getElementById("fithint")
 };
 
 // Current document canvas, in pixels + inches (null when no doc is open).
@@ -263,6 +264,18 @@ els.fill.addEventListener("click", () => scaleLayer("fill"));
 els.fit.addEventListener("click", () => scaleLayer("fit"));
 els.warp.addEventListener("click", () => scaleLayer("warp"));
 els.preset.addEventListener("change", onPresetChange);
+
+// Show a per-button description on hover; revert to the default on leave.
+const FIT_DEFAULT = "Hover Fill, Fit, or Warp for what each does.";
+const FIT_HINTS = {
+  fill: "Fill — scale up to cover the canvas; overflow is cropped.",
+  fit: "Fit — scale to sit inside the canvas; leaves transparent margins.",
+  warp: "Warp — stretch to fill the canvas exactly; distorts, nothing cropped."
+};
+[["fill", els.fill], ["fit", els.fit], ["warp", els.warp]].forEach(([key, el]) => {
+  el.addEventListener("mouseenter", () => { els.fithint.textContent = FIT_HINTS[key]; });
+  el.addEventListener("mouseleave", () => { els.fithint.textContent = FIT_DEFAULT; });
+});
 
 ["input", "change"].forEach((ev) => {
   els.pw.addEventListener(ev, compute);
