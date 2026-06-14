@@ -172,9 +172,10 @@ function renderPreview(t) {
   const ppi = docState.ppi;
   const nW = fromInches(t.Cw, u), nH = fromInches(t.Ch, u);
   const nWpx = Math.round(t.Cw * ppi), nHpx = Math.round(t.Ch * ppi);
-  // Same label the dropdown shows (reduced, orientation-neutral) so the two
-  // always agree. Orientation is conveyed by the New size dimensions below.
-  const ratioLabel = aspectRatioLabel(parseFloat(els.pw.value), parseFloat(els.ph.value));
+  // Raw paper ratio plus its reduced form, e.g. "16:20 (4:5)". The reduced
+  // part is the same aspectRatioLabel the dropdown shows.
+  const a = parseFloat(els.pw.value), b = parseFloat(els.ph.value);
+  const ratioLabel = `${fmt(a)}:${fmt(b)} (${aspectRatioLabel(a, b)})`;
   const deltaTxt = t.delta < 0.005
     ? "Already matches this ratio. No expansion needed."
     : `Grow <b>${t.grow}</b> by <b>${fmt(fromInches(t.delta, u))} ${u}</b>. Nothing is clipped.` +
