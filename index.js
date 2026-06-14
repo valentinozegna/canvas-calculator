@@ -136,7 +136,7 @@ function readDoc() {
 function compute() {
   if (!docState) {
     els.preview.className = "preview muted";
-    els.preview.textContent = "Open a document and tap “Re-read document”.";
+    els.preview.textContent = "No document open.";
     current = null;
     els.expand.disabled = true;
     return;
@@ -144,7 +144,7 @@ function compute() {
   const { pw, ph, ok } = paperInchesFromInputs();
   if (!ok) {
     els.preview.className = "preview muted";
-    els.preview.textContent = "Enter a target paper size (e.g. 16 × 20).";
+    els.preview.textContent = "No paper size selected.";
     current = null;
     els.expand.disabled = true;
     return;
