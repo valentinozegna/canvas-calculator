@@ -1,0 +1,920 @@
+- generic [ref=e5]:
+  - banner [ref=e7]:
+    - navigation "Global" [ref=e8]:
+      - generic [ref=e9]:
+        - button [ref=e11] [cursor=pointer]:
+          - img
+        - link "Adobe Developer" [ref=e15] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e16]:
+            - img [ref=e17]
+            - strong [ref=e21]: Adobe Developer
+        - generic [ref=e23]:
+          - link "Products" [active] [ref=e25] [cursor=pointer]:
+            - /url: /apis/
+            - generic [ref=e26]: Products
+          - link "UXP for Adobe Photoshop" [ref=e27] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/
+            - generic [ref=e28]: UXP for Adobe Photoshop
+          - button "2021" [ref=e30] [cursor=pointer]:
+            - generic [ref=e31]: "2021"
+            - img
+          - link "Guides" [ref=e32] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/guides/
+            - generic [ref=e33]: Guides
+          - link "Photoshop API" [ref=e34] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/ps_reference/
+            - generic [ref=e35]: Photoshop API
+          - link "UXP API" [ref=e36] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/uxp/
+            - generic [ref=e37]: UXP API
+          - link "Sample Code" [ref=e38] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/code_samples/
+            - generic [ref=e39]: Sample Code
+          - link "Design" [ref=e40] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/design/
+            - generic [ref=e41]: Design
+          - link "Developer Tool" [ref=e42] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/devtool/
+            - generic [ref=e43]: Developer Tool
+          - link "Share" [ref=e44] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/distribution/
+            - generic [ref=e45]: Share
+          - link "Community" [ref=e46] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/community/
+            - generic [ref=e47]: Community
+        - generic [ref=e50]:
+          - button "Search" [ref=e51] [cursor=pointer]:
+            - img
+          - button "Console" [ref=e53] [cursor=pointer]
+          - button "Sign in" [ref=e55] [cursor=pointer]:
+            - generic [ref=e56]: Sign in
+  - navigation "Primary" [ref=e58]:
+    - generic [ref=e59]:
+      - paragraph [ref=e60]: Global Navigation
+      - tree "Global Navigation" [ref=e61]:
+        - treeitem "Versions" [level=1] [ref=e62]:
+          - link "Versions" [ref=e63] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/guides/uxp_guide/uxp-misc/manifest-v4/#versions
+            - text: Versions
+            - img
+        - treeitem "UXP for Adobe Photoshop" [level=1] [ref=e64]:
+          - link "UXP for Adobe Photoshop" [ref=e65] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/
+        - treeitem "Guides" [level=1] [ref=e66]:
+          - link "Guides" [ref=e67] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/guides/
+        - treeitem "Photoshop API" [level=1] [ref=e68]:
+          - link "Photoshop API" [ref=e69] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/ps_reference/
+        - treeitem "UXP API" [level=1] [ref=e70]:
+          - link "UXP API" [ref=e71] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/uxp/
+        - treeitem "Sample Code" [level=1] [ref=e72]:
+          - link "Sample Code" [ref=e73] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/code_samples/
+        - treeitem "Design" [level=1] [ref=e74]:
+          - link "Design" [ref=e75] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/design/
+        - treeitem "Developer Tool" [level=1] [ref=e76]:
+          - link "Developer Tool" [ref=e77] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/devtool/
+        - treeitem "Share" [level=1] [ref=e78]:
+          - link "Share" [ref=e79] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/distribution/
+        - treeitem "Community" [level=1] [ref=e80]:
+          - link "Community" [ref=e81] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/community/
+        - button "Console" [ref=e82] [cursor=pointer]
+      - separator [ref=e83]
+      - paragraph [ref=e84]: Table of contents
+      - tree "Table of contents" [ref=e85]:
+        - treeitem "Getting Started" [expanded] [level=1] [ref=e86]:
+          - heading "Getting Started" [level=2] [ref=e87]
+          - group [ref=e88]:
+            - treeitem "Getting Started" [expanded] [level=2] [ref=e89]:
+              - link "Getting Started" [ref=e90] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/guides/
+            - treeitem "UXP for You" [level=2] [ref=e91]:
+              - link "UXP for You" [ref=e92] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/guides/uxp_for_you/
+            - treeitem "The UXP Toolchain" [level=2] [ref=e93]:
+              - link "The UXP Toolchain" [ref=e94] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/guides/uxp_guide/uxp-toolchain/
+            - treeitem "UXP for Photoshop Basics" [level=2] [ref=e95]:
+              - link "UXP for Photoshop Basics" [ref=e96] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/guides/ps_basics/
+            - treeitem "UXP Developer Tool" [level=2] [ref=e97]:
+              - link "UXP Developer Tool" [ref=e98] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/guides/uxp-developer-tool/
+            - treeitem "Developer Tool Walkthrough" [level=2] [ref=e99]:
+              - link "Developer Tool Walkthrough" [ref=e100] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/guides/udt-walkthrough/
+            - treeitem "Other Topics »»" [expanded] [level=2] [ref=e101]:
+              - link "Other Topics »»" [ref=e102] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/guides/uxp_guide/uxp-misc/
+                - text: Other Topics »»
+                - img
+              - group [ref=e103]:
+                - treeitem "The UXP Manifest" [expanded] [level=3] [ref=e104]:
+                  - link "The UXP Manifest" [ref=e105] [cursor=pointer]:
+                    - /url: /photoshop/uxp/2021/guides/uxp_guide/uxp-misc/manifest-v4/
+                - treeitem "Localization and Platforms" [level=3] [ref=e106]:
+                  - link "Localization and Platforms" [ref=e107] [cursor=pointer]:
+                    - /url: /photoshop/uxp/2021/guides/uxp_guide/uxp-misc/localization-and-platforms/
+                - treeitem "Flyout Menus" [level=3] [ref=e108]:
+                  - link "Flyout Menus" [ref=e109] [cursor=pointer]:
+                    - /url: /photoshop/uxp/2021/guides/uxp_guide/uxp-misc/flyout-menus/
+                - treeitem "File Access" [level=3] [ref=e110]:
+                  - link "File Access" [ref=e111] [cursor=pointer]:
+                    - /url: /photoshop/uxp/2021/guides/uxp_guide/uxp-misc/file-access/
+                - treeitem "Network I/O" [level=3] [ref=e112]:
+                  - link "Network I/O" [ref=e113] [cursor=pointer]:
+                    - /url: /photoshop/uxp/2021/guides/uxp_guide/uxp-misc/network-io/
+                - treeitem "Spectrum CSS" [level=3] [ref=e114]:
+                  - link "Spectrum CSS" [ref=e115] [cursor=pointer]:
+                    - /url: /photoshop/uxp/2021/guides/uxp_guide/uxp-misc/spectrum-css/
+            - treeitem "How Do I..." [level=2] [ref=e116]:
+              - link "How Do I..." [ref=e117] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/guides/how-to/
+            - treeitem "Theme Awareness" [level=2] [ref=e118]:
+              - link "Theme Awareness" [ref=e119] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/guides/theme-awareness/
+            - treeitem "Debugging your Plugins" [level=2] [ref=e120]:
+              - link "Debugging your Plugins" [ref=e121] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/guides/debugging/
+  - main [ref=e123]:
+    - generic [ref=e126]:
+      - generic [ref=e127]:
+        - navigation "Breadcrumb" [ref=e129]:
+          - list [ref=e130]:
+            - listitem [ref=e131]:
+              - link "Products" [ref=e132] [cursor=pointer]:
+                - /url: /apis/
+              - img
+            - listitem [ref=e133]:
+              - link "UXP for Adobe Photoshop" [ref=e134] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/
+              - img
+            - listitem [ref=e135]:
+              - link "Guides" [ref=e136] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/guides/
+              - img
+            - listitem [ref=e137]:
+              - link "Other Topics »»" [ref=e138] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/guides/uxp_guide/uxp-misc/
+              - img
+            - listitem [ref=e139]:
+              - link "The UXP Manifest" [ref=e140] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/guides/uxp_guide/uxp-misc/manifest-v4/
+        - generic [ref=e142]:
+          - button "Edit in GitHub" [ref=e143] [cursor=pointer]:
+            - img
+            - generic [ref=e144]: Edit in GitHub
+          - button "Log an issue" [ref=e145] [cursor=pointer]:
+            - img
+            - generic [ref=e146]: Log an issue
+      - heading "Manifest File Structure" [level=1] [ref=e147]
+      - paragraph [ref=e148]: The plugin's manifest is where you include metadata about your plugin. Simply put, the manifest is a list of facts about your plugin in the form of a JSON object. No executable code goes into your manifest.
+      - paragraph [ref=e149]:
+        - text: The manifest is located in your plugin's root folder and must be named
+        - code [ref=e150]: manifest.json
+        - text: .
+      - paragraph [ref=e151]:
+        - text: If you are a bit rusty at reading JSON,
+        - link "here's a good reference" [ref=e152] [cursor=pointer]:
+          - /url: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON
+        - text: .
+      - heading "Example manifest" [level=2] [ref=e153]:
+        - text: Example manifest
+        - link [ref=e155] [cursor=pointer]:
+          - /url: "#example-manifest"
+          - img [ref=e156]
+      - separator [ref=e158]
+      - generic [ref=e160]:
+        - button "Copy" [ref=e161] [cursor=pointer]
+        - textbox [ref=e162]: "{ \"manifestVersion\": 4, \"id\": \"YOUR_ID_HERE\", \"name\": \"Name of your plugin\", \"version\": \"1.0.0\", \"main\": \"index.html\", \"host\": { \"app\": \"PS\", \"minVersion\": \"22.0.0\" }, \"entrypoints\": [ { \"type\": \"command\", \"id\": \"commandFn\", \"label\": { \"default\": \"Show A Dialog\" } }, { \"type\": \"panel\", \"id\": \"panelName\", \"label\": { \"default\": \"Panel Name\" }, \"minimumSize\": {\"width\": 230, \"height\": 200}, \"maximumSize\": {\"width\": 2000, \"height\": 2000}, \"preferredDockedSize\": {\"width\": 230, \"height\": 300}, \"preferredFloatingSize\": {\"width\": 230, \"height\": 300}, \"icons\": [ {\"width\":23,\"height\":23,\"path\":\"icons/dark.png\",\"scale\":[1,2],\"theme\":[\"darkest\",\"dark\",\"medium\"]}, {\"width\":23,\"height\":23,\"path\":\"icons/light.png\",\"scale\":[1,2],\"theme\":[\"lightest\",\"light\"]} ] } ], \"icons\": [ { \"width\": 23, \"height\": 23, \"path\": \"icons/icon_D.png\", \"scale\": [ 1, 2 ], \"theme\": [ \"dark\", \"darkest\" ], \"species\": [ \"generic\" ] }, { \"width\": 23, \"height\": 23, \"path\": \"icons/icon_N.png\", \"scale\": [ 1, 2 ], \"theme\": [ \"lightest\", \"light\" ], \"species\": [ \"generic\" ] } ] }"
+        - generic [ref=e163]:
+          - generic [ref=e164]:
+            - generic [ref=e165]: "1"
+            - generic [ref=e166]: "{"
+          - generic [ref=e167]:
+            - generic [ref=e168]: "2"
+            - generic [ref=e169]: "\"manifestVersion\": 4,"
+          - generic [ref=e170]:
+            - generic [ref=e171]: "3"
+            - generic [ref=e172]: "\"id\": \"YOUR_ID_HERE\","
+          - generic [ref=e173]:
+            - generic [ref=e174]: "4"
+            - generic [ref=e175]: "\"name\": \"Name of your plugin\","
+          - generic [ref=e176]:
+            - generic [ref=e177]: "5"
+            - generic [ref=e178]: "\"version\": \"1.0.0\","
+          - generic [ref=e179]:
+            - generic [ref=e180]: "6"
+            - generic [ref=e181]: "\"main\": \"index.html\","
+          - generic [ref=e182]:
+            - generic [ref=e183]: "7"
+            - generic [ref=e184]: "\"host\": {"
+          - generic [ref=e185]:
+            - generic [ref=e186]: "8"
+            - generic [ref=e187]: "\"app\": \"PS\","
+          - generic [ref=e188]:
+            - generic [ref=e189]: "9"
+            - generic [ref=e190]: "\"minVersion\": \"22.0.0\""
+          - generic [ref=e191]:
+            - generic [ref=e192]: "10"
+            - generic [ref=e193]: "},"
+          - generic [ref=e194]:
+            - generic [ref=e195]: "11"
+            - generic [ref=e196]: "\"entrypoints\": ["
+          - generic [ref=e197]:
+            - generic [ref=e198]: "12"
+            - generic [ref=e199]: "{"
+          - generic [ref=e200]:
+            - generic [ref=e201]: "13"
+            - generic [ref=e202]: "\"type\": \"command\","
+          - generic [ref=e203]:
+            - generic [ref=e204]: "14"
+            - generic [ref=e205]: "\"id\": \"commandFn\","
+          - generic [ref=e206]:
+            - generic [ref=e207]: "15"
+            - generic [ref=e208]: "\"label\": {"
+          - generic [ref=e209]:
+            - generic [ref=e210]: "16"
+            - generic [ref=e211]: "\"default\": \"Show A Dialog\""
+          - generic [ref=e212]:
+            - generic [ref=e213]: "17"
+            - generic [ref=e214]: "}"
+          - generic [ref=e215]:
+            - generic [ref=e216]: "18"
+            - generic [ref=e217]: "},"
+          - generic [ref=e218]:
+            - generic [ref=e219]: "19"
+            - generic [ref=e220]: "{"
+          - generic [ref=e221]:
+            - generic [ref=e222]: "20"
+            - generic [ref=e223]: "\"type\": \"panel\","
+          - generic [ref=e224]:
+            - generic [ref=e225]: "21"
+            - generic [ref=e226]: "\"id\": \"panelName\","
+          - generic [ref=e227]:
+            - generic [ref=e228]: "22"
+            - generic [ref=e229]: "\"label\": {"
+          - generic [ref=e230]:
+            - generic [ref=e231]: "23"
+            - generic [ref=e232]: "\"default\": \"Panel Name\""
+          - generic [ref=e233]:
+            - generic [ref=e234]: "24"
+            - generic [ref=e235]: "},"
+          - generic [ref=e236]:
+            - generic [ref=e237]: "25"
+            - generic [ref=e238]: "\"minimumSize\": {\"width\": 230, \"height\": 200},"
+          - generic [ref=e239]:
+            - generic [ref=e240]: "26"
+            - generic [ref=e241]: "\"maximumSize\": {\"width\": 2000, \"height\": 2000},"
+          - generic [ref=e242]:
+            - generic [ref=e243]: "27"
+            - generic [ref=e244]: "\"preferredDockedSize\": {\"width\": 230, \"height\": 300},"
+          - generic [ref=e245]:
+            - generic [ref=e246]: "28"
+            - generic [ref=e247]: "\"preferredFloatingSize\": {\"width\": 230, \"height\": 300},"
+          - generic [ref=e248]:
+            - generic [ref=e249]: "29"
+            - generic [ref=e250]: "\"icons\": ["
+          - generic [ref=e251]:
+            - generic [ref=e252]: "30"
+            - generic [ref=e253]: "{\"width\":23,\"height\":23,\"path\":\"icons/dark.png\",\"scale\":[1,2],\"theme\":[\"darkest\",\"dark\",\"medium\"]},"
+          - generic [ref=e254]:
+            - generic [ref=e255]: "31"
+            - generic [ref=e256]: "{\"width\":23,\"height\":23,\"path\":\"icons/light.png\",\"scale\":[1,2],\"theme\":[\"lightest\",\"light\"]}"
+          - generic [ref=e257]:
+            - generic [ref=e258]: "32"
+            - generic [ref=e259]: "]"
+          - generic [ref=e260]:
+            - generic [ref=e261]: "33"
+            - generic [ref=e262]: "}"
+          - generic [ref=e263]:
+            - generic [ref=e264]: "34"
+            - generic [ref=e265]: "],"
+          - generic [ref=e266]:
+            - generic [ref=e267]: "35"
+            - generic [ref=e268]: "\"icons\": ["
+          - generic [ref=e269]:
+            - generic [ref=e270]: "36"
+            - generic [ref=e271]: "{ \"width\": 23, \"height\": 23, \"path\": \"icons/icon_D.png\", \"scale\": [ 1, 2 ], \"theme\": [ \"dark\", \"darkest\" ], \"species\": [ \"generic\" ] },"
+          - generic [ref=e272]:
+            - generic [ref=e273]: "37"
+            - generic [ref=e274]: "{ \"width\": 23, \"height\": 23, \"path\": \"icons/icon_N.png\", \"scale\": [ 1, 2 ], \"theme\": [ \"lightest\", \"light\" ], \"species\": [ \"generic\" ] }"
+          - generic [ref=e275]:
+            - generic [ref=e276]: "38"
+            - generic [ref=e277]: "]"
+          - generic [ref=e278]:
+            - generic [ref=e279]: "39"
+            - generic [ref=e280]: "}"
+      - paragraph [ref=e281]: See the sections below to learn more about each key/value field. All fields are required unless otherwise noted below.
+      - heading "Top-level metadata" [level=2] [ref=e282]:
+        - text: Top-level metadata
+        - link [ref=e284] [cursor=pointer]:
+          - /url: "#top-level-metadata"
+          - img [ref=e285]
+      - separator [ref=e287]
+      - paragraph [ref=e288]: The top level of the manifest JSON object contains high-level information about your plugin.
+      - paragraph [ref=e289]: "Here are the definitions of the keywords in the \"Required\" column:"
+      - list [ref=e290]:
+        - listitem [ref=e291]: Develop - required field for the plugin to be loaded.
+        - listitem [ref=e292]: Publish - required field for plugins to be submitted in the Adobe Developer Console and published in the Plugin Manager.
+      - table [ref=e293]:
+        - rowgroup [ref=e294]:
+          - row "Key path Type Description Required" [ref=e295]:
+            - columnheader "Key path" [ref=e296]
+            - columnheader "Type" [ref=e297]
+            - columnheader "Description" [ref=e298]
+            - columnheader "Required" [ref=e299]
+        - rowgroup [ref=e300]:
+          - row "manifestVersion number The version of the manifest. For Photoshop, this should be 4 or higher. Develop / Publish" [ref=e301]:
+            - cell "manifestVersion" [ref=e302]:
+              - code [ref=e304]: manifestVersion
+            - cell "number" [ref=e305]:
+              - code [ref=e307]: number
+            - cell "The version of the manifest. For Photoshop, this should be 4 or higher." [ref=e308]:
+              - generic [ref=e309]:
+                - text: The version of the manifest. For Photoshop, this should be
+                - code [ref=e310]: "4"
+                - text: or higher.
+            - cell "Develop / Publish" [ref=e311]:
+              - generic [ref=e312]: Develop / Publish
+          - row "id string Unique identifier for your plugin. You can get your unique ID on the Adobe Developer Console.%7C Develop / Publish" [ref=e313]:
+            - cell "id" [ref=e314]:
+              - code [ref=e316]: id
+            - cell "string" [ref=e317]:
+              - code [ref=e319]: string
+            - cell "Unique identifier for your plugin. You can get your unique ID on the Adobe Developer Console.%7C Develop / Publish" [ref=e320]:
+              - generic [ref=e321]:
+                - text: Unique identifier for your plugin. You can get your unique ID on the
+                - link "Adobe Developer Console" [ref=e322] [cursor=pointer]:
+                  - /url: https://console.adobe.io/projects
+                - text: .%7C Develop / Publish
+            - cell [ref=e323]
+          - row "name string The name should be 3 - 45 characters. We recommend your plugin name matches the project name you created when getting your plugin ID from the Adobe Developer Console. Develop / Publish" [ref=e324]:
+            - cell "name" [ref=e325]:
+              - code [ref=e327]: name
+            - cell "string" [ref=e328]:
+              - code [ref=e330]: string
+            - cell "The name should be 3 - 45 characters. We recommend your plugin name matches the project name you created when getting your plugin ID from the Adobe Developer Console." [ref=e331]:
+              - generic [ref=e332]:
+                - text: The name should be 3 - 45 characters. We recommend your plugin name matches the
+                - emphasis [ref=e333]: project name
+                - text: you created when getting your plugin ID from the Adobe Developer Console.
+            - cell "Develop / Publish" [ref=e334]:
+              - generic [ref=e335]: Develop / Publish
+          - row "version string Version number of your plugin in x.y.z format. Version must be three segments and each version component must be between 0 and 99 . Develop / Publish" [ref=e336]:
+            - cell "version" [ref=e337]:
+              - code [ref=e339]: version
+            - cell "string" [ref=e340]:
+              - code [ref=e342]: string
+            - cell "Version number of your plugin in x.y.z format. Version must be three segments and each version component must be between 0 and 99 ." [ref=e343]:
+              - generic [ref=e344]:
+                - text: Version number of your plugin in
+                - code [ref=e345]: x.y.z
+                - text: format.
+                - text: Version must be three segments and each version component must be between
+                - code [ref=e346]: "0"
+                - text: and
+                - code [ref=e347]: "99"
+                - text: .
+            - cell "Develop / Publish" [ref=e348]:
+              - generic [ref=e349]: Develop / Publish
+          - row "main string Path to the your plugin initialization code. This can be a JavaScript file or an HTML file. Optional (defaults to main.js )" [ref=e350]:
+            - cell "main" [ref=e351]:
+              - code [ref=e353]: main
+            - cell "string" [ref=e354]:
+              - code [ref=e356]: string
+            - cell "Path to the your plugin initialization code. This can be a JavaScript file or an HTML file." [ref=e357]:
+              - generic [ref=e358]: Path to the your plugin initialization code. This can be a JavaScript file or an HTML file.
+            - cell "Optional (defaults to main.js )" [ref=e359]:
+              - generic [ref=e360]:
+                - text: Optional (defaults to
+                - code [ref=e361]: main.js
+                - text: )
+          - row "icons IconDefinition[] Icons for your plugin (which may be rendered in various contexts, such as the plugin panel) PNG, JPG/JPEG formats are supported and the max file size for each icon is 1MB. You should specify at least the 1x and 2x size. Icons for the Plugin Manager are uploaded directly via the Adobe Developer Console, not included within your plugin itself. See our \"Publishing your plugin\" guide to learn more. Publish" [ref=e362]:
+            - cell "icons" [ref=e363]:
+              - code [ref=e365]: icons
+            - cell "IconDefinition[]" [ref=e366]:
+              - code [ref=e368]: IconDefinition[]
+            - cell "Icons for your plugin (which may be rendered in various contexts, such as the plugin panel) PNG, JPG/JPEG formats are supported and the max file size for each icon is 1MB. You should specify at least the 1x and 2x size. Icons for the Plugin Manager are uploaded directly via the Adobe Developer Console, not included within your plugin itself. See our \"Publishing your plugin\" guide to learn more." [ref=e369]:
+              - generic [ref=e370]:
+                - text: Icons for your plugin (which may be rendered in various contexts, such as the plugin panel)
+                - text: PNG, JPG/JPEG formats are supported and the max file size for each icon is 1MB.
+                - text: You should specify at least the 1x and 2x size. Icons for the Plugin Manager are uploaded directly via the Adobe Developer Console, not included within your plugin itself. See our
+                - link "\"Publishing your plugin\" guide" [ref=e371] [cursor=pointer]:
+                  - /url: /photoshop/uxp/2021/distribution/packaging-your-plugin/
+                - text: to learn more.
+            - cell "Publish" [ref=e372]:
+              - generic [ref=e373]: Publish
+          - 'row "host HostDefinition\\|HostDefinition[] Describes the supported applications that can be used with this plugin. This can include the type of application, the minimum required version, or the maximum version of the host app that the plugin supports. Note: An array can ONLY be used during development. A single definition will be needed when submitting to the marketplace Develop / Publish" [ref=e374]':
+            - cell "host" [ref=e375]:
+              - code [ref=e377]: host
+            - cell "HostDefinition\\|HostDefinition[]" [ref=e378]:
+              - code [ref=e380]: HostDefinition\|HostDefinition[]
+            - 'cell "Describes the supported applications that can be used with this plugin. This can include the type of application, the minimum required version, or the maximum version of the host app that the plugin supports. Note: An array can ONLY be used during development. A single definition will be needed when submitting to the marketplace" [ref=e381]':
+              - generic [ref=e382]:
+                - text: Describes the supported applications that can be used with this plugin. This can include the type of application, the minimum required version, or the maximum version of the host app that the plugin supports.
+                - strong [ref=e383]: "Note:"
+                - text: An array can ONLY be used during development. A single definition will be needed when submitting to the marketplace
+            - cell "Develop / Publish" [ref=e384]:
+              - generic [ref=e385]: Develop / Publish
+          - row "entryPoints EntryPointDefinition[] Describes the entries your plugin adds to the Plugins menu & plugin panel. See the next section for details. Develop / Publish" [ref=e386]:
+            - cell "entryPoints" [ref=e387]:
+              - code [ref=e389]: entryPoints
+            - cell "EntryPointDefinition[]" [ref=e390]:
+              - code [ref=e392]: EntryPointDefinition[]
+            - cell "Describes the entries your plugin adds to the Plugins menu & plugin panel. See the next section for details." [ref=e393]:
+              - generic [ref=e394]:
+                - text: Describes the entries your plugin adds to the
+                - emphasis [ref=e395]: Plugins
+                - text: menu & plugin panel. See the next section for details.
+            - cell "Develop / Publish" [ref=e396]:
+              - generic [ref=e397]: Develop / Publish
+      - heading "Icons" [level=2] [ref=e398]:
+        - text: Icons
+        - link [ref=e400] [cursor=pointer]:
+          - /url: "#icons"
+          - img [ref=e401]
+      - separator [ref=e403]
+      - paragraph [ref=e404]:
+        - text: Icons are not required during development, but
+        - emphasis [ref=e405]: must be provided
+        - text: when distributing through the Plugin Marketplace. The
+        - code [ref=e406]: icons
+        - text: field is an array of a
+        - code [ref=e407]: IconDefinition
+        - text: s.
+      - heading "IconDefinition" [level=3] [ref=e408]:
+        - text: IconDefinition
+        - link [ref=e410] [cursor=pointer]:
+          - /url: "#icondefinition"
+          - img [ref=e411]
+      - table [ref=e413]:
+        - rowgroup [ref=e414]:
+          - row "Key Type Description" [ref=e415]:
+            - columnheader "Key" [ref=e416]
+            - columnheader "Type" [ref=e417]
+            - columnheader "Description" [ref=e418]
+        - rowgroup [ref=e419]:
+          - row "width number Width in logical pixels" [ref=e420]:
+            - cell "width" [ref=e421]:
+              - code [ref=e423]: width
+            - cell "number" [ref=e424]:
+              - code [ref=e426]: number
+            - cell "Width in logical pixels" [ref=e427]:
+              - generic [ref=e428]: Width in logical pixels
+          - row "height number Height in logical pixels" [ref=e429]:
+            - cell "height" [ref=e430]:
+              - code [ref=e432]: height
+            - cell "number" [ref=e433]:
+              - code [ref=e435]: number
+            - cell "Height in logical pixels" [ref=e436]:
+              - generic [ref=e437]: Height in logical pixels
+          - row "path string Path to the icon (relative to the plugin root)" [ref=e438]:
+            - cell "path" [ref=e439]:
+              - code [ref=e441]: path
+            - cell "string" [ref=e442]:
+              - code [ref=e444]: string
+            - cell "Path to the icon (relative to the plugin root)" [ref=e445]:
+              - generic [ref=e446]: Path to the icon (relative to the plugin root)
+          - row "scale number[] Array of scales provided. For example, [1, 2] means that there is a @1x and @2x version of the icon specified at the path . (Densities other than 1x can be specified by adding @2x before the icon's extension)" [ref=e447]:
+            - cell "scale" [ref=e448]:
+              - code [ref=e450]: scale
+            - cell "number[]" [ref=e451]:
+              - code [ref=e453]: number[]
+            - cell "Array of scales provided. For example, [1, 2] means that there is a @1x and @2x version of the icon specified at the path . (Densities other than 1x can be specified by adding @2x before the icon's extension)" [ref=e454]:
+              - generic [ref=e455]:
+                - text: Array of scales provided. For example,
+                - code [ref=e456]: "[1, 2]"
+                - text: means that there is a
+                - code [ref=e457]: "@1x"
+                - text: and
+                - code [ref=e458]: "@2x"
+                - text: version of the icon specified at the
+                - code [ref=e459]: path
+                - text: . (Densities other than
+                - code [ref=e460]: 1x
+                - text: can be specified by adding
+                - code [ref=e461]: "@2x"
+                - text: before the icon's extension)
+          - row "theme string[] Array of themes this icon supports. Photoshop supports lightest , light , dark , and darkest . If all themes are compatible with the icon, you can use all . (Default is all )." [ref=e462]:
+            - cell "theme" [ref=e463]:
+              - code [ref=e465]: theme
+            - cell "string[]" [ref=e466]:
+              - code [ref=e468]: string[]
+            - cell "Array of themes this icon supports. Photoshop supports lightest , light , dark , and darkest . If all themes are compatible with the icon, you can use all . (Default is all )." [ref=e469]:
+              - generic [ref=e470]:
+                - text: Array of themes this icon supports. Photoshop supports
+                - code [ref=e471]: lightest
+                - text: ","
+                - code [ref=e472]: light
+                - text: ","
+                - code [ref=e473]: dark
+                - text: ", and"
+                - code [ref=e474]: darkest
+                - text: . If all themes are compatible with the icon, you can use
+                - code [ref=e475]: all
+                - text: . (Default is
+                - code [ref=e476]: all
+                - text: ).
+          - row "species string[] Identifies the type of icon and where it would make sense to display it. The default is generic , meaning that Photoshop is free to use this icon anywhere." [ref=e477]:
+            - cell "species" [ref=e478]:
+              - code [ref=e480]: species
+            - cell "string[]" [ref=e481]:
+              - code [ref=e483]: string[]
+            - cell "Identifies the type of icon and where it would make sense to display it. The default is generic , meaning that Photoshop is free to use this icon anywhere." [ref=e484]:
+              - generic [ref=e485]:
+                - text: Identifies the type of icon and where it would make sense to display it. The default is
+                - code [ref=e486]: generic
+                - text: ", meaning that Photoshop is free to use this icon anywhere."
+      - heading "Host" [level=2] [ref=e487]:
+        - text: Host
+        - link [ref=e489] [cursor=pointer]:
+          - /url: "#host"
+          - img [ref=e490]
+      - separator [ref=e492]
+      - paragraph [ref=e493]:
+        - text: The
+        - code [ref=e494]: host
+        - text: field is an
+        - emphasis [ref=e495]: object
+        - text: matching the
+        - code [ref=e496]: HostDefinition
+        - text: format specified below. This entry allows your plugin to specify which app your plugin can run on such as Adobe XD or Photoshop. During development, the field can contain an
+        - emphasis [ref=e497]: array
+        - text: of HostDefinition's. This can be very convient during development of cross-compatible UXP plugins. However, during submission to the marketplace, only one HostDefinition is allowed.
+      - heading "HostDefinition" [level=3] [ref=e498]:
+        - text: HostDefinition
+        - link [ref=e500] [cursor=pointer]:
+          - /url: "#hostdefinition"
+          - img [ref=e501]
+      - table [ref=e503]:
+        - rowgroup [ref=e504]:
+          - row "Key Type Description Required" [ref=e505]:
+            - columnheader "Key" [ref=e506]
+            - columnheader "Type" [ref=e507]
+            - columnheader "Description" [ref=e508]
+            - columnheader "Required" [ref=e509]
+        - rowgroup [ref=e510]:
+          - row "app string Indicates the supported application for this plugin (currently, the only valid values here are \"XD\" and \"PS\" ). Develop / Publish" [ref=e511]:
+            - cell "app" [ref=e512]:
+              - code [ref=e514]: app
+            - cell "string" [ref=e515]:
+              - code [ref=e517]: string
+            - cell "Indicates the supported application for this plugin (currently, the only valid values here are \"XD\" and \"PS\" )." [ref=e518]:
+              - generic [ref=e519]:
+                - text: Indicates the supported application for this plugin (currently, the only valid values here are
+                - code [ref=e520]: "\"XD\""
+                - text: and
+                - code [ref=e521]: "\"PS\""
+                - text: ).
+            - cell "Develop / Publish" [ref=e522]:
+              - generic [ref=e523]: Develop / Publish
+          - 'row "minVersion string Minimum required version of the host app (in x.y format) that can run this plugin. The lowest valid version for manifest V4 plugins is version 22.0 . Note: The version number must be at least two segments. Typically, you''ll leave the minor segment set to 0 , e.g. 22.0 . Develop / Publish" [ref=e524]':
+            - cell "minVersion" [ref=e525]:
+              - code [ref=e527]: minVersion
+            - cell "string" [ref=e528]:
+              - code [ref=e530]: string
+            - 'cell "Minimum required version of the host app (in x.y format) that can run this plugin. The lowest valid version for manifest V4 plugins is version 22.0 . Note: The version number must be at least two segments. Typically, you''ll leave the minor segment set to 0 , e.g. 22.0 ." [ref=e531]':
+              - generic [ref=e532]:
+                - text: Minimum required version of the host app (in
+                - code [ref=e533]: x.y
+                - text: format) that can run this plugin. The lowest valid version for manifest V4 plugins is version
+                - code [ref=e534]: "22.0"
+                - text: .
+                - strong [ref=e535]: "Note:"
+                - text: The version number must be at least two segments. Typically, you'll leave the minor segment set to
+                - code [ref=e536]: "0"
+                - text: ", e.g."
+                - code [ref=e537]: "22.0"
+                - text: .
+            - cell "Develop / Publish" [ref=e538]:
+              - generic [ref=e539]: Develop / Publish
+          - row "maxVersion string Maximum version of host app that can run this plugin. Same formatting as host.minVersion . Optional" [ref=e540]:
+            - cell "maxVersion" [ref=e541]:
+              - code [ref=e543]: maxVersion
+            - cell "string" [ref=e544]:
+              - code [ref=e546]: string
+            - cell "Maximum version of host app that can run this plugin. Same formatting as host.minVersion ." [ref=e547]:
+              - generic [ref=e548]:
+                - text: Maximum version of host app that can run this plugin. Same formatting as
+                - code [ref=e549]: host.minVersion
+                - text: .
+            - cell "Optional" [ref=e550]:
+              - generic [ref=e551]: Optional
+      - heading "Entry Points" [level=2] [ref=e552]:
+        - text: Entry Points
+        - link [ref=e554] [cursor=pointer]:
+          - /url: "#entry-points"
+          - img [ref=e555]
+      - separator [ref=e557]
+      - paragraph [ref=e558]:
+        - text: The
+        - code [ref=e559]: entryPoints
+        - text: field is an
+        - emphasis [ref=e560]: array
+        - text: of objects matching the
+        - code [ref=e561]: EntryPointDefinition
+        - text: format specified below. These entries appear both in the
+        - emphasis [ref=e562]: Plugins
+        - text: menu in the native menubar, and the plugin panel.
+      - paragraph [ref=e563]:
+        - text: Each entry point specifies a
+        - code [ref=e564]: type
+        - text: ", to create either a direct-action command or a panel show/hide command."
+      - heading "EntryPointDefinition" [level=3] [ref=e565]:
+        - text: EntryPointDefinition
+        - link [ref=e567] [cursor=pointer]:
+          - /url: "#entrypointdefinition"
+          - img [ref=e568]
+      - table [ref=e570]:
+        - rowgroup [ref=e571]:
+          - row "Key Type Description" [ref=e572]:
+            - columnheader "Key" [ref=e573]
+            - columnheader "Type" [ref=e574]
+            - columnheader "Description" [ref=e575]
+        - rowgroup [ref=e576]:
+          - 'row "type string Entry point type: either \"command\" or \"panel\" ." [ref=e577]':
+            - cell "type" [ref=e578]:
+              - code [ref=e580]: type
+            - cell "string" [ref=e581]:
+              - code [ref=e583]: string
+            - 'cell "Entry point type: either \"command\" or \"panel\" ." [ref=e584]':
+              - generic [ref=e585]:
+                - text: "Entry point type: either"
+                - code [ref=e586]: "\"command\""
+                - text: or
+                - code [ref=e587]: "\"panel\""
+                - text: .
+          - row "id string Unique identifier for the entry point. This id will also be mapped to entrypoints defined in your plugin code." [ref=e588]:
+            - cell "id" [ref=e589]:
+              - code [ref=e591]: id
+            - cell "string" [ref=e592]:
+              - code [ref=e594]: string
+            - cell "Unique identifier for the entry point. This id will also be mapped to entrypoints defined in your plugin code." [ref=e595]:
+              - generic [ref=e596]:
+                - text: Unique identifier for the entry point. This
+                - code [ref=e597]: id
+                - text: will also be mapped to entrypoints defined in your plugin code.
+          - row "label string Label for this menu item that the user will select to run your plugin. May be a single string or a dictionary of localized strings." [ref=e598]:
+            - cell "label" [ref=e599]:
+              - code [ref=e601]: label
+            - cell "string" [ref=e602]:
+              - code [ref=e604]: string
+            - cell "Label for this menu item that the user will select to run your plugin. May be a single string or a dictionary of localized strings." [ref=e605]:
+              - generic [ref=e606]:
+                - text: Label for this menu item that the user will select to run your plugin. May be a single string
+                - emphasis [ref=e607]: or
+                - text: a dictionary of localized strings.
+          - row "shortcut Object Optional. Object defining Mac and Windows keyboard shortcuts for this menu item. See \"Keyboard shortcuts\" below for details. Only valid for command entry points." [ref=e608]:
+            - cell "shortcut" [ref=e609]:
+              - code [ref=e611]: shortcut
+            - cell "Object" [ref=e612]:
+              - code [ref=e614]: Object
+            - cell "Optional. Object defining Mac and Windows keyboard shortcuts for this menu item. See \"Keyboard shortcuts\" below for details. Only valid for command entry points." [ref=e615]:
+              - generic [ref=e616]:
+                - emphasis [ref=e617]: Optional.
+                - text: Object defining Mac and Windows keyboard shortcuts for this menu item. See "Keyboard shortcuts" below for details. Only valid for
+                - code [ref=e618]: command
+                - text: entry points.
+          - 'row "minimumSize Object Optional. Valid only for panel entry points. Object defining the preferred minimum size of the panel. This object is of the form {width: number, height: number} where each length is in pixel units. The host app may not guarantee the minimum width depending upon context." [ref=e619]':
+            - cell "minimumSize" [ref=e620]:
+              - code [ref=e622]: minimumSize
+            - cell "Object" [ref=e623]:
+              - code [ref=e625]: Object
+            - 'cell "Optional. Valid only for panel entry points. Object defining the preferred minimum size of the panel. This object is of the form {width: number, height: number} where each length is in pixel units. The host app may not guarantee the minimum width depending upon context." [ref=e626]':
+              - generic [ref=e627]:
+                - emphasis [ref=e628]: Optional.
+                - text: Valid only for
+                - code [ref=e629]: panel
+                - text: entry points.
+                - text: Object defining the preferred minimum size of the panel. This object is of the form
+                - code [ref=e630]: "{width: number, height: number}"
+                - text: where each length is in pixel units. The host app may not guarantee the minimum width depending upon context.
+          - 'row "maximumSize Object Optional. Valid only for panel entry points. Object defining the preferred maximum size of the panel. This object is of the form {width: number, height: number} where each length is in pixel units. The host app may not guarantee the maximum width depending upon context." [ref=e631]':
+            - cell "maximumSize" [ref=e632]:
+              - code [ref=e634]: maximumSize
+            - cell "Object" [ref=e635]:
+              - code [ref=e637]: Object
+            - 'cell "Optional. Valid only for panel entry points. Object defining the preferred maximum size of the panel. This object is of the form {width: number, height: number} where each length is in pixel units. The host app may not guarantee the maximum width depending upon context." [ref=e638]':
+              - generic [ref=e639]:
+                - emphasis [ref=e640]: Optional.
+                - text: Valid only for
+                - code [ref=e641]: panel
+                - text: entry points.
+                - text: Object defining the preferred maximum size of the panel. This object is of the form
+                - code [ref=e642]: "{width: number, height: number}"
+                - text: where each length is in pixel units. The host app may not guarantee the maximum width depending upon context.
+          - 'row "preferredDockedSize Object Optional. Valid only for panel entry points. Object defining the preferred size of the panel when docked. This object is of the form {width: number, height: number} where each length is in pixel units. This setting is a preference, and may not be honored." [ref=e643]':
+            - cell "preferredDockedSize" [ref=e644]:
+              - code [ref=e646]: preferredDockedSize
+            - cell "Object" [ref=e647]:
+              - code [ref=e649]: Object
+            - 'cell "Optional. Valid only for panel entry points. Object defining the preferred size of the panel when docked. This object is of the form {width: number, height: number} where each length is in pixel units. This setting is a preference, and may not be honored." [ref=e650]':
+              - generic [ref=e651]:
+                - emphasis [ref=e652]: Optional.
+                - text: Valid only for
+                - code [ref=e653]: panel
+                - text: entry points.
+                - text: Object defining the preferred size of the panel when docked. This object is of the form
+                - code [ref=e654]: "{width: number, height: number}"
+                - text: where each length is in pixel units. This setting is a preference, and may not be honored.
+          - 'row "preferredFloatingSize Object Optional. Valid only for panel entry points. Object defining the preferred size of the panel when floating. This object is of the form {width: number, height: number} where each length is in pixel units. This setting is a preference, and may not be honored." [ref=e655]':
+            - cell "preferredFloatingSize" [ref=e656]:
+              - code [ref=e658]: preferredFloatingSize
+            - cell "Object" [ref=e659]:
+              - code [ref=e661]: Object
+            - 'cell "Optional. Valid only for panel entry points. Object defining the preferred size of the panel when floating. This object is of the form {width: number, height: number} where each length is in pixel units. This setting is a preference, and may not be honored." [ref=e662]':
+              - generic [ref=e663]:
+                - emphasis [ref=e664]: Optional.
+                - text: Valid only for
+                - code [ref=e665]: panel
+                - text: entry points.
+                - text: Object defining the preferred size of the panel when floating. This object is of the form
+                - code [ref=e666]: "{width: number, height: number}"
+                - text: where each length is in pixel units. This setting is a preference, and may not be honored.
+          - row "icons array<object> Icons for your panel. Each panel in a plugin requires its own set of icon set, which is shown in the toolbars when minimized, and has no additional treatment supplied. A panel icon is 23x23 (46x46) in size, and can be transparent. These are different from the icons in the main plugin. They are optional during development, but must be present in the manifest and the project if the plugin is submitted to the Plugin Marketplace via the Developer Console." [ref=e667]:
+            - cell "icons" [ref=e668]:
+              - code [ref=e670]: icons
+            - cell "array<object>" [ref=e671]:
+              - code [ref=e673]: array<object>
+            - cell "Icons for your panel. Each panel in a plugin requires its own set of icon set, which is shown in the toolbars when minimized, and has no additional treatment supplied. A panel icon is 23x23 (46x46) in size, and can be transparent. These are different from the icons in the main plugin. They are optional during development, but must be present in the manifest and the project if the plugin is submitted to the Plugin Marketplace via the Developer Console." [ref=e674]:
+              - generic [ref=e675]:
+                - text: Icons for your panel. Each panel in a plugin requires its own set of icon set, which is shown in the toolbars when minimized, and has no additional treatment supplied. A panel icon is 23x23 (46x46) in size, and can be transparent. These are different from the icons in the main plugin. They are optional during development, but
+                - emphasis [ref=e676]: must
+                - text: be present in the manifest and the project if the plugin is submitted to the Plugin Marketplace via the Developer Console.
+      - heading "Keyboard shortcuts" [level=3] [ref=e677]:
+        - text: Keyboard shortcuts
+        - link [ref=e679] [cursor=pointer]:
+          - /url: "#keyboard-shortcuts"
+          - img [ref=e680]
+      - blockquote [ref=e682]:
+        - paragraph [ref=e683]: Shortcuts are not yet available for plugins.
+      - heading "Menu Localization" [level=2] [ref=e684]:
+        - text: Menu Localization
+        - link [ref=e686] [cursor=pointer]:
+          - /url: "#menu-localization"
+          - img [ref=e687]
+      - separator [ref=e689]
+      - paragraph [ref=e690]:
+        - text: Plugin menu item labels or panel labels can be localized to match the host's current UI language setting. Other manifest fields such as
+        - code [ref=e691]: name
+        - emphasis [ref=e692]: cannot be localized yet.
+        - text: "Localized labels are represented as an object containing multiple translations, instead of a single string value:"
+      - generic [ref=e694]:
+        - button "Copy" [ref=e695] [cursor=pointer]
+        - textbox [ref=e696]: "\"label\": { \"default\": \"Menu Label\", \"fr\": \"Etiquette de Menu\", \"de\": \"Menübezeichnung\" }"
+        - generic [ref=e697]:
+          - generic [ref=e698]:
+            - generic [ref=e699]: "1"
+            - generic [ref=e700]: "\"label\": {"
+          - generic [ref=e701]:
+            - generic [ref=e702]: "2"
+            - generic [ref=e703]: "\"default\": \"Menu Label\","
+          - generic [ref=e704]:
+            - generic [ref=e705]: "3"
+            - generic [ref=e706]: "\"fr\": \"Etiquette de Menu\","
+          - generic [ref=e707]:
+            - generic [ref=e708]: "4"
+            - generic [ref=e709]: "\"de\": \"Menübezeichnung\""
+          - generic [ref=e710]:
+            - generic [ref=e711]: "5"
+            - generic [ref=e712]: "}"
+      - paragraph [ref=e713]: A default string is always required.
+      - heading "Inheritance and Overrides" [level=2] [ref=e714]:
+        - text: Inheritance and Overrides
+        - link [ref=e716] [cursor=pointer]:
+          - /url: "#inheritance-and-overrides"
+          - img [ref=e717]
+      - separator [ref=e719]
+      - paragraph [ref=e720]: Certain top-level fields can be overridden deeper in the manifest.
+      - list [ref=e721]:
+        - listitem [ref=e722]:
+          - code [ref=e723]: icons
+          - text: can be overridden for each panel's entry point.
+      - generic [ref=e725]:
+        - link "Other Topics »»" [ref=e727] [cursor=pointer]:
+          - /url: /photoshop/uxp/2021/guides/uxp_guide/uxp-misc/
+          - generic [ref=e728]:
+            - img
+            - generic [ref=e729]: Other Topics »»
+        - link "Localization and Platforms" [ref=e731] [cursor=pointer]:
+          - /url: /photoshop/uxp/2021/guides/uxp_guide/uxp-misc/localization-and-platforms/
+          - generic [ref=e732]:
+            - generic [ref=e733]: Localization and Platforms
+            - img
+      - generic [ref=e734]:
+        - link "Barkin Aygun Last updated 9/29/2021" [ref=e736] [cursor=pointer]:
+          - /url: https://github.com/AdobeDocs/uxp-photoshop-2021/commits/main/src/pages/guides/uxp_guide/uxp-misc/manifest-v4/index.md
+          - generic [ref=e737]:
+            - generic [ref=e740]:
+              - img "Barkin Aygun"
+            - generic [ref=e741]: Last updated 9/29/2021
+        - generic [ref=e743]:
+          - generic [ref=e744]: Was this helpful?
+          - generic [ref=e745]:
+            - button "Yes" [ref=e747] [cursor=pointer]:
+              - generic [ref=e748]: "Yes"
+            - button "No" [ref=e750] [cursor=pointer]:
+              - generic [ref=e751]: "No"
+    - generic [ref=e753]:
+      - generic [ref=e754]:
+        - generic [ref=e757]:
+          - heading "APIs and Services" [level=3] [ref=e758]
+          - list [ref=e759]:
+            - listitem [ref=e760]:
+              - link "Adobe Creative Cloud" [ref=e761] [cursor=pointer]:
+                - /url: /creative-cloud
+            - listitem [ref=e762]:
+              - link "Adobe Experience Platform" [ref=e763] [cursor=pointer]:
+                - /url: /experience-platform-apis
+            - listitem [ref=e764]:
+              - link "Adobe Document Cloud" [ref=e765] [cursor=pointer]:
+                - /url: /document-services/homepage
+            - listitem [ref=e766]:
+              - link "Adobe Cloud Manager" [ref=e767] [cursor=pointer]:
+                - /url: /experience-cloud/cloud-manager
+            - listitem [ref=e768]:
+              - link "Adobe Analytics" [ref=e769] [cursor=pointer]:
+                - /url: /analytics-apis/docs/2.0
+            - listitem [ref=e770]:
+              - link "App Builder" [ref=e771] [cursor=pointer]:
+                - /url: /app-builder
+            - listitem [ref=e772]:
+              - link "View all APIs and Services" [ref=e773] [cursor=pointer]:
+                - /url: /apis
+                - strong [ref=e774]: View all
+        - generic [ref=e775]:
+          - heading "Community" [level=3] [ref=e776]
+          - list [ref=e777]:
+            - listitem [ref=e778]:
+              - link "Adobe Tech Blog" [ref=e779] [cursor=pointer]:
+                - /url: https://medium.com/adobetech
+            - listitem [ref=e780]:
+              - link "Adobe on GitHub" [ref=e781] [cursor=pointer]:
+                - /url: https://github.com/adobe
+            - listitem [ref=e782]:
+              - link "Adobe Developer on YouTube" [ref=e783] [cursor=pointer]:
+                - /url: https://youtube.com/channel/UCDtYqOjS9Eq9gacLcbMwhhQ
+            - listitem [ref=e784]:
+              - link "Adobe Developer on X" [ref=e785] [cursor=pointer]:
+                - /url: https://twitter.com/adobedevs
+            - listitem [ref=e786]:
+              - link "Community Forums" [ref=e787] [cursor=pointer]:
+                - /url: https://community.adobe.com/
+        - generic [ref=e788]:
+          - heading "Support" [level=3] [ref=e789]
+          - list [ref=e790]:
+            - listitem [ref=e791]:
+              - link "Adobe Developer support" [ref=e792] [cursor=pointer]:
+                - /url: /developer-support
+            - listitem [ref=e793]:
+              - link "Adobe Product support" [ref=e794] [cursor=pointer]:
+                - /url: https://helpx.adobe.com/contact/enterprise-support.html
+        - generic [ref=e795]:
+          - heading "Adobe Developer" [level=3] [ref=e796]
+          - list [ref=e797]:
+            - listitem [ref=e798]:
+              - link "Adobe Developer Console" [ref=e799] [cursor=pointer]:
+                - /url: /developer-console
+            - listitem [ref=e800]:
+              - link "Developer Distribution" [ref=e801] [cursor=pointer]:
+                - /url: /developer-distribution/
+            - listitem [ref=e802]:
+              - link "Open source at Adobe" [ref=e803] [cursor=pointer]:
+                - /url: /open
+            - listitem [ref=e804]:
+              - link "Download SDKs" [ref=e805] [cursor=pointer]:
+                - /url: /console/downloads
+            - listitem [ref=e806]:
+              - link "Authentication" [ref=e807] [cursor=pointer]:
+                - /url: /developer-console/docs/guides/authentication
+            - listitem [ref=e808]:
+              - link "Careers" [ref=e809] [cursor=pointer]:
+                - /url: https://adobe.com/careers.html
+      - separator [ref=e810]
+      - generic [ref=e811]:
+        - list [ref=e813]:
+          - listitem [ref=e814]:
+            - link "Privacy" [ref=e815] [cursor=pointer]:
+              - /url: https://adobe.com/privacy.html
+          - listitem [ref=e816]:
+            - link "Terms of Use" [ref=e817] [cursor=pointer]:
+              - /url: https://adobe.com/legal/terms.html
+          - listitem [ref=e818]:
+            - link "Cookie preferences" [ref=e819] [cursor=pointer]:
+              - /url: "#/"
+          - listitem [ref=e820]:
+            - link "Do not sell or share my personal information" [ref=e821] [cursor=pointer]:
+              - /url: https://adobe.com/privacy/us-rights.html
+          - listitem [ref=e822]:
+            - img [ref=e823]
+            - link "AdChoices" [ref=e826] [cursor=pointer]:
+              - /url: https://adobe.com/privacy/opt-out.html#interest-based-ads
+        - generic [ref=e828]: Copyright © 2026 Adobe. All rights reserved.

@@ -1,0 +1,1000 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic "Skip navigation links":
+      - generic:
+        - link "Skip to last reply" [ref=e4] [cursor=pointer]:
+          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/19
+        - link "Skip to top" [ref=e5] [cursor=pointer]:
+          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/1
+      - link "Skip to main content" [ref=e6] [cursor=pointer]:
+        - /url: "#main-container"
+    - generic [ref=e11]:
+      - button "Sidebar" [expanded] [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+      - link "Adobe Creative Cloud Developer Forums" [ref=e17] [cursor=pointer]:
+        - /url: /
+        - img "Adobe Creative Cloud Developer Forums" [ref=e18]
+      - navigation "Header" [ref=e19]:
+        - generic [ref=e21]:
+          - button "Sign Up" [ref=e22] [cursor=pointer]:
+            - generic [ref=e23]: Sign Up
+          - button "Log In" [ref=e24] [cursor=pointer]:
+            - img [ref=e25]
+            - generic [ref=e26]: Log In
+        - list [ref=e27]:
+          - listitem [ref=e28]:
+            - button "Search" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+    - main [ref=e31]:
+      - navigation "Sidebar" [ref=e33]:
+        - generic [ref=e34]:
+          - list [ref=e37]:
+            - listitem [ref=e38]:
+              - link "Topics" [ref=e39] [cursor=pointer]:
+                - /url: /latest
+                - img [ref=e41]
+                - generic [ref=e42]: Topics
+            - listitem [ref=e43]:
+              - link "Docs" [ref=e44] [cursor=pointer]:
+                - /url: /docs
+                - img [ref=e46]
+                - generic [ref=e47]: Docs
+            - listitem [ref=e48]:
+              - button "More" [ref=e49] [cursor=pointer]:
+                - img [ref=e51]
+                - generic [ref=e52]: More
+          - generic [ref=e53]:
+            - button "Categories" [expanded] [ref=e55] [cursor=pointer]:
+              - img [ref=e57]
+              - generic [ref=e58]: Categories
+            - list [ref=e59]:
+              - listitem [ref=e60]:
+                - link "Introductions" [ref=e61] [cursor=pointer]:
+                  - /url: /c/intros/23
+                  - generic [ref=e64]: Introductions
+              - listitem [ref=e65]:
+                - link "Events" [ref=e66] [cursor=pointer]:
+                  - /url: /c/events/70
+                  - generic [ref=e69]: Events
+              - listitem [ref=e70]:
+                - link "InDesign" [ref=e71] [cursor=pointer]:
+                  - /url: /c/indesign/72
+                  - generic [ref=e74]: InDesign
+              - listitem [ref=e75]:
+                - link "Photoshop" [ref=e76] [cursor=pointer]:
+                  - /url: /c/photoshop/63
+                  - generic [ref=e79]: Photoshop
+              - listitem [ref=e80]:
+                - link "Plugin Marketplace" [ref=e81] [cursor=pointer]:
+                  - /url: /c/plugin-marketplace/66
+                  - generic [ref=e84]: Plugin Marketplace
+              - listitem [ref=e85]:
+                - link "UXP Developer Tool" [ref=e86] [cursor=pointer]:
+                  - /url: /c/uxp-developer-tool/65
+                  - generic [ref=e89]: UXP Developer Tool
+              - listitem [ref=e90]:
+                - link "Forum Feedback" [ref=e91] [cursor=pointer]:
+                  - /url: /c/forum-feedback/3
+                  - generic [ref=e94]: Forum Feedback
+              - listitem [ref=e95]:
+                - link "All categories" [ref=e96] [cursor=pointer]:
+                  - /url: /categories
+                  - img [ref=e98]
+                  - generic [ref=e99]: All categories
+          - generic [ref=e100]:
+            - button "Tags" [expanded] [ref=e102] [cursor=pointer]:
+              - img [ref=e104]
+              - generic [ref=e105]: Tags
+            - list [ref=e106]:
+              - listitem [ref=e107]:
+                - link "uxp" [ref=e108] [cursor=pointer]:
+                  - /url: /tag/uxp/101
+                  - img [ref=e110]
+                  - generic [ref=e111]: uxp
+              - listitem [ref=e112]:
+                - link "javascript" [ref=e113] [cursor=pointer]:
+                  - /url: /tag/javascript/103
+                  - img [ref=e115]
+                  - generic [ref=e116]: javascript
+              - listitem [ref=e117]:
+                - link "api-feedback" [ref=e118] [cursor=pointer]:
+                  - /url: /tag/api-feedback/109
+                  - img [ref=e120]
+                  - generic [ref=e121]: api-feedback
+              - listitem [ref=e122]:
+                - link "bug" [ref=e123] [cursor=pointer]:
+                  - /url: /tag/bug/16
+                  - img [ref=e125]
+                  - generic [ref=e126]: bug
+              - listitem [ref=e127]:
+                - link "ui" [ref=e128] [cursor=pointer]:
+                  - /url: /tag/ui/5
+                  - img [ref=e130]
+                  - generic [ref=e131]: ui
+              - listitem [ref=e132]:
+                - link "All tags" [ref=e133] [cursor=pointer]:
+                  - /url: /tags
+                  - img [ref=e135]
+                  - generic [ref=e136]: All tags
+        - button "Keyboard Shortcuts" [ref=e140] [cursor=pointer]:
+          - img [ref=e141]
+      - generic [ref=e142]:
+        - generic [ref=e143]:
+          - generic [ref=e145]:
+            - heading "Is there a way to resize plugin window via JS?" [level=1] [ref=e146]:
+              - link "Is there a way to resize plugin window via JS?" [ref=e147] [cursor=pointer]:
+                - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633
+            - generic [ref=e148]:
+              - link "Photoshop" [ref=e149] [cursor=pointer]:
+                - /url: /c/photoshop/63
+                - generic "This is the parent category for Photoshop. There are sub-categories for each API:" [ref=e150]:
+                  - generic [ref=e151]: Photoshop
+              - link "UXP Plugin API" [ref=e152] [cursor=pointer]:
+                - /url: /c/photoshop/uxp-plugin-api/64
+                - generic [ref=e154]: UXP Plugin API
+          - generic [ref=e155]:
+            - generic [ref=e158]:
+              - button "899 views" [ref=e159] [cursor=pointer]:
+                - generic [ref=e160]: "899"
+                - generic [ref=e161]: views
+              - button "13 likes" [ref=e162] [cursor=pointer]:
+                - generic [ref=e163]: "13"
+                - generic [ref=e164]: likes
+              - button "1 link" [ref=e165] [cursor=pointer]:
+                - generic [ref=e166]: "1"
+                - generic [ref=e167]: link
+              - generic [ref=e168]:
+                - link "svumme's profile" [ref=e170] [cursor=pointer]:
+                  - /url: /u/svumme
+                  - img "carlo diamanti" [ref=e171]
+                - link "Karmalakas's profile" [ref=e173] [cursor=pointer]:
+                  - /url: /u/Karmalakas
+                  - img "Karmalakas" [ref=e174]
+                - link "PS-fxrios's profile" [ref=e176] [cursor=pointer]:
+                  - /url: /u/PS-fxrios
+                  - img "PS-fxrios" [ref=e177]
+                - link "indranil's profile" [ref=e179] [cursor=pointer]:
+                  - /url: /u/indranil
+                  - img "indranil" [ref=e180]
+                - link "photonic's profile" [ref=e182] [cursor=pointer]:
+                  - /url: /u/photonic
+                  - img "Mario OM" [ref=e183]
+            - generic [ref=e187]:
+              - link "Dec 2022" [ref=e189] [cursor=pointer]:
+                - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/1
+                - generic [ref=e190]: Dec 2022
+              - generic [ref=e194]:
+                - generic [ref=e195]: 1 / 19
+                - generic [ref=e196]: Dec 2022
+              - link "Jun 2024" [ref=e199] [cursor=pointer]:
+                - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/19
+                - generic [ref=e200]: Jun 2024
+            - generic [ref=e204]:
+              - generic [ref=e205]:
+                - heading "post by photonic on Dec 28, 2022" [level=2] [ref=e206]
+                - article "post by photonic on Dec 28, 2022" [ref=e207]:
+                  - generic [ref=e208]:
+                    - link "photonic's profile" [ref=e211] [cursor=pointer]:
+                      - /url: /u/photonic
+                    - generic [ref=e212]:
+                      - generic [ref=e213]:
+                        - link "photonic's profile" [ref=e216] [cursor=pointer]:
+                          - /url: /u/photonic
+                          - text: photonic
+                        - link "Dec 2022" [ref=e219] [cursor=pointer]:
+                          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633
+                      - generic [ref=e220]:
+                        - generic [ref=e221]:
+                          - paragraph [ref=e222]: I’m trying to find a way to resize my plugin window in UXP?
+                          - paragraph [ref=e223]: "With CEP I used to use:"
+                          - code [ref=e226]: csInterface.resizeContent(width, height);
+                          - paragraph [ref=e227]: Is there something similar in UXP?
+                          - paragraph [ref=e228]: Thanks!
+                          - paragraph [ref=e229]: Mario OM
+                        - group "Post actions" [ref=e230]:
+                          - generic [ref=e231]:
+                            - button "like this post" [ref=e233] [cursor=pointer]:
+                              - img [ref=e234]
+                            - button "copy a link to this post to clipboard" [ref=e235] [cursor=pointer]:
+                              - img [ref=e236]
+                          - generic:
+                            - list
+                  - generic [ref=e239]:
+                    - button "899 views" [ref=e240] [cursor=pointer]:
+                      - generic [ref=e241]: "899"
+                      - generic [ref=e242]: views
+                    - button "13 likes" [ref=e243] [cursor=pointer]:
+                      - generic [ref=e244]: "13"
+                      - generic [ref=e245]: likes
+                    - button "1 link" [ref=e246] [cursor=pointer]:
+                      - generic [ref=e247]: "1"
+                      - generic [ref=e248]: link
+                    - generic [ref=e249]:
+                      - link "svumme's profile" [ref=e251] [cursor=pointer]:
+                        - /url: /u/svumme
+                        - img "carlo diamanti" [ref=e252]
+                      - link "Karmalakas's profile" [ref=e254] [cursor=pointer]:
+                        - /url: /u/Karmalakas
+                        - img "Karmalakas" [ref=e255]
+                      - link "PS-fxrios's profile" [ref=e257] [cursor=pointer]:
+                        - /url: /u/PS-fxrios
+                        - img "PS-fxrios" [ref=e258]
+                      - link "indranil's profile" [ref=e260] [cursor=pointer]:
+                        - /url: /u/indranil
+                        - img "indranil" [ref=e261]
+                      - link "photonic's profile" [ref=e263] [cursor=pointer]:
+                        - /url: /u/photonic
+                        - img "Mario OM" [ref=e264]
+              - generic [ref=e265]:
+                - heading "post by Karmalakas on Dec 28, 2022" [level=2] [ref=e266]
+                - article "post by Karmalakas on Dec 28, 2022" [ref=e267]:
+                  - generic [ref=e268]:
+                    - link "Karmalakas's profile" [ref=e271] [cursor=pointer]:
+                      - /url: /u/karmalakas
+                    - generic [ref=e272]:
+                      - generic [ref=e273]:
+                        - link "Karmalakas's profile" [ref=e276] [cursor=pointer]:
+                          - /url: /u/karmalakas
+                          - text: Karmalakas
+                          - generic "This user is a moderator" [ref=e277]:
+                            - img [ref=e278]
+                        - link "Dec 2022" [ref=e281] [cursor=pointer]:
+                          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/2
+                      - generic [ref=e282]:
+                        - generic [ref=e283]:
+                          - paragraph [ref=e284]: It was already asked and it seems no update
+                          - generic [ref=e285] [cursor=pointer]:
+                            - link "Plugin resize via JS" [ref=e286]:
+                              - /url: http://forums.creativeclouddeveloper.com/t/plugin-resize-via-js/2834/2
+                            - link "UXP Plugin API" [ref=e287]:
+                              - /url: /c/photoshop/uxp-plugin-api/64
+                              - generic [ref=e289]: UXP Plugin API
+                            - button "Expand" [ref=e291]:
+                              - img [ref=e292]
+                          - blockquote [ref=e293]:
+                            - generic [ref=e294]: UXP does not currently have any mechanism for controlling the size of the panels dynamically.
+                        - group "Post actions" [ref=e295]:
+                          - generic [ref=e296]:
+                            - generic [ref=e297]:
+                              - button "1 person liked this post." [ref=e298] [cursor=pointer]: "1"
+                              - button "like this post" [ref=e299] [cursor=pointer]:
+                                - img [ref=e300]
+                            - button "copy a link to this post to clipboard" [ref=e301] [cursor=pointer]:
+                              - img [ref=e302]
+                          - generic:
+                            - list
+              - generic [ref=e303]:
+                - heading "post by photonic on Dec 29, 2022" [level=2] [ref=e304]
+                - article "post by photonic on Dec 29, 2022" [ref=e305]:
+                  - generic [ref=e306]:
+                    - link "photonic's profile" [ref=e309] [cursor=pointer]:
+                      - /url: /u/photonic
+                    - generic [ref=e310]:
+                      - generic [ref=e311]:
+                        - link "photonic's profile" [ref=e314] [cursor=pointer]:
+                          - /url: /u/photonic
+                          - text: photonic
+                        - link "Dec 2022" [ref=e317] [cursor=pointer]:
+                          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/3
+                      - generic [ref=e318]:
+                        - paragraph [ref=e320]: This is something that should be implemented.
+                        - group "Post actions" [ref=e321]:
+                          - generic [ref=e322]:
+                            - button "like this post" [ref=e324] [cursor=pointer]:
+                              - img [ref=e325]
+                            - button "copy a link to this post to clipboard" [ref=e326] [cursor=pointer]:
+                              - img [ref=e327]
+                          - generic:
+                            - list
+              - generic [ref=e330]: 1 year later
+              - generic [ref=e331]:
+                - heading "post by svumme on May 28, 2024" [level=2] [ref=e332]
+                - article "post by svumme on May 28, 2024" [ref=e333]:
+                  - generic [ref=e334]:
+                    - link "svumme's profile" [ref=e337] [cursor=pointer]:
+                      - /url: /u/svumme
+                    - generic [ref=e338]:
+                      - generic [ref=e339]:
+                        - link "svumme's profile" [ref=e342] [cursor=pointer]:
+                          - /url: /u/svumme
+                          - text: svumme
+                        - link "May 2024" [ref=e345] [cursor=pointer]:
+                          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/4
+                      - generic [ref=e346]:
+                        - paragraph [ref=e348]:
+                          - text: Hi
+                          - link "@indranil" [ref=e349] [cursor=pointer]:
+                            - /url: /u/indranil
+                          - text: ", Is there any plan to introduce the feature for dynamic resizing of panel windows via code in future versions of the UXP platform? This capability would be very useful for creating more flexible and adaptable interfaces."
+                        - group "Post actions" [ref=e350]:
+                          - button "This post has 1 reply" [ref=e351] [cursor=pointer]:
+                            - generic [ref=e352]: 1 Reply
+                            - img [ref=e353]
+                          - generic [ref=e354]:
+                            - button "like this post" [ref=e356] [cursor=pointer]:
+                              - img [ref=e357]
+                            - button "copy a link to this post to clipboard" [ref=e358] [cursor=pointer]:
+                              - img [ref=e359]
+                          - generic:
+                            - list
+              - generic [ref=e360]:
+                - heading "post by Karmalakas on May 28, 2024" [level=2] [ref=e361]
+                - article "post by Karmalakas on May 28, 2024" [ref=e362]:
+                  - generic [ref=e363]:
+                    - link "Karmalakas's profile" [ref=e366] [cursor=pointer]:
+                      - /url: /u/karmalakas
+                    - generic [ref=e367]:
+                      - generic [ref=e368]:
+                        - link "Karmalakas's profile" [ref=e371] [cursor=pointer]:
+                          - /url: /u/karmalakas
+                          - text: Karmalakas
+                          - generic "This user is a moderator" [ref=e372]:
+                            - img [ref=e373]
+                        - link "May 2024" [ref=e376] [cursor=pointer]:
+                          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/5
+                      - generic [ref=e377]:
+                        - paragraph [ref=e379]:
+                          - text: TBH, unless there’s an option to turn off auto-resize, I would not want this. Usually I dock panels somewhere and resize would create a mess
+                          - img ":confused:" [ref=e380]
+                        - group "Post actions" [ref=e381]:
+                          - generic [ref=e382]:
+                            - button "like this post" [ref=e384] [cursor=pointer]:
+                              - img [ref=e385]
+                            - button "copy a link to this post to clipboard" [ref=e386] [cursor=pointer]:
+                              - img [ref=e387]
+                          - generic:
+                            - list
+              - generic [ref=e388]:
+                - heading "post by svumme on May 28, 2024" [level=2] [ref=e389]
+                - article "post by svumme on May 28, 2024" [ref=e390]:
+                  - generic [ref=e391]:
+                    - link "svumme's profile" [ref=e394] [cursor=pointer]:
+                      - /url: /u/svumme
+                    - generic [ref=e395]:
+                      - generic [ref=e396]:
+                        - link "svumme's profile" [ref=e399] [cursor=pointer]:
+                          - /url: /u/svumme
+                          - text: svumme
+                        - link "May 2024" [ref=e402] [cursor=pointer]:
+                          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/6
+                      - generic [ref=e403]:
+                        - paragraph [ref=e405]:
+                          - text: hi
+                          - link "@Karmalakas" [ref=e406] [cursor=pointer]:
+                            - /url: /u/karmalakas
+                          - text: By dynamic, I mean the ability to programmatically change the dimensions of the panel.
+                        - group "Post actions" [ref=e407]:
+                          - generic [ref=e408]:
+                            - button "like this post" [ref=e410] [cursor=pointer]:
+                              - img [ref=e411]
+                            - button "copy a link to this post to clipboard" [ref=e412] [cursor=pointer]:
+                              - img [ref=e413]
+                          - generic:
+                            - list
+              - generic [ref=e414]:
+                - heading "post by Karmalakas on May 28, 2024" [level=2] [ref=e415]
+                - article "post by Karmalakas on May 28, 2024" [ref=e416]:
+                  - generic [ref=e417]:
+                    - link "Karmalakas's profile" [ref=e420] [cursor=pointer]:
+                      - /url: /u/karmalakas
+                    - generic [ref=e421]:
+                      - generic [ref=e422]:
+                        - link "Karmalakas's profile" [ref=e425] [cursor=pointer]:
+                          - /url: /u/karmalakas
+                          - text: Karmalakas
+                          - generic "This user is a moderator" [ref=e426]:
+                            - img [ref=e427]
+                        - link "May 2024" [ref=e430] [cursor=pointer]:
+                          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/7
+                      - generic [ref=e431]:
+                        - generic [ref=e432]:
+                          - generic [ref=e433] [cursor=pointer]:
+                            - text: "svumme:"
+                            - generic [ref=e434]:
+                              - button "Expand" [ref=e435]:
+                                - img [ref=e436]
+                              - link "go to the quoted post" [ref=e437]:
+                                - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/6
+                                - img [ref=e438]
+                          - blockquote [ref=e439]:
+                            - paragraph [ref=e441]: I mean the ability to programmatically change the dimensions of the panel
+                          - paragraph [ref=e442]:
+                            - text: Yes, I understand
+                            - img ":slight_smile:" [ref=e443]
+                            - text: When I dock the panel, I usually adjust the size manually to place it where and how I wish, to make my workflow comfortable and consistent. If panel would get resized depending on some of my actions (or worse - depending on some actions, that developer decides), that would ruin the layout I’ve set up, thus ruining my usual workflow to reach the panels. In these cases I don’t mind having scrollbars, but the size should not change.
+                          - paragraph [ref=e444]:
+                            - text: IMO, if panel requires a size change, maybe the design (not necessary visual) is flawed. Maybe there should be some dialog or maybe even a completely separate panel with different interface
+                            - img ":thinking:" [ref=e445]
+                          - paragraph [ref=e446]: I wonder what the use cases would be for actually justifiable panel size change without user actually changing the size manually
+                        - group "Post actions" [ref=e447]:
+                          - generic [ref=e448]:
+                            - button "like this post" [ref=e450] [cursor=pointer]:
+                              - img [ref=e451]
+                            - button "copy a link to this post to clipboard" [ref=e452] [cursor=pointer]:
+                              - img [ref=e453]
+                          - generic:
+                            - list
+              - generic [ref=e454]:
+                - heading "post by svumme on May 28, 2024" [level=2] [ref=e455]
+                - article "post by svumme on May 28, 2024" [ref=e456]:
+                  - generic [ref=e457]:
+                    - link "svumme's profile" [ref=e460] [cursor=pointer]:
+                      - /url: /u/svumme
+                    - generic [ref=e461]:
+                      - generic [ref=e462]:
+                        - link "svumme's profile" [ref=e465] [cursor=pointer]:
+                          - /url: /u/svumme
+                          - text: svumme
+                        - link "May 2024" [ref=e468] [cursor=pointer]:
+                          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/8
+                      - generic [ref=e469]:
+                        - paragraph [ref=e471]: I simply think it should be an additional feature so that if you don’t like it, you simply don’t use it and continue resizing your panel manually. I am creating widgets for color grading like curves, horizontal curves, vectorscope, etc. There are cases where I want to dynamically resize the panel to optimize space or to see them larger. Many software programs allow dynamic resizing of their panels.
+                        - group "Post actions" [ref=e472]:
+                          - button "This post has 2 replies" [ref=e473] [cursor=pointer]:
+                            - generic [ref=e474]: 2 Replies
+                            - img [ref=e475]
+                          - generic [ref=e476]:
+                            - generic [ref=e477]:
+                              - button "1 person liked this post." [ref=e478] [cursor=pointer]: "1"
+                              - button "like this post" [ref=e479] [cursor=pointer]:
+                                - img [ref=e480]
+                            - button "copy a link to this post to clipboard" [ref=e481] [cursor=pointer]:
+                              - img [ref=e482]
+                          - generic:
+                            - list
+              - generic [ref=e483]:
+                - heading "post by PS-fxrios on May 28, 2024" [level=2] [ref=e484]
+                - article "post by PS-fxrios on May 28, 2024" [ref=e485]:
+                  - generic [ref=e486]:
+                    - link "PS-fxrios's profile" [ref=e489] [cursor=pointer]:
+                      - /url: /u/ps-fxrios
+                    - generic [ref=e490]:
+                      - generic [ref=e491]:
+                        - link "PS-fxrios's profile" [ref=e494] [cursor=pointer]:
+                          - /url: /u/ps-fxrios
+                          - text: PS-fxrios
+                        - link "May 2024" [ref=e497] [cursor=pointer]:
+                          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/9
+                      - generic [ref=e498]:
+                        - generic [ref=e499]:
+                          - generic [ref=e500] [cursor=pointer]:
+                            - text: "svumme:"
+                            - generic [ref=e501]:
+                              - button "Expand" [ref=e502]:
+                                - img [ref=e503]
+                              - link "go to the quoted post" [ref=e504]:
+                                - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/8
+                                - img [ref=e505]
+                          - blockquote [ref=e506]:
+                            - paragraph [ref=e508]: redimensionar dinamicamente
+                          - paragraph [ref=e509]:
+                            - text: I would love to be able to also dynamically resize a Modal window with it open.
+                            - link "@svumme" [ref=e510] [cursor=pointer]:
+                              - /url: /u/svumme
+                            - text: this feature would be a great option.
+                        - group "Post actions" [ref=e511]:
+                          - generic [ref=e512]:
+                            - generic [ref=e513]:
+                              - button "1 person liked this post." [ref=e514] [cursor=pointer]: "1"
+                              - button "like this post" [ref=e515] [cursor=pointer]:
+                                - img [ref=e516]
+                            - button "copy a link to this post to clipboard" [ref=e517] [cursor=pointer]:
+                              - img [ref=e518]
+                          - generic:
+                            - list
+              - generic [ref=e519]:
+                - heading "post by Karmalakas on May 28, 2024" [level=2] [ref=e520]
+                - article "post by Karmalakas on May 28, 2024" [ref=e521]:
+                  - generic [ref=e522]:
+                    - link "Karmalakas's profile" [ref=e525] [cursor=pointer]:
+                      - /url: /u/karmalakas
+                    - generic [ref=e526]:
+                      - generic [ref=e527]:
+                        - link "Karmalakas's profile" [ref=e530] [cursor=pointer]:
+                          - /url: /u/karmalakas
+                          - text: Karmalakas
+                          - generic "This user is a moderator" [ref=e531]:
+                            - img [ref=e532]
+                        - link "May 2024" [ref=e535] [cursor=pointer]:
+                          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/10
+                      - generic [ref=e536]:
+                        - generic [ref=e537]:
+                          - generic [ref=e538] [cursor=pointer]:
+                            - text: "svumme:"
+                            - generic [ref=e539]:
+                              - button "Expand" [ref=e540]:
+                                - img [ref=e541]
+                              - link "go to the quoted post" [ref=e542]:
+                                - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/8
+                                - img [ref=e543]
+                          - blockquote [ref=e544]:
+                            - paragraph [ref=e546]: curves, horizontal curves, vectorscope
+                          - paragraph [ref=e547]: Oh, I would be interested in those, but I’d love to have them in separate panels freely resizeable so I could have curves and vectorscope open at the same time
+                        - group "Post actions" [ref=e548]:
+                          - generic [ref=e549]:
+                            - button "like this post" [ref=e551] [cursor=pointer]:
+                              - img [ref=e552]
+                            - button "copy a link to this post to clipboard" [ref=e553] [cursor=pointer]:
+                              - img [ref=e554]
+                          - generic:
+                            - list
+              - generic [ref=e555]:
+                - heading "post by indranil on May 30, 2024" [level=2] [ref=e556]
+                - article "post by indranil on May 30, 2024" [ref=e557]:
+                  - generic [ref=e558]:
+                    - generic [ref=e560]:
+                      - link "indranil's profile" [ref=e561] [cursor=pointer]:
+                        - /url: /u/indranil
+                      - generic "Adobe" [ref=e562]
+                    - generic [ref=e563]:
+                      - generic [ref=e564]:
+                        - generic [ref=e565]:
+                          - link "indranil's profile" [ref=e567] [cursor=pointer]:
+                            - /url: /u/indranil
+                            - text: indranil
+                          - link "Adobe" [ref=e569] [cursor=pointer]:
+                            - /url: /g/Adobe
+                        - generic [ref=e570]:
+                          - button "post edit history" [ref=e572] [cursor=pointer]:
+                            - img [ref=e573]
+                            - generic [ref=e574]: "1"
+                          - button "svumme svumme" [ref=e575] [cursor=pointer]:
+                            - img [ref=e576]
+                            - img "svumme" [ref=e577]
+                            - generic [ref=e578]: svumme
+                          - link "May 2024" [ref=e580] [cursor=pointer]:
+                            - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/11
+                      - generic [ref=e581]:
+                        - paragraph [ref=e583]:
+                          - text: Hello
+                          - link "@svumme" [ref=e584] [cursor=pointer]:
+                            - /url: /u/svumme
+                          - text: ", this feature is there in our backlog but not planned for this year. On a related note, would a resizable window/dialog work for your use case?"
+                        - group "Post actions" [ref=e585]:
+                          - button "This post has 2 replies" [ref=e586] [cursor=pointer]:
+                            - generic [ref=e587]: 2 Replies
+                            - img [ref=e588]
+                          - generic [ref=e589]:
+                            - generic [ref=e590]:
+                              - button "1 person liked this post." [ref=e591] [cursor=pointer]: "1"
+                              - button "like this post" [ref=e592] [cursor=pointer]:
+                                - img [ref=e593]
+                            - button "copy a link to this post to clipboard" [ref=e594] [cursor=pointer]:
+                              - img [ref=e595]
+                          - generic:
+                            - list
+              - generic [ref=e596]:
+                - heading "post by PS-fxrios on May 30, 2024" [level=2] [ref=e597]
+                - article "post by PS-fxrios on May 30, 2024" [ref=e598]:
+                  - generic [ref=e599]:
+                    - link "PS-fxrios's profile" [ref=e602] [cursor=pointer]:
+                      - /url: /u/ps-fxrios
+                    - generic [ref=e603]:
+                      - generic [ref=e604]:
+                        - link "PS-fxrios's profile" [ref=e607] [cursor=pointer]:
+                          - /url: /u/ps-fxrios
+                          - text: PS-fxrios
+                        - link "May 2024" [ref=e610] [cursor=pointer]:
+                          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/12
+                      - generic [ref=e611]:
+                        - paragraph [ref=e613]:
+                          - link "@indranil" [ref=e614] [cursor=pointer]:
+                            - /url: /u/indranil
+                          - text: Can a window/dialog box resize with a click event on it?If yes, could you please share the JS logic? I’m not sure, but I don’t think this is documented
+                        - group "Post actions" [ref=e615]:
+                          - button "This post has 1 reply" [ref=e616] [cursor=pointer]:
+                            - generic [ref=e617]: 1 Reply
+                            - img [ref=e618]
+                          - generic [ref=e619]:
+                            - button "like this post" [ref=e621] [cursor=pointer]:
+                              - img [ref=e622]
+                            - button "copy a link to this post to clipboard" [ref=e623] [cursor=pointer]:
+                              - img [ref=e624]
+                          - generic:
+                            - list
+              - generic [ref=e625]:
+                - heading "post by svumme on Jun 3, 2024" [level=2] [ref=e626]
+                - article "post by svumme on Jun 3, 2024" [ref=e627]:
+                  - generic [ref=e628]:
+                    - link "svumme's profile" [ref=e631] [cursor=pointer]:
+                      - /url: /u/svumme
+                    - generic [ref=e632]:
+                      - generic [ref=e633]:
+                        - link "svumme's profile" [ref=e636] [cursor=pointer]:
+                          - /url: /u/svumme
+                          - text: svumme
+                        - generic [ref=e637]:
+                          - button "indranil indranil" [ref=e638] [cursor=pointer]:
+                            - img [ref=e639]
+                            - img "indranil" [ref=e640]
+                            - generic [ref=e641]: indranil
+                          - link "Jun 2024" [ref=e643] [cursor=pointer]:
+                            - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/13
+                      - generic [ref=e644]:
+                        - paragraph [ref=e646]: Thank you for the response! Yes, but only if they are non-modal windows, in that case, they would be useful.
+                        - group "Post actions" [ref=e647]:
+                          - button "This post has 1 reply" [ref=e648] [cursor=pointer]:
+                            - generic [ref=e649]: 1 Reply
+                            - img [ref=e650]
+                          - generic [ref=e651]:
+                            - button "like this post" [ref=e653] [cursor=pointer]:
+                              - img [ref=e654]
+                            - button "copy a link to this post to clipboard" [ref=e655] [cursor=pointer]:
+                              - img [ref=e656]
+                          - generic:
+                            - list
+              - generic [ref=e657]:
+                - heading "post by indranil on Jun 7, 2024" [level=2] [ref=e658]
+                - article "post by indranil on Jun 7, 2024" [ref=e659]:
+                  - generic [ref=e660]:
+                    - generic [ref=e662]:
+                      - link "indranil's profile" [ref=e663] [cursor=pointer]:
+                        - /url: /u/indranil
+                      - generic "Adobe" [ref=e664]
+                    - generic [ref=e665]:
+                      - generic [ref=e666]:
+                        - generic [ref=e667]:
+                          - link "indranil's profile" [ref=e669] [cursor=pointer]:
+                            - /url: /u/indranil
+                            - text: indranil
+                          - link "Adobe" [ref=e671] [cursor=pointer]:
+                            - /url: /g/Adobe
+                        - generic [ref=e672]:
+                          - button "PS-fxrios PS-fxrios" [ref=e673] [cursor=pointer]:
+                            - img [ref=e674]
+                            - img "PS-fxrios" [ref=e675]
+                            - generic [ref=e676]: PS-fxrios
+                          - link "Jun 2024" [ref=e678] [cursor=pointer]:
+                            - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/14
+                      - generic [ref=e679]:
+                        - generic [ref=e680]:
+                          - paragraph [ref=e681]:
+                            - text: Unfortunately, the documentation of dialog options and overall dialogs is well…abysmal to be candid
+                            - img ":grimacing:" [ref=e682]
+                            - text: . We are working on updating the dialog documentation, it shall take some time but it
+                            - emphasis [ref=e683]: shall be done
+                            - text: . Here’s how you can try out a dialog that resizes upon clicking a button in it.
+                          - code [ref=e686]:
+                            - generic [ref=e687]:
+                              - generic [ref=e688]: <!DOCTYPE HTML>
+                              - generic [ref=e689]: <html>
+                              - generic [ref=e690]: <head>
+                              - generic [ref=e691]: <script src="main.js">
+                              - generic [ref=e692]: </script>
+                              - generic [ref=e693]: </head>
+                              - generic [ref=e694]: <body>
+                              - generic [ref=e695]: <button id="show-dialog">
+                              - text: Show dialog 3
+                              - generic [ref=e696]: </button>
+                              - generic [ref=e697]: </body>
+                              - generic [ref=e698]: </body>
+                              - generic [ref=e699]: </html>
+                          - paragraph [ref=e700]:
+                            - text: and in
+                            - code [ref=e701]: main.js
+                            - text: ":"
+                          - code [ref=e704]:
+                            - text: document.getElementById("show-dialog").addEventListener("click",
+                            - generic [ref=e705]: (e) =>
+                            - text: "{ const dialog = document.createElement(\"dialog\"); document.appendChild(dialog); const resizeButton = document.createElement(\"button\"); resizeButton.innerText = \"Click to resize\"; resizeButton.addEventListener(\"click\","
+                            - generic [ref=e706]: (e) =>
+                            - text: "{ // random size on every click dialog.resizeTo( Math.floor(Math.random() * 50) + 500, Math.floor(Math.random() * 50) + 500 ); }); dialog.appendChild(resizeButton); dialog.show({ \"size\": { \"width\": 300, \"height\": 500 } }); });"
+                        - group "Post actions" [ref=e707]:
+                          - button "This post has 1 reply" [ref=e708] [cursor=pointer]:
+                            - generic [ref=e709]: 1 Reply
+                            - img [ref=e710]
+                          - generic [ref=e711]:
+                            - generic [ref=e712]:
+                              - button "7 people liked this post." [ref=e713] [cursor=pointer]: "7"
+                              - button "like this post" [ref=e714] [cursor=pointer]:
+                                - img [ref=e715]
+                            - button "copy a link to this post to clipboard" [ref=e716] [cursor=pointer]:
+                              - img [ref=e717]
+                          - generic:
+                            - list
+              - generic [ref=e718]:
+                - heading "post by indranil on Jun 7, 2024" [level=2] [ref=e719]
+                - article "post by indranil on Jun 7, 2024" [ref=e720]:
+                  - generic [ref=e721]:
+                    - generic [ref=e723]:
+                      - link "indranil's profile" [ref=e724] [cursor=pointer]:
+                        - /url: /u/indranil
+                      - generic "Adobe" [ref=e725]
+                    - generic [ref=e726]:
+                      - generic [ref=e727]:
+                        - generic [ref=e728]:
+                          - link "indranil's profile" [ref=e730] [cursor=pointer]:
+                            - /url: /u/indranil
+                            - text: indranil
+                          - link "Adobe" [ref=e732] [cursor=pointer]:
+                            - /url: /g/Adobe
+                        - generic [ref=e733]:
+                          - button "svumme svumme" [ref=e734] [cursor=pointer]:
+                            - img [ref=e735]
+                            - img "svumme" [ref=e736]
+                            - generic [ref=e737]: svumme
+                          - link "Jun 2024" [ref=e739] [cursor=pointer]:
+                            - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/15
+                      - generic [ref=e740]:
+                        - paragraph [ref=e742]:
+                          - text: Yes, you can try my
+                          - link "above code snippet" [ref=e743] [cursor=pointer]:
+                            - /url: http://forums.creativeclouddeveloper.com/t/is-there-a-way-to-resize-plugin-window-via-js/5633/14
+                          - text: for a non-modal dialog to see if it suits your use case.
+                        - group "Post actions" [ref=e744]:
+                          - button "This post has 1 reply" [ref=e745] [cursor=pointer]:
+                            - generic [ref=e746]: 1 Reply
+                            - img [ref=e747]
+                          - generic [ref=e748]:
+                            - generic [ref=e749]:
+                              - button "1 person liked this post." [ref=e750] [cursor=pointer]: "1"
+                              - button "like this post" [ref=e751] [cursor=pointer]:
+                                - img [ref=e752]
+                            - button "copy a link to this post to clipboard" [ref=e753] [cursor=pointer]:
+                              - img [ref=e754]
+                          - generic:
+                            - list
+              - generic [ref=e755]:
+                - heading "post by PS-fxrios on Jun 7, 2024" [level=2] [ref=e756]
+                - article "post by PS-fxrios on Jun 7, 2024" [ref=e757]:
+                  - generic [ref=e758]:
+                    - link "PS-fxrios's profile" [ref=e761] [cursor=pointer]:
+                      - /url: /u/ps-fxrios
+                    - generic [ref=e762]:
+                      - generic [ref=e763]:
+                        - link "PS-fxrios's profile" [ref=e766] [cursor=pointer]:
+                          - /url: /u/ps-fxrios
+                          - text: PS-fxrios
+                        - generic [ref=e767]:
+                          - button "post edit history" [ref=e769] [cursor=pointer]:
+                            - img [ref=e770]
+                            - generic [ref=e771]: "1"
+                          - button "indranil indranil" [ref=e772] [cursor=pointer]:
+                            - img [ref=e773]
+                            - img "indranil" [ref=e774]
+                            - generic [ref=e775]: indranil
+                          - link "Jun 2024" [ref=e777] [cursor=pointer]:
+                            - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/16
+                      - generic [ref=e778]:
+                        - paragraph [ref=e780]:
+                          - text: Tested and approved, this works perfectly! Luckily this feature is already available in the API, it was just hidden, this is essential in my projects.
+                          - link "@indranil" [ref=e781] [cursor=pointer]:
+                            - /url: /u/indranil
+                          - text: "thanks for sharing, great support, and taking advantage of the fact that you have frequently visited this community, as soon as you can, visit this topic:"
+                          - 'link "Object: printOneCopy does not work from the UXP plugin" [ref=e782] [cursor=pointer]':
+                            - /url: http://forums.creativeclouddeveloper.com/t/object-printonecopy-does-not-work-from-the-uxp-plugin/7075
+                          - text: and inform us there about the implementation of this feature. Thanks.
+                        - group "Post actions" [ref=e783]:
+                          - button "This post has 1 reply" [ref=e784] [cursor=pointer]:
+                            - generic [ref=e785]: 1 Reply
+                            - img [ref=e786]
+                          - generic [ref=e787]:
+                            - button "like this post" [ref=e789] [cursor=pointer]:
+                              - img [ref=e790]
+                            - button "copy a link to this post to clipboard" [ref=e791] [cursor=pointer]:
+                              - img [ref=e792]
+                          - generic:
+                            - list
+              - generic [ref=e793]:
+                - heading "post by svumme on Jun 7, 2024" [level=2] [ref=e794]
+                - article "post by svumme on Jun 7, 2024" [ref=e795]:
+                  - generic [ref=e796]:
+                    - link "svumme's profile" [ref=e799] [cursor=pointer]:
+                      - /url: /u/svumme
+                    - generic [ref=e800]:
+                      - generic [ref=e801]:
+                        - link "svumme's profile" [ref=e804] [cursor=pointer]:
+                          - /url: /u/svumme
+                          - text: svumme
+                        - generic [ref=e805]:
+                          - button "indranil indranil" [ref=e806] [cursor=pointer]:
+                            - img [ref=e807]
+                            - img "indranil" [ref=e808]
+                            - generic [ref=e809]: indranil
+                          - link "Jun 2024" [ref=e811] [cursor=pointer]:
+                            - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/17
+                      - generic [ref=e812]:
+                        - paragraph [ref=e814]: That’s fantastic! Perfect for me, thank you so much!
+                        - group "Post actions" [ref=e815]:
+                          - generic [ref=e816]:
+                            - button "like this post" [ref=e818] [cursor=pointer]:
+                              - img [ref=e819]
+                            - button "copy a link to this post to clipboard" [ref=e820] [cursor=pointer]:
+                              - img [ref=e821]
+                          - generic:
+                            - list
+              - generic [ref=e824]: 10 days later
+              - generic [ref=e825]:
+                - heading "post by indranil on Jun 18, 2024" [level=2] [ref=e826]
+                - article "post by indranil on Jun 18, 2024" [ref=e827]:
+                  - generic [ref=e828]:
+                    - generic [ref=e830]:
+                      - link "indranil's profile" [ref=e831] [cursor=pointer]:
+                        - /url: /u/indranil
+                      - generic "Adobe" [ref=e832]
+                    - generic [ref=e833]:
+                      - generic [ref=e834]:
+                        - generic [ref=e835]:
+                          - link "indranil's profile" [ref=e837] [cursor=pointer]:
+                            - /url: /u/indranil
+                            - text: indranil
+                          - link "Adobe" [ref=e839] [cursor=pointer]:
+                            - /url: /g/Adobe
+                        - generic [ref=e840]:
+                          - button "PS-fxrios PS-fxrios" [ref=e841] [cursor=pointer]:
+                            - img [ref=e842]
+                            - img "PS-fxrios" [ref=e843]
+                            - generic [ref=e844]: PS-fxrios
+                          - link "Jun 2024" [ref=e846] [cursor=pointer]:
+                            - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/18
+                      - generic [ref=e847]:
+                        - paragraph [ref=e849]:
+                          - link "@PS-fxrios" [ref=e850] [cursor=pointer]:
+                            - /url: /u/ps-fxrios
+                          - text: I did check the
+                          - code [ref=e851]: print
+                          - text: related thread that you directed me to and that’s something that the Photoshop team would need to add in the PS DOM. Unfortunately, it’s not something that’s slated for this year.
+                        - group "Post actions" [ref=e852]:
+                          - generic [ref=e853]:
+                            - generic [ref=e854]:
+                              - button "1 person liked this post." [ref=e855] [cursor=pointer]: "1"
+                              - button "like this post" [ref=e856] [cursor=pointer]:
+                                - img [ref=e857]
+                            - button "copy a link to this post to clipboard" [ref=e858] [cursor=pointer]:
+                              - img [ref=e859]
+                          - generic:
+                            - list
+              - generic [ref=e860]:
+                - heading "post by PS-fxrios on Jun 18, 2024" [level=2] [ref=e861]
+                - article "post by PS-fxrios on Jun 18, 2024" [ref=e862]:
+                  - generic [ref=e863]:
+                    - link "PS-fxrios's profile" [ref=e866] [cursor=pointer]:
+                      - /url: /u/ps-fxrios
+                    - generic [ref=e867]:
+                      - generic [ref=e868]:
+                        - link "PS-fxrios's profile" [ref=e871] [cursor=pointer]:
+                          - /url: /u/ps-fxrios
+                          - text: PS-fxrios
+                        - link "Jun 2024" [ref=e874] [cursor=pointer]:
+                          - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/19
+                      - generic [ref=e875]:
+                        - paragraph [ref=e877]:
+                          - link "@indranil" [ref=e878] [cursor=pointer]:
+                            - /url: /u/indranil
+                          - text: thanks for responding to the complaint. I am improvising using atn actions for such print settings and run them via jsx in my UXP modal window.
+                        - group "Post actions" [ref=e879]:
+                          - generic [ref=e880]:
+                            - button "like this post" [ref=e882] [cursor=pointer]:
+                              - img [ref=e883]
+                            - button "copy a link to this post to clipboard" [ref=e884] [cursor=pointer]:
+                              - img [ref=e885]
+                          - generic:
+                            - list
+          - region [ref=e888]:
+            - button "Reply" [ref=e890] [cursor=pointer]:
+              - img [ref=e891]
+              - generic [ref=e892]: Reply
+          - complementary "Related topics" [ref=e895]:
+            - heading "Related topics" [level=3] [ref=e896]:
+              - img [ref=e897]
+              - text: Related topics
+            - table "Topic list, column headers with buttons are sortable." [ref=e901]:
+              - caption [ref=e902]: Topic list, column headers with buttons are sortable.
+              - rowgroup [ref=e903]:
+                - row "Topic Replies Views Activity" [ref=e904]:
+                  - columnheader "Topic" [ref=e905]:
+                    - generic [ref=e906]: Topic
+                  - columnheader "Replies" [ref=e907]:
+                    - generic [ref=e908]: Replies
+                  - columnheader "Views" [ref=e909]:
+                    - generic [ref=e910]: Views
+                  - columnheader "Activity" [ref=e911]:
+                    - generic [ref=e912]: Activity
+              - rowgroup [ref=e913]:
+                - row "Plugin resize via JS UXP Plugin API Tags 4 replies, jump to first post 730 May 2023" [ref=e914]:
+                  - cell "Plugin resize via JS UXP Plugin API Tags" [ref=e915]:
+                    - heading "Plugin resize via JS" [level=2] [ref=e916]:
+                      - link "Plugin resize via JS" [ref=e917] [cursor=pointer]:
+                        - /url: /t/plugin-resize-via-js/2834
+                    - generic [ref=e918]:
+                      - link "UXP Plugin API" [ref=e919] [cursor=pointer]:
+                        - /url: /c/photoshop/uxp-plugin-api/64
+                        - generic [ref=e921]: UXP Plugin API
+                      - list "Tags" [ref=e922]:
+                        - listitem [ref=e923]:
+                          - link "javascript" [ref=e924] [cursor=pointer]:
+                            - /url: /tag/javascript/103
+                  - cell "4 replies, jump to first post" [ref=e925]:
+                    - link "4 replies, jump to first post" [ref=e926] [cursor=pointer]:
+                      - /url: /t/plugin-resize-via-js/2834/1
+                      - text: "4"
+                  - cell "730" [ref=e927]
+                  - cell "May 2023" [ref=e928]:
+                    - link "May 2023" [ref=e929] [cursor=pointer]:
+                      - /url: /t/plugin-resize-via-js/2834/5
+                - row "Panel is resized when modal dialog is open UXP Plugin API Tags 10 replies, jump to first post 780 Nov 2019" [ref=e930]:
+                  - cell "Panel is resized when modal dialog is open UXP Plugin API Tags" [ref=e931]:
+                    - heading "Panel is resized when modal dialog is open" [level=2] [ref=e932]:
+                      - generic "This topic has a solution" [ref=e934]:
+                        - img [ref=e935]
+                      - link "Panel is resized when modal dialog is open" [ref=e936] [cursor=pointer]:
+                        - /url: /t/panel-is-resized-when-modal-dialog-is-open/1085
+                    - generic [ref=e937]:
+                      - link "UXP Plugin API" [ref=e938] [cursor=pointer]:
+                        - /url: /c/adobe-xd/xd/8
+                        - generic "This forum is for topics specific to XD, including plugin development, API feature requests, and bug reports." [ref=e939]:
+                          - generic [ref=e940]: UXP Plugin API
+                      - list "Tags" [ref=e941]:
+                        - listitem [ref=e942]:
+                          - link "api-feedback" [ref=e943] [cursor=pointer]:
+                            - /url: /tag/api-feedback/109
+                  - cell "10 replies, jump to first post" [ref=e944]:
+                    - link "10 replies, jump to first post" [ref=e945] [cursor=pointer]:
+                      - /url: /t/panel-is-resized-when-modal-dialog-is-open/1085/1
+                      - text: "10"
+                  - cell "780" [ref=e946]
+                  - cell "Nov 2019" [ref=e947]:
+                    - link "Nov 2019" [ref=e948] [cursor=pointer]:
+                      - /url: /t/panel-is-resized-when-modal-dialog-is-open/1085/11
+                - row "Get Plugin dimension on ready and resize event UXP Plugin API Tags 0 replies, jump to first post 358 Aug 2022" [ref=e949]:
+                  - cell "Get Plugin dimension on ready and resize event UXP Plugin API Tags" [ref=e950]:
+                    - heading "Get Plugin dimension on ready and resize event" [level=2] [ref=e951]:
+                      - link "Get Plugin dimension on ready and resize event" [ref=e952] [cursor=pointer]:
+                        - /url: /t/get-plugin-dimension-on-ready-and-resize-event/5130
+                    - generic [ref=e953]:
+                      - link "UXP Plugin API" [ref=e954] [cursor=pointer]:
+                        - /url: /c/photoshop/uxp-plugin-api/64
+                        - generic [ref=e956]: UXP Plugin API
+                      - list "Tags" [ref=e957]:
+                        - listitem [ref=e958]:
+                          - link "javascript" [ref=e959] [cursor=pointer]:
+                            - /url: /tag/javascript/103
+                  - cell "0 replies, jump to first post" [ref=e960]:
+                    - link "0 replies, jump to first post" [ref=e961] [cursor=pointer]:
+                      - /url: /t/get-plugin-dimension-on-ready-and-resize-event/5130/1
+                      - text: "0"
+                  - cell "358" [ref=e962]
+                  - cell "Aug 2022" [ref=e963]:
+                    - link "Aug 2022" [ref=e964] [cursor=pointer]:
+                      - /url: /t/get-plugin-dimension-on-ready-and-resize-event/5130/1
+                - row "Can dialogs size be changed dynamically now? UXP Plugin API Tags 2 replies, jump to first post 351 Oct 2019" [ref=e965]:
+                  - cell "Can dialogs size be changed dynamically now? UXP Plugin API Tags" [ref=e966]:
+                    - heading "Can dialogs size be changed dynamically now?" [level=2] [ref=e967]:
+                      - link "Can dialogs size be changed dynamically now?" [ref=e968] [cursor=pointer]:
+                        - /url: /t/can-dialogs-size-be-changed-dynamically-now/1319
+                    - generic [ref=e969]:
+                      - link "UXP Plugin API" [ref=e970] [cursor=pointer]:
+                        - /url: /c/adobe-xd/xd/8
+                        - generic "This forum is for topics specific to XD, including plugin development, API feature requests, and bug reports." [ref=e971]:
+                          - generic [ref=e972]: UXP Plugin API
+                      - list "Tags" [ref=e973]:
+                        - listitem [ref=e974]:
+                          - link "javascript" [ref=e975] [cursor=pointer]:
+                            - /url: /tag/javascript/103
+                  - cell "2 replies, jump to first post" [ref=e976]:
+                    - link "2 replies, jump to first post" [ref=e977] [cursor=pointer]:
+                      - /url: /t/can-dialogs-size-be-changed-dynamically-now/1319/1
+                      - text: "2"
+                  - cell "351" [ref=e978]
+                  - cell "Oct 2019" [ref=e979]:
+                    - link "Oct 2019" [ref=e980] [cursor=pointer]:
+                      - /url: /t/can-dialogs-size-be-changed-dynamically-now/1319/3
+                - row "SP-Dialog Size UXP Plugin API 1 reply, jump to first post 350 May 2022" [ref=e981]:
+                  - cell "SP-Dialog Size UXP Plugin API" [ref=e982]:
+                    - heading "SP-Dialog Size" [level=2] [ref=e983]:
+                      - link "SP-Dialog Size" [ref=e984] [cursor=pointer]:
+                        - /url: /t/sp-dialog-size/4702
+                    - link "UXP Plugin API" [ref=e986] [cursor=pointer]:
+                      - /url: /c/photoshop/uxp-plugin-api/64
+                      - generic [ref=e988]: UXP Plugin API
+                  - cell "1 reply, jump to first post" [ref=e989]:
+                    - link "1 reply, jump to first post" [ref=e990] [cursor=pointer]:
+                      - /url: /t/sp-dialog-size/4702/1
+                      - text: "1"
+                  - cell "350" [ref=e991]
+                  - cell "May 2022" [ref=e992]:
+                    - link "May 2022" [ref=e993] [cursor=pointer]:
+                      - /url: /t/sp-dialog-size/4702/2
+        - dialog "User card"
+  - status [ref=e994]
+  - alert [ref=e995]

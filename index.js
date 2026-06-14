@@ -13,8 +13,6 @@ const els = {
   docnote: document.getElementById("docnote"),
   preview: document.getElementById("preview"),
   expand: document.getElementById("expand"),
-  moreToggle: document.getElementById("moreToggle"),
-  more: document.getElementById("more"),
   fill: document.getElementById("fill"),
   fit: document.getElementById("fit"),
   resize: document.getElementById("resize")
@@ -253,10 +251,6 @@ buildPresets();
 
 els.refresh.addEventListener("click", readDoc);
 els.expand.addEventListener("click", expandCanvas);
-els.moreToggle.addEventListener("click", () => {
-  const hidden = els.more.classList.toggle("hidden");
-  els.moreToggle.textContent = hidden ? "More actions ▾" : "Fewer actions ▴";
-});
 els.resize.addEventListener("click", resizeExact);
 els.fill.addEventListener("click", () => scaleLayer(true));
 els.fit.addEventListener("click", () => scaleLayer(false));

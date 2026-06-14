@@ -1,0 +1,159 @@
+- generic [active] [ref=e1]:
+  - generic:
+    - generic:
+      - link "Skip to main content" [ref=e2] [cursor=pointer]
+      - link "Accessibility help" [ref=e3] [cursor=pointer]:
+        - /url: https://support.google.com/websearch/answer/181196?hl=en
+  - generic [ref=e8]:
+    - search [ref=e9]:
+      - generic [ref=e11]:
+        - generic:
+          - generic:
+            - generic:
+              - img
+        - 'link "World Cup 2026: The Art of the Rabona" [ref=e13] [cursor=pointer]':
+          - /url: https://www.google.com/webhp?hl=en&ictx=2&sa=X&ved=0ahUKEwiYwempzIWVAxUPpVYBHdjLGR4QPQgK
+          - 'img "World Cup 2026: The Art of the Rabona" [ref=e14]'
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - combobox "Search" [ref=e19]: "\"each length is in pixel units\" UXP manifest \"each length is in pixel units\" UXP manifest"
+            - generic [ref=e20]:
+              - button "Clear" [ref=e22] [cursor=pointer]:
+                - img [ref=e24]
+              - generic [ref=e27]:
+                - button "Search by voice" [ref=e28] [cursor=pointer]:
+                  - img [ref=e29]
+                - button "Search by image" [ref=e31] [cursor=pointer]:
+                  - img [ref=e32]
+          - button "Search" [ref=e34] [cursor=pointer]:
+            - img [ref=e37]
+    - generic [ref=e39]:
+      - button "Settings" [ref=e41] [cursor=pointer]:
+        - img [ref=e44]
+      - generic [ref=e47]:
+        - button "Google apps" [ref=e49] [cursor=pointer]:
+          - img [ref=e50]
+        - link "Sign in" [ref=e54] [cursor=pointer]:
+          - /url: https://accounts.google.com/ServiceLogin?hl=en&passive=true&continue=https://www.google.com/search%3Fq%3D%2522each%2Blength%2Bis%2Bin%2Bpixel%2Bunits%2522%2BUXP%2Bmanifest%26sei%3DIwYuarbCMdTd2roPxbCj4Qw&ec=futura_srp_og_si_72236_p
+  - generic [ref=e56]:
+    - navigation [ref=e62]:
+      - generic [ref=e68]:
+        - list [ref=e69]:
+          - listitem [ref=e70]:
+            - link "AI Mode" [ref=e73] [cursor=pointer]:
+              - /url: /search?q=%22each+length+is+in+pixel+units%22+UXP+manifest&sca_esv=e7d38744cd64d9bd&udm=50&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3sbM0Xv-BZKE_VrZb6-djVgPsTSy5UjazDfPq8BLa8BriI08eYAyMPM-9LNl6snbW52ydSrsDxJsHy24udrm1es8mzYqmStJB6omsHCni1bYSUKQEWzeT0IsoLrmk4c-TerycM8A2uuN_4QanCC5RKV8vCwOryFuSJVt6gqRV93xUiYNOQ&aep=1&ntc=1&sa=X&ved=2ahUKEwiYwempzIWVAxUPpVYBHdjLGR4Q2J8OegQIERAD
+              - generic [ref=e76]: AI Mode
+          - listitem [ref=e77]:
+            - link "All" [disabled] [ref=e78]:
+              - generic [ref=e80]: All
+          - listitem [ref=e81]:
+            - link "Images" [ref=e82] [cursor=pointer]:
+              - /url: /search?sca_esv=e7d38744cd64d9bd&udm=2&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3sbM0Xv-BZKE_VrZb6-djVgPsTSy5UjazDfPq8BLa8BriI08eYAyMPM-9LNl6snbW52ydSrsDxJsHy24udrm1es8mzYqmStJB6omsHCni1bYSUKQEWzeT0IsoLrmk4c-TerycM8A2uuN_4QanCC5RKV8vCwOryFuSJVt6gqRV93xUiYNOQ&q=%22each+length+is+in+pixel+units%22+UXP+manifest&sa=X&ved=2ahUKEwiYwempzIWVAxUPpVYBHdjLGR4QtKgLegQIFRAB
+              - generic [ref=e84]: Images
+          - listitem [ref=e85]:
+            - link "Videos" [ref=e86] [cursor=pointer]:
+              - /url: /search?sca_esv=e7d38744cd64d9bd&udm=7&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3sbM0Xv-BZKE_VrZb6-djVgPsTSy5UjazDfPq8BLa8BriI08eYAyMPM-9LNl6snbW52ydSrsDxJsHy24udrm1es8mzYqmStJB6omsHCni1bYSUKQEWzeT0IsoLrmk4c-TerycM8A2uuN_4QanCC5RKV8vCwOryFuSJVt6gqRV93xUiYNOQ&q=%22each+length+is+in+pixel+units%22+UXP+manifest&sa=X&ved=2ahUKEwiYwempzIWVAxUPpVYBHdjLGR4QtKgLegQIGBAB
+              - generic [ref=e88]: Videos
+          - listitem [ref=e89]:
+            - link "Forums" [ref=e90] [cursor=pointer]:
+              - /url: /search?sca_esv=e7d38744cd64d9bd&udm=18&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3sbM0Xv-BZKE_VrZb6-djVgPsTSy5UjazDfPq8BLa8BriI08eYAyMPM-9LNl6snbW52ydSrsDxJsHy24udrm1es8mzYqmStJB6omsHCni1bYSUKQEWzeT0IsoLrmk4c-TerycM8A2uuN_4QanCC5RKV8vCwOryFuSJVt6gqRV93xUiYNOQ&q=%22each+length+is+in+pixel+units%22+UXP+manifest&sa=X&ved=2ahUKEwiYwempzIWVAxUPpVYBHdjLGR4Qs6gLegQIFhAB
+              - generic [ref=e92]: Forums
+          - listitem [ref=e93]:
+            - link "Shopping" [ref=e94] [cursor=pointer]:
+              - /url: /search?sca_esv=e7d38744cd64d9bd&udm=28&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3sbM0Xv-BZKE_VrZb6-djVgPsTSy5UjazDfPq8BLa8BriI08eYAyMPM-9LNl6snbW52ydSrsDxJsHy24udrm1es8mzYqmStJB6omsHCni1bYSUKQEWzeT0IsoLrmk4c-TerycM8A2uuN_4QanCC5RKV8vCwOryFuSJVt6gqRV93xUiYNOQ&q=%22each+length+is+in+pixel+units%22+UXP+manifest&ved=1t:220175&ictx=111
+              - generic [ref=e96]: Shopping
+          - listitem [ref=e97]:
+            - link "Short videos" [ref=e98] [cursor=pointer]:
+              - /url: /search?sca_esv=e7d38744cd64d9bd&udm=39&fbs=ADc_l-aN0CWEZBOHjofHoaMMDiKpaEWjvZ2Py1XXV8d8KvlI3sbM0Xv-BZKE_VrZb6-djVgPsTSy5UjazDfPq8BLa8BriI08eYAyMPM-9LNl6snbW52ydSrsDxJsHy24udrm1es8mzYqmStJB6omsHCni1bYSUKQEWzeT0IsoLrmk4c-TerycM8A2uuN_4QanCC5RKV8vCwOryFuSJVt6gqRV93xUiYNOQ&q=%22each+length+is+in+pixel+units%22+UXP+manifest&sa=X&ved=2ahUKEwiYwempzIWVAxUPpVYBHdjLGR4Qs6gLegQIGRAB
+              - generic [ref=e100]: Short videos
+          - listitem [ref=e101]:
+            - button "More filters" [ref=e102] [cursor=pointer]:
+              - generic "More filters" [ref=e103]:
+                - generic [ref=e104]:
+                  - generic [ref=e105]: More
+                  - img [ref=e107]
+        - button "Tools" [ref=e110] [cursor=pointer]:
+          - generic [ref=e112]:
+            - generic [ref=e113]: Tools
+            - img [ref=e115]
+    - heading "Search Results" [level=1] [ref=e117]
+    - generic [ref=e122]:
+      - generic [ref=e141]:
+        - heading "Thinking" [level=2] [ref=e145]:
+          - generic [ref=e146]: Thinking
+        - progressbar "Generating" [ref=e147]
+      - main [ref=e149]:
+        - generic [ref=e156]:
+          - heading "Web results" [level=2] [ref=e157]
+          - generic [ref=e158]:
+            - generic [ref=e161]:
+              - link "UXP Manifest v4 Adobe Developer https://developer.adobe.com › uxp-guide › uxp-misc" [ref=e163] [cursor=pointer]:
+                - /url: https://developer.adobe.com/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v4/
+                - heading "UXP Manifest v4" [level=3] [ref=e164]
+                - generic [ref=e170]:
+                  - generic [ref=e172]: Adobe Developer
+                  - generic [ref=e174]: https://developer.adobe.com › uxp-guide › uxp-misc
+              - button "About this result" [ref=e175] [cursor=pointer]:
+                - img [ref=e178]
+            - generic [ref=e182]:
+              - text: ...
+              - emphasis [ref=e183]: each length is in pixel units
+              - text: . The host app may not guarantee the minimum width depending upon context. maximumSize, Object, Optional. Valid only for panel ...
+            - list [ref=e185]:
+              - listitem [ref=e186]:
+                - link "Top-Level Metadata" [ref=e187] [cursor=pointer]:
+                  - /url: https://developer.adobe.com/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v4/#:~:text=Top%2Dlevel%20metadata,-The%20top%20level%20of%20the
+                  - generic [ref=e189]: Top-Level Metadata
+              - listitem [ref=e190]:
+                - link "Entry Points" [ref=e191] [cursor=pointer]:
+                  - /url: https://developer.adobe.com/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v4/#:~:text=Entry%20Points,-The%20entrypoints%20field%20is%20an
+                  - generic [ref=e193]: Entry Points
+              - listitem [ref=e194]:
+                - link "Entrypointdefinition" [ref=e195] [cursor=pointer]:
+                  - /url: https://developer.adobe.com/photoshop/uxp/2022/guides/uxp-guide/uxp-misc/manifest-v4/#:~:text=EntryPointDefinition,-Key
+                  - generic [ref=e197]: Entrypointdefinition
+        - generic [ref=e199]:
+          - generic [ref=e204]:
+            - heading "People also search for" [level=2] [ref=e206]
+            - generic [ref=e208]:
+              - link "Each length is in pixel units uxp manifest example" [ref=e213] [cursor=pointer]:
+                - /url: /search?sca_esv=e7d38744cd64d9bd&q=Each+length+is+in+pixel+units+uxp+manifest+example&sa=X&ved=2ahUKEwiYwempzIWVAxUPpVYBHdjLGR4Q1QJ6BAgaEAE
+                - generic [ref=e214]:
+                  - generic [ref=e219]: Each length is in pixel units uxp manifest example
+                  - img [ref=e223]
+              - link "Each length is in pixel units uxp manifest adobe" [ref=e229] [cursor=pointer]:
+                - /url: /search?sca_esv=e7d38744cd64d9bd&q=Each+length+is+in+pixel+units+uxp+manifest+adobe&sa=X&ved=2ahUKEwiYwempzIWVAxUPpVYBHdjLGR4Q1QJ6BAgbEAE
+                - generic [ref=e230]:
+                  - generic [ref=e235]: Each length is in pixel units uxp manifest adobe
+                  - img [ref=e239]
+          - generic [ref=e241]:
+            - heading "Notices about Filtered Results" [level=2] [ref=e242]
+            - paragraph [ref=e244]:
+              - generic [ref=e245]:
+                - text: In order to show you the most relevant results, we have omitted some entries very similar to the 1 already displayed.
+                - text: If you like, you can
+                - link "repeat the search with the omitted results included" [ref=e246] [cursor=pointer]:
+                  - /url: /search?q=%22each+length+is+in+pixel+units%22+UXP+manifest&sca_esv=e7d38744cd64d9bd&filter=0
+                - text: .
+          - navigation
+        - navigation
+    - contentinfo [ref=e247]:
+      - heading "Footer Links" [level=1] [ref=e248]
+      - generic [ref=e252]:
+        - generic [ref=e256]:
+          - button "94110, San Francisco, CA - From your IP address" [ref=e258] [cursor=pointer]:
+            - generic [ref=e259]: 94110, San Francisco, CA
+            - generic [ref=e261]:
+              - text: "-"
+              - generic [ref=e262]: From your IP address
+          - text: "-"
+          - button "Update location" [ref=e264] [cursor=pointer]: Update location
+        - generic [ref=e267]:
+          - link "Help" [ref=e268] [cursor=pointer]:
+            - /url: https://support.google.com/websearch/?p=ws_results_help&hl=en&fg=1
+          - link "Send feedback" [ref=e269] [cursor=pointer]:
+            - /url: "#"
+          - link "Privacy" [ref=e270] [cursor=pointer]:
+            - /url: https://policies.google.com/privacy?hl=en&fg=1
+          - link "Terms" [ref=e271] [cursor=pointer]:
+            - /url: https://policies.google.com/terms?hl=en&fg=1

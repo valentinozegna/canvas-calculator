@@ -1,0 +1,488 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic "Skip navigation links":
+      - generic:
+        - link "Skip to last reply" [ref=e4] [cursor=pointer]:
+          - /url: /t/automatic-panel-height-suggestions/3046/7
+        - link "Skip to top" [ref=e5] [cursor=pointer]:
+          - /url: /t/automatic-panel-height-suggestions/3046/1
+      - link "Skip to main content" [ref=e6] [cursor=pointer]:
+        - /url: "#main-container"
+    - generic [ref=e11]:
+      - button "Sidebar" [expanded] [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+      - link "Adobe Creative Cloud Developer Forums" [ref=e17] [cursor=pointer]:
+        - /url: /
+        - img "Adobe Creative Cloud Developer Forums" [ref=e18]
+      - navigation "Header" [ref=e19]:
+        - generic [ref=e21]:
+          - button "Sign Up" [ref=e22] [cursor=pointer]:
+            - generic [ref=e23]: Sign Up
+          - button "Log In" [ref=e24] [cursor=pointer]:
+            - img [ref=e25]
+            - generic [ref=e26]: Log In
+        - list [ref=e27]:
+          - listitem [ref=e28]:
+            - button "Search" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+    - main [ref=e31]:
+      - navigation "Sidebar" [ref=e33]:
+        - generic [ref=e34]:
+          - list [ref=e37]:
+            - listitem [ref=e38]:
+              - link "Topics" [ref=e39] [cursor=pointer]:
+                - /url: /latest
+                - img [ref=e41]
+                - generic [ref=e42]: Topics
+            - listitem [ref=e43]:
+              - link "Docs" [ref=e44] [cursor=pointer]:
+                - /url: /docs
+                - img [ref=e46]
+                - generic [ref=e47]: Docs
+            - listitem [ref=e48]:
+              - button "More" [ref=e49] [cursor=pointer]:
+                - img [ref=e51]
+                - generic [ref=e52]: More
+          - generic [ref=e53]:
+            - button "Categories" [expanded] [ref=e55] [cursor=pointer]:
+              - img [ref=e57]
+              - generic [ref=e58]: Categories
+            - list [ref=e59]:
+              - listitem [ref=e60]:
+                - link "Introductions" [ref=e61] [cursor=pointer]:
+                  - /url: /c/intros/23
+                  - generic [ref=e64]: Introductions
+              - listitem [ref=e65]:
+                - link "Events" [ref=e66] [cursor=pointer]:
+                  - /url: /c/events/70
+                  - generic [ref=e69]: Events
+              - listitem [ref=e70]:
+                - link "InDesign" [ref=e71] [cursor=pointer]:
+                  - /url: /c/indesign/72
+                  - generic [ref=e74]: InDesign
+              - listitem [ref=e75]:
+                - link "Photoshop" [ref=e76] [cursor=pointer]:
+                  - /url: /c/photoshop/63
+                  - generic [ref=e79]: Photoshop
+              - listitem [ref=e80]:
+                - link "Plugin Marketplace" [ref=e81] [cursor=pointer]:
+                  - /url: /c/plugin-marketplace/66
+                  - generic [ref=e84]: Plugin Marketplace
+              - listitem [ref=e85]:
+                - link "UXP Developer Tool" [ref=e86] [cursor=pointer]:
+                  - /url: /c/uxp-developer-tool/65
+                  - generic [ref=e89]: UXP Developer Tool
+              - listitem [ref=e90]:
+                - link "Forum Feedback" [ref=e91] [cursor=pointer]:
+                  - /url: /c/forum-feedback/3
+                  - generic [ref=e94]: Forum Feedback
+              - listitem [ref=e95]:
+                - link "All categories" [ref=e96] [cursor=pointer]:
+                  - /url: /categories
+                  - img [ref=e98]
+                  - generic [ref=e99]: All categories
+          - generic [ref=e100]:
+            - button "Tags" [expanded] [ref=e102] [cursor=pointer]:
+              - img [ref=e104]
+              - generic [ref=e105]: Tags
+            - list [ref=e106]:
+              - listitem [ref=e107]:
+                - link "uxp" [ref=e108] [cursor=pointer]:
+                  - /url: /tag/uxp/101
+                  - img [ref=e110]
+                  - generic [ref=e111]: uxp
+              - listitem [ref=e112]:
+                - link "javascript" [ref=e113] [cursor=pointer]:
+                  - /url: /tag/javascript/103
+                  - img [ref=e115]
+                  - generic [ref=e116]: javascript
+              - listitem [ref=e117]:
+                - link "api-feedback" [ref=e118] [cursor=pointer]:
+                  - /url: /tag/api-feedback/109
+                  - img [ref=e120]
+                  - generic [ref=e121]: api-feedback
+              - listitem [ref=e122]:
+                - link "bug" [ref=e123] [cursor=pointer]:
+                  - /url: /tag/bug/16
+                  - img [ref=e125]
+                  - generic [ref=e126]: bug
+              - listitem [ref=e127]:
+                - link "ui" [ref=e128] [cursor=pointer]:
+                  - /url: /tag/ui/5
+                  - img [ref=e130]
+                  - generic [ref=e131]: ui
+              - listitem [ref=e132]:
+                - link "All tags" [ref=e133] [cursor=pointer]:
+                  - /url: /tags
+                  - img [ref=e135]
+                  - generic [ref=e136]: All tags
+        - button "Keyboard Shortcuts" [ref=e140] [cursor=pointer]:
+          - img [ref=e141]
+      - generic [ref=e142]:
+        - generic [ref=e143]:
+          - generic [ref=e145]:
+            - heading "Automatic panel height suggestions" [level=1] [ref=e146]:
+              - link "Automatic panel height suggestions" [ref=e147] [cursor=pointer]:
+                - /url: /t/automatic-panel-height-suggestions/3046
+            - generic [ref=e148]:
+              - link "Photoshop" [ref=e149] [cursor=pointer]:
+                - /url: /c/photoshop/63
+                - generic "This is the parent category for Photoshop. There are sub-categories for each API:" [ref=e150]:
+                  - generic [ref=e151]: Photoshop
+              - link "UXP Plugin API" [ref=e152] [cursor=pointer]:
+                - /url: /c/photoshop/uxp-plugin-api/64
+                - generic [ref=e154]: UXP Plugin API
+          - generic [ref=e155]:
+            - generic [ref=e158]:
+              - button "700 views" [ref=e159] [cursor=pointer]:
+                - generic [ref=e160]: "700"
+                - generic [ref=e161]: views
+              - generic [ref=e162]:
+                - link "AndreasResch's profile" [ref=e164] [cursor=pointer]:
+                  - /url: /u/AndreasResch
+                  - img "Andreas Resch" [ref=e165]
+                - link "simonhenke's profile" [ref=e167] [cursor=pointer]:
+                  - /url: /u/simonhenke
+                  - img "Simon Henke" [ref=e168]
+                - link "kerrishotts's profile" [ref=e170] [cursor=pointer]:
+                  - /url: /u/kerrishotts
+                  - img "Kerri Shotts" [ref=e171]
+            - generic [ref=e175]:
+              - link "Jun 2021" [ref=e177] [cursor=pointer]:
+                - /url: /t/automatic-panel-height-suggestions/3046/1
+                - generic [ref=e178]: Jun 2021
+              - generic [ref=e182]:
+                - generic [ref=e183]: 1 / 7
+                - generic [ref=e184]: Jun 2021
+              - link "Jun 2021" [ref=e187] [cursor=pointer]:
+                - /url: /t/automatic-panel-height-suggestions/3046/7
+                - generic [ref=e188]: Jun 2021
+            - generic [ref=e192]:
+              - generic [ref=e193]:
+                - heading "post by AndreasResch on Jun 7, 2021" [level=2] [ref=e194]
+                - article "post by AndreasResch on Jun 7, 2021" [ref=e195]:
+                  - generic [ref=e196]:
+                    - link "AndreasResch's profile" [ref=e199] [cursor=pointer]:
+                      - /url: /u/andreasresch
+                    - generic [ref=e200]:
+                      - generic [ref=e201]:
+                        - link "AndreasResch's profile" [ref=e204] [cursor=pointer]:
+                          - /url: /u/andreasresch
+                          - text: AndreasResch
+                        - link "Jun 2021" [ref=e207] [cursor=pointer]:
+                          - /url: /t/automatic-panel-height-suggestions/3046
+                      - generic [ref=e208]:
+                        - generic [ref=e209]:
+                          - paragraph [ref=e210]: Hello.
+                          - paragraph [ref=e211]: I have no success to automatically adapt the height of the panel to its content. After loading, the panel is cut off when I set the values in the manifest.json to a low value. Everything is contained in a wrapper-div with these settings …
+                          - paragraph [ref=e212]:
+                            - text: "div#wrapper {"
+                            - text: "position: absolute;"
+                            - text: "top: 0; left: 0; right: 0; bottom: 0;"
+                            - text: "padding: 12px;"
+                            - text: "overflow: auto;"
+                            - text: "}"
+                          - paragraph [ref=e213]: Any ideas?
+                        - group "Post actions" [ref=e214]:
+                          - generic [ref=e215]:
+                            - button "like this post" [ref=e217] [cursor=pointer]:
+                              - img [ref=e218]
+                            - button "copy a link to this post to clipboard" [ref=e219] [cursor=pointer]:
+                              - img [ref=e220]
+                          - generic:
+                            - list
+                  - generic [ref=e223]:
+                    - button "700 views" [ref=e224] [cursor=pointer]:
+                      - generic [ref=e225]: "700"
+                      - generic [ref=e226]: views
+                    - generic [ref=e227]:
+                      - link "AndreasResch's profile" [ref=e229] [cursor=pointer]:
+                        - /url: /u/AndreasResch
+                        - img "Andreas Resch" [ref=e230]
+                      - link "simonhenke's profile" [ref=e232] [cursor=pointer]:
+                        - /url: /u/simonhenke
+                        - img "Simon Henke" [ref=e233]
+                      - link "kerrishotts's profile" [ref=e235] [cursor=pointer]:
+                        - /url: /u/kerrishotts
+                        - img "Kerri Shotts" [ref=e236]
+              - generic [ref=e237]:
+                - heading "post by simonhenke on Jun 7, 2021" [level=2] [ref=e238]
+                - article "post by simonhenke on Jun 7, 2021" [ref=e239]:
+                  - generic [ref=e240]:
+                    - link "simonhenke's profile" [ref=e243] [cursor=pointer]:
+                      - /url: /u/simonhenke
+                    - generic [ref=e244]:
+                      - generic [ref=e245]:
+                        - link "simonhenke's profile" [ref=e248] [cursor=pointer]:
+                          - /url: /u/simonhenke
+                          - text: simonhenke
+                        - link "Jun 2021" [ref=e251] [cursor=pointer]:
+                          - /url: /t/automatic-panel-height-suggestions/3046/2
+                      - generic [ref=e252]:
+                        - paragraph [ref=e254]: You can’t dynamically adjust the panel size (via code). The size you specify in the manifest, is the one that it will have once it’s loaded. I usually build out my whole interface, and then set the size in the manifest to a value that shows the whole interface without scrolling. The user can then resize the panel to his liking (which might cause it to show scrollbars).
+                        - group "Post actions" [ref=e255]:
+                          - generic [ref=e256]:
+                            - generic [ref=e257]:
+                              - button "1 person liked this post." [ref=e258] [cursor=pointer]: "1"
+                              - button "like this post" [ref=e259] [cursor=pointer]:
+                                - img [ref=e260]
+                            - button "copy a link to this post to clipboard" [ref=e261] [cursor=pointer]:
+                              - img [ref=e262]
+                          - generic:
+                            - list
+              - generic [ref=e263]:
+                - heading "post by AndreasResch on Jun 8, 2021" [level=2] [ref=e264]
+                - article "post by AndreasResch on Jun 8, 2021" [ref=e265]:
+                  - generic [ref=e266]:
+                    - link "AndreasResch's profile" [ref=e269] [cursor=pointer]:
+                      - /url: /u/andreasresch
+                    - generic [ref=e270]:
+                      - generic [ref=e271]:
+                        - link "AndreasResch's profile" [ref=e274] [cursor=pointer]:
+                          - /url: /u/andreasresch
+                          - text: AndreasResch
+                        - link "Jun 2021" [ref=e277] [cursor=pointer]:
+                          - /url: /t/automatic-panel-height-suggestions/3046/3
+                      - generic [ref=e278]:
+                        - paragraph [ref=e280]: That works fine when you have a static interface, but when you have collapsible panels, this is rather annoying to have to resize the panel manually all the time.
+                        - group "Post actions" [ref=e281]:
+                          - generic [ref=e282]:
+                            - button "like this post" [ref=e284] [cursor=pointer]:
+                              - img [ref=e285]
+                            - button "copy a link to this post to clipboard" [ref=e286] [cursor=pointer]:
+                              - img [ref=e287]
+                          - generic:
+                            - list
+              - generic [ref=e288]:
+                - heading "post by simonhenke on Jun 8, 2021" [level=2] [ref=e289]
+                - article "post by simonhenke on Jun 8, 2021" [ref=e290]:
+                  - generic [ref=e291]:
+                    - link "simonhenke's profile" [ref=e294] [cursor=pointer]:
+                      - /url: /u/simonhenke
+                    - generic [ref=e295]:
+                      - generic [ref=e296]:
+                        - link "simonhenke's profile" [ref=e299] [cursor=pointer]:
+                          - /url: /u/simonhenke
+                          - text: simonhenke
+                        - link "Jun 2021" [ref=e302] [cursor=pointer]:
+                          - /url: /t/automatic-panel-height-suggestions/3046/4
+                      - generic [ref=e303]:
+                        - generic [ref=e304]:
+                          - paragraph [ref=e305]: For me personally, a “jumping” panel would be way more annoying. Wouldn’t that be as if your browser window would adjust in size all the time just because a website expands content?
+                          - paragraph [ref=e306]:
+                            - text: And if you have scrollable content, I don’t see the need to “resize the panel manually all the time”. Just scroll instead
+                            - img ":sweat_smile:" [ref=e307]
+                        - group "Post actions" [ref=e308]:
+                          - generic [ref=e309]:
+                            - generic [ref=e310]:
+                              - button "1 person liked this post." [ref=e311] [cursor=pointer]: "1"
+                              - button "like this post" [ref=e312] [cursor=pointer]:
+                                - img [ref=e313]
+                            - button "copy a link to this post to clipboard" [ref=e314] [cursor=pointer]:
+                              - img [ref=e315]
+                          - generic:
+                            - list
+              - generic [ref=e316]:
+                - heading "post by AndreasResch on Jun 8, 2021" [level=2] [ref=e317]
+                - article "post by AndreasResch on Jun 8, 2021" [ref=e318]:
+                  - generic [ref=e319]:
+                    - link "AndreasResch's profile" [ref=e322] [cursor=pointer]:
+                      - /url: /u/andreasresch
+                    - generic [ref=e323]:
+                      - generic [ref=e324]:
+                        - link "AndreasResch's profile" [ref=e327] [cursor=pointer]:
+                          - /url: /u/andreasresch
+                          - text: AndreasResch
+                        - link "Jun 2021" [ref=e330] [cursor=pointer]:
+                          - /url: /t/automatic-panel-height-suggestions/3046/5
+                      - generic [ref=e331]:
+                        - paragraph [ref=e333]: Collapsible panels are quite common and as long as you yourself can collapse/expand them, they aren’t annoying but functional. A lot of programs use them to simplify the UI.
+                        - group "Post actions" [ref=e334]:
+                          - generic [ref=e335]:
+                            - button "like this post" [ref=e337] [cursor=pointer]:
+                              - img [ref=e338]
+                            - button "copy a link to this post to clipboard" [ref=e339] [cursor=pointer]:
+                              - img [ref=e340]
+                          - generic:
+                            - list
+              - generic [ref=e341]:
+                - heading "post by kerrishotts on Jun 8, 2021" [level=2] [ref=e342]
+                - article "post by kerrishotts on Jun 8, 2021" [ref=e343]:
+                  - generic [ref=e344]:
+                    - generic [ref=e346]:
+                      - link "kerrishotts's profile" [ref=e347] [cursor=pointer]:
+                        - /url: /u/kerrishotts
+                      - generic "Adobe" [ref=e348]
+                    - generic [ref=e349]:
+                      - generic [ref=e350]:
+                        - generic [ref=e351]:
+                          - link "kerrishotts's profile" [ref=e353] [cursor=pointer]:
+                            - /url: /u/kerrishotts
+                            - text: kerrishotts
+                            - generic "This user is a moderator" [ref=e354]:
+                              - img [ref=e355]
+                          - link "Adobe" [ref=e357] [cursor=pointer]:
+                            - /url: /g/Adobe
+                        - link "Jun 2021" [ref=e360] [cursor=pointer]:
+                          - /url: /t/automatic-panel-height-suggestions/3046/6
+                      - generic [ref=e361]:
+                        - generic [ref=e362]:
+                          - paragraph [ref=e363]: Photoshop panels do not adjust their size based on the content. They are restricted to the sizes defined by the manifest. Plugins also cannot control the size of their panel programmatically.
+                          - paragraph [ref=e364]:
+                            - text: Users
+                            - emphasis [ref=e365]: can
+                            - text: collapse the panel if they so choose (they can double-click on the tab to collapse it), but this is entirely at the user’s discretion.
+                          - paragraph [ref=e366]: The expectation is that plugin developers will design their UI in a responsive manner – allowing the user to configure the panel to their liking. Sometimes limits must be placed on this (min/max size), but generally, it should be left to the user to control their workspace, rather than the plugin doing it.
+                          - paragraph [ref=e367]: If your plugin consists of multiple accordions in the UI, you might want to consider shipping with multiple panels instead. Then the user can group all those panels together, resize them, collapse them, etc., as they choose. (Plus they can decide the ordering.) We are working on adding a feature to the manifest that will let you specify that a plugin’s panels should be automatically grouped together at first use.
+                        - group "Post actions" [ref=e368]:
+                          - generic [ref=e369]:
+                            - generic [ref=e370]:
+                              - button "2 people liked this post." [ref=e371] [cursor=pointer]: "2"
+                              - button "like this post" [ref=e372] [cursor=pointer]:
+                                - img [ref=e373]
+                            - button "copy a link to this post to clipboard" [ref=e374] [cursor=pointer]:
+                              - img [ref=e375]
+                          - generic:
+                            - list
+              - generic [ref=e376]:
+                - heading "post by AndreasResch on Jun 8, 2021" [level=2] [ref=e377]
+                - article "post by AndreasResch on Jun 8, 2021" [ref=e378]:
+                  - generic [ref=e379]:
+                    - link "AndreasResch's profile" [ref=e382] [cursor=pointer]:
+                      - /url: /u/andreasresch
+                    - generic [ref=e383]:
+                      - generic [ref=e384]:
+                        - link "AndreasResch's profile" [ref=e387] [cursor=pointer]:
+                          - /url: /u/andreasresch
+                          - text: AndreasResch
+                        - link "Jun 2021" [ref=e390] [cursor=pointer]:
+                          - /url: /t/automatic-panel-height-suggestions/3046/7
+                      - generic [ref=e391]:
+                        - paragraph [ref=e393]: Thanks for the reply. It only concern one smaller accordion, so separating it makes no sense. I’ll have to think about some solution. Eventually I will stay away from the collapsing option.
+                        - group "Post actions" [ref=e394]:
+                          - generic [ref=e395]:
+                            - button "like this post" [ref=e397] [cursor=pointer]:
+                              - img [ref=e398]
+                            - button "copy a link to this post to clipboard" [ref=e399] [cursor=pointer]:
+                              - img [ref=e400]
+                          - generic:
+                            - list
+          - region [ref=e403]:
+            - button "Reply" [ref=e405] [cursor=pointer]:
+              - img [ref=e406]
+              - generic [ref=e407]: Reply
+          - complementary "Related topics" [ref=e410]:
+            - heading "Related topics" [level=3] [ref=e411]:
+              - img [ref=e412]
+              - text: Related topics
+            - table "Topic list, column headers with buttons are sortable." [ref=e416]:
+              - caption [ref=e417]: Topic list, column headers with buttons are sortable.
+              - rowgroup [ref=e418]:
+                - row "Topic Replies Views Activity" [ref=e419]:
+                  - columnheader "Topic" [ref=e420]:
+                    - generic [ref=e421]: Topic
+                  - columnheader "Replies" [ref=e422]:
+                    - generic [ref=e423]: Replies
+                  - columnheader "Views" [ref=e424]:
+                    - generic [ref=e425]: Views
+                  - columnheader "Activity" [ref=e426]:
+                    - generic [ref=e427]: Activity
+              - rowgroup [ref=e428]:
+                - row "Plugin resize via JS UXP Plugin API Tags 4 replies, jump to first post 729 May 2023" [ref=e429]:
+                  - cell "Plugin resize via JS UXP Plugin API Tags" [ref=e430]:
+                    - heading "Plugin resize via JS" [level=2] [ref=e431]:
+                      - link "Plugin resize via JS" [ref=e432] [cursor=pointer]:
+                        - /url: /t/plugin-resize-via-js/2834
+                    - generic [ref=e433]:
+                      - link "UXP Plugin API" [ref=e434] [cursor=pointer]:
+                        - /url: /c/photoshop/uxp-plugin-api/64
+                        - generic [ref=e436]: UXP Plugin API
+                      - list "Tags" [ref=e437]:
+                        - listitem [ref=e438]:
+                          - link "javascript" [ref=e439] [cursor=pointer]:
+                            - /url: /tag/javascript/103
+                  - cell "4 replies, jump to first post" [ref=e440]:
+                    - link "4 replies, jump to first post" [ref=e441] [cursor=pointer]:
+                      - /url: /t/plugin-resize-via-js/2834/1
+                      - text: "4"
+                  - cell "729" [ref=e442]
+                  - cell "May 2023" [ref=e443]:
+                    - link "May 2023" [ref=e444] [cursor=pointer]:
+                      - /url: /t/plugin-resize-via-js/2834/5
+                - row "UI dimensions guidelines Photoshop 8 replies, jump to first post 510 Mar 2022" [ref=e445]:
+                  - cell "UI dimensions guidelines Photoshop" [ref=e446]:
+                    - heading "UI dimensions guidelines" [level=2] [ref=e447]:
+                      - link "UI dimensions guidelines" [ref=e448] [cursor=pointer]:
+                        - /url: /t/ui-dimensions-guidelines/4424
+                    - link "Photoshop" [ref=e450] [cursor=pointer]:
+                      - /url: /c/photoshop/63
+                      - generic "This is the parent category for Photoshop. There are sub-categories for each API:" [ref=e451]:
+                        - generic [ref=e452]: Photoshop
+                  - cell "8 replies, jump to first post" [ref=e453]:
+                    - link "8 replies, jump to first post" [ref=e454] [cursor=pointer]:
+                      - /url: /t/ui-dimensions-guidelines/4424/1
+                      - text: "8"
+                  - cell "510" [ref=e455]
+                  - cell "Mar 2022" [ref=e456]:
+                    - link "Mar 2022" [ref=e457] [cursor=pointer]:
+                      - /url: /t/ui-dimensions-guidelines/4424/9
+                - row "Is there a way to resize plugin window via JS? UXP Plugin API 18 replies, jump to first post 898 Jun 2024" [ref=e458]:
+                  - cell "Is there a way to resize plugin window via JS? UXP Plugin API" [ref=e459]:
+                    - heading "Is there a way to resize plugin window via JS?" [level=2] [ref=e460]:
+                      - link "Is there a way to resize plugin window via JS?" [ref=e461] [cursor=pointer]:
+                        - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633
+                    - link "UXP Plugin API" [ref=e463] [cursor=pointer]:
+                      - /url: /c/photoshop/uxp-plugin-api/64
+                      - generic [ref=e465]: UXP Plugin API
+                  - cell "18 replies, jump to first post" [ref=e466]:
+                    - link "18 replies, jump to first post" [ref=e467] [cursor=pointer]:
+                      - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/1
+                      - text: "18"
+                  - cell "898" [ref=e468]
+                  - cell "Jun 2024" [ref=e469]:
+                    - link "Jun 2024" [ref=e470] [cursor=pointer]:
+                      - /url: /t/is-there-a-way-to-resize-plugin-window-via-js/5633/19
+                - row "Nable to get the height and width of the panel Photoshop 8 replies, jump to first post 685 Mar 2021" [ref=e471]:
+                  - cell "Nable to get the height and width of the panel Photoshop" [ref=e472]:
+                    - heading "Nable to get the height and width of the panel" [level=2] [ref=e473]:
+                      - generic "This topic has a solution" [ref=e475]:
+                        - img [ref=e476]
+                      - link "Nable to get the height and width of the panel" [ref=e477] [cursor=pointer]:
+                        - /url: /t/nable-to-get-the-height-and-width-of-the-panel/2616
+                    - link "Photoshop" [ref=e479] [cursor=pointer]:
+                      - /url: /c/photoshop/63
+                      - generic "This is the parent category for Photoshop. There are sub-categories for each API:" [ref=e480]:
+                        - generic [ref=e481]: Photoshop
+                  - cell "8 replies, jump to first post" [ref=e482]:
+                    - link "8 replies, jump to first post" [ref=e483] [cursor=pointer]:
+                      - /url: /t/nable-to-get-the-height-and-width-of-the-panel/2616/1
+                      - text: "8"
+                  - cell "685" [ref=e484]
+                  - cell "Mar 2021" [ref=e485]:
+                    - link "Mar 2021" [ref=e486] [cursor=pointer]:
+                      - /url: /t/nable-to-get-the-height-and-width-of-the-panel/2616/9
+                - row "Set size of panel UXP Plugin API Tags 8 replies, jump to first post 1.0k Mar 2022" [ref=e487]:
+                  - cell "Set size of panel UXP Plugin API Tags" [ref=e488]:
+                    - heading "Set size of panel" [level=2] [ref=e489]:
+                      - link "Set size of panel" [ref=e490] [cursor=pointer]:
+                        - /url: /t/set-size-of-panel/1042
+                    - generic [ref=e491]:
+                      - link "UXP Plugin API" [ref=e492] [cursor=pointer]:
+                        - /url: /c/adobe-xd/xd/8
+                        - generic "This forum is for topics specific to XD, including plugin development, API feature requests, and bug reports." [ref=e493]:
+                          - generic [ref=e494]: UXP Plugin API
+                      - list "Tags" [ref=e495]:
+                        - listitem [ref=e496]:
+                          - link "api-feedback" [ref=e497] [cursor=pointer]:
+                            - /url: /tag/api-feedback/109
+                  - cell "8 replies, jump to first post" [ref=e498]:
+                    - link "8 replies, jump to first post" [ref=e499] [cursor=pointer]:
+                      - /url: /t/set-size-of-panel/1042/1
+                      - text: "8"
+                  - cell "1.0k" [ref=e500]
+                  - cell "Mar 2022" [ref=e501]:
+                    - link "Mar 2022" [ref=e502] [cursor=pointer]:
+                      - /url: /t/set-size-of-panel/1042/9
+        - dialog "User card"
+  - status [ref=e503]
+  - alert [ref=e504]

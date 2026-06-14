@@ -1,0 +1,2488 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]:
+      - link "Skip to content" [ref=e4] [cursor=pointer]:
+        - /url: "#start-of-content"
+      - banner [ref=e6]:
+        - heading "Navigation Menu" [level=2] [ref=e7]
+        - generic [ref=e8]:
+          - link "Homepage" [ref=e10] [cursor=pointer]:
+            - /url: /
+            - img [ref=e11]
+          - generic [ref=e13]:
+            - navigation "Global" [ref=e16]:
+              - list [ref=e17]:
+                - listitem [ref=e18]:
+                  - button "Platform" [ref=e20] [cursor=pointer]:
+                    - text: Platform
+                    - img [ref=e21]
+                - listitem [ref=e23]:
+                  - button "Solutions" [ref=e25] [cursor=pointer]:
+                    - text: Solutions
+                    - img [ref=e26]
+                - listitem [ref=e28]:
+                  - button "Resources" [ref=e30] [cursor=pointer]:
+                    - text: Resources
+                    - img [ref=e31]
+                - listitem [ref=e33]:
+                  - button "Open Source" [ref=e35] [cursor=pointer]:
+                    - text: Open Source
+                    - img [ref=e36]
+                - listitem [ref=e38]:
+                  - button "Enterprise" [ref=e40] [cursor=pointer]:
+                    - text: Enterprise
+                    - img [ref=e41]
+                - listitem [ref=e43]:
+                  - link "Pricing" [ref=e44] [cursor=pointer]:
+                    - /url: https://github.com/pricing
+                    - generic [ref=e45]: Pricing
+            - generic [ref=e46]:
+              - button "Search or jump to…" [ref=e49] [cursor=pointer]:
+                - img [ref=e51]
+              - link "Sign in" [ref=e54] [cursor=pointer]:
+                - /url: /login?return_to=https%3A%2F%2Fgithub.com%2FAdobeDocs%2Fuxp-photoshop-plugin-samples%2Fblob%2Fmain%2Fui-kitchen-sink%2Findex.html
+              - link "Sign up" [ref=e55] [cursor=pointer]:
+                - /url: /signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fblob%2Fshow&source=header-repo&source_repo=AdobeDocs%2Fuxp-photoshop-plugin-samples
+              - button "Appearance settings" [ref=e58] [cursor=pointer]:
+                - img
+    - main [ref=e62]:
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - generic [ref=e66]:
+            - img [ref=e67]
+            - link "AdobeDocs" [ref=e70] [cursor=pointer]:
+              - /url: /AdobeDocs
+            - generic [ref=e71]: /
+            - strong [ref=e72]:
+              - link "uxp-photoshop-plugin-samples" [ref=e73] [cursor=pointer]:
+                - /url: /AdobeDocs/uxp-photoshop-plugin-samples
+            - generic [ref=e74]: Public
+          - generic [ref=e75]:
+            - list:
+              - listitem [ref=e76]:
+                - link "You must be signed in to change notification settings" [ref=e77] [cursor=pointer]:
+                  - /url: /login?return_to=%2FAdobeDocs%2Fuxp-photoshop-plugin-samples
+                  - img [ref=e78]
+                  - text: Notifications
+              - listitem [ref=e80]:
+                - link "Fork 101" [ref=e81] [cursor=pointer]:
+                  - /url: /login?return_to=%2FAdobeDocs%2Fuxp-photoshop-plugin-samples
+                  - img [ref=e82]
+                  - text: Fork
+                  - generic "101" [ref=e84]
+              - listitem [ref=e85]:
+                - link "You must be signed in to star a repository" [ref=e87] [cursor=pointer]:
+                  - /url: /login?return_to=%2FAdobeDocs%2Fuxp-photoshop-plugin-samples
+                  - img [ref=e88]
+                  - text: Star
+                  - generic "340 users starred this repository" [ref=e90]: "340"
+        - navigation "Repository" [ref=e91]:
+          - list [ref=e92]:
+            - listitem [ref=e93]:
+              - link "Code" [ref=e94] [cursor=pointer]:
+                - /url: /AdobeDocs/uxp-photoshop-plugin-samples
+                - img [ref=e95]
+                - generic [ref=e97]: Code
+            - listitem [ref=e98]:
+              - link "Issues 33" [ref=e99] [cursor=pointer]:
+                - /url: /AdobeDocs/uxp-photoshop-plugin-samples/issues
+                - img [ref=e100]
+                - generic [ref=e103]: Issues
+                - generic "33" [ref=e104]
+            - listitem [ref=e105]:
+              - link "Pull requests 6" [ref=e106] [cursor=pointer]:
+                - /url: /AdobeDocs/uxp-photoshop-plugin-samples/pulls
+                - img [ref=e107]
+                - generic [ref=e109]: Pull requests
+                - generic "6" [ref=e110]
+            - listitem [ref=e111]:
+              - link "Actions" [ref=e112] [cursor=pointer]:
+                - /url: /AdobeDocs/uxp-photoshop-plugin-samples/actions
+                - img [ref=e113]
+                - generic [ref=e115]: Actions
+            - listitem [ref=e116]:
+              - link "Projects" [ref=e117] [cursor=pointer]:
+                - /url: /AdobeDocs/uxp-photoshop-plugin-samples/projects
+                - img [ref=e118]
+                - generic [ref=e120]: Projects
+            - listitem [ref=e121]:
+              - link "Security and quality" [ref=e122] [cursor=pointer]:
+                - /url: /AdobeDocs/uxp-photoshop-plugin-samples/security
+                - img [ref=e123]
+                - generic [ref=e125]: Security and quality
+            - listitem [ref=e126]:
+              - link "Insights" [ref=e127] [cursor=pointer]:
+                - /url: /AdobeDocs/uxp-photoshop-plugin-samples/pulse
+                - img [ref=e128]
+                - generic [ref=e130]: Insights
+      - generic [ref=e138]:
+        - generic [ref=e140]:
+          - generic [ref=e143]:
+            - generic [ref=e144]:
+              - generic [ref=e145]:
+                - heading "Collapse file tree" [level=2] [ref=e146]:
+                  - button "Collapse file tree" [expanded] [ref=e147] [cursor=pointer]:
+                    - img [ref=e148]
+                - heading "Files" [level=2] [ref=e151]
+              - generic [ref=e152]:
+                - button "main branch" [ref=e154] [cursor=pointer]:
+                  - generic [ref=e155]:
+                    - generic [ref=e157]:
+                      - img [ref=e159]
+                      - generic [ref=e162]: main
+                    - generic:
+                      - img
+                - button "Search this repository (forward slash)" [ref=e164] [cursor=pointer]:
+                  - img [ref=e165]
+            - generic [ref=e168]:
+              - img [ref=e170]
+              - combobox "Go to file" [ref=e172]
+            - navigation "File Tree Navigation" [ref=e178]:
+              - tree "Files" [ref=e180]:
+                - treeitem ".github" [level=1] [ref=e181]:
+                  - generic [ref=e182] [cursor=pointer]:
+                    - img [ref=e184]
+                    - generic [ref=e186]:
+                      - img [ref=e190]
+                      - generic [ref=e192]: .github
+                - treeitem "cross-compatible-js-sample" [level=1] [ref=e193]:
+                  - generic [ref=e194] [cursor=pointer]:
+                    - img [ref=e196]
+                    - generic [ref=e198]:
+                      - img [ref=e202]
+                      - generic [ref=e204]: cross-compatible-js-sample
+                - treeitem "desktop-helper-sample" [level=1] [ref=e205]:
+                  - generic [ref=e206] [cursor=pointer]:
+                    - img [ref=e208]
+                    - generic [ref=e210]:
+                      - img [ref=e214]
+                      - generic [ref=e216]: desktop-helper-sample
+                - treeitem "direct-action-js-sample" [level=1] [ref=e217]:
+                  - generic [ref=e218] [cursor=pointer]:
+                    - img [ref=e220]
+                    - generic [ref=e222]:
+                      - img [ref=e226]
+                      - generic [ref=e228]: direct-action-js-sample
+                - treeitem "firebase-integration-sample" [level=1] [ref=e229]:
+                  - generic [ref=e230] [cursor=pointer]:
+                    - img [ref=e232]
+                    - generic [ref=e234]:
+                      - img [ref=e238]
+                      - generic [ref=e240]: firebase-integration-sample
+                - treeitem "hello-world-panel-js-sample" [level=1] [ref=e241]:
+                  - generic [ref=e242] [cursor=pointer]:
+                    - img [ref=e244]
+                    - generic [ref=e246]:
+                      - img [ref=e250]
+                      - generic [ref=e252]: hello-world-panel-js-sample
+                - treeitem "invisible-plugin-sample" [level=1] [ref=e253]:
+                  - generic [ref=e254] [cursor=pointer]:
+                    - img [ref=e256]
+                    - generic [ref=e258]:
+                      - img [ref=e262]
+                      - generic [ref=e264]: invisible-plugin-sample
+                - treeitem "io-websocket-example" [level=1] [ref=e265]:
+                  - generic [ref=e266] [cursor=pointer]:
+                    - img [ref=e268]
+                    - generic [ref=e270]:
+                      - img [ref=e274]
+                      - generic [ref=e276]: io-websocket-example
+                - treeitem "jszip-sample" [level=1] [ref=e277]:
+                  - generic [ref=e278] [cursor=pointer]:
+                    - img [ref=e280]
+                    - generic [ref=e282]:
+                      - img [ref=e286]
+                      - generic [ref=e288]: jszip-sample
+                - treeitem "layer-creation-js-sample" [level=1] [ref=e289]:
+                  - generic [ref=e290] [cursor=pointer]:
+                    - img [ref=e292]
+                    - generic [ref=e294]:
+                      - img [ref=e298]
+                      - generic [ref=e300]: layer-creation-js-sample
+                - treeitem "neural-filter-sample" [level=1] [ref=e301]:
+                  - generic [ref=e302] [cursor=pointer]:
+                    - img [ref=e304]
+                    - generic [ref=e306]:
+                      - img [ref=e310]
+                      - generic [ref=e312]: neural-filter-sample
+                - treeitem "oauth-workflow-sample" [level=1] [ref=e313]:
+                  - generic [ref=e314] [cursor=pointer]:
+                    - img [ref=e316]
+                    - generic [ref=e318]:
+                      - img [ref=e322]
+                      - generic [ref=e324]: oauth-workflow-sample
+                - treeitem "secure-storage-sample" [level=1] [ref=e325]:
+                  - generic [ref=e326] [cursor=pointer]:
+                    - img [ref=e328]
+                    - generic [ref=e330]:
+                      - img [ref=e334]
+                      - generic [ref=e336]: secure-storage-sample
+                - treeitem "swc-uxp-react-starter" [level=1] [ref=e337]:
+                  - generic [ref=e338] [cursor=pointer]:
+                    - img [ref=e340]
+                    - generic [ref=e342]:
+                      - img [ref=e346]
+                      - generic [ref=e348]: swc-uxp-react-starter
+                - treeitem "swc-uxp-starter" [level=1] [ref=e349]:
+                  - generic [ref=e350] [cursor=pointer]:
+                    - img [ref=e352]
+                    - generic [ref=e354]:
+                      - img [ref=e358]
+                      - generic [ref=e360]: swc-uxp-starter
+                - treeitem "tailwind-sample" [level=1] [ref=e361]:
+                  - generic [ref=e362] [cursor=pointer]:
+                    - img [ref=e364]
+                    - generic [ref=e366]:
+                      - img [ref=e370]
+                      - generic [ref=e372]: tailwind-sample
+                - treeitem "typescript-webpack-sample" [level=1] [ref=e373]:
+                  - generic [ref=e374] [cursor=pointer]:
+                    - img [ref=e376]
+                    - generic [ref=e378]:
+                      - img [ref=e382]
+                      - generic [ref=e384]: typescript-webpack-sample
+                - treeitem "ui-kitchen-sink" [expanded] [level=1] [ref=e385]:
+                  - generic [ref=e386] [cursor=pointer]:
+                    - img [ref=e388]
+                    - generic [ref=e390]:
+                      - img [ref=e394]
+                      - generic [ref=e396]: ui-kitchen-sink
+                  - group "ui-kitchen-sink" [ref=e397]:
+                    - treeitem "icons" [level=2] [ref=e398]:
+                      - generic [ref=e399] [cursor=pointer]:
+                        - img [ref=e404]
+                        - generic [ref=e406]:
+                          - img [ref=e410]
+                          - generic [ref=e412]: icons
+                    - treeitem "README.md" [level=2] [ref=e413]:
+                      - generic [ref=e418] [cursor=pointer]:
+                        - img [ref=e421]
+                        - generic [ref=e423]: README.md
+                    - treeitem "index.html" [level=2] [ref=e424]:
+                      - generic [ref=e429] [cursor=pointer]:
+                        - img [ref=e432]
+                        - generic [ref=e434]: index.html
+                    - treeitem "index.js" [level=2] [ref=e435]:
+                      - generic [ref=e440] [cursor=pointer]:
+                        - img [ref=e443]
+                        - generic [ref=e445]: index.js
+                    - treeitem "manifest.json" [level=2] [ref=e446]:
+                      - generic [ref=e451] [cursor=pointer]:
+                        - img [ref=e454]
+                        - generic [ref=e456]: manifest.json
+                - treeitem "ui-playground" [level=1] [ref=e457]:
+                  - generic [ref=e458] [cursor=pointer]:
+                    - img [ref=e460]
+                    - generic [ref=e462]:
+                      - img [ref=e466]
+                      - generic [ref=e468]: ui-playground
+                - treeitem "ui-react-starter" [level=1] [ref=e469]:
+                  - generic [ref=e470] [cursor=pointer]:
+                    - img [ref=e472]
+                    - generic [ref=e474]:
+                      - img [ref=e478]
+                      - generic [ref=e480]: ui-react-starter
+                - treeitem "ui-svelte-starter" [level=1] [ref=e481]:
+                  - generic [ref=e482] [cursor=pointer]:
+                    - img [ref=e484]
+                    - generic [ref=e486]:
+                      - img [ref=e490]
+                      - generic [ref=e492]: ui-svelte-starter
+                - treeitem "ui-vue-3-starter" [level=1] [ref=e493]:
+                  - generic [ref=e494] [cursor=pointer]:
+                    - img [ref=e496]
+                    - generic [ref=e498]:
+                      - img [ref=e502]
+                      - generic [ref=e504]: ui-vue-3-starter
+                - treeitem "ui-vue-starter" [level=1] [ref=e505]:
+                  - generic [ref=e506] [cursor=pointer]:
+                    - img [ref=e508]
+                    - generic [ref=e510]:
+                      - img [ref=e514]
+                      - generic [ref=e516]: ui-vue-starter
+                - treeitem "unsplash-plugin-sample" [level=1] [ref=e517]:
+                  - generic [ref=e518] [cursor=pointer]:
+                    - img [ref=e520]
+                    - generic [ref=e522]:
+                      - img [ref=e526]
+                      - generic [ref=e528]: unsplash-plugin-sample
+                - treeitem "vanilla-js-sample" [level=1] [ref=e529]:
+                  - generic [ref=e530] [cursor=pointer]:
+                    - img [ref=e532]
+                    - generic [ref=e534]:
+                      - img [ref=e538]
+                      - generic [ref=e540]: vanilla-js-sample
+                - treeitem "wasm-rust-sample" [level=1] [ref=e541]:
+                  - generic [ref=e542] [cursor=pointer]:
+                    - img [ref=e544]
+                    - generic [ref=e546]:
+                      - img [ref=e550]
+                      - generic [ref=e552]: wasm-rust-sample
+                - treeitem "web-service-call-js-sample" [level=1] [ref=e553]:
+                  - generic [ref=e554] [cursor=pointer]:
+                    - img [ref=e556]
+                    - generic [ref=e558]:
+                      - img [ref=e562]
+                      - generic [ref=e564]: web-service-call-js-sample
+                - treeitem ".gitignore" [level=1] [ref=e565]:
+                  - generic [ref=e567] [cursor=pointer]:
+                    - img [ref=e570]
+                    - generic [ref=e572]: .gitignore
+                - treeitem "CODE_OF_CONDUCT.md" [level=1] [ref=e573]:
+                  - generic [ref=e575] [cursor=pointer]:
+                    - img [ref=e578]
+                    - generic [ref=e580]: CODE_OF_CONDUCT.md
+                - treeitem "CONTRIBUTING.md" [level=1] [ref=e581]:
+                  - generic [ref=e583] [cursor=pointer]:
+                    - img [ref=e586]
+                    - generic [ref=e588]: CONTRIBUTING.md
+                - treeitem "COPYRIGHT" [level=1] [ref=e589]:
+                  - generic [ref=e591] [cursor=pointer]:
+                    - img [ref=e594]
+                    - generic [ref=e596]: COPYRIGHT
+                - treeitem "LICENSE" [level=1] [ref=e597]:
+                  - generic [ref=e599] [cursor=pointer]:
+                    - img [ref=e602]
+                    - generic [ref=e604]: LICENSE
+                - treeitem "README.md" [level=1] [ref=e605]:
+                  - generic [ref=e607] [cursor=pointer]:
+                    - img [ref=e610]
+                    - generic [ref=e612]: README.md
+          - slider "Draggable pane splitter" [ref=e614]
+        - generic [ref=e617]:
+          - generic [ref=e621]:
+            - generic [ref=e623]:
+              - navigation "Breadcrumbs" [ref=e624]:
+                - heading "Breadcrumbs" [level=2] [ref=e625]
+                - list [ref=e626]:
+                  - listitem [ref=e627]:
+                    - link "uxp-photoshop-plugin-samples" [ref=e628] [cursor=pointer]:
+                      - /url: /AdobeDocs/uxp-photoshop-plugin-samples/tree/main
+                  - listitem [ref=e629]:
+                    - text: /
+                    - link "ui-kitchen-sink" [ref=e630] [cursor=pointer]:
+                      - /url: /AdobeDocs/uxp-photoshop-plugin-samples/tree/main/ui-kitchen-sink
+              - generic [ref=e631]:
+                - text: /
+                - heading "index.html" [level=1] [ref=e632]
+              - button "Copy path" [ref=e633] [cursor=pointer]:
+                - img [ref=e634]
+            - button "More file actions" [ref=e640] [cursor=pointer]:
+              - img [ref=e641]
+          - generic [ref=e643]:
+            - generic [ref=e645]:
+              - heading "Latest commit" [level=2] [ref=e646]
+              - generic [ref=e647]:
+                - generic [ref=e649]:
+                  - link "kerrishotts" [ref=e650] [cursor=pointer]:
+                    - /url: /kerrishotts
+                    - img "kerrishotts" [ref=e651]
+                  - link "commits by kerrishotts" [ref=e652] [cursor=pointer]:
+                    - /url: /AdobeDocs/uxp-photoshop-plugin-samples/commits?author=kerrishotts
+                    - text: kerrishotts
+                - link "First push of plugins" [ref=e656] [cursor=pointer]:
+                  - /url: /AdobeDocs/uxp-photoshop-plugin-samples/commit/1013a5f452b723d33005c5004596179bdc8ea872
+              - generic [ref=e657]:
+                - generic [ref=e659]:
+                  - link "Commit 1013a5f" [ref=e660] [cursor=pointer]:
+                    - /url: /AdobeDocs/uxp-photoshop-plugin-samples/commit/1013a5f452b723d33005c5004596179bdc8ea872
+                    - text: 1013a5f
+                  - text: ·
+                  - generic "Oct 18, 2020, 12:26 PM PDT" [ref=e661]: Oct 18, 20206 years ago
+                - generic [ref=e662]:
+                  - heading "History" [level=2] [ref=e663]
+                  - link "History" [ref=e664] [cursor=pointer]:
+                    - /url: /AdobeDocs/uxp-photoshop-plugin-samples/commits/main/ui-kitchen-sink/index.html
+                    - generic [ref=e665]:
+                      - generic:
+                        - img
+                      - generic [ref=e666]: History
+            - generic [ref=e668]:
+              - generic [ref=e670]:
+                - heading "File metadata and controls" [level=2] [ref=e671]
+                - list "File view" [ref=e673]:
+                  - listitem [ref=e674]:
+                    - button "Code" [ref=e675] [cursor=pointer]:
+                      - generic [ref=e677]: Code
+                  - listitem [ref=e678]:
+                    - button "Blame" [ref=e679] [cursor=pointer]:
+                      - generic [ref=e681]: Blame
+                - generic [ref=e682]:
+                  - generic [ref=e683]:
+                    - generic [ref=e684]:
+                      - link "Raw" [ref=e686] [cursor=pointer]:
+                        - /url: https://github.com/AdobeDocs/uxp-photoshop-plugin-samples/raw/refs/heads/main/ui-kitchen-sink/index.html
+                        - generic [ref=e688]: Raw
+                      - button "Copy raw file" [ref=e690] [cursor=pointer]:
+                        - img [ref=e691]
+                      - button "Download raw file" [ref=e695] [cursor=pointer]:
+                        - img [ref=e696]
+                    - generic [ref=e699]:
+                      - button "You must be signed in to make or propose changes" [disabled] [ref=e701]:
+                        - img [ref=e702]
+                      - button "More edit options" [ref=e705] [cursor=pointer]:
+                        - img [ref=e706]
+                  - button "Open symbols panel" [ref=e708] [cursor=pointer]:
+                    - img [ref=e709]
+              - region "index.html" [ref=e712]:
+                - generic [ref=e716]:
+                  - textbox "file content" [ref=e721]: "<!DOCTYPE html> <html> <head> <script src=\"index.js\"></script> </head> <style> @media (prefers-color-scheme: dark), (prefers-color-scheme: darkest) { label { color: #E0E0E0; } } /* tweaks for better appearance */ sp-textarea { display: block; width: 240px; } /* tooltip */ .tooltip { position: relative; } .tooltip sp-tooltip { display: none; position: absolute; bottom: 133%; left: 0; right: 0; text-align: center; } .tooltip:hover sp-tooltip { display: block; } /* dialog styles */ :not(.xd) dialog { width: 480px; height: 240px; padding: 0; margin: 0; display: flex; } :not(.xd) dialog form { width: 100vw; height: 100vh; display: flex; flex-direction: column; padding: 32px; } :not(.xd) dialog form > * { flex: 0 0 auto; margin: 8px; } .xd dialog form sp-divider { width: calc(100% - 16px); } dialog form sp-body { flex: 1 1 auto; } .wrapper { position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100vw; height: 100vh; flex-direction: column; display: flex; padding: 12px; } .xd .wrapper { width: 100%; height: 100%; } /* tabs */ .sp-tabs { flex: 0 0 auto; display: flex; flex-direction: row; border-bottom: 2px solid #3E3E3E; } .sp-tab { margin-right: 12px; } .sp-tab sp-label { color: rgba(255,255,255,0.75); } .sp-tab:hover sp-label { color: white; } .sp-tab.selected { border-bottom: 2px solid white; margin-bottom: -2px; } .sp-tab.selected sp-label { color: white; } @media (prefers-color-scheme: light), (prefers-color-scheme: lightest) { .sp-tabs { border-bottom: 2px solid #B8B8B8; } .sp-tab sp-label { color: rgba(0,0,0,0.66); } .sp-tab:hover sp-label { color: black; } .sp-tab.selected { border-bottom: 2px solid black; } .sp-tab.selected sp-label { color: black; } } .sp-tab-page { display: none; flex: 1 1 auto; overflow: scroll; padding: 12px 0; flex-direction: column; } .sp-tab-page.visible { display: flex; } .sp-tab-page > * { flex: 0 0 auto; } /* groups */ .group { flex: 0 0 auto; background-color: rgba(0,0,0,0.5); border-radius: 4px; padding: 24px 12px 12px 12px; position: relative; margin-top: 1em; margin-bottom: 12px; } #sp-native-tab-page .group { background-color: transparent; border: 1px solid rgba(0,0,0,0.5); } .group > sp-label:not(.safe) { position: absolute; top: -1em; left: 0px; background-color: #3E3E3E; display: block; padding: 4px 12px; border-radius: 4px; } @media (prefers-color-scheme: light), (prefers-color-scheme: lightest) { .group { background-color: rgba(0,0,0,0.0625); } .group > sp-label:not(.safe) { background-color: #E8E8E8; } } .group > :not(sp-label) { margin: 6px; } /* icons */ .icon { fill: currentColor; height: 18px; width: 18px; } .icon svg { height: 18px; width: 18px; } /* logs */ .console { flex: 0 0 auto; overflow: scroll; height: 140px; display: none; } .console.visible { display: block; } .console #logs { white-space: pre; font-family: menlo; font-size: 8px; color: black; background-color: white; } </style> <body> <div class=\"wrapper\"> <div class=\"sp-tabs\"> <div class=\"sp-tab selected\" id=\"sp-spectrum-typography-tab\"><sp-label>Spectrum Typography</sp-label></div> <div class=\"sp-tab\" id=\"sp-spectrum-widgets-tab\"><sp-label>Spectrum Widgets</sp-label></div> <div class=\"sp-tab\" id=\"sp-native-tab\"><sp-label>Native</sp-label></div> <div class=\"sp-tab\" id=\"sp-html-tab\"><sp-label>HTML</sp-label></div> <div class=\"sp-tab\" id=\"sp-events-tab\"><sp-label>Events</sp-label></div> </div> <div class=\"sp-tab-page visible\" id=\"sp-spectrum-typography-tab-page\"> <div class=\"group\"><sp-label>Heading</sp-label> <sp-detail>NORMAL HEADING</sp-detail> <sp-heading>Heading</sp-heading> <sp-detail>HEADING SIZES</sp-detail> <sp-heading size=\"XXXL\">Heading XXXL</sp-heading> <sp-heading size=\"XXL\">Heading XXL</sp-heading> <sp-heading size=\"XL\">Heading XL</sp-heading> <sp-heading size=\"L\">Heading L</sp-heading> <sp-heading size=\"M\">Heading M</sp-heading> <sp-heading size=\"S\">Heading S</sp-heading> <sp-heading size=\"XS\">Heading XS</sp-heading> <sp-heading size=\"XXS\">Heading XXS</sp-heading> </div> <div class=\"group\"><sp-label>Body</sp-label> <sp-detail>BODY TEXT</sp-detail> <sp-body>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</sp-body> <sp-detail>BODY SIZES</sp-detail> <sp-body size=\"XXXL\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</sp-body> <sp-body size=\"XXL\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</sp-body> <sp-body size=\"XL\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</sp-body> <sp-body size=\"L\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</sp-body> <sp-body size=\"M\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</sp-body> <sp-body size=\"S\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</sp-body> <sp-body size=\"XS\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eleifend est mollis ligula lobortis, tempus ultricies sapien lacinia. Nulla ut turpis velit. Sed finibus dapibus diam et sollicitudin. Phasellus in ipsum nec ante elementum congue eget in leo. Morbi eleifend justo non rutrum venenatis. Fusce cursus et lectus eu facilisis. Ut laoreet felis in magna dignissim feugiat.</sp-body> </div> <div class=\"group\"><sp-label>Label</sp-label> <sp-label class=\"safe\">Label</sp-label> <div style=\"background-color: blue\"> <sp-label variant=\"overBackground\" class=\"safe\">Label, overBackground</sp-label> </div> </div> <div class=\"group\"><sp-label>Detail</sp-label> <sp-detail>SOME DETAIL INFO</sp-detail> </div> </div> <div class=\"sp-tab-page\" id=\"sp-spectrum-widgets-tab-page\"> <div class=\"group\"><sp-label>Action Buttons</sp-label> <sp-detail>NO ICON</sp-detail> <sp-action-button> Do action </sp-action-button> <sp-action-button selected> Do action </sp-action-button> <sp-action-button disabled> Do action </sp-action-button> <sp-detail>WITH ICON</sp-detail> <sp-action-button> <div slot=\"icon\" class=\"icon\"> <svg id=\"spectrum-icon-18-Edit\" viewBox=\"0 0 36 36\"> <path d=\"M33.567 8.2L27.8 2.432a1.215 1.215 0 0 0-.866-.353H26.9a1.371 1.371 0 0 0-.927.406L5.084 23.372a.99.99 0 0 0-.251.422L2.055 33.1c-.114.377.459.851.783.851a.251.251 0 0 0 .062-.007c.276-.063 7.866-2.344 9.311-2.778a.972.972 0 0 0 .414-.249l20.888-20.889a1.372 1.372 0 0 0 .4-.883 1.221 1.221 0 0 0-.346-.945zM11.4 29.316c-2.161.649-4.862 1.465-6.729 2.022l2.009-6.73z\" ></path> </svg> </div> This is an action button </sp-action-button> <sp-detail>ICON ONLY</sp-detail> <sp-action-button label=\"Edit\"><div slot=\"icon\" class=\"icon\"><svg id=\"spectrum-icon-18-Edit\" viewBox=\"0 0 36 36\"><path d=\"M33.567 8.2L27.8 2.432a1.215 1.215 0 0 0-.866-.353H26.9a1.371 1.371 0 0 0-.927.406L5.084 23.372a.99.99 0 0 0-.251.422L2.055 33.1c-.114.377.459.851.783.851a.251.251 0 0 0 .062-.007c.276-.063 7.866-2.344 9.311-2.778a.972.972 0 0 0 .414-.249l20.888-20.889a1.372 1.372 0 0 0 .4-.883 1.221 1.221 0 0 0-.346-.945zM11.4 29.316c-2.161.649-4.862 1.465-6.729 2.022l2.009-6.73z\" ></path></svg></div></sp-action-button> </div> <div class=\"group\"><sp-label>Buttons</sp-label> <sp-detail>NORMAL VARIANTS</sp-detail> <sp-button variant=\"cta\">Call To Action</sp-button> <sp-button variant=\"primary\">Primary</sp-button> <sp-button variant=\"secondary\">Secondary</sp-button> <sp-button variant=\"warning\">Warning</sp-button> <sp-detail>QUIET VARIANTS</sp-detail> <sp-button quiet variant=\"primary\">Quiet Primary</sp-button> <sp-button quiet variant=\"secondary\">Quiet Secondary</sp-button> <sp-button quiet variant=\"negative\">Quiet Negative</sp-button> <sp-detail>WITH ICONS</sp-detail> <sp-icons-medium></sp-icons-medium> <sp-button variant=\"primary\">Label only</sp-button> <sp-button variant=\"primary\"> <sp-icon slot=\"icon\" size=\"s\" name=\"ui:HelpMedium\"></sp-icon> Icon + Label </sp-button> <sp-button variant=\"primary\"> <div slot=\"icon\" class=\"icon\"> <svg slot=\"icon\" viewBox=\"0 0 36 36\" focusable=\"false\" aria-hidden=\"true\" role=\"img\" > <path d=\"M16 36a4.407 4.407 0 0 0 4-4h-8a4.407 4.407 0 0 0 4 4zm9.143-24.615c0-3.437-3.206-4.891-7.143-5.268V3a1.079 1.079 0 0 0-1.143-1h-1.714A1.079 1.079 0 0 0 14 3v3.117c-3.937.377-7.143 1.831-7.143 5.268C6.857 26.8 2 26.111 2 28.154V30h28v-1.846C30 26 25.143 26.8 25.143 11.385z\" ></path> </svg> </div> SVG Icon + Label </sp-button> <sp-detail>STATES</sp-detail> <sp-button variant=\"primary\">Normal</sp-button> <sp-button variant=\"primary\" disabled>Disabled</sp-button> </div> <div class=\"group\"><sp-label>Checkbox</sp-label> <sp-detail>REGULAR CHECKBOX</sp-detail> <sp-checkbox>Web component</sp-checkbox> <sp-detail>STATES</sp-detail> <sp-checkbox checked>Web component</sp-checkbox> <sp-checkbox indeterminate>Web component</sp-checkbox> <sp-checkbox disabled>Web component</sp-checkbox> <sp-checkbox invalid>Web component</sp-checkbox> </div> <div class=\"group\"><sp-label>Dividers</sp-label> <sp-detail>DIVIDER SIZES</sp-detail> <sp-divider size=\"large\"></sp-divider> <sp-divider size=\"medium\"></sp-divider> <sp-divider size=\"small\"></sp-divider> </div> <div class=\"group\"><sp-label>Dropdown</sp-label> <sp-detail>NORMAL</sp-detail> <sp-dropdown placeholder=\"Make a selection...\"> <sp-menu slot=\"options\"> <sp-menu-item> Deselect </sp-menu-item> <sp-menu-item> Select inverse </sp-menu-item> <sp-menu-item> Feather... </sp-menu-item> <sp-menu-item> Select and mask... </sp-menu-item> <sp-menu-divider></sp-menu-divider> <sp-menu-item> Save selection </sp-menu-item> <sp-menu-item disabled> Make work path </sp-menu-item> </sp-menu> </sp-dropdown> <sp-detail>DISABLED</sp-detail> <sp-dropdown disabled placeholder=\"Make a selection...\"> <sp-menu slot=\"options\"> <sp-menu-item> Deselect </sp-menu-item> <sp-menu-item> Select inverse </sp-menu-item> <sp-menu-item> Feather... </sp-menu-item> <sp-menu-item> Select and mask... </sp-menu-item> <sp-menu-divider></sp-menu-divider> <sp-menu-item> Save selection </sp-menu-item> <sp-menu-item disabled> Make work path </sp-menu-item> </sp-menu> </sp-dropdown> <sp-detail>INVALID</sp-detail> <sp-dropdown invalid placeholder=\"Make a selection...\"> <sp-menu slot=\"options\"> <sp-menu-item> Deselect </sp-menu-item> <sp-menu-item> Select inverse </sp-menu-item> <sp-menu-item> Feather... </sp-menu-item> <sp-menu-item> Select and mask... </sp-menu-item> <sp-menu-divider></sp-menu-divider> <sp-menu-item> Save selection </sp-menu-item> <sp-menu-item disabled> Make work path </sp-menu-item> </sp-menu> </sp-dropdown> </div> <div class=\"group\"><sp-label>Icon</sp-label> <sp-detail>UI ICON</sp-detail> <sp-body> <sp-icon name=\"ui:Magnifier\"></sp-icon> </sp-body> <sp-detail>SIZE VARIANTS</sp-detail> <sp-body> <sp-icon size=\"xxs\" name=\"ui:Magnifier\"></sp-icon> <sp-icon size=\"xs\" name=\"ui:Magnifier\"></sp-icon> <sp-icon size=\"s\" name=\"ui:Magnifier\"></sp-icon> <sp-icon size=\"m\" name=\"ui:Magnifier\"></sp-icon> <sp-icon size=\"l\" name=\"ui:Magnifier\"></sp-icon> <sp-icon size=\"xl\" name=\"ui:Magnifier\"></sp-icon> <sp-icon size=\"xxl\" name=\"ui:Magnifier\"></sp-icon> </sp-body> </div> <div class=\"group\"><sp-label>Link</sp-label> <sp-detail>STANDARD LINK</sp-detail> <sp-body> This is a <sp-link href=\"#\">standard link</sp-link>. </sp-body> <sp-detail>QUIET LINK</sp-detail> <sp-body> This is a <sp-link quiet href=\"#\">standard link</sp-link>. </sp-body> </div> <div class=\"group\"><sp-label>Menu</sp-label> <sp-detail>MENU</sp-detail> <sp-menu> <sp-menu-item> Deselect </sp-menu-item> <sp-menu-item> Select inverse </sp-menu-item> <sp-menu-item> Feather... </sp-menu-item> <sp-menu-item> Select and mask... </sp-menu-item> <sp-menu-item> Save selection </sp-menu-item> <sp-menu-item disabled> Make work path </sp-menu-item> </sp-menu> </div> <div class=\"group\"><sp-label>Number</sp-label> <sp-detail>NUMBER FIELD</sp-detail> <sp-textfield type=\"number\" placeholder=\"Pick a Number\"></sp-textfield> <sp-detail>QUIET NUMBER FIELD</sp-detail> <sp-textfield quiet type=\"number\" placeholder=\"Pick a Number\"></sp-textfield> <sp-detail>NUMBER FIELD VARIANTS</sp-detail> <sp-textfield type=\"number\" invalid placeholder=\"Pick a Number\"></sp-textfield> <sp-textfield type=\"number\" valid placeholder=\"Pick a Number\"></sp-textfield> </div> <div class=\"group\"><sp-label>Password</sp-label> <sp-detail>PASSWORD FIELD</sp-detail> <sp-textfield type=\"password\" placeholder=\"Password\"></sp-textfield> <sp-detail>QUIET PASSWORD FIELD</sp-detail> <sp-textfield quiet type=\"password\" placeholder=\"Password\"></sp-textfield> <sp-detail>NUMBER PASSWORD VARIANTS</sp-detail> <sp-textfield type=\"password\" invalid placeholder=\"Password\"></sp-textfield> <sp-textfield type=\"password\" valid placeholder=\"Password\"></sp-textfield> </div> <div class=\"group\"><sp-label>Radio</sp-label> <sp-detail>STANDARD RADIO BUTTON GROUP</sp-detail> <sp-radio-group selected=\"first\" name=\"example\"> <sp-radio value=\"first\">Option 1</sp-radio> <sp-radio value=\"second\">Option 2</sp-radio> <sp-radio value=\"third\">Option 3</sp-radio> <sp-radio value=\"fourth\">Option 4</sp-radio> </sp-radio-group> <sp-detail>STATES</sp-detail> <sp-radio-group name=\"example2\"> <sp-radio checked>Checked radio button</sp-radio> <sp-radio invalid>Invalid radio button</sp-radio> <sp-radio disabled>Disabled radio button</sp-radio> <sp-radio-group> </div> <div class=\"group\"><sp-label>Search</sp-label> <sp-detail>SEARCH FIELD</sp-detail> <sp-textfield type=\"search\" placeholder=\"Stock Search...\"></sp-textfield> <sp-detail>QUIET SEARCH FIELD</sp-detail> <sp-textfield quiet type=\"search\" placeholder=\"Stock Search...\"></sp-textfield> <sp-detail>NUMBER SEARCH VARIANTS</sp-detail> <sp-textfield type=\"search\" invalid placeholder=\"Stock Search...\"></sp-textfield> <sp-textfield type=\"search\" valid placeholder=\"Stock Search...\"></sp-textfield> </div> <div class=\"group\"><sp-label>Slider</sp-label> <sp-detail>SLIDER</sp-detail> <sp-slider min=\"0\" max=\"100\" value=\"50\"></sp-slider> <sp-slider min=\"0\" max=\"100\" value=\"50\" disabled></sp-slider> <sp-detail>WITH LABEL</sp-detail> <sp-slider min=\"0\" max=\"100\" value=\"50\"><sp-label slot=\"label\">Slider Label</sp-label></sp-slider> <sp-slider min=\"0\" max=\"100\" value=\"50\" disabled><sp-label slot=\"label\">Slider Label - Disabled</sp-label></sp-slider> <sp-detail>FILLED</sp-detail> <sp-slider min=\"0\" max=\"100\" value=\"50\" variant=\"filled\"></sp-slider> <sp-slider min=\"0\" max=\"100\" value=\"50\" variant=\"filled\" disabled ></sp-slider> </div> <div class=\"group\"><sp-label>Textarea</sp-label> <sp-detail>TEXT AREA</sp-detail> <sp-textarea placeholder=\"Enter your name\" multiline></sp-textarea> <sp-textarea quiet placeholder=\"Enter your name\" multiline></sp-textarea> <sp-textarea invalid placeholder=\"Enter your name\" multiline></sp-textarea> <sp-textarea valid placeholder=\"Enter your name\" multiline></sp-textarea> <sp-detail>TEXT AREA WITH LABEL</sp-detail> <sp-textarea placeholder=\"Add a comment\" multiline> <sp-label slot=\"label\">Feedback</sp-label> </sp-textarea> </div> <div class=\"group\"><sp-label>Textfield</sp-label> <sp-detail>TEXT FIELD</sp-detail> <sp-textfield placeholder=\"Type Something.\"></sp-textfield> <sp-detail>QUIET TEXT FIELD</sp-detail> <sp-textfield quiet placeholder=\"Type Something.\"></sp-textfield> <sp-detail>TEXT SEARCH VARIANTS</sp-detail> <sp-textfield valid placeholder=\"Type Something.\"></sp-textfield> <sp-textfield invalid placeholder=\"Type Something.\"></sp-textfield> <sp-detail>TEXT FIELD WITH LABELS</sp-detail> <sp-textfield placeholder=\"Phone Number\"><sp-label isrequired=\"true\" slot=\"label\">Phone Number</sp-label></sp-textfield> <br/> <sp-textfield placeholder=\"Phone Number\" style=\"display: flex; flex-direction: row; align-items: baseline;\"> <sp-label style=\"padding-right: 16px\" isrequired=\"true\" slot=\"label\">Phone Number</sp-label> </sp-textfield> </div> <div class=\"group\"><sp-label>Tooltip</sp-label> <sp-detail>NORMAL TOOLTIP</sp-detail> <sp-tooltip open placement=\"top\">Label</sp-tooltip> <br /> <br /> <sp-tooltip open placement=\"bottom\">Label</sp-tooltip> <br /> <br /> <sp-tooltip open placement=\"left\">Label</sp-tooltip> <br /> <br /> <sp-tooltip open placement=\"right\">Label</sp-tooltip> <sp-detail>CONTROL WITH TOOLTIP</sp-detail> <sp-button class=\"tooltip\">Hover over me <sp-tooltip open placement=\"top\" variant=\"info\">I'm a tooltip!</sp-tooltip> </sp-button> <sp-detail>INFORMATIVE TOOLTIP</sp-detail> <sp-tooltip open placement=\"top\" variant=\"info\">Label</sp-tooltip> <sp-tooltip open placement=\"top\" variant=\"info\"> Lorem ipsum dolor sit amet, consectetur adipiscing elit </sp-tooltip> <sp-tooltip open placement=\"top\" variant=\"info\"> <sp-icon size=\"s\" name=\"ui:InfoSmall\" slot=\"icon\"></sp-icon> Label </sp-tooltip> <sp-tooltip open placement=\"top\" variant=\"info\"> <sp-icon size=\"s\" name=\"ui:InfoSmall\" slot=\"icon\"></sp-icon> Lorem ipsum dolor sit amet, consectetur adipiscing elit </sp-tooltip> <sp-detail>POSITIVE TOOLTIP</sp-detail> <sp-tooltip open placement=\"top\" variant=\"positive\">Label</sp-tooltip> <sp-tooltip open placement=\"top\" variant=\"positive\"> Lorem ipsum dolor sit amet, consectetur adipiscing elit </sp-tooltip> <sp-tooltip open placement=\"top\" variant=\"positive\"> <sp-icon size=\"s\" name=\"ui:CheckmarkSmall\" slot=\"icon\"></sp-icon> Label </sp-tooltip> <sp-tooltip open placement=\"top\" variant=\"positive\"> <sp-icon size=\"s\" name=\"ui:CheckmarkSmall\" slot=\"icon\"></sp-icon> Lorem ipsum dolor sit amet, consectetur adipiscing elit </sp-tooltip> <sp-detail>NEGATIVE TOOLTIP</sp-detail> <sp-tooltip open placement=\"top\" variant=\"negative\">Label</sp-tooltip> <sp-tooltip open placement=\"top\" variant=\"negative\"> Lorem ipsum dolor sit amet, consectetur adipiscing elit </sp-tooltip> <sp-tooltip open placement=\"top\" variant=\"negative\"> <sp-icon size=\"s\" name=\"ui:AlertSmall\" slot=\"icon\"></sp-icon> Label </sp-tooltip> <sp-tooltip open placement=\"top\" variant=\"negative\"> <sp-icon size=\"s\" name=\"ui:AlertSmall\" slot=\"icon\"></sp-icon> Lorem ipsum dolor sit amet, consectetur adipiscing elit </sp-tooltip> </div> </div> <div class=\"sp-tab-page\" id=\"sp-native-tab-page\"> <div class=\"group\"><sp-label>Buttons</sp-label> <button>Hi</button> </div> <div class=\"group\"><sp-label>Checkboxes</sp-label> <label><input type=\"checkbox\">Check me</label> <label><input type=\"checkbox\" checked>Check me</label> <label><input type=\"checkbox\" disabled>Check me</label> </div> <div class=\"group\"><sp-label>Dialogs</sp-label> <sp-detail>DIALOG EXAMPLE</sp-detail> <button id=\"btnOpenDialog\">Open Dialog</button> <dialog id=\"dlgExample\"> <form method=\"dialog\"> <sp-heading>Vectorize Images?</sp-heading> <sp-divider size=\"large\"></sp-divider> <sp-body>Are you sure you want to vectorize the images? This might take some time.</sp-body> <footer> <sp-button variant=\"secondary\" quiet>Don't Vectorize</sp-button> <sp-button variant=\"cta\">Vectorize</sp-button> </footer> </form> </dialog> <button id=\"btnOpenPDialog\">Open Programmatic Dialog</button> </div> <div class=\"group\"><sp-label>Selects</sp-label> <label>City: <select> <option value=\"Amsterdam\" selected>Amsterdam</option> <option value=\"New York\" >New York</option> <option value=\"New Jersey\">New Jersey</option> </select> </label> </div> <div class=\"group\"><sp-label>Radio Buttons</sp-label> <label><input type=\"radio\" name=\"radioGroup\">Click me</label> <label><input type=\"radio\" name=\"radioGroup\" checked>Click me</label> <label><input type=\"radio\" name=\"radioGroup\" disabled >Click me</label> </div> <div class=\"group\"><sp-label>Range</sp-label> <label>Opacity: <input type=\"range\" min=\"0\" max=\"100\" value=\"50\"></label> </div> <div class=\"group\"><sp-label>Textarea</sp-label> <label>Text Area <textarea style=\"width:240px; height:60px\"></textarea> </label> </div> <div class=\"group\"><sp-label>Text Input</sp-label> <label>Text Input <input type=\"text\" placeholder=\"Enter your text\"/> </label> <label>Number Input <input type=\"number\" placeholder=\"Enter your text\"/> </label> <label>Password Input <input type=\"password\" placeholder=\"Enter your text\"/> </label> </div> </div> <div class=\"sp-tab-page\" id=\"sp-html-tab-page\"> <div class=\"group\"><sp-label>Rules</sp-label> <sp-detail>HR</sp-detail> <hr/> </div> </div> <div class=\"sp-tab-page\" id=\"sp-events-tab-page\"> <sp-checkbox id=\"toggleConsole\">Toggle Events Console</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkfocus\" checked>focus</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkblur\" checked>blur</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkclick\" checked>click</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkdblclick\" checked>dblclick</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkauxclick\" checked>auxclick*</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkcontextmenu\" checked>contextmenu</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkchange\" checked>change</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkinput\" checked>input</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkkeydown\" checked>keydown</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkkeyup\" checked>keyup</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkkeypress\" checked>keypress*</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkmousedown\" checked>mousedown</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkmouseup\" checked>mouseup</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkmousemove\" >mousemove</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkmouseenter\" >mouseenter</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkmouseleave\" >mouseleave</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkmouseover\" >mouseover</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkmouseout\" >mouseout</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkmousewheel\" >mousewheel*</sp-checkbox> <sp-checkbox class=\"filter\" id=\"chkwheel\" >wheel*</sp-checkbox> <sp-body>* indicates non-functioning</sp-body> </div> <div id=\"console\" class=\"console\"> <sp-body id=\"logs\"></sp-body> </div> </div> </body> </html>"
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic [ref=e722]:
+                          - generic [ref=e723] [cursor=pointer]: "1"
+                          - generic [ref=e724] [cursor=pointer]: "2"
+                          - generic [ref=e725] [cursor=pointer]: "3"
+                          - generic [ref=e726] [cursor=pointer]: "4"
+                          - generic [ref=e727] [cursor=pointer]: "5"
+                          - generic [ref=e728] [cursor=pointer]: "6"
+                          - generic [ref=e729] [cursor=pointer]: "7"
+                          - generic [ref=e730] [cursor=pointer]: "8"
+                          - generic [ref=e731] [cursor=pointer]: "9"
+                          - generic [ref=e732] [cursor=pointer]: "10"
+                          - generic [ref=e733] [cursor=pointer]: "11"
+                          - generic [ref=e734] [cursor=pointer]: "12"
+                          - generic [ref=e735] [cursor=pointer]: "13"
+                          - generic [ref=e736] [cursor=pointer]: "14"
+                          - generic [ref=e737] [cursor=pointer]: "15"
+                          - generic [ref=e738] [cursor=pointer]: "16"
+                          - generic [ref=e739] [cursor=pointer]: "17"
+                          - generic [ref=e740] [cursor=pointer]: "18"
+                          - generic [ref=e741] [cursor=pointer]: "19"
+                          - generic [ref=e742] [cursor=pointer]: "20"
+                          - generic [ref=e743] [cursor=pointer]: "21"
+                          - generic [ref=e744] [cursor=pointer]: "22"
+                          - generic [ref=e745] [cursor=pointer]: "23"
+                          - generic [ref=e746] [cursor=pointer]: "24"
+                          - generic [ref=e747] [cursor=pointer]: "25"
+                          - generic [ref=e748] [cursor=pointer]: "26"
+                          - generic [ref=e749] [cursor=pointer]: "27"
+                          - generic [ref=e750] [cursor=pointer]: "28"
+                          - generic [ref=e751] [cursor=pointer]: "29"
+                          - generic [ref=e752] [cursor=pointer]: "30"
+                          - generic [ref=e753] [cursor=pointer]: "31"
+                          - generic [ref=e754] [cursor=pointer]: "32"
+                          - generic [ref=e755] [cursor=pointer]: "33"
+                          - generic [ref=e756] [cursor=pointer]: "34"
+                          - generic [ref=e757] [cursor=pointer]: "35"
+                          - generic [ref=e758] [cursor=pointer]: "36"
+                          - generic [ref=e759] [cursor=pointer]: "37"
+                          - generic [ref=e760] [cursor=pointer]: "38"
+                          - generic [ref=e761] [cursor=pointer]: "39"
+                          - generic [ref=e762] [cursor=pointer]: "40"
+                          - generic [ref=e763] [cursor=pointer]: "41"
+                          - generic [ref=e764] [cursor=pointer]: "42"
+                          - generic [ref=e765] [cursor=pointer]: "43"
+                          - generic [ref=e766] [cursor=pointer]: "44"
+                          - generic [ref=e767] [cursor=pointer]: "45"
+                          - generic [ref=e768] [cursor=pointer]: "46"
+                          - generic [ref=e769] [cursor=pointer]: "47"
+                          - generic [ref=e770] [cursor=pointer]: "48"
+                          - generic [ref=e771] [cursor=pointer]: "49"
+                          - generic [ref=e772] [cursor=pointer]: "50"
+                          - generic [ref=e773] [cursor=pointer]: "51"
+                          - generic [ref=e774] [cursor=pointer]: "52"
+                          - generic [ref=e775] [cursor=pointer]: "53"
+                          - generic [ref=e776] [cursor=pointer]: "54"
+                          - generic [ref=e777] [cursor=pointer]: "55"
+                          - generic [ref=e778] [cursor=pointer]: "56"
+                          - generic [ref=e779] [cursor=pointer]: "57"
+                          - generic [ref=e780] [cursor=pointer]: "58"
+                          - generic [ref=e781] [cursor=pointer]: "59"
+                          - generic [ref=e782] [cursor=pointer]: "60"
+                          - generic [ref=e783] [cursor=pointer]: "61"
+                          - generic [ref=e784] [cursor=pointer]: "62"
+                          - generic [ref=e785] [cursor=pointer]: "63"
+                          - generic [ref=e786] [cursor=pointer]: "64"
+                          - generic [ref=e787] [cursor=pointer]: "65"
+                          - generic [ref=e788] [cursor=pointer]: "66"
+                          - generic [ref=e789] [cursor=pointer]: "67"
+                          - generic [ref=e790] [cursor=pointer]: "68"
+                          - generic [ref=e791] [cursor=pointer]: "69"
+                          - generic [ref=e792] [cursor=pointer]: "70"
+                          - generic [ref=e793] [cursor=pointer]: "71"
+                          - generic [ref=e794] [cursor=pointer]: "72"
+                          - generic [ref=e795] [cursor=pointer]: "73"
+                          - generic [ref=e796] [cursor=pointer]: "74"
+                          - generic [ref=e797] [cursor=pointer]: "75"
+                          - generic [ref=e798] [cursor=pointer]: "76"
+                          - generic [ref=e799] [cursor=pointer]: "77"
+                          - generic [ref=e800] [cursor=pointer]: "78"
+                          - generic [ref=e801] [cursor=pointer]: "79"
+                          - generic [ref=e802] [cursor=pointer]: "80"
+                          - generic [ref=e803] [cursor=pointer]: "81"
+                          - generic [ref=e804] [cursor=pointer]: "82"
+                          - generic [ref=e805] [cursor=pointer]: "83"
+                          - generic [ref=e806] [cursor=pointer]: "84"
+                          - generic [ref=e807] [cursor=pointer]: "85"
+                          - generic [ref=e808] [cursor=pointer]: "86"
+                          - generic [ref=e809] [cursor=pointer]: "87"
+                          - generic [ref=e810] [cursor=pointer]: "88"
+                          - generic [ref=e811] [cursor=pointer]: "89"
+                          - generic [ref=e812] [cursor=pointer]: "90"
+                          - generic [ref=e813] [cursor=pointer]: "91"
+                          - generic [ref=e814] [cursor=pointer]: "92"
+                          - generic [ref=e815] [cursor=pointer]: "93"
+                          - generic [ref=e816] [cursor=pointer]: "94"
+                          - generic [ref=e817] [cursor=pointer]: "95"
+                          - generic [ref=e818] [cursor=pointer]: "96"
+                          - generic [ref=e819] [cursor=pointer]: "97"
+                          - generic [ref=e820] [cursor=pointer]: "98"
+                          - generic [ref=e821] [cursor=pointer]: "99"
+                          - generic [ref=e822] [cursor=pointer]: "100"
+                          - generic [ref=e823] [cursor=pointer]: "101"
+                          - generic [ref=e824] [cursor=pointer]: "102"
+                          - generic [ref=e825] [cursor=pointer]: "103"
+                          - generic [ref=e826] [cursor=pointer]: "104"
+                          - generic [ref=e827] [cursor=pointer]: "105"
+                          - generic [ref=e828] [cursor=pointer]: "106"
+                          - generic [ref=e829] [cursor=pointer]: "107"
+                          - generic [ref=e830] [cursor=pointer]: "108"
+                          - generic [ref=e831] [cursor=pointer]: "109"
+                          - generic [ref=e832] [cursor=pointer]: "110"
+                          - generic [ref=e833] [cursor=pointer]: "111"
+                          - generic [ref=e834] [cursor=pointer]: "112"
+                          - generic [ref=e835] [cursor=pointer]: "113"
+                          - generic [ref=e836] [cursor=pointer]: "114"
+                          - generic [ref=e837] [cursor=pointer]: "115"
+                          - generic [ref=e838] [cursor=pointer]: "116"
+                          - generic [ref=e839] [cursor=pointer]: "117"
+                          - generic [ref=e840] [cursor=pointer]: "118"
+                          - generic [ref=e841] [cursor=pointer]: "119"
+                          - generic [ref=e842] [cursor=pointer]: "120"
+                          - generic [ref=e843] [cursor=pointer]: "121"
+                          - generic [ref=e844] [cursor=pointer]: "122"
+                          - generic [ref=e845] [cursor=pointer]: "123"
+                          - generic [ref=e846] [cursor=pointer]: "124"
+                          - generic [ref=e847] [cursor=pointer]: "125"
+                          - generic [ref=e848] [cursor=pointer]: "126"
+                          - generic [ref=e849] [cursor=pointer]: "127"
+                          - generic [ref=e850] [cursor=pointer]: "128"
+                          - generic [ref=e851] [cursor=pointer]: "129"
+                          - generic [ref=e852] [cursor=pointer]: "130"
+                          - generic [ref=e853] [cursor=pointer]: "131"
+                          - generic [ref=e854] [cursor=pointer]: "132"
+                          - generic [ref=e855] [cursor=pointer]: "133"
+                          - generic [ref=e856] [cursor=pointer]: "134"
+                          - generic [ref=e857] [cursor=pointer]: "135"
+                          - generic [ref=e858] [cursor=pointer]: "136"
+                          - generic [ref=e859] [cursor=pointer]: "137"
+                          - generic [ref=e860] [cursor=pointer]: "138"
+                          - generic [ref=e861] [cursor=pointer]: "139"
+                          - generic [ref=e862] [cursor=pointer]: "140"
+                          - generic [ref=e863] [cursor=pointer]: "550"
+                          - generic [ref=e864] [cursor=pointer]: "551"
+                          - generic [ref=e865] [cursor=pointer]: "552"
+                          - generic [ref=e866] [cursor=pointer]: "553"
+                          - generic [ref=e867] [cursor=pointer]: "554"
+                          - generic [ref=e868] [cursor=pointer]: "555"
+                          - generic [ref=e869] [cursor=pointer]: "556"
+                          - generic [ref=e870] [cursor=pointer]: "557"
+                          - generic [ref=e871] [cursor=pointer]: "558"
+                          - generic [ref=e872] [cursor=pointer]: "559"
+                          - generic [ref=e873] [cursor=pointer]: "560"
+                          - generic [ref=e874] [cursor=pointer]: "561"
+                          - generic [ref=e875] [cursor=pointer]: "562"
+                          - generic [ref=e876] [cursor=pointer]: "563"
+                          - generic [ref=e877] [cursor=pointer]: "564"
+                          - generic [ref=e878] [cursor=pointer]: "565"
+                          - generic [ref=e879] [cursor=pointer]: "566"
+                          - generic [ref=e880] [cursor=pointer]: "567"
+                          - generic [ref=e881] [cursor=pointer]: "568"
+                          - generic [ref=e882] [cursor=pointer]: "569"
+                          - generic [ref=e883] [cursor=pointer]: "570"
+                          - generic [ref=e884] [cursor=pointer]: "571"
+                          - generic [ref=e885] [cursor=pointer]: "572"
+                          - generic [ref=e886] [cursor=pointer]: "573"
+                          - generic [ref=e887] [cursor=pointer]: "574"
+                          - generic [ref=e888] [cursor=pointer]: "575"
+                          - generic [ref=e889] [cursor=pointer]: "576"
+                          - generic [ref=e890] [cursor=pointer]: "577"
+                          - generic [ref=e891] [cursor=pointer]: "578"
+                          - generic [ref=e892] [cursor=pointer]: "579"
+                          - generic [ref=e893] [cursor=pointer]: "580"
+                          - generic [ref=e894] [cursor=pointer]: "581"
+                          - generic [ref=e895] [cursor=pointer]: "582"
+                          - generic [ref=e896] [cursor=pointer]: "583"
+                          - generic [ref=e897] [cursor=pointer]: "584"
+                          - generic [ref=e898] [cursor=pointer]: "585"
+                          - generic [ref=e899] [cursor=pointer]: "586"
+                          - generic [ref=e900] [cursor=pointer]: "587"
+                          - generic [ref=e901] [cursor=pointer]: "588"
+                          - generic [ref=e902] [cursor=pointer]: "589"
+                          - generic [ref=e903] [cursor=pointer]: "590"
+                          - generic [ref=e904] [cursor=pointer]: "591"
+                          - generic [ref=e905] [cursor=pointer]: "592"
+                          - generic [ref=e906] [cursor=pointer]: "593"
+                          - generic [ref=e907] [cursor=pointer]: "594"
+                          - generic [ref=e908] [cursor=pointer]: "595"
+                          - generic [ref=e909] [cursor=pointer]: "596"
+                          - generic [ref=e910] [cursor=pointer]: "597"
+                          - generic [ref=e911] [cursor=pointer]: "598"
+                          - generic [ref=e912] [cursor=pointer]: "599"
+                          - generic [ref=e913] [cursor=pointer]: "600"
+                          - generic [ref=e914] [cursor=pointer]: "601"
+                          - generic [ref=e915] [cursor=pointer]: "602"
+                          - generic [ref=e916] [cursor=pointer]: "603"
+                          - generic [ref=e917] [cursor=pointer]: "604"
+                          - generic [ref=e918] [cursor=pointer]: "605"
+                          - generic [ref=e919] [cursor=pointer]: "606"
+                          - generic [ref=e920] [cursor=pointer]: "607"
+                          - generic [ref=e921] [cursor=pointer]: "608"
+                          - generic [ref=e922] [cursor=pointer]: "609"
+                          - generic [ref=e923] [cursor=pointer]: "610"
+                          - generic [ref=e924] [cursor=pointer]: "611"
+                          - generic [ref=e925] [cursor=pointer]: "612"
+                          - generic [ref=e926] [cursor=pointer]: "613"
+                          - generic [ref=e927] [cursor=pointer]: "614"
+                          - generic [ref=e928] [cursor=pointer]: "615"
+                          - generic [ref=e929] [cursor=pointer]: "616"
+                          - generic [ref=e930] [cursor=pointer]: "617"
+                          - generic [ref=e931] [cursor=pointer]: "618"
+                          - generic [ref=e932] [cursor=pointer]: "619"
+                          - generic [ref=e933] [cursor=pointer]: "620"
+                          - generic [ref=e934] [cursor=pointer]: "621"
+                          - generic [ref=e935] [cursor=pointer]: "622"
+                          - generic [ref=e936] [cursor=pointer]: "623"
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - text: <!DOCTYPE html
+                                  - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: html
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: head
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: script
+                                - generic: src
+                                - text: ="
+                                - generic: index.js
+                                - text: "\""
+                                - generic: ">"
+                                - generic: </
+                                - generic: script
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: head
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: style
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: "@media"
+                                - text: (
+                                - generic: prefers-color-scheme
+                                - generic: ":"
+                                - text: dark)
+                                - generic: ","
+                                - text: (
+                                - generic: prefers-color-scheme
+                                - generic: ":"
+                                - text: "darkest) {"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: label
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: color
+                                - generic: ":"
+                                - generic:
+                                  - generic: "#"
+                                  - text: E0E0E0
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: /* tweaks for better appearance */
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: sp-textarea
+                                - text: "{"
+                                - generic: display
+                                - generic: ":"
+                                - text: block;
+                                - generic: width
+                                - generic: ":"
+                                - generic:
+                                  - text: "240"
+                                  - generic: px
+                                - text: "; }"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: /* tooltip */
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: tooltip
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: position
+                                - generic: ":"
+                                - text: relative;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: tooltip
+                                - generic: sp-tooltip
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: display
+                                - generic: ":"
+                                - text: none;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: position
+                                - generic: ":"
+                                - text: absolute;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: bottom
+                                - generic: ":"
+                                - generic:
+                                  - text: "133"
+                                  - generic: "%"
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: left
+                                - generic: ":"
+                                - generic: "0"
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: right
+                                - generic: ":"
+                                - generic: "0"
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: text-align
+                                - generic: ":"
+                                - text: center;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: tooltip
+                                - generic: ":"
+                                - generic: hover
+                                - generic: sp-tooltip
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: display
+                                - generic: ":"
+                                - text: block;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: /* dialog styles */
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: ":"
+                                - generic: not
+                                - text: (.
+                                - generic: xd
+                                - text: )
+                                - generic: dialog
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: width
+                                - generic: ":"
+                                - generic:
+                                  - text: "480"
+                                  - generic: px
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: height
+                                - generic: ":"
+                                - generic:
+                                  - text: "240"
+                                  - generic: px
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: padding
+                                - generic: ":"
+                                - generic: "0"
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: margin
+                                - generic: ":"
+                                - generic: "0"
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: display
+                                - generic: ":"
+                                - text: flex;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: ":"
+                                - generic: not
+                                - text: (.
+                                - generic: xd
+                                - text: )
+                                - generic: dialog
+                                - generic: form
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: width
+                                - generic: ":"
+                                - generic:
+                                  - text: "100"
+                                  - generic: vw
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: height
+                                - generic: ":"
+                                - generic:
+                                  - text: "100"
+                                  - generic: vh
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: display
+                                - generic: ":"
+                                - text: flex;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: flex-direction
+                                - generic: ":"
+                                - text: column;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: padding
+                                - generic: ":"
+                                - generic:
+                                  - text: "32"
+                                  - generic: px
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: ":"
+                                - generic: not
+                                - text: (.
+                                - generic: xd
+                                - text: )
+                                - generic: dialog
+                                - generic: form
+                                - generic: ">"
+                                - generic:
+                                  - generic: "*"
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: flex
+                                - generic: ":"
+                                - generic: "0"
+                                - generic: "0"
+                                - text: auto;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: margin
+                                - generic: ":"
+                                - generic:
+                                  - text: "8"
+                                  - generic: px
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: xd
+                                - generic: dialog
+                                - generic: form
+                                - generic: sp-divider
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: width
+                                - generic: ":"
+                                - generic: calc
+                                - text: (
+                                - generic:
+                                  - text: "100"
+                                  - generic: "%"
+                                - generic: "-"
+                                - generic:
+                                  - text: "16"
+                                  - generic: px
+                                - text: );
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: dialog
+                                - generic: form
+                                - generic: sp-body
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: flex
+                                - generic: ":"
+                                - generic: "1"
+                                - generic: "1"
+                                - text: auto;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: wrapper
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: position
+                                - generic: ":"
+                                - text: absolute;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: top
+                                - generic: ":"
+                                - generic: "0"
+                                - text: ;
+                                - generic: left
+                                - generic: ":"
+                                - generic: "0"
+                                - text: ;
+                                - generic: right
+                                - generic: ":"
+                                - generic: "0"
+                                - text: ;
+                                - generic: bottom
+                                - generic: ":"
+                                - generic: "0"
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: width
+                                - generic: ":"
+                                - generic:
+                                  - text: "100"
+                                  - generic: vw
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: height
+                                - generic: ":"
+                                - generic:
+                                  - text: "100"
+                                  - generic: vh
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: flex-direction
+                                - generic: ":"
+                                - text: column;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: display
+                                - generic: ":"
+                                - text: flex;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: padding
+                                - generic: ":"
+                                - generic:
+                                  - text: "12"
+                                  - generic: px
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: xd
+                                - text: .
+                                - generic: wrapper
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: width
+                                - generic: ":"
+                                - generic:
+                                  - text: "100"
+                                  - generic: "%"
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: height
+                                - generic: ":"
+                                - generic:
+                                  - text: "100"
+                                  - generic: "%"
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: /* tabs */
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tabs
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: flex
+                                - generic: ":"
+                                - generic: "0"
+                                - generic: "0"
+                                - text: auto;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: display
+                                - generic: ":"
+                                - text: flex;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: flex-direction
+                                - generic: ":"
+                                - text: row;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: border-bottom
+                                - generic: ":"
+                                - generic:
+                                  - text: "2"
+                                  - generic: px
+                                - text: solid
+                                - generic:
+                                  - generic: "#"
+                                  - text: 3E3E3E
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tab
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: margin-right
+                                - generic: ":"
+                                - generic:
+                                  - text: "12"
+                                  - generic: px
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tab
+                                - generic: sp-label
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: color
+                                - generic: ":"
+                                - generic: rgba
+                                - text: (
+                                - generic: "255"
+                                - generic: ","
+                                - generic: "255"
+                                - generic: ","
+                                - generic: "255"
+                                - generic: ","
+                                - generic: "0.75"
+                                - text: );
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tab
+                                - generic: ":"
+                                - generic: hover
+                                - generic: sp-label
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: color
+                                - generic: ":"
+                                - text: white;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tab
+                                - text: .
+                                - generic: selected
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: border-bottom
+                                - generic: ":"
+                                - generic:
+                                  - text: "2"
+                                  - generic: px
+                                - text: solid white;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: margin-bottom
+                                - generic: ":"
+                                - generic:
+                                  - text: "-2"
+                                  - generic: px
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tab
+                                - text: .
+                                - generic: selected
+                                - generic: sp-label
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: color
+                                - generic: ":"
+                                - text: white;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: "@media"
+                                - text: (
+                                - generic: prefers-color-scheme
+                                - generic: ":"
+                                - text: light)
+                                - generic: ","
+                                - text: (
+                                - generic: prefers-color-scheme
+                                - generic: ":"
+                                - text: "lightest) {"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tabs
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: border-bottom
+                                - generic: ":"
+                                - generic:
+                                  - text: "2"
+                                  - generic: px
+                                - text: solid
+                                - generic:
+                                  - generic: "#"
+                                  - text: B8B8B8
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tab
+                                - generic: sp-label
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: color
+                                - generic: ":"
+                                - generic: rgba
+                                - text: (
+                                - generic: "0"
+                                - generic: ","
+                                - generic: "0"
+                                - generic: ","
+                                - generic: "0"
+                                - generic: ","
+                                - generic: "0.66"
+                                - text: );
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tab
+                                - generic: ":"
+                                - generic: hover
+                                - generic: sp-label
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: color
+                                - generic: ":"
+                                - text: black;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tab
+                                - text: .
+                                - generic: selected
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: border-bottom
+                                - generic: ":"
+                                - generic:
+                                  - text: "2"
+                                  - generic: px
+                                - text: solid black;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tab
+                                - text: .
+                                - generic: selected
+                                - generic: sp-label
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: color
+                                - generic: ":"
+                                - text: black;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tab-page
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: display
+                                - generic: ":"
+                                - text: none;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: flex
+                                - generic: ":"
+                                - generic: "1"
+                                - generic: "1"
+                                - text: auto;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: overflow
+                                - generic: ":"
+                                - text: scroll;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: padding
+                                - generic: ":"
+                                - generic:
+                                  - text: "12"
+                                  - generic: px
+                                - generic: "0"
+                                - text: ;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: flex-direction
+                                - generic: ":"
+                                - text: column;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tab-page
+                                - text: .
+                                - generic: visible
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: display
+                                - generic: ":"
+                                - text: flex;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: sp-tab-page
+                                - generic: ">"
+                                - generic:
+                                  - generic: "*"
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: flex
+                                - generic: ":"
+                                - generic: "0"
+                                - generic: "0"
+                                - text: auto;
+                          - generic:
+                            - generic:
+                              - generic: "}"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: /* groups */
+                          - generic:
+                            - generic:
+                              - generic:
+                                - text: .
+                                - generic: group
+                                - text: "{"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: flex
+                                - generic: ":"
+                                - generic: "0"
+                                - generic: "0"
+                                - text: auto;
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-divider
+                                - generic: size
+                                - text: ="
+                                - generic: large
+                                - text: "\""
+                                - generic: ">"
+                                - generic: </
+                                - generic: sp-divider
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-body
+                                - generic: ">"
+                                - text: Are you sure you want to vectorize the images? This might take some time.
+                                - generic: </
+                                - generic: sp-body
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: footer
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-button
+                                - generic: variant
+                                - text: ="
+                                - generic: secondary
+                                - text: "\""
+                                - generic: quiet
+                                - generic: ">"
+                                - text: Don't Vectorize
+                                - generic: </
+                                - generic: sp-button
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-button
+                                - generic: variant
+                                - text: ="
+                                - generic: cta
+                                - text: "\""
+                                - generic: ">"
+                                - text: Vectorize
+                                - generic: </
+                                - generic: sp-button
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: footer
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: form
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: dialog
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: button
+                                - generic: id
+                                - text: ="
+                                - generic: btnOpenPDialog
+                                - text: "\""
+                                - generic: ">"
+                                - text: Open Programmatic Dialog
+                                - generic: </
+                                - generic: button
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: div
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: div
+                                - generic: class
+                                - text: ="
+                                - generic: group
+                                - text: "\""
+                                - generic: ">"
+                                - generic: <
+                                - generic: sp-label
+                                - generic: ">"
+                                - text: Selects
+                                - generic: </
+                                - generic: sp-label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: label
+                                - generic: ">"
+                                - text: "City:"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: select
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: option
+                                - generic: value
+                                - text: ="
+                                - generic: Amsterdam
+                                - text: "\""
+                                - generic: selected
+                                - generic: ">"
+                                - text: Amsterdam
+                                - generic: </
+                                - generic: option
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: option
+                                - generic: value
+                                - text: ="
+                                - generic: New York
+                                - text: "\""
+                                - generic: ">"
+                                - text: New York
+                                - generic: </
+                                - generic: option
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: option
+                                - generic: value
+                                - text: ="
+                                - generic: New Jersey
+                                - text: "\""
+                                - generic: ">"
+                                - text: New Jersey
+                                - generic: </
+                                - generic: option
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: select
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: div
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: div
+                                - generic: class
+                                - text: ="
+                                - generic: group
+                                - text: "\""
+                                - generic: ">"
+                                - generic: <
+                                - generic: sp-label
+                                - generic: ">"
+                                - text: Radio Buttons
+                                - generic: </
+                                - generic: sp-label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: label
+                                - generic: ">"
+                                - generic: <
+                                - generic: input
+                                - generic: type
+                                - text: ="
+                                - generic: radio
+                                - text: "\""
+                                - generic: name
+                                - text: ="
+                                - generic: radioGroup
+                                - text: "\""
+                                - generic: ">"
+                                - text: Click me
+                                - generic: </
+                                - generic: label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: label
+                                - generic: ">"
+                                - generic: <
+                                - generic: input
+                                - generic: type
+                                - text: ="
+                                - generic: radio
+                                - text: "\""
+                                - generic: name
+                                - text: ="
+                                - generic: radioGroup
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: Click me
+                                - generic: </
+                                - generic: label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: label
+                                - generic: ">"
+                                - generic: <
+                                - generic: input
+                                - generic: type
+                                - text: ="
+                                - generic: radio
+                                - text: "\""
+                                - generic: name
+                                - text: ="
+                                - generic: radioGroup
+                                - text: "\""
+                                - generic: disabled
+                                - generic: ">"
+                                - text: Click me
+                                - generic: </
+                                - generic: label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: div
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: div
+                                - generic: class
+                                - text: ="
+                                - generic: group
+                                - text: "\""
+                                - generic: ">"
+                                - generic: <
+                                - generic: sp-label
+                                - generic: ">"
+                                - text: Range
+                                - generic: </
+                                - generic: sp-label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: label
+                                - generic: ">"
+                                - text: "Opacity:"
+                                - generic: <
+                                - generic: input
+                                - generic: type
+                                - text: ="
+                                - generic: range
+                                - text: "\""
+                                - generic: min
+                                - text: ="
+                                - generic: "0"
+                                - text: "\""
+                                - generic: max
+                                - text: ="
+                                - generic: "100"
+                                - text: "\""
+                                - generic: value
+                                - text: ="
+                                - generic: "50"
+                                - text: "\""
+                                - generic: ">"
+                                - generic: </
+                                - generic: label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: div
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: div
+                                - generic: class
+                                - text: ="
+                                - generic: group
+                                - text: "\""
+                                - generic: ">"
+                                - generic: <
+                                - generic: sp-label
+                                - generic: ">"
+                                - text: Textarea
+                                - generic: </
+                                - generic: sp-label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: label
+                                - generic: ">"
+                                - text: Text Area
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: textarea
+                                - generic: style
+                                - text: ="
+                                - generic: width:240px; height:60px
+                                - text: "\""
+                                - generic: ">"
+                                - generic: </
+                                - generic: textarea
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: div
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: div
+                                - generic: class
+                                - text: ="
+                                - generic: group
+                                - text: "\""
+                                - generic: ">"
+                                - generic: <
+                                - generic: sp-label
+                                - generic: ">"
+                                - text: Text Input
+                                - generic: </
+                                - generic: sp-label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: label
+                                - generic: ">"
+                                - text: Text Input
+                                - generic: <
+                                - generic: input
+                                - generic: type
+                                - text: ="
+                                - generic: text
+                                - text: "\""
+                                - generic: placeholder
+                                - text: ="
+                                - generic: Enter your text
+                                - text: "\""
+                                - generic: />
+                                - generic: </
+                                - generic: label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: label
+                                - generic: ">"
+                                - text: Number Input
+                                - generic: <
+                                - generic: input
+                                - generic: type
+                                - text: ="
+                                - generic: number
+                                - text: "\""
+                                - generic: placeholder
+                                - text: ="
+                                - generic: Enter your text
+                                - text: "\""
+                                - generic: />
+                                - generic: </
+                                - generic: label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: label
+                                - generic: ">"
+                                - text: Password Input
+                                - generic: <
+                                - generic: input
+                                - generic: type
+                                - text: ="
+                                - generic: password
+                                - text: "\""
+                                - generic: placeholder
+                                - text: ="
+                                - generic: Enter your text
+                                - text: "\""
+                                - generic: />
+                                - generic: </
+                                - generic: label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: div
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: div
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: div
+                                - generic: class
+                                - text: ="
+                                - generic: sp-tab-page
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: sp-html-tab-page
+                                - text: "\""
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: div
+                                - generic: class
+                                - text: ="
+                                - generic: group
+                                - text: "\""
+                                - generic: ">"
+                                - generic: <
+                                - generic: sp-label
+                                - generic: ">"
+                                - text: Rules
+                                - generic: </
+                                - generic: sp-label
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-detail
+                                - generic: ">"
+                                - text: HR
+                                - generic: </
+                                - generic: sp-detail
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: hr
+                                - generic: />
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: div
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: div
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: div
+                                - generic: class
+                                - text: ="
+                                - generic: sp-tab-page
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: sp-events-tab-page
+                                - text: "\""
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: id
+                                - text: ="
+                                - generic: toggleConsole
+                                - text: "\""
+                                - generic: ">"
+                                - text: Toggle Events Console
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkfocus
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: focus
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkblur
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: blur
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkclick
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: click
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkdblclick
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: dblclick
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkauxclick
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: auxclick*
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkcontextmenu
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: contextmenu
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkchange
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: change
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkinput
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: input
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkkeydown
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: keydown
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkkeyup
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: keyup
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkkeypress
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: keypress*
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkmousedown
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: mousedown
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkmouseup
+                                - text: "\""
+                                - generic: checked
+                                - generic: ">"
+                                - text: mouseup
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkmousemove
+                                - text: "\""
+                                - generic: ">"
+                                - text: mousemove
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkmouseenter
+                                - text: "\""
+                                - generic: ">"
+                                - text: mouseenter
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkmouseleave
+                                - text: "\""
+                                - generic: ">"
+                                - text: mouseleave
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkmouseover
+                                - text: "\""
+                                - generic: ">"
+                                - text: mouseover
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkmouseout
+                                - text: "\""
+                                - generic: ">"
+                                - text: mouseout
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkmousewheel
+                                - text: "\""
+                                - generic: ">"
+                                - text: mousewheel*
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-checkbox
+                                - generic: class
+                                - text: ="
+                                - generic: filter
+                                - text: "\""
+                                - generic: id
+                                - text: ="
+                                - generic: chkwheel
+                                - text: "\""
+                                - generic: ">"
+                                - text: wheel*
+                                - generic: </
+                                - generic: sp-checkbox
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-body
+                                - generic: ">"
+                                - text: "* indicates non-functioning"
+                                - generic: </
+                                - generic: sp-body
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: div
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: div
+                                - generic: id
+                                - text: ="
+                                - generic: console
+                                - text: "\""
+                                - generic: class
+                                - text: ="
+                                - generic: console
+                                - text: "\""
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: <
+                                - generic: sp-body
+                                - generic: id
+                                - text: ="
+                                - generic: logs
+                                - text: "\""
+                                - generic: ">"
+                                - generic: </
+                                - generic: sp-body
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: div
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: div
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: body
+                                - generic: ">"
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic: </
+                                - generic: html
+                                - generic: ">"
+  - alert [ref=e942]

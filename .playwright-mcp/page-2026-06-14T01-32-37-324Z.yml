@@ -1,0 +1,566 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic "Skip navigation links":
+      - generic:
+        - link "Skip to last reply" [ref=e4] [cursor=pointer]:
+          - /url: /t/set-size-of-panel/1042/9
+        - link "Skip to top" [ref=e5] [cursor=pointer]:
+          - /url: /t/set-size-of-panel/1042/1
+      - link "Skip to main content" [ref=e6] [cursor=pointer]:
+        - /url: "#main-container"
+    - generic [ref=e11]:
+      - button "Sidebar" [expanded] [ref=e13] [cursor=pointer]:
+        - img [ref=e14]
+      - link "Adobe Creative Cloud Developer Forums" [ref=e17] [cursor=pointer]:
+        - /url: /
+        - img "Adobe Creative Cloud Developer Forums" [ref=e18]
+      - navigation "Header" [ref=e19]:
+        - generic [ref=e21]:
+          - button "Sign Up" [ref=e22] [cursor=pointer]:
+            - generic [ref=e23]: Sign Up
+          - button "Log In" [ref=e24] [cursor=pointer]:
+            - img [ref=e25]
+            - generic [ref=e26]: Log In
+        - list [ref=e27]:
+          - listitem [ref=e28]:
+            - button "Search" [ref=e29] [cursor=pointer]:
+              - img [ref=e30]
+    - main [ref=e31]:
+      - navigation "Sidebar" [ref=e33]:
+        - generic [ref=e34]:
+          - list [ref=e37]:
+            - listitem [ref=e38]:
+              - link "Topics" [ref=e39] [cursor=pointer]:
+                - /url: /latest
+                - img [ref=e41]
+                - generic [ref=e42]: Topics
+            - listitem [ref=e43]:
+              - link "Docs" [ref=e44] [cursor=pointer]:
+                - /url: /docs
+                - img [ref=e46]
+                - generic [ref=e47]: Docs
+            - listitem [ref=e48]:
+              - button "More" [ref=e49] [cursor=pointer]:
+                - img [ref=e51]
+                - generic [ref=e52]: More
+          - generic [ref=e53]:
+            - button "Categories" [expanded] [ref=e55] [cursor=pointer]:
+              - img [ref=e57]
+              - generic [ref=e58]: Categories
+            - list [ref=e59]:
+              - listitem [ref=e60]:
+                - link "Introductions" [ref=e61] [cursor=pointer]:
+                  - /url: /c/intros/23
+                  - generic [ref=e64]: Introductions
+              - listitem [ref=e65]:
+                - link "Events" [ref=e66] [cursor=pointer]:
+                  - /url: /c/events/70
+                  - generic [ref=e69]: Events
+              - listitem [ref=e70]:
+                - link "InDesign" [ref=e71] [cursor=pointer]:
+                  - /url: /c/indesign/72
+                  - generic [ref=e74]: InDesign
+              - listitem [ref=e75]:
+                - link "Photoshop" [ref=e76] [cursor=pointer]:
+                  - /url: /c/photoshop/63
+                  - generic [ref=e79]: Photoshop
+              - listitem [ref=e80]:
+                - link "Plugin Marketplace" [ref=e81] [cursor=pointer]:
+                  - /url: /c/plugin-marketplace/66
+                  - generic [ref=e84]: Plugin Marketplace
+              - listitem [ref=e85]:
+                - link "UXP Developer Tool" [ref=e86] [cursor=pointer]:
+                  - /url: /c/uxp-developer-tool/65
+                  - generic [ref=e89]: UXP Developer Tool
+              - listitem [ref=e90]:
+                - link "Forum Feedback" [ref=e91] [cursor=pointer]:
+                  - /url: /c/forum-feedback/3
+                  - generic [ref=e94]: Forum Feedback
+              - listitem [ref=e95]:
+                - link "All categories" [ref=e96] [cursor=pointer]:
+                  - /url: /categories
+                  - img [ref=e98]
+                  - generic [ref=e99]: All categories
+          - generic [ref=e100]:
+            - button "Tags" [expanded] [ref=e102] [cursor=pointer]:
+              - img [ref=e104]
+              - generic [ref=e105]: Tags
+            - list [ref=e106]:
+              - listitem [ref=e107]:
+                - link "uxp" [ref=e108] [cursor=pointer]:
+                  - /url: /tag/uxp/101
+                  - img [ref=e110]
+                  - generic [ref=e111]: uxp
+              - listitem [ref=e112]:
+                - link "javascript" [ref=e113] [cursor=pointer]:
+                  - /url: /tag/javascript/103
+                  - img [ref=e115]
+                  - generic [ref=e116]: javascript
+              - listitem [ref=e117]:
+                - link "api-feedback" [ref=e118] [cursor=pointer]:
+                  - /url: /tag/api-feedback/109
+                  - img [ref=e120]
+                  - generic [ref=e121]: api-feedback
+              - listitem [ref=e122]:
+                - link "bug" [ref=e123] [cursor=pointer]:
+                  - /url: /tag/bug/16
+                  - img [ref=e125]
+                  - generic [ref=e126]: bug
+              - listitem [ref=e127]:
+                - link "ui" [ref=e128] [cursor=pointer]:
+                  - /url: /tag/ui/5
+                  - img [ref=e130]
+                  - generic [ref=e131]: ui
+              - listitem [ref=e132]:
+                - link "All tags" [ref=e133] [cursor=pointer]:
+                  - /url: /tags
+                  - img [ref=e135]
+                  - generic [ref=e136]: All tags
+        - button "Keyboard Shortcuts" [ref=e140] [cursor=pointer]:
+          - img [ref=e141]
+      - generic [ref=e142]:
+        - generic [ref=e143]:
+          - generic [ref=e145]:
+            - heading "Set size of panel" [level=1] [ref=e146]:
+              - link "Set size of panel" [ref=e147] [cursor=pointer]:
+                - /url: /t/set-size-of-panel/1042
+            - generic [ref=e148]:
+              - link "Adobe XD" [ref=e149] [cursor=pointer]:
+                - /url: /c/adobe-xd/61
+                - generic "This is the parent category for Adobe XD. There are sub-categories for each API:" [ref=e150]:
+                  - generic [ref=e151]: Adobe XD
+              - link "UXP Plugin API" [ref=e152] [cursor=pointer]:
+                - /url: /c/adobe-xd/xd/8
+                - generic "This forum is for topics specific to XD, including plugin development, API feature requests, and bug reports." [ref=e153]:
+                  - generic [ref=e154]: UXP Plugin API
+              - list "Tags" [ref=e157]:
+                - listitem [ref=e158]:
+                  - link "api-feedback" [ref=e159] [cursor=pointer]:
+                    - /url: /tag/api-feedback/109
+          - generic [ref=e160]:
+            - generic [ref=e163]:
+              - button "1.0k views" [ref=e164] [cursor=pointer]:
+                - generic [ref=e165]: 1.0k
+                - generic [ref=e166]: views
+              - generic [ref=e167]:
+                - link "Velara's profile" [ref=e169] [cursor=pointer]:
+                  - /url: /u/Velara
+                  - img "Judah Frangipane" [ref=e170]
+                - link "cpryland's profile" [ref=e172] [cursor=pointer]:
+                  - /url: /u/cpryland
+                  - img "Chris Ryland" [ref=e173]
+                - link "stevekwak's profile" [ref=e175] [cursor=pointer]:
+                  - /url: /u/stevekwak
+                  - img "Steve Kwak" [ref=e176]
+                - link "Powerbooster's profile" [ref=e178] [cursor=pointer]:
+                  - /url: /u/Powerbooster
+                  - img "Powerbooster" [ref=e179]
+            - generic [ref=e183]:
+              - link "Jul 2019" [ref=e185] [cursor=pointer]:
+                - /url: /t/set-size-of-panel/1042/1
+                - generic [ref=e186]: Jul 2019
+              - generic [ref=e190]:
+                - generic [ref=e191]: 1 / 9
+                - generic [ref=e192]: Jul 2019
+              - link "Mar 2022" [ref=e195] [cursor=pointer]:
+                - /url: /t/set-size-of-panel/1042/9
+                - generic [ref=e196]: Mar 2022
+            - generic [ref=e200]:
+              - generic [ref=e201]:
+                - heading "post by Velara on Jul 15, 2019" [level=2] [ref=e202]
+                - article "post by Velara on Jul 15, 2019" [ref=e203]:
+                  - generic [ref=e204]:
+                    - generic [ref=e206]:
+                      - link "Velara's profile" [ref=e207] [cursor=pointer]:
+                        - /url: /u/velara
+                      - generic "Focus-Group" [ref=e208]:
+                        - img [ref=e209]
+                    - generic [ref=e210]:
+                      - generic [ref=e211]:
+                        - link "Velara's profile" [ref=e214] [cursor=pointer]:
+                          - /url: /u/velara
+                          - text: Velara
+                        - generic [ref=e215]:
+                          - button "post edit history" [ref=e217] [cursor=pointer]:
+                            - img [ref=e218]
+                            - generic [ref=e219]: "1"
+                          - link "Jul 2019" [ref=e221] [cursor=pointer]:
+                            - /url: /t/set-size-of-panel/1042
+                      - generic [ref=e222]:
+                        - generic [ref=e223]:
+                          - paragraph [ref=e224]: Set size of panel
+                          - paragraph [ref=e225]:
+                            - strong [ref=e226]: Use Case
+                            - text: Presley is making a text formatting like area in a panel for his company employees. He adds a keyboard short cut to open the panel but he is getting feature requests to have it open at a minimum width. He saves the last width they set it to and when they open the panel the panel is restored to the saved width.
+                        - group "Post actions" [ref=e227]:
+                          - generic [ref=e228]:
+                            - button "like this post" [ref=e230] [cursor=pointer]:
+                              - img [ref=e231]
+                            - button "copy a link to this post to clipboard" [ref=e232] [cursor=pointer]:
+                              - img [ref=e233]
+                          - generic:
+                            - list
+                  - generic [ref=e236]:
+                    - button "1.0k views" [ref=e237] [cursor=pointer]:
+                      - generic [ref=e238]: 1.0k
+                      - generic [ref=e239]: views
+                    - generic [ref=e240]:
+                      - link "Velara's profile" [ref=e242] [cursor=pointer]:
+                        - /url: /u/Velara
+                        - img "Judah Frangipane" [ref=e243]
+                      - link "cpryland's profile" [ref=e245] [cursor=pointer]:
+                        - /url: /u/cpryland
+                        - img "Chris Ryland" [ref=e246]
+                      - link "stevekwak's profile" [ref=e248] [cursor=pointer]:
+                        - /url: /u/stevekwak
+                        - img "Steve Kwak" [ref=e249]
+                      - link "Powerbooster's profile" [ref=e251] [cursor=pointer]:
+                        - /url: /u/Powerbooster
+                        - img "Powerbooster" [ref=e252]
+              - generic [ref=e253]:
+                - heading "post by stevekwak on Jul 16, 2019" [level=2] [ref=e254]
+                - article "post by stevekwak on Jul 16, 2019" [ref=e255]:
+                  - generic [ref=e256]:
+                    - link "stevekwak's profile" [ref=e259] [cursor=pointer]:
+                      - /url: /u/stevekwak
+                    - generic [ref=e260]:
+                      - generic [ref=e261]:
+                        - generic [ref=e262]:
+                          - link "stevekwak's profile" [ref=e264] [cursor=pointer]:
+                            - /url: /u/stevekwak
+                            - text: stevekwak
+                          - generic [ref=e265]: Adobe
+                        - link "Jul 2019" [ref=e268] [cursor=pointer]:
+                          - /url: /t/set-size-of-panel/1042/2
+                      - generic [ref=e269]:
+                        - paragraph [ref=e271]: Thanks for submitting the feature request. We will review this internally
+                        - group "Post actions" [ref=e272]:
+                          - generic [ref=e273]:
+                            - button "like this post" [ref=e275] [cursor=pointer]:
+                              - img [ref=e276]
+                            - button "copy a link to this post to clipboard" [ref=e277] [cursor=pointer]:
+                              - img [ref=e278]
+                          - generic:
+                            - list
+              - generic [ref=e279]:
+                - heading "post by cpryland on Jul 16, 2019" [level=2] [ref=e280]
+                - article "post by cpryland on Jul 16, 2019" [ref=e281]:
+                  - generic [ref=e282]:
+                    - link "cpryland's profile" [ref=e285] [cursor=pointer]:
+                      - /url: /u/cpryland
+                    - generic [ref=e286]:
+                      - generic [ref=e287]:
+                        - link "cpryland's profile" [ref=e290] [cursor=pointer]:
+                          - /url: /u/cpryland
+                          - text: cpryland
+                        - link "Jul 2019" [ref=e293] [cursor=pointer]:
+                          - /url: /t/set-size-of-panel/1042/3
+                      - generic [ref=e294]:
+                        - generic [ref=e295]:
+                          - paragraph [ref=e296]: Or perhaps XD should remember the last-closed-width for each panel and restore on the next open? Makes plenty of sense, and there’s no need for each panel to implement this logic.
+                          - paragraph [ref=e297]: Perhaps make it optional with a manifest setting?
+                        - group "Post actions" [ref=e298]:
+                          - generic [ref=e299]:
+                            - generic [ref=e300]:
+                              - button "1 person liked this post." [ref=e301] [cursor=pointer]: "1"
+                              - button "like this post" [ref=e302] [cursor=pointer]:
+                                - img [ref=e303]
+                            - button "copy a link to this post to clipboard" [ref=e304] [cursor=pointer]:
+                              - img [ref=e305]
+                          - generic:
+                            - list
+              - generic [ref=e306]:
+                - heading "post by Velara on Jul 16, 2019" [level=2] [ref=e307]
+                - article "post by Velara on Jul 16, 2019" [ref=e308]:
+                  - generic [ref=e309]:
+                    - generic [ref=e311]:
+                      - link "Velara's profile" [ref=e312] [cursor=pointer]:
+                        - /url: /u/velara
+                      - generic "Focus-Group" [ref=e313]:
+                        - img [ref=e314]
+                    - generic [ref=e315]:
+                      - generic [ref=e316]:
+                        - link "Velara's profile" [ref=e319] [cursor=pointer]:
+                          - /url: /u/velara
+                          - text: Velara
+                        - link "Jul 2019" [ref=e322] [cursor=pointer]:
+                          - /url: /t/set-size-of-panel/1042/4
+                      - generic [ref=e323]:
+                        - generic [ref=e324]:
+                          - paragraph [ref=e325]: You can add a keyboard shortcut to open the plugins panel with CMD + SHIFT + P or you can assign a keyboard shortcut to your panel in the manifest to open your specific panel. When you do this it does restore the last closed width.
+                          - paragraph [ref=e326]:
+                            - text: However,
+                            - link "@kerrishotts" [ref=e327] [cursor=pointer]:
+                              - /url: /u/kerrishotts
+                            - text: mentioned the team was contemplating adding a rich text editor in XD (or support of it). To me, I find it hard to write something in such a small column.
+                          - paragraph [ref=e328]: So if there’s ever an option to enter rich text or a situation where you might be doing some typing I’d want to make sure that the panel is set to a minimum width, at first, to display the full size of the plugin. They could shorten it if they like.
+                          - paragraph [ref=e329]: But there is another case where if there ever is a RTE then I might want to open the RTE to the same width as the scene node so the user typing will get the same line breaks and have an accurate estimation of what the text will display as. If you have text field of 50 columns then having the panel match the width give you that higher fidelity. If you select another text field that’s 180 columns the the panel can resize to that. It could be an option to match the width of the selected element.
+                        - group "Post actions" [ref=e330]:
+                          - generic [ref=e331]:
+                            - button "like this post" [ref=e333] [cursor=pointer]:
+                              - img [ref=e334]
+                            - button "copy a link to this post to clipboard" [ref=e335] [cursor=pointer]:
+                              - img [ref=e336]
+                          - generic:
+                            - list
+              - generic [ref=e337]:
+                - heading "post by cpryland on Jul 16, 2019" [level=2] [ref=e338]
+                - article "post by cpryland on Jul 16, 2019" [ref=e339]:
+                  - generic [ref=e340]:
+                    - link "cpryland's profile" [ref=e343] [cursor=pointer]:
+                      - /url: /u/cpryland
+                    - generic [ref=e344]:
+                      - generic [ref=e345]:
+                        - link "cpryland's profile" [ref=e348] [cursor=pointer]:
+                          - /url: /u/cpryland
+                          - text: cpryland
+                        - link "Jul 2019" [ref=e351] [cursor=pointer]:
+                          - /url: /t/set-size-of-panel/1042/5
+                      - generic [ref=e352]:
+                        - generic [ref=e353]:
+                          - paragraph [ref=e354]: OK, good. I’m happy as long as last-closed-width is restored. I should have realized that’s the case just from using panels for many weeks now.
+                          - paragraph [ref=e355]: Don’t see how you can affect the height, though.
+                        - group "Post actions" [ref=e356]:
+                          - generic [ref=e357]:
+                            - button "like this post" [ref=e359] [cursor=pointer]:
+                              - img [ref=e360]
+                            - button "copy a link to this post to clipboard" [ref=e361] [cursor=pointer]:
+                              - img [ref=e362]
+                          - generic:
+                            - list
+              - generic [ref=e363]:
+                - heading "post by Velara on Jul 16, 2019" [level=2] [ref=e364]
+                - article "post by Velara on Jul 16, 2019" [ref=e365]:
+                  - generic [ref=e366]:
+                    - generic [ref=e368]:
+                      - link "Velara's profile" [ref=e369] [cursor=pointer]:
+                        - /url: /u/velara
+                      - generic "Focus-Group" [ref=e370]:
+                        - img [ref=e371]
+                    - generic [ref=e372]:
+                      - generic [ref=e373]:
+                        - link "Velara's profile" [ref=e376] [cursor=pointer]:
+                          - /url: /u/velara
+                          - text: Velara
+                        - link "Jul 2019" [ref=e379] [cursor=pointer]:
+                          - /url: /t/set-size-of-panel/1042/6
+                      - generic [ref=e380]:
+                        - paragraph [ref=e382]: For me, height is not important as much as width. I don’t have a case where I need to set the height.
+                        - group "Post actions" [ref=e383]:
+                          - generic [ref=e384]:
+                            - button "like this post" [ref=e386] [cursor=pointer]:
+                              - img [ref=e387]
+                            - button "copy a link to this post to clipboard" [ref=e388] [cursor=pointer]:
+                              - img [ref=e389]
+                          - generic:
+                            - list
+              - generic [ref=e390]:
+                - heading "post by cpryland on Jul 16, 2019" [level=2] [ref=e391]
+                - article "post by cpryland on Jul 16, 2019" [ref=e392]:
+                  - generic [ref=e393]:
+                    - link "cpryland's profile" [ref=e396] [cursor=pointer]:
+                      - /url: /u/cpryland
+                    - generic [ref=e397]:
+                      - generic [ref=e398]:
+                        - link "cpryland's profile" [ref=e401] [cursor=pointer]:
+                          - /url: /u/cpryland
+                          - text: cpryland
+                        - link "Jul 2019" [ref=e404] [cursor=pointer]:
+                          - /url: /t/set-size-of-panel/1042/7
+                      - generic [ref=e405]:
+                        - paragraph [ref=e407]: Agreed. Was referring to your “…they could shorten it if they liked.”
+                        - group "Post actions" [ref=e408]:
+                          - generic [ref=e409]:
+                            - button "like this post" [ref=e411] [cursor=pointer]:
+                              - img [ref=e412]
+                            - button "copy a link to this post to clipboard" [ref=e413] [cursor=pointer]:
+                              - img [ref=e414]
+                          - generic:
+                            - list
+              - generic [ref=e417]: 2 years later
+              - generic [ref=e418]:
+                - heading "post by Powerbooster on Dec 8, 2021" [level=2] [ref=e419]
+                - article "post by Powerbooster on Dec 8, 2021" [ref=e420]:
+                  - generic [ref=e421]:
+                    - link "Powerbooster's profile" [ref=e424] [cursor=pointer]:
+                      - /url: /u/powerbooster
+                    - generic [ref=e425]:
+                      - generic [ref=e426]:
+                        - link "Powerbooster's profile" [ref=e429] [cursor=pointer]:
+                          - /url: /u/powerbooster
+                          - text: Powerbooster
+                        - link "Dec 2021" [ref=e432] [cursor=pointer]:
+                          - /url: /t/set-size-of-panel/1042/8
+                      - generic [ref=e433]:
+                        - paragraph [ref=e435]:
+                          - link "@Velara" [ref=e436] [cursor=pointer]:
+                            - /url: /u/velara
+                          - link "@stevekwak" [ref=e437] [cursor=pointer]:
+                            - /url: /u/stevekwak
+                          - text: has there been a solution for this yet?
+                        - group "Post actions" [ref=e438]:
+                          - generic [ref=e439]:
+                            - button "like this post" [ref=e441] [cursor=pointer]:
+                              - img [ref=e442]
+                            - button "copy a link to this post to clipboard" [ref=e443] [cursor=pointer]:
+                              - img [ref=e444]
+                          - generic:
+                            - list
+              - generic [ref=e447]: 4 months later
+              - generic [ref=e448]:
+                - heading "post by Velara on Mar 28, 2022" [level=2] [ref=e449]
+                - article "post by Velara on Mar 28, 2022" [ref=e450]:
+                  - generic [ref=e451]:
+                    - generic [ref=e453]:
+                      - link "Velara's profile" [ref=e454] [cursor=pointer]:
+                        - /url: /u/velara
+                      - generic "Focus-Group" [ref=e455]:
+                        - img [ref=e456]
+                    - generic [ref=e457]:
+                      - generic [ref=e458]:
+                        - link "Velara's profile" [ref=e461] [cursor=pointer]:
+                          - /url: /u/velara
+                          - text: Velara
+                        - link "Mar 2022" [ref=e464] [cursor=pointer]:
+                          - /url: /t/set-size-of-panel/1042/9
+                      - generic [ref=e465]:
+                        - paragraph [ref=e467]: The panel width should stay the same size when it is opened and closed. If you close out of XD completely I don’t remember if it keeps the same panel width size.
+                        - group "Post actions" [ref=e468]:
+                          - generic [ref=e469]:
+                            - button "like this post" [ref=e471] [cursor=pointer]:
+                              - img [ref=e472]
+                            - button "copy a link to this post to clipboard" [ref=e473] [cursor=pointer]:
+                              - img [ref=e474]
+                          - generic:
+                            - list
+          - region [ref=e477]:
+            - button "Reply" [ref=e479] [cursor=pointer]:
+              - img [ref=e480]
+              - generic [ref=e481]: Reply
+          - complementary "Related topics" [ref=e484]:
+            - heading "Related topics" [level=3] [ref=e485]:
+              - img [ref=e486]
+              - text: Related topics
+            - table "Topic list, column headers with buttons are sortable." [ref=e490]:
+              - caption [ref=e491]: Topic list, column headers with buttons are sortable.
+              - rowgroup [ref=e492]:
+                - row "Topic Replies Views Activity" [ref=e493]:
+                  - columnheader "Topic" [ref=e494]:
+                    - generic [ref=e495]: Topic
+                  - columnheader "Replies" [ref=e496]:
+                    - generic [ref=e497]: Replies
+                  - columnheader "Views" [ref=e498]:
+                    - generic [ref=e499]: Views
+                  - columnheader "Activity" [ref=e500]:
+                    - generic [ref=e501]: Activity
+              - rowgroup [ref=e502]:
+                - row "Panel is resized when modal dialog is open UXP Plugin API Tags 10 replies, jump to first post 780 Nov 2019" [ref=e503]:
+                  - cell "Panel is resized when modal dialog is open UXP Plugin API Tags" [ref=e504]:
+                    - heading "Panel is resized when modal dialog is open" [level=2] [ref=e505]:
+                      - generic "This topic has a solution" [ref=e507]:
+                        - img [ref=e508]
+                      - link "Panel is resized when modal dialog is open" [ref=e509] [cursor=pointer]:
+                        - /url: /t/panel-is-resized-when-modal-dialog-is-open/1085
+                    - generic [ref=e510]:
+                      - link "UXP Plugin API" [ref=e511] [cursor=pointer]:
+                        - /url: /c/adobe-xd/xd/8
+                        - generic "This forum is for topics specific to XD, including plugin development, API feature requests, and bug reports." [ref=e512]:
+                          - generic [ref=e513]: UXP Plugin API
+                      - list "Tags" [ref=e514]:
+                        - listitem [ref=e515]:
+                          - link "api-feedback" [ref=e516] [cursor=pointer]:
+                            - /url: /tag/api-feedback/109
+                  - cell "10 replies, jump to first post" [ref=e517]:
+                    - link "10 replies, jump to first post" [ref=e518] [cursor=pointer]:
+                      - /url: /t/panel-is-resized-when-modal-dialog-is-open/1085/1
+                      - text: "10"
+                  - cell "780" [ref=e519]
+                  - cell "Nov 2019" [ref=e520]:
+                    - link "Nov 2019" [ref=e521] [cursor=pointer]:
+                      - /url: /t/panel-is-resized-when-modal-dialog-is-open/1085/11
+                - row "Automatic panel height suggestions UXP Plugin API 6 replies, jump to first post 700 Jun 2021" [ref=e522]:
+                  - cell "Automatic panel height suggestions UXP Plugin API" [ref=e523]:
+                    - heading "Automatic panel height suggestions" [level=2] [ref=e524]:
+                      - link "Automatic panel height suggestions" [ref=e525] [cursor=pointer]:
+                        - /url: /t/automatic-panel-height-suggestions/3046
+                    - link "UXP Plugin API" [ref=e527] [cursor=pointer]:
+                      - /url: /c/photoshop/uxp-plugin-api/64
+                      - generic [ref=e529]: UXP Plugin API
+                  - cell "6 replies, jump to first post" [ref=e530]:
+                    - link "6 replies, jump to first post" [ref=e531] [cursor=pointer]:
+                      - /url: /t/automatic-panel-height-suggestions/3046/1
+                      - text: "6"
+                  - cell "700" [ref=e532]
+                  - cell "Jun 2021" [ref=e533]:
+                    - link "Jun 2021" [ref=e534] [cursor=pointer]:
+                      - /url: /t/automatic-panel-height-suggestions/3046/7
+                - row "Open panel with keyboard shortcut UXP Plugin API Tags 2 replies, jump to first post 414 Jul 2019" [ref=e535]:
+                  - cell "Open panel with keyboard shortcut UXP Plugin API Tags" [ref=e536]:
+                    - heading "Open panel with keyboard shortcut" [level=2] [ref=e537]:
+                      - generic "This topic has a solution" [ref=e539]:
+                        - img [ref=e540]
+                      - link "Open panel with keyboard shortcut" [ref=e541] [cursor=pointer]:
+                        - /url: /t/open-panel-with-keyboard-shortcut/1043
+                    - generic [ref=e542]:
+                      - link "UXP Plugin API" [ref=e543] [cursor=pointer]:
+                        - /url: /c/adobe-xd/xd/8
+                        - generic "This forum is for topics specific to XD, including plugin development, API feature requests, and bug reports." [ref=e544]:
+                          - generic [ref=e545]: UXP Plugin API
+                      - list "Tags" [ref=e546]:
+                        - listitem [ref=e547]:
+                          - link "api-feedback" [ref=e548] [cursor=pointer]:
+                            - /url: /tag/api-feedback/109
+                  - cell "2 replies, jump to first post" [ref=e549]:
+                    - link "2 replies, jump to first post" [ref=e550] [cursor=pointer]:
+                      - /url: /t/open-panel-with-keyboard-shortcut/1043/1
+                      - text: "2"
+                  - cell "414" [ref=e551]
+                  - cell "Jul 2019" [ref=e552]:
+                    - link "Jul 2019" [ref=e553] [cursor=pointer]:
+                      - /url: /t/open-panel-with-keyboard-shortcut/1043/3
+                - row "Giving open panel plugins priority on keyboard shortcuts UXP Plugin API Tags 2 replies, jump to first post 381 Oct 2019" [ref=e554]:
+                  - cell "Giving open panel plugins priority on keyboard shortcuts UXP Plugin API Tags" [ref=e555]:
+                    - heading "Giving open panel plugins priority on keyboard shortcuts" [level=2] [ref=e556]:
+                      - link "Giving open panel plugins priority on keyboard shortcuts" [ref=e557] [cursor=pointer]:
+                        - /url: /t/giving-open-panel-plugins-priority-on-keyboard-shortcuts/1275
+                    - generic [ref=e558]:
+                      - link "UXP Plugin API" [ref=e559] [cursor=pointer]:
+                        - /url: /c/adobe-xd/xd/8
+                        - generic "This forum is for topics specific to XD, including plugin development, API feature requests, and bug reports." [ref=e560]:
+                          - generic [ref=e561]: UXP Plugin API
+                      - list "Tags" [ref=e562]:
+                        - listitem [ref=e563]:
+                          - link "api-feedback" [ref=e564] [cursor=pointer]:
+                            - /url: /tag/api-feedback/109
+                  - cell "2 replies, jump to first post" [ref=e565]:
+                    - link "2 replies, jump to first post" [ref=e566] [cursor=pointer]:
+                      - /url: /t/giving-open-panel-plugins-priority-on-keyboard-shortcuts/1275/1
+                      - text: "2"
+                  - cell "381" [ref=e567]
+                  - cell "Oct 2019" [ref=e568]:
+                    - link "Oct 2019" [ref=e569] [cursor=pointer]:
+                      - /url: /t/giving-open-panel-plugins-priority-on-keyboard-shortcuts/1275/3
+                - row "Plugin resize via JS UXP Plugin API Tags 4 replies, jump to first post 729 May 2023" [ref=e570]:
+                  - cell "Plugin resize via JS UXP Plugin API Tags" [ref=e571]:
+                    - heading "Plugin resize via JS" [level=2] [ref=e572]:
+                      - link "Plugin resize via JS" [ref=e573] [cursor=pointer]:
+                        - /url: /t/plugin-resize-via-js/2834
+                    - generic [ref=e574]:
+                      - link "UXP Plugin API" [ref=e575] [cursor=pointer]:
+                        - /url: /c/photoshop/uxp-plugin-api/64
+                        - generic [ref=e577]: UXP Plugin API
+                      - list "Tags" [ref=e578]:
+                        - listitem [ref=e579]:
+                          - link "javascript" [ref=e580] [cursor=pointer]:
+                            - /url: /tag/javascript/103
+                  - cell "4 replies, jump to first post" [ref=e581]:
+                    - link "4 replies, jump to first post" [ref=e582] [cursor=pointer]:
+                      - /url: /t/plugin-resize-via-js/2834/1
+                      - text: "4"
+                  - cell "729" [ref=e583]
+                  - cell "May 2023" [ref=e584]:
+                    - link "May 2023" [ref=e585] [cursor=pointer]:
+                      - /url: /t/plugin-resize-via-js/2834/5
+        - dialog "User card"
+  - status [ref=e586]
+  - alert [ref=e587]

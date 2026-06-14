@@ -1,0 +1,637 @@
+- generic [ref=e5]:
+  - banner [ref=e7]:
+    - navigation "Global" [ref=e8]:
+      - generic [ref=e9]:
+        - button [ref=e11] [cursor=pointer]:
+          - img
+        - link "Adobe Developer" [ref=e15] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e16]:
+            - img [ref=e17]
+            - strong [ref=e21]: Adobe Developer
+        - generic [ref=e23]:
+          - link "Products" [active] [ref=e25] [cursor=pointer]:
+            - /url: /apis/
+            - generic [ref=e26]: Products
+          - link "UXP for Adobe Photoshop" [ref=e27] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/
+            - generic [ref=e28]: UXP for Adobe Photoshop
+          - button "2021" [ref=e30] [cursor=pointer]:
+            - generic [ref=e31]: "2021"
+            - img
+          - link "Guides" [ref=e32] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/guides/
+            - generic [ref=e33]: Guides
+          - link "Photoshop API" [ref=e34] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/ps_reference/
+            - generic [ref=e35]: Photoshop API
+          - link "UXP API" [ref=e36] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/uxp/
+            - generic [ref=e37]: UXP API
+          - link "Sample Code" [ref=e38] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/code_samples/
+            - generic [ref=e39]: Sample Code
+          - link "Design" [ref=e40] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/design/
+            - generic [ref=e41]: Design
+          - link "Developer Tool" [ref=e42] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/devtool/
+            - generic [ref=e43]: Developer Tool
+          - link "Share" [ref=e44] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/distribution/
+            - generic [ref=e45]: Share
+          - link "Community" [ref=e46] [cursor=pointer]:
+            - /url: /photoshop/uxp/2021/community/
+            - generic [ref=e47]: Community
+        - generic [ref=e49]:
+          - button "Search" [ref=e50] [cursor=pointer]:
+            - img
+          - button "Console" [ref=e52] [cursor=pointer]
+          - generic "Loading" [ref=e54]
+  - navigation "Primary" [ref=e64]:
+    - tree "Table of contents" [ref=e66]:
+      - treeitem "UXP API" [expanded] [level=1] [ref=e67]:
+        - heading "UXP API" [level=2] [ref=e68]
+        - group [ref=e69]:
+          - treeitem "JavaScript Reference" [level=2] [ref=e70]:
+            - link "JavaScript Reference" [ref=e71] [cursor=pointer]:
+              - /url: /photoshop/uxp/2021/uxp/reference-js/
+              - text: JavaScript Reference
+              - img
+          - treeitem "CSS Reference" [level=2] [ref=e72]:
+            - link "CSS Reference" [ref=e73] [cursor=pointer]:
+              - /url: /photoshop/uxp/2021/uxp/reference-css/
+              - text: CSS Reference
+              - img
+          - treeitem "HTML Reference" [level=2] [ref=e74]:
+            - link "HTML Reference" [ref=e75] [cursor=pointer]:
+              - /url: /photoshop/uxp/2021/uxp/reference-html/
+              - text: HTML Reference
+              - img
+          - treeitem "Spectrum UXP Reference" [level=2] [ref=e76]:
+            - link "Spectrum UXP Reference" [ref=e77] [cursor=pointer]:
+              - /url: /photoshop/uxp/2021/uxp/reference-spectrum/
+              - text: Spectrum UXP Reference
+              - img
+          - treeitem "Known Issues" [expanded] [level=2] [ref=e78]:
+            - link "Known Issues" [ref=e79] [cursor=pointer]:
+              - /url: /photoshop/uxp/2021/uxp/known-issues/
+  - main [ref=e81]:
+    - generic [ref=e84]:
+      - generic [ref=e85]:
+        - navigation "Breadcrumb" [ref=e87]:
+          - list [ref=e88]:
+            - listitem [ref=e89]:
+              - link "Products" [ref=e90] [cursor=pointer]:
+                - /url: /apis/
+              - img
+            - listitem [ref=e91]:
+              - link "UXP for Adobe Photoshop" [ref=e92] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/
+              - img
+            - listitem [ref=e93]:
+              - link "UXP API" [ref=e94] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/uxp/
+              - img
+            - listitem [ref=e95]:
+              - link "Known Issues" [ref=e96] [cursor=pointer]:
+                - /url: /photoshop/uxp/2021/uxp/known-issues/
+        - generic [ref=e98]:
+          - button "Edit in GitHub" [ref=e99] [cursor=pointer]:
+            - img
+            - generic [ref=e100]: Edit in GitHub
+          - button "Log an issue" [ref=e101] [cursor=pointer]:
+            - img
+            - generic [ref=e102]: Log an issue
+      - heading "Known Issues" [level=1] [ref=e103]
+      - paragraph [ref=e104]: The following issues are known. Please check this page with future updates, as known issues will be fixed over time, and new issues will likely be discovered.
+      - heading "General Issues" [level=2] [ref=e105]:
+        - text: General Issues
+        - link [ref=e107] [cursor=pointer]:
+          - /url: "#general-issues"
+          - img [ref=e108]
+      - separator [ref=e110]
+      - list [ref=e111]:
+        - listitem [ref=e112]: Panel icons must always be 23x23 (46x46) PNG files. SVG icons are not supported on Photoshop toolbars.
+        - listitem [ref=e113]:
+          - text: Plugin icons must always be 24x24 (48x48) files. In the manifest, they must currently be specified with
+          - code [ref=e114]: "width: 48"
+          - text: and
+          - code [ref=e115]: "height: 48"
+          - text: . Plugin icons do support SVG files, but UXP doesn't support all SVG features, which means you'll want to test your SVG icon before shipping your plugin if you decide to use SVG icons in the Plugin Panel.
+        - listitem [ref=e116]:
+          - text: When using
+          - code [ref=e117]: require("uxp").entrypoints.setup()
+          - text: in a delayed fashion (that is, not immediately at plugin start), you may encounter an uncatchable error. This appears to be related to how quickly the
+          - code [ref=e118]: setup
+          - text: function is called in relation to drawing the first few frames on the display. If this delay is short (less than ~20ms), the call will likely succeed. If it is long, an error is likely to occur. A delay in calling this function should not cause any errors to be thrown, and will be fixed in a future release. (PS-57605)
+        - listitem [ref=e119]:
+          - text: When creating a flyout separator, you must specify an
+          - code [ref=e120]: id
+          - text: of
+          - code [ref=e121]: "-"
+          - text: . This will be fixed in the next UXP release. (PS-56279)
+        - listitem [ref=e122]: When attempting to use the UXP clipboard APIs in panel-less plugins, errors will be thrown. This will be fixed in a future release. (UXP-15542)
+      - heading "User Interface" [level=2] [ref=e123]:
+        - text: User Interface
+        - link [ref=e125] [cursor=pointer]:
+          - /url: "#user-interface"
+          - img [ref=e126]
+      - separator [ref=e128]
+      - list [ref=e129]:
+        - listitem [ref=e130]:
+          - text: While
+          - code [ref=e131]: z-index
+          - text: is supported, no element can overlay a widget that has text editing capabilities. Text fields and areas will always render the text editor
+          - emphasis [ref=e132]: above
+          - text: everything else in the same panel or dialog. As such, you can use popovers to render content above them,
+          - emphasis [ref=e133]: or
+          - text: hide the element if you need to render some content above it.
+        - listitem [ref=e134]:
+          - code [ref=e135]: window.devicePixelRatio
+          - text: (and corresponding
+          - code [ref=e136]: element.uxpContainer.devicePixelRatio
+          - text: ) always returns
+          - code [ref=e137]: "1"
+          - text: . This is incorrect and will be fixed in the future. Note that
+          - code [ref=e138]: window.devicePixelRatio
+          - text: may not always match an element's pixel ratio if the element is visible on a screen with a different pixel ratio from the primary screen.
+        - listitem [ref=e139]: Not all SVG files are supported by UXP. UXP's SVG renderer is targeted for simple icons and the like; complex SVGs may fail to render completely, or may render in unexpected ways. The SVG renderer will improve in the future.
+        - listitem [ref=e140]: Images formatted in a grayscale mode will fail to render. They will take up space in the DOM, but will not be visible to the user.
+        - listitem [ref=e141]: When the mouse cursor is changed, it may not revert back to its original state in UWP.
+        - listitem [ref=e142]: It is not possible to trigger the emoji selector in a text field on macOS.
+        - listitem [ref=e143]: Many SVGs are known to render in odd ways in the UI. These issues will be addressed in the future, but we would love to hear your reports of any SVGs that don't work, and how you fixed it.
+        - listitem [ref=e144]: When tabbing in a scroll view, the scroll view is not automatically scrolled to ensure the target control is in view (macOS Only).
+        - listitem [ref=e145]: Emojis are rendered in the font color on Windows 10, instead of using the emoji's colors.
+        - listitem [ref=e146]:
+          - text: When a control in a panel is disabled and enabled, it is no longer reachable via TAB. This may also impact controls added
+          - emphasis [ref=e147]: after
+          - text: a panel is shown for the first time.
+        - listitem [ref=e148]: Drag and Drop is not currently supported.
+        - listitem [ref=e149]:
+          - text: The
+          - code [ref=e150]: Save
+          - text: dialog that appears when using
+          - code [ref=e151]: getFileForSaving
+          - text: appears
+          - emphasis [ref=e152]: behind
+          - text: the plugin panels. The
+          - code [ref=e153]: Open
+          - text: and
+          - code [ref=e154]: Folder
+          - text: dialogs may also do this on occasion on both macOS and Windows. This will be fixed in a future release. (PS-57708)
+        - listitem [ref=e155]:
+          - text: When using
+          - code [ref=e156]: <img>
+          - text: tags inside a
+          - code [ref=e157]: <dialog>
+          - text: ", you should ensure that the images have an explicit"
+          - code [ref=e158]: width
+          - text: and
+          - code [ref=e159]: height
+          - text: on either the image or the dialog. Otherwise, the dialog will attempt to resize to the smallest possible size, and images initially have a 0x0 dimension until at least one frame has been rendered to the display. This can cause the dialog to display at the wrong size.
+        - listitem [ref=e160]:
+          - code [ref=e161]: <img>
+          - text: tags do not currently handle embedded rotation information.
+      - heading "Spectrum UXP Components" [level=2] [ref=e162]:
+        - text: Spectrum UXP Components
+        - link [ref=e164] [cursor=pointer]:
+          - /url: "#spectrum-uxp-components"
+          - img [ref=e165]
+      - separator [ref=e167]
+      - list [ref=e168]:
+        - listitem [ref=e169]: Buttons do not indicate when they are focused from the keyboard.
+        - listitem [ref=e170]:
+          - text: You should make sure
+          - code [ref=e171]: sp-dropdown
+          - text: elements have a width set, otherwise they will size according to the currently selected item. This may cause items in the dropdown itself to appear truncated, wrapped, or oddly formatted.
+        - listitem [ref=e172]:
+          - text: Password field values cannot be read on macOS. A workaround for this is to set the
+          - code [ref=e173]: type
+          - text: to
+          - code [ref=e174]: text
+          - text: "on"
+          - code [ref=e175]: focus
+          - text: and switch it back to
+          - code [ref=e176]: password
+          - text: "on"
+          - code [ref=e177]: blur
+          - text: .
+        - listitem [ref=e178]:
+          - text: Displaying a file picker or browser from a Spectrum UXP control (such as a button) may result in an infinite series of
+          - code [ref=e179]: click
+          - text: events. Until this is fixed in UXP, you'll need to add some logic to prevent the infinite loop or use a native widget instead. (PS-57264)
+        - listitem [ref=e180]: Dropdowns don't currently respond to arrow keys; this will be fixed in a future update.
+        - listitem [ref=e181]:
+          - text: The
+          - code [ref=e182]: location
+          - text: attribute for
+          - code [ref=e183]: sp-tooltip
+          - text: seems like it would control the position of the tooltip relative to its attachment. This is not how the attribute actually works -- it instead controls the tooltip's "tip" direction. If
+          - code [ref=e184]: location
+          - text: is set to
+          - code [ref=e185]: bottom
+          - text: ", the tip will be pointed upwards under the assumption that your code has already placed the tooltip below the control. (PS-56708)"
+          - emphasis [ref=e186]: Better tooltip handling is coming in a future release
+          - text: .
+        - listitem [ref=e187]:
+          - text: The numeric
+          - code [ref=e188]: sp-textfield
+          - text: can trigger numeric validation errors, even when the entered value would seem to be correct. This will be addressed in a future release. The limitation on valid ranges is an issue with numeric fields in Photoshop in general and is a separate issue. (PS-57698)
+      - heading "Events" [level=2] [ref=e189]:
+        - text: Events
+        - link [ref=e191] [cursor=pointer]:
+          - /url: "#events"
+          - img [ref=e192]
+      - separator [ref=e194]
+      - list [ref=e195]:
+        - listitem [ref=e196]:
+          - code [ref=e197]: uxpshowpanel
+          - text: and the corresponding
+          - code [ref=e198]: show
+          - text: callback occurs only once, when the panel is initially made visible. It will not recur. This will be fixed in the future. (PS-57284)
+        - listitem [ref=e199]:
+          - code [ref=e200]: uxphidepanel
+          - text: and the corresponding
+          - code [ref=e201]: hide
+          - text: callback never occurs, even when the panel is made invisible. This will be fixed in the future. (PS-57284)
+        - listitem [ref=e202]:
+          - code [ref=e203]: uxpcommand
+          - text: will incude
+          - code [ref=e204]: uxpshowpanel
+          - text: and
+          - code [ref=e205]: uxphidepanel
+          - text: in the
+          - code [ref=e206]: commandId
+          - text: field of the event whenever panels are shown and hidden. For plugins
+          - emphasis [ref=e207]: with a single panel
+          - text: ", this is sufficient to detect that your panel's state has changed. If your plugin has multiple panels, there is no way (at this time) to detect which panel was shown or hidden."
+        - listitem [ref=e208]: Interactive elements swallow most events.
+        - listitem [ref=e209]:
+          - code [ref=e210]: keypress
+          - text: is not currently supported.
+      - heading "HTML Elements" [level=2] [ref=e211]:
+        - text: HTML Elements
+        - link [ref=e213] [cursor=pointer]:
+          - /url: "#html-elements"
+          - img [ref=e214]
+      - separator [ref=e216]
+      - list [ref=e217]:
+        - listitem [ref=e218]:
+          - code [ref=e219]: <option>
+          - text: tags
+          - emphasis [ref=e220]: must
+          - text: have a
+          - code [ref=e221]: value
+          - text: attribute, or referencing the
+          - code [ref=e222]: select
+          - text: "'s"
+          - code [ref=e223]: value
+          - text: property will return
+          - code [ref=e224]: undefined
+          - text: .
+        - listitem [ref=e225]:
+          - code [ref=e226]: <select value="…"/>
+          - text: does not show the value as selected. Instead, get a reference to the element and call
+          - code [ref=e227]: setAttribute("value", …)
+          - text: or use the
+          - code [ref=e228]: selected
+          - text: attribute on the
+          - code [ref=e229]: option
+          - text: tags.
+        - listitem [ref=e230]:
+          - text: If you don’t specify a width for your
+          - code [ref=e231]: form
+          - text: ", block elements inside may not take up the entire width. Workaround: always set a width for your"
+          - code [ref=e232]: form
+          - text: elements.
+        - listitem [ref=e233]:
+          - code [ref=e234]: form
+          - text: s only support
+          - code [ref=e235]: method="dialog"
+          - text: . They do not submit to a URL automatically.
+        - listitem [ref=e236]: It is not currently possible to specify the tab order.
+        - listitem [ref=e237]:
+          - text: The size of a
+          - code [ref=e238]: <textarea>
+          - text: cannot be set with
+          - code [ref=e239]: rows
+          - text: or
+          - code [ref=e240]: cols
+          - text: . Use CSS styles
+          - code [ref=e241]: height
+          - text: and
+          - code [ref=e242]: width
+          - text: respectively.
+        - listitem [ref=e243]: HTML5 input validation is not supported.
+        - listitem [ref=e244]: Images that fail to load will not render any “broken icon” image in place.
+        - listitem [ref=e245]:
+          - text: Input elements do not accept
+          - code [ref=e246]: defaultValue
+          - text: .
+        - listitem [ref=e247]:
+          - code [ref=e248]: <option>
+          - text: tags do not support
+          - code [ref=e249]: disabled
+          - text: attributes.
+        - listitem [ref=e250]:
+          - code [ref=e251]: <label for="id"/>
+          - text: is not supported. Wrap
+          - code [ref=e252]: <label>
+          - text: around the control instead.
+        - listitem [ref=e253]:
+          - code [ref=e254]: <input type="file" />
+          - text: is not supported.
+        - listitem [ref=e255]:
+          - code [ref=e256]: <input type="color" />
+          - text: is not supported.
+        - listitem [ref=e257]:
+          - text: Using unitless values in
+          - code [ref=e258]: width
+          - text: and
+          - code [ref=e259]: height
+          - text: attributes are not supported in UXP 3.1. Use
+          - code [ref=e260]: px
+          - text: ", or CSS styles."
+        - listitem [ref=e261]:
+          - code [ref=e262]: <label>
+          - text: uses
+          - code [ref=e263]: inline-flex
+          - text: layout semantics in UXP 3.1 mode, with
+          - code [ref=e264]: "flex-wrap: wrap"
+          - text: enabled. If you need to prevent wrapping, use
+          - code [ref=e265]: "flex-wrap: nowrap"
+          - text: on these elements. Note that the default layout behavior is now
+          - emphasis [ref=e266]: horizontal
+          - text: not
+          - emphasis [ref=e267]: vertical
+          - text: .
+        - listitem [ref=e268]:
+          - code [ref=e269]: <progress>
+          - text: is not theme aware.
+        - listitem [ref=e270]:
+          - text: Password field values cannot be read on macOS. A workaround for this is to set the
+          - code [ref=e271]: type
+          - text: to
+          - code [ref=e272]: text
+          - text: "on"
+          - code [ref=e273]: focus
+          - text: and switch it back to
+          - code [ref=e274]: password
+          - text: "on"
+          - code [ref=e275]: blur
+          - text: .
+      - heading "Layout" [level=2] [ref=e276]:
+        - text: Layout
+        - link [ref=e278] [cursor=pointer]:
+          - /url: "#layout"
+          - img [ref=e279]
+      - separator [ref=e281]
+      - list [ref=e282]:
+        - listitem [ref=e283]: When rendering inline text that wraps, borders, outlines, and backgrounds only apply to the first line. You should place borders, outlines, and backgrounds on elements with block layout semantics.
+        - listitem [ref=e284]:
+          - text: Mixing inline text with UI controls is unlikely to result in a pleasant appearance.
+          - code [ref=e285]: vertical-align
+          - text: is supported, but baseline layout does not always do what you might expect, which makes it difficult to properly align widgets and labels. As such, you should use
+          - code [ref=e286]: flex
+          - text: or
+          - code [ref=e287]: inline-flex
+          - text: when using UI elements.
+      - heading "CSS" [level=2] [ref=e288]:
+        - text: CSS
+        - link [ref=e290] [cursor=pointer]:
+          - /url: "#css"
+          - img [ref=e291]
+      - separator [ref=e293]
+      - list [ref=e294]:
+        - listitem [ref=e295]: It is not currently possible to assign multiple border colors to a container.
+        - listitem [ref=e296]:
+          - code [ref=e297]: baseline
+          - text: alignment is supported, but buggy; do not rely on its behavior for now.
+        - listitem [ref=e298]:
+          - text: The
+          - code [ref=e299]: font
+          - text: shorthand CSS rule is not supported.
+        - listitem [ref=e300]:
+          - code [ref=e301]: text-transform
+          - text: is not supported,
+        - listitem [ref=e302]: CSS transitions and animations are not supported.
+        - listitem [ref=e303]:
+          - text: A solid
+          - code [ref=e304]: outline
+          - text: will not render unless a color is also provided. When using
+          - code [ref=e305]: "outline: solid"
+          - text: ", be sure to supply an outline color as well."
+        - listitem [ref=e306]:
+          - text: Font sizes do not adjust to dynamic units like
+          - code [ref=e307]: vh
+          - text: . As such, if you use
+          - code [ref=e308]: "font-size: 1vh"
+          - text: ", and the viewport changes size, the font size will not adjust."
+        - listitem [ref=e309]:
+          - text: Setting a
+          - code [ref=e310]: border-color
+          - text: to
+          - code [ref=e311]: unset
+          - text: may not reset the color to its initial value.
+        - listitem [ref=e312]:
+          - text: Borders and backgrounds are not drawn correctly when coupled with
+          - code [ref=e313]: object-fit
+          - text: .
+        - listitem [ref=e314]: The bottom border may not always render with the same width as the other borders.
+        - listitem [ref=e315]: Underlines may render very thin.
+        - listitem [ref=e316]:
+          - code [ref=e317]: calc
+          - text: only works for length/numeric properties. Using
+          - code [ref=e318]: calc
+          - text: for a color will not work.
+        - listitem [ref=e319]:
+          - text: If you need to override an anchor link color, use
+          - code [ref=e320]: a[href]
+          - text: as the selector to override it.
+      - heading "DOM" [level=2] [ref=e321]:
+        - text: DOM
+        - link [ref=e323] [cursor=pointer]:
+          - /url: "#dom"
+          - img [ref=e324]
+      - separator [ref=e326]
+      - list [ref=e327]:
+        - listitem [ref=e328]:
+          - text: When a dialog is closed, it is not removed from the DOM. This is per spec. If you want the dialog to be removed from the DOM, you must call
+          - code [ref=e329]: HTMLDialogElement#remove
+          - text: explicitly.
+        - listitem [ref=e330]:
+          - text: When applying HTML using
+          - code [ref=e331]: innerHTML
+          - text: ", event handlers and scripts are currently parsed in Photoshop, but not in XD."
+          - strong [ref=e332]: DO NOT RELY ON THIS BEHAVIOR
+          - text: ", as it will likely go away in the future and match XD's behavior (which is by design)."
+      - heading "Network I/O" [level=2] [ref=e333]:
+        - text: Network I/O
+        - link [ref=e335] [cursor=pointer]:
+          - /url: "#network-io"
+          - img [ref=e336]
+      - separator [ref=e338]
+      - list [ref=e339]:
+        - listitem [ref=e340]: On macOS, it is not possible to use self-signed certificates with secure Websockets.
+        - listitem [ref=e341]: Websockets do not support extensions.
+        - listitem [ref=e342]: XHR can only send binary content using an ArrayBuffer -- Blob is not supported.
+        - listitem [ref=e343]: XHR does not support cookies.
+        - listitem [ref=e344]:
+          - code [ref=e345]: responseURL
+          - text: is not supported on XHR
+      - heading "File I/O" [level=2] [ref=e346]:
+        - text: File I/O
+        - link [ref=e348] [cursor=pointer]:
+          - /url: "#file-io"
+          - img [ref=e349]
+      - separator [ref=e351]
+      - list [ref=e352]:
+        - listitem [ref=e353]:
+          - code [ref=e354]: Blob
+          - text: is not supported. Use
+          - code [ref=e355]: ArrayBuffer
+          - text: instead.
+        - listitem [ref=e356]:
+          - text: Copying a file from a folder outside the plugin's data folder into the plugin's data folder (using
+          - code [ref=e357]: getDataFolder
+          - text: ") may fail on Windows with the error `fs.copyFile fallback failed - Error: Route not found\". (PS-57707)"
+        - listitem [ref=e358]:
+          - text: The list of images in
+          - code [ref=e359]: require("uxp").storage.fileTypes.images
+          - text: is not intended to be a complete representation of all supported image types by the host. Instead, this array includes some of the more common images. You can pass your own array with the desired file types instead. (PS-57601)
+        - listitem [ref=e360]:
+          - text: It's not currently possible to obtain metadata for file objects in the plugin's bundle. The date or size will be invalid. Metadata from other sources (such as
+          - code [ref=e361]: getDataFolder
+          - text: ) are unaffected. This will be fixed in a future release. (PS-57307)
+      - heading "Debugging" [level=2] [ref=e362]:
+        - text: Debugging
+        - link [ref=e364] [cursor=pointer]:
+          - /url: "#debugging"
+          - img [ref=e365]
+      - separator [ref=e367]
+      - list [ref=e368]:
+        - listitem [ref=e369]: If debugging exposes any private fields and methods, do not attempt to use them. Plugins referring to private APIs may be rejected or removed from the Plugin Marketplace, and will be prone to breaking unexpectedly.
+      - generic [ref=e371]:
+        - link "sp-textarea" [ref=e373] [cursor=pointer]:
+          - /url: /photoshop/uxp/2021/uxp-api/reference-spectrum/User%20Interface/sp-textarea/
+          - generic [ref=e374]:
+            - img
+            - generic [ref=e375]: sp-textarea
+        - link "Photoshop API" [ref=e377] [cursor=pointer]:
+          - /url: /photoshop/uxp/2021/ps_reference/
+          - generic [ref=e378]:
+            - generic [ref=e379]: Photoshop API
+            - img
+      - generic [ref=e380]:
+        - link "Barkin Aygun kerrishotts Last updated 9/29/2021" [ref=e382] [cursor=pointer]:
+          - /url: https://github.com/AdobeDocs/uxp-photoshop-2021/commits/main/src/pages/uxp/known-issues.md
+          - generic [ref=e383]:
+            - generic [ref=e384]:
+              - generic [ref=e386]:
+                - img "Barkin Aygun"
+              - generic [ref=e388]:
+                - img "kerrishotts"
+            - generic [ref=e389]: Last updated 9/29/2021
+        - generic [ref=e391]:
+          - generic [ref=e392]: Was this helpful?
+          - generic [ref=e393]:
+            - button "Yes" [ref=e395] [cursor=pointer]:
+              - generic [ref=e396]: "Yes"
+            - button "No" [ref=e398] [cursor=pointer]:
+              - generic [ref=e399]: "No"
+    - generic [ref=e401]:
+      - generic [ref=e402]:
+        - generic [ref=e405]:
+          - heading "APIs and Services" [level=3] [ref=e406]
+          - list [ref=e407]:
+            - listitem [ref=e408]:
+              - link "Adobe Creative Cloud" [ref=e409] [cursor=pointer]:
+                - /url: /creative-cloud
+            - listitem [ref=e410]:
+              - link "Adobe Experience Platform" [ref=e411] [cursor=pointer]:
+                - /url: /experience-platform-apis
+            - listitem [ref=e412]:
+              - link "Adobe Document Cloud" [ref=e413] [cursor=pointer]:
+                - /url: /document-services/homepage
+            - listitem [ref=e414]:
+              - link "Adobe Cloud Manager" [ref=e415] [cursor=pointer]:
+                - /url: /experience-cloud/cloud-manager
+            - listitem [ref=e416]:
+              - link "Adobe Analytics" [ref=e417] [cursor=pointer]:
+                - /url: /analytics-apis/docs/2.0
+            - listitem [ref=e418]:
+              - link "App Builder" [ref=e419] [cursor=pointer]:
+                - /url: /app-builder
+            - listitem [ref=e420]:
+              - link "View all APIs and Services" [ref=e421] [cursor=pointer]:
+                - /url: /apis
+                - strong [ref=e422]: View all
+        - generic [ref=e423]:
+          - heading "Community" [level=3] [ref=e424]
+          - list [ref=e425]:
+            - listitem [ref=e426]:
+              - link "Adobe Tech Blog" [ref=e427] [cursor=pointer]:
+                - /url: https://medium.com/adobetech
+            - listitem [ref=e428]:
+              - link "Adobe on GitHub" [ref=e429] [cursor=pointer]:
+                - /url: https://github.com/adobe
+            - listitem [ref=e430]:
+              - link "Adobe Developer on YouTube" [ref=e431] [cursor=pointer]:
+                - /url: https://youtube.com/channel/UCDtYqOjS9Eq9gacLcbMwhhQ
+            - listitem [ref=e432]:
+              - link "Adobe Developer on X" [ref=e433] [cursor=pointer]:
+                - /url: https://twitter.com/adobedevs
+            - listitem [ref=e434]:
+              - link "Community Forums" [ref=e435] [cursor=pointer]:
+                - /url: https://community.adobe.com/
+        - generic [ref=e436]:
+          - heading "Support" [level=3] [ref=e437]
+          - list [ref=e438]:
+            - listitem [ref=e439]:
+              - link "Adobe Developer support" [ref=e440] [cursor=pointer]:
+                - /url: /developer-support
+            - listitem [ref=e441]:
+              - link "Adobe Product support" [ref=e442] [cursor=pointer]:
+                - /url: https://helpx.adobe.com/contact/enterprise-support.html
+        - generic [ref=e443]:
+          - heading "Adobe Developer" [level=3] [ref=e444]
+          - list [ref=e445]:
+            - listitem [ref=e446]:
+              - link "Adobe Developer Console" [ref=e447] [cursor=pointer]:
+                - /url: /developer-console
+            - listitem [ref=e448]:
+              - link "Developer Distribution" [ref=e449] [cursor=pointer]:
+                - /url: /developer-distribution/
+            - listitem [ref=e450]:
+              - link "Open source at Adobe" [ref=e451] [cursor=pointer]:
+                - /url: /open
+            - listitem [ref=e452]:
+              - link "Download SDKs" [ref=e453] [cursor=pointer]:
+                - /url: /console/downloads
+            - listitem [ref=e454]:
+              - link "Authentication" [ref=e455] [cursor=pointer]:
+                - /url: /developer-console/docs/guides/authentication
+            - listitem [ref=e456]:
+              - link "Careers" [ref=e457] [cursor=pointer]:
+                - /url: https://adobe.com/careers.html
+      - separator [ref=e458]
+      - generic [ref=e459]:
+        - list [ref=e461]:
+          - listitem [ref=e462]:
+            - link "Privacy" [ref=e463] [cursor=pointer]:
+              - /url: https://adobe.com/privacy.html
+          - listitem [ref=e464]:
+            - link "Terms of Use" [ref=e465] [cursor=pointer]:
+              - /url: https://adobe.com/legal/terms.html
+          - listitem [ref=e466]:
+            - link "Cookie preferences" [ref=e467] [cursor=pointer]:
+              - /url: "#/"
+          - listitem [ref=e468]:
+            - link "Do not sell or share my personal information" [ref=e469] [cursor=pointer]:
+              - /url: https://adobe.com/privacy/us-rights.html
+          - listitem [ref=e470]:
+            - img [ref=e471]
+            - link "AdChoices" [ref=e474] [cursor=pointer]:
+              - /url: https://adobe.com/privacy/opt-out.html#interest-based-ads
+        - generic [ref=e476]: Copyright © 2026 Adobe. All rights reserved.

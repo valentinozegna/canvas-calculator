@@ -1,0 +1,1797 @@
+- generic [ref=e5]:
+  - banner [ref=e7]:
+    - navigation "Global" [ref=e8]:
+      - generic [ref=e9]:
+        - button [ref=e11] [cursor=pointer]:
+          - img
+        - link "Adobe Developer" [ref=e15] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e16]:
+            - img [ref=e17]
+            - strong [ref=e21]: Adobe Developer
+        - generic [ref=e23]:
+          - link "Products" [active] [ref=e25] [cursor=pointer]:
+            - /url: /apis/
+            - generic [ref=e26]: Products
+          - link "UXP for InDesign" [ref=e27] [cursor=pointer]:
+            - /url: /indesign/uxp/
+            - generic [ref=e28]: UXP for InDesign
+          - link "Introduction" [ref=e29] [cursor=pointer]:
+            - /url: /indesign/uxp/introduction/
+            - generic [ref=e30]: Introduction
+          - link "Scripts" [ref=e31] [cursor=pointer]:
+            - /url: /indesign/uxp/scripts/
+            - generic [ref=e32]: Scripts
+          - link "Plugins" [ref=e33] [cursor=pointer]:
+            - /url: /indesign/uxp/plugins/
+            - generic [ref=e34]: Plugins
+          - link "Resources" [ref=e35] [cursor=pointer]:
+            - /url: /indesign/uxp/resources/
+            - generic [ref=e36]: Resources
+          - generic "References" [ref=e37] [cursor=pointer]:
+            - generic [ref=e38]: References
+            - img
+            - button "References"
+        - generic [ref=e40]:
+          - button "Search" [ref=e41] [cursor=pointer]:
+            - img
+          - button "Console" [ref=e43] [cursor=pointer]
+          - generic "Loading" [ref=e45]
+  - navigation "Primary" [ref=e55]:
+    - tree "Table of contents" [ref=e57]:
+      - treeitem "Plugins" [expanded] [level=1] [ref=e58]:
+        - heading "Plugins" [level=2] [ref=e59]
+        - group [ref=e60]:
+          - treeitem "Getting started" [level=2] [ref=e61]:
+            - link "Getting started" [ref=e62] [cursor=pointer]:
+              - /url: /indesign/uxp/plugins/getting-started/
+          - treeitem "Concepts" [expanded] [level=2] [ref=e63]:
+            - link "Concepts" [ref=e64] [cursor=pointer]:
+              - /url: /indesign/uxp/plugins/concepts/
+              - text: Concepts
+              - img
+            - group [ref=e65]:
+              - treeitem "Entry points" [level=3] [ref=e66]:
+                - link "Entry points" [ref=e67] [cursor=pointer]:
+                  - /url: /indesign/uxp/plugins/concepts/entry-points/
+              - treeitem "Manifest" [expanded] [level=3] [ref=e68]:
+                - link "Manifest" [ref=e69] [cursor=pointer]:
+                  - /url: /indesign/uxp/plugins/concepts/manifest/
+          - treeitem "Tutorials" [level=2] [ref=e70]:
+            - link "Tutorials" [ref=e71] [cursor=pointer]:
+              - /url: /indesign/uxp/plugins/tutorials/
+              - text: Tutorials
+              - img
+          - treeitem "Advanced topics" [level=2] [ref=e72]:
+            - link "Advanced topics" [ref=e73] [cursor=pointer]:
+              - /url: /indesign/uxp/plugins/advanced/
+  - main [ref=e75]:
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - navigation "Breadcrumb" [ref=e81]:
+          - list [ref=e82]:
+            - listitem [ref=e83]:
+              - link "Products" [ref=e84] [cursor=pointer]:
+                - /url: /apis/
+              - img
+            - listitem [ref=e85]:
+              - link "UXP for InDesign" [ref=e86] [cursor=pointer]:
+                - /url: /indesign/uxp/
+              - img
+            - listitem [ref=e87]:
+              - link "Plugins" [ref=e88] [cursor=pointer]:
+                - /url: /indesign/uxp/plugins/
+              - img
+            - listitem [ref=e89]:
+              - link "Concepts" [ref=e90] [cursor=pointer]:
+                - /url: /indesign/uxp/plugins/concepts/
+              - img
+            - listitem [ref=e91]:
+              - link "Manifest" [ref=e92] [cursor=pointer]:
+                - /url: /indesign/uxp/plugins/concepts/manifest/
+        - generic [ref=e94]:
+          - button "Edit in GitHub" [ref=e95] [cursor=pointer]:
+            - img
+            - generic [ref=e96]: Edit in GitHub
+          - button "Log an issue" [ref=e97] [cursor=pointer]:
+            - img
+            - generic [ref=e98]: Log an issue
+      - heading "UXP Manifest" [level=1] [ref=e99]
+      - paragraph [ref=e100]:
+        - text: The manifest is a JSON file that is located at the root of the plugin bundle. It is named
+        - code [ref=e101]: manifest.json
+        - text: and is required for all plugins.
+      - heading "Overview" [level=2] [ref=e102]:
+        - text: Overview
+        - link [ref=e104] [cursor=pointer]:
+          - /url: "#overview"
+          - img [ref=e105]
+      - separator [ref=e107]
+      - paragraph [ref=e108]:
+        - text: Each UXP plugin has one
+        - code [ref=e109]: manifest.json
+        - text: file that describes the plugin. It contains metadata such as the plugin's name, version, icons, and entry points.
+      - paragraph [ref=e110]:
+        - text: The manifest file also contains the permissions that the plugin requires. Most importantly, it contains your plugin ID which is used to identify your plugin. (Valid plugin IDs are required for distributing in Adobe's Marketplace, read more
+        - link "in the docmentation" [ref=e111] [cursor=pointer]:
+          - /url: https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/
+        - text: .)
+      - paragraph [ref=e112]:
+        - text: Since UXP plugins can be run in a number of different hosts, the manifest also contains a
+        - code [ref=e113]: host
+        - text: field that specifies which host the plugin is for. This is used to identify the plugin in the manifest and in the plugin bundle.
+      - heading "Reference" [level=2] [ref=e114]:
+        - text: Reference
+        - link [ref=e116] [cursor=pointer]:
+          - /url: "#reference"
+          - img [ref=e117]
+      - separator [ref=e119]
+      - heading "Manifest" [level=3] [ref=e120]:
+        - text: Manifest
+        - link [ref=e122] [cursor=pointer]:
+          - /url: "#manifest"
+          - img [ref=e123]
+      - paragraph [ref=e125]: The object at the root of the manifest file.
+      - alert [ref=e126]:
+        - img
+        - paragraph [ref=e127]: Properties marked with an asterisk (*) are required.
+      - heading "Example" [level=4] [ref=e128]:
+        - text: Example
+        - link [ref=e130] [cursor=pointer]:
+          - /url: "#example"
+          - img [ref=e131]
+      - generic [ref=e134]:
+        - button "Copy" [ref=e135] [cursor=pointer]
+        - textbox [ref=e136]: "{ \"manifestVersion\": 5, \"id\": \"YOUR_ID_HERE\", \"name\": \"Name of your plugin\", \"version\": \"1.0.0\", \"main\": \"index.html\", \"host\": { \"app\": \"HOST_APPLICATION\", \"minVersion\": \"HOST_VERSION\" }, \"entrypoints\": [ { \"type\": \"command\", \"id\": \"commandFn\", \"label\": { \"default\": \"Show A Dialog\" } }, { \"type\": \"panel\", \"id\": \"panelName\", \"label\": { \"default\": \"Panel Name\" } } ], \"icons\": [ { \"width\": 24, \"height\": 24, \"path\": \"icons/icon.png\", \"scale\": [ 1, 2 ] } ], \"requiredPermissions\": { \"network\": { \"domains\": \"all\" } } }"
+        - generic [ref=e137]:
+          - generic [ref=e138]:
+            - generic [ref=e139]: "1"
+            - generic [ref=e140]: "{"
+          - generic [ref=e141]:
+            - generic [ref=e142]: "2"
+            - generic [ref=e143]: "\"manifestVersion\": 5,"
+          - generic [ref=e144]:
+            - generic [ref=e145]: "3"
+            - generic [ref=e146]: "\"id\": \"YOUR_ID_HERE\","
+          - generic [ref=e147]:
+            - generic [ref=e148]: "4"
+            - generic [ref=e149]: "\"name\": \"Name of your plugin\","
+          - generic [ref=e150]:
+            - generic [ref=e151]: "5"
+            - generic [ref=e152]: "\"version\": \"1.0.0\","
+          - generic [ref=e153]:
+            - generic [ref=e154]: "6"
+            - generic [ref=e155]: "\"main\": \"index.html\","
+          - generic [ref=e156]:
+            - generic [ref=e157]: "7"
+            - generic [ref=e158]: "\"host\": {"
+          - generic [ref=e159]:
+            - generic [ref=e160]: "8"
+            - generic [ref=e161]: "\"app\": \"HOST_APPLICATION\","
+          - generic [ref=e162]:
+            - generic [ref=e163]: "9"
+            - generic [ref=e164]: "\"minVersion\": \"HOST_VERSION\""
+          - generic [ref=e165]:
+            - generic [ref=e166]: "10"
+            - generic [ref=e167]: "},"
+          - generic [ref=e168]:
+            - generic [ref=e169]: "11"
+            - generic [ref=e170]: "\"entrypoints\": ["
+          - generic [ref=e171]:
+            - generic [ref=e172]: "12"
+            - generic [ref=e173]: "{"
+          - generic [ref=e174]:
+            - generic [ref=e175]: "13"
+            - generic [ref=e176]: "\"type\": \"command\","
+          - generic [ref=e177]:
+            - generic [ref=e178]: "14"
+            - generic [ref=e179]: "\"id\": \"commandFn\","
+          - generic [ref=e180]:
+            - generic [ref=e181]: "15"
+            - generic [ref=e182]: "\"label\": {"
+          - generic [ref=e183]:
+            - generic [ref=e184]: "16"
+            - generic [ref=e185]: "\"default\": \"Show A Dialog\""
+          - generic [ref=e186]:
+            - generic [ref=e187]: "17"
+            - generic [ref=e188]: "}"
+          - generic [ref=e189]:
+            - generic [ref=e190]: "18"
+            - generic [ref=e191]: "},"
+          - generic [ref=e192]:
+            - generic [ref=e193]: "19"
+            - generic [ref=e194]: "{"
+          - generic [ref=e195]:
+            - generic [ref=e196]: "20"
+            - generic [ref=e197]: "\"type\": \"panel\","
+          - generic [ref=e198]:
+            - generic [ref=e199]: "21"
+            - generic [ref=e200]: "\"id\": \"panelName\","
+          - generic [ref=e201]:
+            - generic [ref=e202]: "22"
+            - generic [ref=e203]: "\"label\": {"
+          - generic [ref=e204]:
+            - generic [ref=e205]: "23"
+            - generic [ref=e206]: "\"default\": \"Panel Name\""
+          - generic [ref=e207]:
+            - generic [ref=e208]: "24"
+            - generic [ref=e209]: "}"
+          - generic [ref=e210]:
+            - generic [ref=e211]: "25"
+            - generic [ref=e212]: "}"
+          - generic [ref=e213]:
+            - generic [ref=e214]: "26"
+            - generic [ref=e215]: "],"
+          - generic [ref=e216]:
+            - generic [ref=e217]: "27"
+            - generic [ref=e218]: "\"icons\": ["
+          - generic [ref=e219]:
+            - generic [ref=e220]: "28"
+            - generic [ref=e221]: "{"
+          - generic [ref=e222]:
+            - generic [ref=e223]: "29"
+            - generic [ref=e224]: "\"width\": 24,"
+          - generic [ref=e225]:
+            - generic [ref=e226]: "30"
+            - generic [ref=e227]: "\"height\": 24,"
+          - generic [ref=e228]:
+            - generic [ref=e229]: "31"
+            - generic [ref=e230]: "\"path\": \"icons/icon.png\","
+          - generic [ref=e231]:
+            - generic [ref=e232]: "32"
+            - generic [ref=e233]: "\"scale\": ["
+          - generic [ref=e234]:
+            - generic [ref=e235]: "33"
+            - generic [ref=e236]: 1,
+          - generic [ref=e237]:
+            - generic [ref=e238]: "34"
+            - generic [ref=e239]: "2"
+          - generic [ref=e240]:
+            - generic [ref=e241]: "35"
+            - generic [ref=e242]: "]"
+          - generic [ref=e243]:
+            - generic [ref=e244]: "36"
+            - generic [ref=e245]: "}"
+          - generic [ref=e246]:
+            - generic [ref=e247]: "37"
+            - generic [ref=e248]: "],"
+          - generic [ref=e249]:
+            - generic [ref=e250]: "38"
+            - generic [ref=e251]: "\"requiredPermissions\": {"
+          - generic [ref=e252]:
+            - generic [ref=e253]: "39"
+            - generic [ref=e254]: "\"network\": {"
+          - generic [ref=e255]:
+            - generic [ref=e256]: "40"
+            - generic [ref=e257]: "\"domains\": \"all\""
+          - generic [ref=e258]:
+            - generic [ref=e259]: "41"
+            - generic [ref=e260]: "}"
+          - generic [ref=e261]:
+            - generic [ref=e262]: "42"
+            - generic [ref=e263]: "}"
+          - generic [ref=e264]:
+            - generic [ref=e265]: "43"
+            - generic [ref=e266]: "}"
+      - alert [ref=e267]:
+        - img
+        - paragraph [ref=e268]: Properties marked with an asterisk (*) are required.
+      - heading "Properties" [level=4] [ref=e269]:
+        - text: Properties
+        - link [ref=e271] [cursor=pointer]:
+          - /url: "#undefined"
+          - img [ref=e272]
+      - table [ref=e274]:
+        - rowgroup [ref=e275]:
+          - row "Name Type Required Description" [ref=e276]:
+            - columnheader "Name" [ref=e277]
+            - columnheader "Type" [ref=e278]
+            - columnheader "Required" [ref=e279]
+            - columnheader "Description" [ref=e280]
+        - rowgroup [ref=e281]:
+          - row "manifestVersion * \"5\" required The manifestVersion indicates the version of the manifest schema. This document describes version 5 of the manifest schema." [ref=e282]:
+            - cell "manifestVersion *" [ref=e283]:
+              - generic [ref=e284]:
+                - code [ref=e285]: manifestVersion
+                - text: "*"
+            - cell "\"5\"" [ref=e286]:
+              - code [ref=e288]: "\"5\""
+            - cell "required" [ref=e289]:
+              - generic [ref=e290]: required
+            - cell "The manifestVersion indicates the version of the manifest schema. This document describes version 5 of the manifest schema." [ref=e291]:
+              - paragraph [ref=e293]: The manifestVersion indicates the version of the manifest schema. This document describes version 5 of the manifest schema.
+          - row "id * string required The id uniquely identifies a plugin and is used to disambiguate plugin contexts, storage, errors, etc. For plugins distributed through the plugin marketplace, the ID has to match the ID in the Developer Distribution portal." [ref=e294]:
+            - cell "id *" [ref=e295]:
+              - generic [ref=e296]:
+                - code [ref=e297]: id
+                - text: "*"
+            - cell "string" [ref=e298]:
+              - code [ref=e300]: string
+            - cell "required" [ref=e301]:
+              - generic [ref=e302]: required
+            - cell "The id uniquely identifies a plugin and is used to disambiguate plugin contexts, storage, errors, etc. For plugins distributed through the plugin marketplace, the ID has to match the ID in the Developer Distribution portal." [ref=e303]:
+              - paragraph [ref=e305]:
+                - text: The id uniquely identifies a plugin and is used to disambiguate plugin contexts, storage, errors, etc. For plugins distributed through the plugin marketplace, the ID has to match the ID in
+                - link "the Developer Distribution portal" [ref=e306] [cursor=pointer]:
+                  - /url: https://developer.adobe.com/developer-distribution/creative-cloud/docs/guides/plugin_id/
+                - text: .
+          - row "name * string | LocalizedString required The name visually identifies the plugin in the user interface. It is usually used in a plugin menu listing or launcher for top-level action items. The name can be a string, a key from the StringsDefinition object, or a localized string." [ref=e307]:
+            - cell "name *" [ref=e308]:
+              - generic [ref=e309]:
+                - code [ref=e310]: name
+                - text: "*"
+            - cell "string | LocalizedString" [ref=e311]:
+              - code [ref=e313]:
+                - text: string | Localized
+                - text: String
+            - cell "required" [ref=e314]:
+              - generic [ref=e315]: required
+            - cell "The name visually identifies the plugin in the user interface. It is usually used in a plugin menu listing or launcher for top-level action items. The name can be a string, a key from the StringsDefinition object, or a localized string." [ref=e316]:
+              - paragraph [ref=e318]: The name visually identifies the plugin in the user interface. It is usually used in a plugin menu listing or launcher for top-level action items. The name can be a string, a key from the StringsDefinition object, or a localized string.
+          - 'row "strings StringsDefinition optional A set of strings used to localize the plugin name and other user-facing strings. It can also be a path to a JSON file containing the StringsDefinition object. Default value {} (no strings)" [ref=e319]':
+            - cell "strings" [ref=e320]:
+              - code [ref=e322]: strings
+            - cell "StringsDefinition" [ref=e323]:
+              - code [ref=e325]: StringsDefinition
+            - cell "optional" [ref=e326]:
+              - generic [ref=e327]: optional
+            - 'cell "A set of strings used to localize the plugin name and other user-facing strings. It can also be a path to a JSON file containing the StringsDefinition object. Default value {} (no strings)" [ref=e328]':
+              - generic [ref=e329]:
+                - paragraph [ref=e330]: A set of strings used to localize the plugin name and other user-facing strings. It can also be a path to a JSON file containing the StringsDefinition object.
+                - paragraph [ref=e331]:
+                  - strong [ref=e332]: Default value
+                - paragraph [ref=e333]:
+                  - code [ref=e334]: "{}"
+                  - text: (no strings)
+          - row "version * string required The version indicates the plugin's version. The string has a format of major.minor.patch." [ref=e335]:
+            - cell "version *" [ref=e336]:
+              - generic [ref=e337]:
+                - code [ref=e338]: version
+                - text: "*"
+            - cell "string" [ref=e339]:
+              - code [ref=e341]: string
+            - cell "required" [ref=e342]:
+              - generic [ref=e343]: required
+            - cell "The version indicates the plugin's version. The string has a format of major.minor.patch." [ref=e344]:
+              - paragraph [ref=e346]: The version indicates the plugin's version. The string has a format of major.minor.patch.
+          - row "main string optional Indicates the primary JavaScript or HTML file, relative to the plugin's installation directory. Supports HTML and JS files, such as index.html and index.js . If not specified (for deprecations), main.js is used. Default value \"main.js\"" [ref=e347]:
+            - cell "main" [ref=e348]:
+              - code [ref=e350]: main
+            - cell "string" [ref=e351]:
+              - code [ref=e353]: string
+            - cell "optional" [ref=e354]:
+              - generic [ref=e355]: optional
+            - cell "Indicates the primary JavaScript or HTML file, relative to the plugin's installation directory. Supports HTML and JS files, such as index.html and index.js . If not specified (for deprecations), main.js is used. Default value \"main.js\"" [ref=e356]:
+              - generic [ref=e357]:
+                - paragraph [ref=e358]:
+                  - text: Indicates the primary JavaScript or HTML file, relative to the plugin's installation directory. Supports HTML and JS files, such as
+                  - code [ref=e359]: index.html
+                  - text: and
+                  - code [ref=e360]: index.js
+                  - text: . If not specified (for deprecations),
+                  - code [ref=e361]: main.js
+                  - text: is used.
+                - paragraph [ref=e362]:
+                  - strong [ref=e363]: Default value
+                - paragraph [ref=e364]:
+                  - code [ref=e365]: "\"main.js\""
+          - row "icons IconDefinition[] optional An array of icons representing the overall plugin or panel icon. The host application uses these icons to present the plugin to the user. If the icons array is missing, a default icon will be used. Default value [] (no icons)" [ref=e366]:
+            - cell "icons" [ref=e367]:
+              - code [ref=e369]: icons
+            - cell "IconDefinition[]" [ref=e370]:
+              - code [ref=e372]: IconDefinition[]
+            - cell "optional" [ref=e373]:
+              - generic [ref=e374]: optional
+            - cell "An array of icons representing the overall plugin or panel icon. The host application uses these icons to present the plugin to the user. If the icons array is missing, a default icon will be used. Default value [] (no icons)" [ref=e375]:
+              - generic [ref=e376]:
+                - paragraph [ref=e377]: An array of icons representing the overall plugin or panel icon. The host application uses these icons to present the plugin to the user. If the icons array is missing, a default icon will be used.
+                - paragraph [ref=e378]:
+                  - strong [ref=e379]: Default value
+                - paragraph [ref=e380]:
+                  - code [ref=e381]: "[]"
+                  - text: (no icons)
+          - 'row "host * HostDefinition required The host object indicates the plugin''s compatibility with the host. Incompatible plugins will: fail to install if attempted in the given host be invisible in the in-app plugin marketplace for the given host be unavailable for update if the update is no longer compatible." [ref=e382]':
+            - cell "host *" [ref=e383]:
+              - generic [ref=e384]:
+                - code [ref=e385]: host
+                - text: "*"
+            - cell "HostDefinition" [ref=e386]:
+              - code [ref=e388]: HostDefinition
+            - cell "required" [ref=e389]:
+              - generic [ref=e390]: required
+            - 'cell "The host object indicates the plugin''s compatibility with the host. Incompatible plugins will: fail to install if attempted in the given host be invisible in the in-app plugin marketplace for the given host be unavailable for update if the update is no longer compatible." [ref=e391]':
+              - generic [ref=e392]:
+                - paragraph [ref=e393]: "The host object indicates the plugin's compatibility with the host. Incompatible plugins will:"
+                - list [ref=e394]:
+                  - listitem [ref=e395]: fail to install if attempted in the given host
+                  - listitem [ref=e396]: be invisible in the in-app plugin marketplace for the given host
+                  - listitem [ref=e397]: be unavailable for update if the update is no longer compatible.
+          - row "entrypoints * EntrypointDefinition[] required The entrypoints array defines the entrypoints that the plugin provides." [ref=e398]:
+            - cell "entrypoints *" [ref=e399]:
+              - generic [ref=e400]:
+                - code [ref=e401]: entrypoints
+                - text: "*"
+            - cell "EntrypointDefinition[]" [ref=e402]:
+              - code [ref=e404]: EntrypointDefinition[]
+            - cell "required" [ref=e405]:
+              - generic [ref=e406]: required
+            - cell "The entrypoints array defines the entrypoints that the plugin provides." [ref=e407]:
+              - paragraph [ref=e409]: The entrypoints array defines the entrypoints that the plugin provides.
+          - 'row "requiredPermissions PermissionsDefinition optional Indicates the various permissions this plugin requires. These permissions are required before accessing certain API surfaces. Without these permissions in the manifest, API access may fail or throw an error. Some permissions require user consent. Default value {} (no permissions)" [ref=e410]':
+            - cell "requiredPermissions" [ref=e411]:
+              - code [ref=e413]: requiredPermissions
+            - cell "PermissionsDefinition" [ref=e414]:
+              - code [ref=e416]: PermissionsDefinition
+            - cell "optional" [ref=e417]:
+              - generic [ref=e418]: optional
+            - 'cell "Indicates the various permissions this plugin requires. These permissions are required before accessing certain API surfaces. Without these permissions in the manifest, API access may fail or throw an error. Some permissions require user consent. Default value {} (no permissions)" [ref=e419]':
+              - generic [ref=e420]:
+                - paragraph [ref=e421]: Indicates the various permissions this plugin requires. These permissions are required before accessing certain API surfaces. Without these permissions in the manifest, API access may fail or throw an error. Some permissions require user consent.
+                - paragraph [ref=e422]:
+                  - strong [ref=e423]: Default value
+                - paragraph [ref=e424]:
+                  - code [ref=e425]: "{}"
+                  - text: (no permissions)
+          - 'row "addon object optional Not supported in InDesign v18.5 Addon definitions for hybrid plugins. A UXP Hybrid plugin is a UXP plugin that can access the power of C++ native libraries. Default value {} (no addons)" [ref=e426]':
+            - cell "addon" [ref=e427]:
+              - code [ref=e429]: addon
+            - cell "object" [ref=e430]:
+              - code [ref=e432]: object
+            - cell "optional" [ref=e433]:
+              - generic [ref=e434]: optional
+            - 'cell "Not supported in InDesign v18.5 Addon definitions for hybrid plugins. A UXP Hybrid plugin is a UXP plugin that can access the power of C++ native libraries. Default value {} (no addons)" [ref=e435]':
+              - generic [ref=e436]:
+                - paragraph [ref=e437]:
+                  - text: Not supported in InDesign v18.5
+                  - text: Addon definitions for hybrid plugins. A UXP Hybrid plugin is a UXP plugin that can access the power of C++ native libraries.
+                - paragraph [ref=e438]:
+                  - strong [ref=e439]: Default value
+                - paragraph [ref=e440]:
+                  - code [ref=e441]: "{}"
+                  - text: (no addons)
+          - 'row "featureFlags FeatureFlags optional A set of feature flags that can be used to enable or disable certain features of the plugin. These flags are used to gate features that are not yet ready for general availability. Default value {} (no additional feature flags)" [ref=e442]':
+            - cell "featureFlags" [ref=e443]:
+              - code [ref=e445]: featureFlags
+            - cell "FeatureFlags" [ref=e446]:
+              - code [ref=e448]: FeatureFlags
+            - cell "optional" [ref=e449]:
+              - generic [ref=e450]: optional
+            - 'cell "A set of feature flags that can be used to enable or disable certain features of the plugin. These flags are used to gate features that are not yet ready for general availability. Default value {} (no additional feature flags)" [ref=e451]':
+              - generic [ref=e452]:
+                - paragraph [ref=e453]: A set of feature flags that can be used to enable or disable certain features of the plugin. These flags are used to gate features that are not yet ready for general availability.
+                - paragraph [ref=e454]:
+                  - strong [ref=e455]: Default value
+                - paragraph [ref=e456]:
+                  - code [ref=e457]: "{}"
+                  - text: (no additional feature flags)
+      - heading "StringsDefinition" [level=3] [ref=e458]:
+        - text: StringsDefinition
+        - link [ref=e460] [cursor=pointer]:
+          - /url: "#stringsdefinition"
+          - img [ref=e461]
+      - paragraph [ref=e463]: Represents a set of strings used to localize the plugin name and other user-facing strings.
+      - paragraph [ref=e464]:
+        - code [ref=e465]: StringsDefinition
+        - text: keys can be used anywhere where
+        - code [ref=e466]: LocalizedString
+        - text: is supported.
+      - paragraph [ref=e467]:
+        - strong [ref=e468]: Example
+      - paragraph [ref=e469]: "Your manifest.json file might look like this:"
+      - generic [ref=e471]:
+        - button "Copy" [ref=e472] [cursor=pointer]
+        - textbox [ref=e473]: "{ \"name\": \"my-plugin\", \"strings\": { \"my-plugin\": { \"default\": \"My Plugin\", \"de\": \"Mein Plugin\" } } }"
+        - generic [ref=e474]:
+          - generic [ref=e475]:
+            - generic [ref=e476]: "1"
+            - generic [ref=e477]: "{"
+          - generic [ref=e478]:
+            - generic [ref=e479]: "2"
+            - generic [ref=e480]: "\"name\": \"my-plugin\","
+          - generic [ref=e481]:
+            - generic [ref=e482]: "3"
+            - generic [ref=e483]: "\"strings\": {"
+          - generic [ref=e484]:
+            - generic [ref=e485]: "4"
+            - generic [ref=e486]: "\"my-plugin\": {"
+          - generic [ref=e487]:
+            - generic [ref=e488]: "5"
+            - generic [ref=e489]: "\"default\": \"My Plugin\","
+          - generic [ref=e490]:
+            - generic [ref=e491]: "6"
+            - generic [ref=e492]: "\"de\": \"Mein Plugin\""
+          - generic [ref=e493]:
+            - generic [ref=e494]: "7"
+            - generic [ref=e495]: "}"
+          - generic [ref=e496]:
+            - generic [ref=e497]: "8"
+            - generic [ref=e498]: "}"
+          - generic [ref=e499]:
+            - generic [ref=e500]: "9"
+            - generic [ref=e501]: "}"
+      - heading "LocalizedString" [level=3] [ref=e502]:
+        - text: LocalizedString
+        - link [ref=e504] [cursor=pointer]:
+          - /url: "#localizedstring"
+          - img [ref=e505]
+      - paragraph [ref=e507]: Represents a localized string. The key is the locale, and the value is the translated string.
+      - paragraph [ref=e508]:
+        - strong [ref=e509]: Example
+      - generic [ref=e511]:
+        - button "Copy" [ref=e512] [cursor=pointer]
+        - textbox [ref=e513]: "{ \"default\": \"Hello\", \"en\": \"Hello\", \"de\": \"Hallo\" }"
+        - generic [ref=e514]:
+          - generic [ref=e515]:
+            - generic [ref=e516]: "1"
+            - generic [ref=e517]: "{"
+          - generic [ref=e518]:
+            - generic [ref=e519]: "2"
+            - generic [ref=e520]: "\"default\": \"Hello\","
+          - generic [ref=e521]:
+            - generic [ref=e522]: "3"
+            - generic [ref=e523]: "\"en\": \"Hello\","
+          - generic [ref=e524]:
+            - generic [ref=e525]: "4"
+            - generic [ref=e526]: "\"de\": \"Hallo\""
+          - generic [ref=e527]:
+            - generic [ref=e528]: "5"
+            - generic [ref=e529]: "}"
+      - heading "Properties" [level=4] [ref=e530]:
+        - text: Properties
+        - link [ref=e532] [cursor=pointer]:
+          - /url: "#properties"
+          - img [ref=e533]
+      - table [ref=e535]:
+        - rowgroup [ref=e536]:
+          - row "Name Type Required Description" [ref=e537]:
+            - columnheader "Name" [ref=e538]
+            - columnheader "Type" [ref=e539]
+            - columnheader "Required" [ref=e540]
+            - columnheader "Description" [ref=e541]
+        - rowgroup [ref=e542]:
+          - row "default * string required The default string used when no translation is available for the current locale." [ref=e543]:
+            - cell "default *" [ref=e544]:
+              - generic [ref=e545]:
+                - code [ref=e546]: default
+                - text: "*"
+            - cell "string" [ref=e547]:
+              - code [ref=e549]: string
+            - cell "required" [ref=e550]:
+              - generic [ref=e551]: required
+            - cell "The default string used when no translation is available for the current locale." [ref=e552]:
+              - paragraph [ref=e554]: The default string used when no translation is available for the current locale.
+      - heading "IconDefinition" [level=3] [ref=e555]:
+        - text: IconDefinition
+        - link [ref=e557] [cursor=pointer]:
+          - /url: "#icondefinition"
+          - img [ref=e558]
+      - paragraph [ref=e560]: Represents an icon used by the plugin or specific entry point. The icon may be used in the plugin list, toolbar, or other places.
+      - heading "Properties" [level=4] [ref=e561]:
+        - text: Properties
+        - link [ref=e563] [cursor=pointer]:
+          - /url: "#undefined"
+          - img [ref=e564]
+      - table [ref=e566]:
+        - rowgroup [ref=e567]:
+          - row "Name Type Required Description" [ref=e568]:
+            - columnheader "Name" [ref=e569]
+            - columnheader "Type" [ref=e570]
+            - columnheader "Required" [ref=e571]
+            - columnheader "Description" [ref=e572]
+        - rowgroup [ref=e573]:
+          - row "width * number required The width of the icon in pixels." [ref=e574]:
+            - cell "width *" [ref=e575]:
+              - generic [ref=e576]:
+                - code [ref=e577]: width
+                - text: "*"
+            - cell "number" [ref=e578]:
+              - code [ref=e580]: number
+            - cell "required" [ref=e581]:
+              - generic [ref=e582]: required
+            - cell "The width of the icon in pixels." [ref=e583]:
+              - paragraph [ref=e585]: The width of the icon in pixels.
+          - row "height * number required The height of the icon in pixels." [ref=e586]:
+            - cell "height *" [ref=e587]:
+              - generic [ref=e588]:
+                - code [ref=e589]: height
+                - text: "*"
+            - cell "number" [ref=e590]:
+              - code [ref=e592]: number
+            - cell "required" [ref=e593]:
+              - generic [ref=e594]: required
+            - cell "The height of the icon in pixels." [ref=e595]:
+              - paragraph [ref=e597]: The height of the icon in pixels.
+          - row "path * string required The path to the icon, relative to the plugin's installation directory. Supports PNG ( .png ), JPG ( .jpg or .jpeg ), and SVG ( .svg ) files." [ref=e598]:
+            - cell "path *" [ref=e599]:
+              - generic [ref=e600]:
+                - code [ref=e601]: path
+                - text: "*"
+            - cell "string" [ref=e602]:
+              - code [ref=e604]: string
+            - cell "required" [ref=e605]:
+              - generic [ref=e606]: required
+            - cell "The path to the icon, relative to the plugin's installation directory. Supports PNG ( .png ), JPG ( .jpg or .jpeg ), and SVG ( .svg ) files." [ref=e607]:
+              - paragraph [ref=e609]:
+                - text: The path to the icon, relative to the plugin's installation directory. Supports PNG (
+                - code [ref=e610]: .png
+                - text: ), JPG (
+                - code [ref=e611]: .jpg
+                - text: or
+                - code [ref=e612]: .jpeg
+                - text: ), and SVG (
+                - code [ref=e613]: .svg
+                - text: ) files.
+          - 'row "scale number[] optional Specifies the scaling factors that the icon supports. Example Copy 1 { 2 \"path\": \"icon.png\", 3 \"width\": 24, 4 \"height\": 24, 5 \"scale\": [1, 2, 2.5] 6 } Results in the following icon files being used: icon.png or icon@1x.png (24x24px) for 100% scaling icon@2x.png (48x48px) for 200% scaling icon@2.5x.png (60x60px) for 250% scaling Default value [1] (only supports 100% scaling)" [ref=e614]':
+            - cell "scale" [ref=e615]:
+              - code [ref=e617]: scale
+            - cell "number[]" [ref=e618]:
+              - code [ref=e620]: number[]
+            - cell "optional" [ref=e621]:
+              - generic [ref=e622]: optional
+            - 'cell "Specifies the scaling factors that the icon supports. Example Copy 1 { 2 \"path\": \"icon.png\", 3 \"width\": 24, 4 \"height\": 24, 5 \"scale\": [1, 2, 2.5] 6 } Results in the following icon files being used: icon.png or icon@1x.png (24x24px) for 100% scaling icon@2x.png (48x48px) for 200% scaling icon@2.5x.png (60x60px) for 250% scaling Default value [1] (only supports 100% scaling)" [ref=e623]':
+              - generic [ref=e624]:
+                - paragraph [ref=e625]: Specifies the scaling factors that the icon supports.
+                - paragraph [ref=e626]:
+                  - strong [ref=e627]: Example
+                - generic [ref=e628]:
+                  - button "Copy" [ref=e629] [cursor=pointer]
+                  - textbox [ref=e630]: "{ \"path\": \"icon.png\", \"width\": 24, \"height\": 24, \"scale\": [1, 2, 2.5] }"
+                  - generic [ref=e631]:
+                    - generic [ref=e632]:
+                      - generic [ref=e633]: "1"
+                      - generic [ref=e634]: "{"
+                    - generic [ref=e635]:
+                      - generic [ref=e636]: "2"
+                      - generic [ref=e637]: "\"path\": \"icon.png\","
+                    - generic [ref=e638]:
+                      - generic [ref=e639]: "3"
+                      - generic [ref=e640]: "\"width\": 24,"
+                    - generic [ref=e641]:
+                      - generic [ref=e642]: "4"
+                      - generic [ref=e643]: "\"height\": 24,"
+                    - generic [ref=e644]:
+                      - generic [ref=e645]: "5"
+                      - generic [ref=e646]: "\"scale\": [1, 2, 2.5]"
+                    - generic [ref=e647]:
+                      - generic [ref=e648]: "6"
+                      - generic [ref=e649]: "}"
+                - paragraph [ref=e650]: "Results in the following icon files being used:"
+                - list [ref=e651]:
+                  - listitem [ref=e652]:
+                    - code [ref=e653]: icon.png
+                    - text: or
+                    - code [ref=e654]: icon@1x.png
+                    - text: (24x24px) for 100% scaling
+                  - listitem [ref=e655]:
+                    - code [ref=e656]: icon@2x.png
+                    - text: (48x48px) for 200% scaling
+                  - listitem [ref=e657]:
+                    - code [ref=e658]: icon@2.5x.png
+                    - text: (60x60px) for 250% scaling
+                - paragraph [ref=e659]:
+                  - strong [ref=e660]: Default value
+                - paragraph [ref=e661]:
+                  - code [ref=e662]: "[1]"
+                  - text: (only supports 100% scaling)
+          - 'row "theme (\"all\" | \"lightest\" | \"light\" | \"medium\" | \"dark\" | \"darkest\")[] optional Specifies the themes that the icon supports. Example Copy 1 { 2 \"path\": \"icon.png\", 3 \"width\": 24, 4 \"height\": 24, 5 \"theme\": [\"lightest\", \"light\"] 6 } Default value [\"all\"] (supports all themes)" [ref=e663]':
+            - cell "theme" [ref=e664]:
+              - code [ref=e666]: theme
+            - cell "(\"all\" | \"lightest\" | \"light\" | \"medium\" | \"dark\" | \"darkest\")[]" [ref=e667]:
+              - code [ref=e669]: ("all" | "lightest" | "light" | "medium" | "dark" | "darkest")[]
+            - cell "optional" [ref=e670]:
+              - generic [ref=e671]: optional
+            - 'cell "Specifies the themes that the icon supports. Example Copy 1 { 2 \"path\": \"icon.png\", 3 \"width\": 24, 4 \"height\": 24, 5 \"theme\": [\"lightest\", \"light\"] 6 } Default value [\"all\"] (supports all themes)" [ref=e672]':
+              - generic [ref=e673]:
+                - paragraph [ref=e674]: Specifies the themes that the icon supports.
+                - paragraph [ref=e675]:
+                  - strong [ref=e676]: Example
+                - generic [ref=e677]:
+                  - button "Copy" [ref=e678] [cursor=pointer]
+                  - textbox [ref=e679]: "{ \"path\": \"icon.png\", \"width\": 24, \"height\": 24, \"theme\": [\"lightest\", \"light\"] }"
+                  - generic [ref=e680]:
+                    - generic [ref=e681]:
+                      - generic [ref=e682]: "1"
+                      - generic [ref=e683]: "{"
+                    - generic [ref=e684]:
+                      - generic [ref=e685]: "2"
+                      - generic [ref=e686]: "\"path\": \"icon.png\","
+                    - generic [ref=e687]:
+                      - generic [ref=e688]: "3"
+                      - generic [ref=e689]: "\"width\": 24,"
+                    - generic [ref=e690]:
+                      - generic [ref=e691]: "4"
+                      - generic [ref=e692]: "\"height\": 24,"
+                    - generic [ref=e693]:
+                      - generic [ref=e694]: "5"
+                      - generic [ref=e695]: "\"theme\": [\"lightest\", \"light\"]"
+                    - generic [ref=e696]:
+                      - generic [ref=e697]: "6"
+                      - generic [ref=e698]: "}"
+                - paragraph [ref=e699]:
+                  - strong [ref=e700]: Default value
+                - paragraph [ref=e701]:
+                  - code [ref=e702]: "[\"all\"]"
+                  - text: (supports all themes)
+          - 'row "species (\"generic\" | \"toolbar\" | \"pluginList\")[] optional Indicates the suitable use of this icon. The default species is generic, meaning that the icon is suitable for display anywhere. Options: generic: suitable for display anywhere toolbar: suitable for display in a toolbar. Icon sizes are 23x23px for 100% scaling and 46x46px for 200% scaling. pluginList: suitable for display in a plugin list. Icon sizes are 24x24px for 100% scaling and 48x48px for 200% scaling. Default value [\"generic\"] (suitable for display anywhere)" [ref=e703]':
+            - cell "species" [ref=e704]:
+              - code [ref=e706]: species
+            - cell "(\"generic\" | \"toolbar\" | \"pluginList\")[]" [ref=e707]:
+              - code [ref=e709]: ("generic" | "toolbar" | "pluginList")[]
+            - cell "optional" [ref=e710]:
+              - generic [ref=e711]: optional
+            - 'cell "Indicates the suitable use of this icon. The default species is generic, meaning that the icon is suitable for display anywhere. Options: generic: suitable for display anywhere toolbar: suitable for display in a toolbar. Icon sizes are 23x23px for 100% scaling and 46x46px for 200% scaling. pluginList: suitable for display in a plugin list. Icon sizes are 24x24px for 100% scaling and 48x48px for 200% scaling. Default value [\"generic\"] (suitable for display anywhere)" [ref=e712]':
+              - generic [ref=e713]:
+                - paragraph [ref=e714]: Indicates the suitable use of this icon. The default species is generic, meaning that the icon is suitable for display anywhere.
+                - paragraph [ref=e715]: "Options:"
+                - list [ref=e716]:
+                  - listitem [ref=e717]: "generic: suitable for display anywhere"
+                  - listitem [ref=e718]: "toolbar: suitable for display in a toolbar. Icon sizes are 23x23px for 100% scaling and 46x46px for 200% scaling."
+                  - listitem [ref=e719]: "pluginList: suitable for display in a plugin list. Icon sizes are 24x24px for 100% scaling and 48x48px for 200% scaling."
+                - paragraph [ref=e720]:
+                  - strong [ref=e721]: Default value
+                - paragraph [ref=e722]:
+                  - code [ref=e723]: "[\"generic\"]"
+                  - text: (suitable for display anywhere)
+      - heading "EntrypointDefinition" [level=3] [ref=e724]:
+        - text: EntrypointDefinition
+        - link [ref=e726] [cursor=pointer]:
+          - /url: "#entrypointdefinition"
+          - img [ref=e727]
+      - paragraph [ref=e729]: Represents an entrypoint provided by the plugin, which can be invoked by the user.
+      - paragraph [ref=e730]: An entrypoint consists of an ID and a label at minimum.
+      - paragraph [ref=e731]:
+        - strong [ref=e732]: Example
+      - generic [ref=e733]:
+        - button "Copy" [ref=e734] [cursor=pointer]
+        - textbox [ref=e735]: "{ \"id\": \"myPlugin.myEntrypoint\", \"label\": \"My Entrypoint\" }"
+        - generic [ref=e736]:
+          - generic [ref=e737]:
+            - generic [ref=e738]: "1"
+            - generic [ref=e739]: "{"
+          - generic [ref=e740]:
+            - generic [ref=e741]: "2"
+            - generic [ref=e742]: "\"id\": \"myPlugin.myEntrypoint\","
+          - generic [ref=e743]:
+            - generic [ref=e744]: "3"
+            - generic [ref=e745]: "\"label\": \"My Entrypoint\""
+          - generic [ref=e746]:
+            - generic [ref=e747]: "4"
+            - generic [ref=e748]: "}"
+      - heading "Properties" [level=4] [ref=e749]:
+        - text: Properties
+        - link [ref=e751] [cursor=pointer]:
+          - /url: "#undefined"
+          - img [ref=e752]
+      - table [ref=e754]:
+        - rowgroup [ref=e755]:
+          - row "Name Type Required Description" [ref=e756]:
+            - columnheader "Name" [ref=e757]
+            - columnheader "Type" [ref=e758]
+            - columnheader "Required" [ref=e759]
+            - columnheader "Description" [ref=e760]
+        - rowgroup [ref=e761]:
+          - row "type * \"command\" | \"panel\" required The type of entrypoint. Currently, only command and panel are supported." [ref=e762]:
+            - cell "type *" [ref=e763]:
+              - generic [ref=e764]:
+                - code [ref=e765]: type
+                - text: "*"
+            - cell "\"command\" | \"panel\"" [ref=e766]:
+              - code [ref=e768]: "\"command\" | \"panel\""
+            - cell "required" [ref=e769]:
+              - generic [ref=e770]: required
+            - cell "The type of entrypoint. Currently, only command and panel are supported." [ref=e771]:
+              - paragraph [ref=e773]:
+                - text: The type of entrypoint. Currently, only
+                - code [ref=e774]: command
+                - text: and
+                - code [ref=e775]: panel
+                - text: are supported.
+          - row "id * string required The ID of the entrypoint. This ID must be unique within the plugin. It is used to identify the code that implements the entrypoint." [ref=e776]:
+            - cell "id *" [ref=e777]:
+              - generic [ref=e778]:
+                - code [ref=e779]: id
+                - text: "*"
+            - cell "string" [ref=e780]:
+              - code [ref=e782]: string
+            - cell "required" [ref=e783]:
+              - generic [ref=e784]: required
+            - cell "The ID of the entrypoint. This ID must be unique within the plugin. It is used to identify the code that implements the entrypoint." [ref=e785]:
+              - paragraph [ref=e787]: The ID of the entrypoint. This ID must be unique within the plugin. It is used to identify the code that implements the entrypoint.
+          - row "label * string | LocalizedString required The label of the entrypoint. This label is used to display the entrypoint to the user, such as in the plugin menu." [ref=e788]:
+            - cell "label *" [ref=e789]:
+              - generic [ref=e790]:
+                - code [ref=e791]: label
+                - text: "*"
+            - cell "string | LocalizedString" [ref=e792]:
+              - code [ref=e794]:
+                - text: string | Localized
+                - text: String
+            - cell "required" [ref=e795]:
+              - generic [ref=e796]: required
+            - cell "The label of the entrypoint. This label is used to display the entrypoint to the user, such as in the plugin menu." [ref=e797]:
+              - paragraph [ref=e799]: The label of the entrypoint. This label is used to display the entrypoint to the user, such as in the plugin menu.
+          - row "description string | LocalizedString optional A description of the entrypoint. This description is used in tooltips and other places where a longer description is appropriate, depending on the host app. Default value undefined (uses the plugin's name)" [ref=e800]:
+            - cell "description" [ref=e801]:
+              - code [ref=e803]: description
+            - cell "string | LocalizedString" [ref=e804]:
+              - code [ref=e806]:
+                - text: string | Localized
+                - text: String
+            - cell "optional" [ref=e807]:
+              - generic [ref=e808]: optional
+            - cell "A description of the entrypoint. This description is used in tooltips and other places where a longer description is appropriate, depending on the host app. Default value undefined (uses the plugin's name)" [ref=e809]:
+              - generic [ref=e810]:
+                - paragraph [ref=e811]: A description of the entrypoint. This description is used in tooltips and other places where a longer description is appropriate, depending on the host app.
+                - paragraph [ref=e812]:
+                  - strong [ref=e813]: Default value
+                - paragraph [ref=e814]:
+                  - code [ref=e815]: undefined
+                  - text: (uses the plugin's name)
+          - row [ref=e816]:
+            - cell "shortcut" [ref=e817]:
+              - code [ref=e819]: shortcut
+            - 'cell "{ mac: string, win: string }" [ref=e820]':
+              - code [ref=e822]: "{ mac: string, win: string }"
+            - cell "optional" [ref=e823]:
+              - generic [ref=e824]: optional
+            - cell [ref=e825]:
+              - generic [ref=e826]:
+                - paragraph [ref=e827]: A keyboard shortcut that can be used to invoke the entrypoint.
+                - paragraph [ref=e828]: Keyboard shortcuts are specified separately for Windows and macOS platforms. If the shortcut is not available in the host application, it will be ignored.
+                - paragraph [ref=e829]:
+                  - strong [ref=e830]: "Please note:"
+                  - emphasis [ref=e831]: Currently, keyboard shortcuts are only supported in Adobe XD.
+                - paragraph [ref=e832]:
+                  - strong [ref=e833]: Example
+                - generic [ref=e834]:
+                  - button "Copy" [ref=e835] [cursor=pointer]
+                  - textbox [ref=e836]: "\"shortcut\": { \"mac\": \"Cmd+Shift+P\", \"win\": \"Ctrl+Shift+P\" }"
+                  - generic [ref=e837]:
+                    - generic [ref=e838]:
+                      - generic [ref=e839]: "1"
+                      - generic [ref=e840]: "\"shortcut\": {"
+                    - generic [ref=e841]:
+                      - generic [ref=e842]: "2"
+                      - generic [ref=e843]: "\"mac\": \"Cmd+Shift+P\","
+                    - generic [ref=e844]:
+                      - generic [ref=e845]: "3"
+                      - generic [ref=e846]: "\"win\": \"Ctrl+Shift+P\""
+                    - generic [ref=e847]:
+                      - generic [ref=e848]: "4"
+                      - generic [ref=e849]: "}"
+                - paragraph [ref=e850]: "Keyboard shortcuts are defined separately for each platform. Each definition is a string that follows this syntax:"
+                - list [ref=e851]:
+                  - listitem [ref=e852]: One or more modifier keys, in any order, each one followed by "+"
+                  - listitem [ref=e853]: "Mac: modifiers may be Cmd, Ctrl, Opt/Alt, or Shift. The shortcut must contain at least one of Cmd or Ctrl."
+                  - listitem [ref=e854]: "Win: modifiers may be Ctrl, Alt, or Shift. The shortcut must contain Ctrl."
+                  - listitem [ref=e855]: A letter or number key.
+                - paragraph [ref=e856]: Letters are case-insensitive (e.g., "Cmd+P" and "Cmd+p" mean the same thing and neither requires pressing Shift). Other keys (including punctuation, arrow keys, or F1-F12) are currently not supported.
+                - paragraph [ref=e857]:
+                  - strong [ref=e858]: "Please note:"
+                  - emphasis [ref=e859]: If your shortcut collides with a built-in command in the host app, or another plugin's shortcut, your shortcut will be ignored, and you"ll see a warning printed to the developer console.
+                - paragraph [ref=e860]:
+                  - strong [ref=e861]: Default value
+                - paragraph [ref=e862]:
+                  - code [ref=e863]: undefined
+                  - text: (no shortcut)
+          - row "icon IconDefinition[] optional An icon specific to the entrypoint. If specified, this icon overrides the plugin icon in places where the entrypoint is specifically displayed. Default value [] (plugin icon)" [ref=e864]:
+            - cell "icon" [ref=e865]:
+              - code [ref=e867]: icon
+            - cell "IconDefinition[]" [ref=e868]:
+              - code [ref=e870]:
+                - text: Icon
+                - text: Definition[]
+            - cell "optional" [ref=e871]:
+              - generic [ref=e872]: optional
+            - cell "An icon specific to the entrypoint. If specified, this icon overrides the plugin icon in places where the entrypoint is specifically displayed. Default value [] (plugin icon)" [ref=e873]:
+              - generic [ref=e874]:
+                - paragraph [ref=e875]: An icon specific to the entrypoint. If specified, this icon overrides the plugin icon in places where the entrypoint is specifically displayed.
+                - paragraph [ref=e876]:
+                  - strong [ref=e877]: Default value
+                - paragraph [ref=e878]:
+                  - code [ref=e879]: "[]"
+                  - text: (plugin icon)
+          - 'row "minimumSize { width: number, height: number } optional Indicates the desired minimum size of the view. The host may not be able to guarantee the minimum size. The size is defined by width and height in pixels. If no minimum size is specified, the host will use its own default minimum size. Default value (host-specific default)" [ref=e880]':
+            - cell "minimumSize" [ref=e881]:
+              - code [ref=e883]: minimumSize
+            - 'cell "{ width: number, height: number }" [ref=e884]':
+              - code [ref=e886]: "{ width: number, height: number }"
+            - cell "optional" [ref=e887]:
+              - generic [ref=e888]: optional
+            - cell "Indicates the desired minimum size of the view. The host may not be able to guarantee the minimum size. The size is defined by width and height in pixels. If no minimum size is specified, the host will use its own default minimum size. Default value (host-specific default)" [ref=e889]:
+              - generic [ref=e890]:
+                - paragraph [ref=e891]: Indicates the desired minimum size of the view. The host may not be able to guarantee the minimum size. The size is defined by width and height in pixels. If no minimum size is specified, the host will use its own default minimum size.
+                - paragraph [ref=e892]:
+                  - strong [ref=e893]: Default value
+                - paragraph [ref=e894]: (host-specific default)
+          - 'row "maximumSize { width: number, height: number } optional The maximum desired size of the view. The host may not be able to guarantee the maximum size. If the view is hosted in a dialog, resizing can be prevented by setting minimumSize = maximumSize. Default value (host-specific default)" [ref=e895]':
+            - cell "maximumSize" [ref=e896]:
+              - code [ref=e898]: maximumSize
+            - 'cell "{ width: number, height: number }" [ref=e899]':
+              - code [ref=e901]: "{ width: number, height: number }"
+            - cell "optional" [ref=e902]:
+              - generic [ref=e903]: optional
+            - cell "The maximum desired size of the view. The host may not be able to guarantee the maximum size. If the view is hosted in a dialog, resizing can be prevented by setting minimumSize = maximumSize. Default value (host-specific default)" [ref=e904]:
+              - generic [ref=e905]:
+                - paragraph [ref=e906]: The maximum desired size of the view. The host may not be able to guarantee the maximum size. If the view is hosted in a dialog, resizing can be prevented by setting minimumSize = maximumSize.
+                - paragraph [ref=e907]:
+                  - strong [ref=e908]: Default value
+                - paragraph [ref=e909]: (host-specific default)
+          - 'row "preferredDockedSize { width: number, height: number } optional The preferred size of the view when docked, if it can be docked, or for modal dialogs that have no reference_node_id. The host may not be able to guarantee this size. Default value (host-specific default)" [ref=e910]':
+            - cell "preferredDockedSize" [ref=e911]:
+              - code [ref=e913]:
+                - text: preferred
+                - text: DockedSize
+            - 'cell "{ width: number, height: number }" [ref=e914]':
+              - code [ref=e916]: "{ width: number, height: number }"
+            - cell "optional" [ref=e917]:
+              - generic [ref=e918]: optional
+            - cell "The preferred size of the view when docked, if it can be docked, or for modal dialogs that have no reference_node_id. The host may not be able to guarantee this size. Default value (host-specific default)" [ref=e919]:
+              - generic [ref=e920]:
+                - paragraph [ref=e921]: The preferred size of the view when docked, if it can be docked, or for modal dialogs that have no reference_node_id. The host may not be able to guarantee this size.
+                - paragraph [ref=e922]:
+                  - strong [ref=e923]: Default value
+                - paragraph [ref=e924]: (host-specific default)
+          - 'row "preferredFloatingSize { width: number, height: number } optional The preferred size of the panel when floating. The host may not be able to guarantee this size. See minimumSize for the format. Default value (host-specific default)" [ref=e925]':
+            - cell "preferredFloatingSize" [ref=e926]:
+              - code [ref=e928]:
+                - text: preferred
+                - text: FloatingSize
+            - 'cell "{ width: number, height: number }" [ref=e929]':
+              - code [ref=e931]: "{ width: number, height: number }"
+            - cell "optional" [ref=e932]:
+              - generic [ref=e933]: optional
+            - cell "The preferred size of the panel when floating. The host may not be able to guarantee this size. See minimumSize for the format. Default value (host-specific default)" [ref=e934]:
+              - generic [ref=e935]:
+                - paragraph [ref=e936]: The preferred size of the panel when floating. The host may not be able to guarantee this size. See minimumSize for the format.
+                - paragraph [ref=e937]:
+                  - strong [ref=e938]: Default value
+                - paragraph [ref=e939]: (host-specific default)
+      - heading "HostDefinition" [level=3] [ref=e940]:
+        - text: HostDefinition
+        - link [ref=e942] [cursor=pointer]:
+          - /url: "#hostdefinition"
+          - img [ref=e943]
+      - paragraph [ref=e945]: UXP supports a number of different host applications. The host definition specifies which host app the plugin supports.
+      - heading "Properties" [level=4] [ref=e946]:
+        - text: Properties
+        - link [ref=e948] [cursor=pointer]:
+          - /url: "#undefined"
+          - img [ref=e949]
+      - table [ref=e951]:
+        - rowgroup [ref=e952]:
+          - row "Name Type Required Description" [ref=e953]:
+            - columnheader "Name" [ref=e954]
+            - columnheader "Type" [ref=e955]
+            - columnheader "Required" [ref=e956]
+            - columnheader "Description" [ref=e957]
+        - rowgroup [ref=e958]:
+          - 'row "app * \"PS\" | \"ID\" | \"XD\" required The host app that the plugin supports. Possible values: PS : Adobe Photoshop ID : Adobe InDesign XD : Adobe XD" [ref=e959]':
+            - cell "app *" [ref=e960]:
+              - generic [ref=e961]:
+                - code [ref=e962]: app
+                - text: "*"
+            - cell "\"PS\" | \"ID\" | \"XD\"" [ref=e963]:
+              - code [ref=e965]:
+                - text: "\"PS\""
+                - text: "| \"ID\""
+                - text: "| \"XD\""
+            - cell "required" [ref=e966]:
+              - generic [ref=e967]: required
+            - 'cell "The host app that the plugin supports. Possible values: PS : Adobe Photoshop ID : Adobe InDesign XD : Adobe XD" [ref=e968]':
+              - generic [ref=e969]:
+                - paragraph [ref=e970]: The host app that the plugin supports.
+                - paragraph [ref=e971]: "Possible values:"
+                - list [ref=e972]:
+                  - listitem [ref=e973]:
+                    - code [ref=e974]: PS
+                    - text: ": Adobe Photoshop"
+                  - listitem [ref=e975]:
+                    - code [ref=e976]: ID
+                    - text: ": Adobe InDesign"
+                  - listitem [ref=e977]:
+                    - code [ref=e978]: XD
+                    - text: ": Adobe XD"
+          - row "minVersion * string required The minimum version of the host app that the plugin supports. The version string follows the format of x.y.z ." [ref=e979]:
+            - cell "minVersion *" [ref=e980]:
+              - generic [ref=e981]:
+                - code [ref=e982]: minVersion
+                - text: "*"
+            - cell "string" [ref=e983]:
+              - code [ref=e985]: string
+            - cell "required" [ref=e986]:
+              - generic [ref=e987]: required
+            - cell "The minimum version of the host app that the plugin supports. The version string follows the format of x.y.z ." [ref=e988]:
+              - paragraph [ref=e990]:
+                - text: The minimum version of the host app that the plugin supports. The version string follows the format of
+                - code [ref=e991]: x.y.z
+                - text: .
+          - row "maxVersion string optional The maximum version of the host app that the plugin supports. Default value undefined (the latest version of the host app)" [ref=e992]:
+            - cell "maxVersion" [ref=e993]:
+              - code [ref=e995]: maxVersion
+            - cell "string" [ref=e996]:
+              - code [ref=e998]: string
+            - cell "optional" [ref=e999]:
+              - generic [ref=e1000]: optional
+            - cell "The maximum version of the host app that the plugin supports. Default value undefined (the latest version of the host app)" [ref=e1001]:
+              - generic [ref=e1002]:
+                - paragraph [ref=e1003]: The maximum version of the host app that the plugin supports.
+                - paragraph [ref=e1004]:
+                  - strong [ref=e1005]: Default value
+                - paragraph [ref=e1006]:
+                  - code [ref=e1007]: undefined
+                  - text: (the latest version of the host app)
+      - heading "PermissionsDefinition" [level=3] [ref=e1008]:
+        - text: PermissionsDefinition
+        - link [ref=e1010] [cursor=pointer]:
+          - /url: "#permissionsdefinition"
+          - img [ref=e1011]
+      - paragraph [ref=e1013]: To ensure that plugins are secure, UXP requires that plugins declare the permissions they need to function.
+      - alert [ref=e1014]:
+        - img
+        - paragraph [ref=e1016]:
+          - strong [ref=e1017]: Pro tip
+        - paragraph [ref=e1018]: Make sure you configure the most accurate permission for your use case because in the future we will ask users to provide their consent based on it. For example, for file operations, you may find 'fullAccess' to be the least restrictive and hence the easiest to pick, but a user may not be comfortable giving full access to their system unless it's absolutely necessary and might deny the installation of your plugin altogether.
+      - heading "Properties" [level=4] [ref=e1019]:
+        - text: Properties
+        - link [ref=e1021] [cursor=pointer]:
+          - /url: "#undefined"
+          - img [ref=e1022]
+      - table [ref=e1024]:
+        - rowgroup [ref=e1025]:
+          - row "Name Type Required Description" [ref=e1026]:
+            - columnheader "Name" [ref=e1027]
+            - columnheader "Type" [ref=e1028]
+            - columnheader "Required" [ref=e1029]
+            - columnheader "Description" [ref=e1030]
+        - rowgroup [ref=e1031]:
+          - 'row "clipboard \"read\" | \"readAndWrite\" optional Enables the plugin to read and write to the clipboard. The clipboard recipe has more examples. Possible values: read : enables the plugin to read from the clipboard. readAndWrite : enables the plugin to read from and write to the clipboard. Default value undefined (no clipboard access)" [ref=e1032]':
+            - cell "clipboard" [ref=e1033]:
+              - code [ref=e1035]: clipboard
+            - cell "\"read\" | \"readAndWrite\"" [ref=e1036]:
+              - code [ref=e1038]: "\"read\" | \"readAndWrite\""
+            - cell "optional" [ref=e1039]:
+              - generic [ref=e1040]: optional
+            - 'cell "Enables the plugin to read and write to the clipboard. The clipboard recipe has more examples. Possible values: read : enables the plugin to read from the clipboard. readAndWrite : enables the plugin to read from and write to the clipboard. Default value undefined (no clipboard access)" [ref=e1041]':
+              - generic [ref=e1042]:
+                - paragraph [ref=e1043]:
+                  - text: Enables the plugin to read and write to the clipboard. The
+                  - link "clipboard recipe" [ref=e1044] [cursor=pointer]:
+                    - /url: /indesign/uxp/resources/recipes/clipboard/
+                  - text: has more examples.
+                - paragraph [ref=e1045]: "Possible values:"
+                - list [ref=e1046]:
+                  - listitem [ref=e1047]:
+                    - code [ref=e1048]: read
+                    - text: ": enables the plugin to read from the clipboard."
+                  - listitem [ref=e1049]:
+                    - code [ref=e1050]: readAndWrite
+                    - text: ": enables the plugin to read from and write to the clipboard."
+                - paragraph [ref=e1051]:
+                  - strong [ref=e1052]: Default value
+                - paragraph [ref=e1053]:
+                  - code [ref=e1054]: undefined
+                  - text: (no clipboard access)
+          - 'row "localFileSystem \"plugin\" | \"request\" | \"fullAccess\" optional Enables the plugin to access the file system. The file-operation recipe has a detailed example. Possible values: plugin : enables the plugin to access the file system in the plugin folder. request : enables the plugin to request access to the file system (user consent). fullAccess : enables the plugin to access the file system without requesting access. Default value \"plugin\"" [ref=e1055]':
+            - cell "localFileSystem" [ref=e1056]:
+              - code [ref=e1058]: localFileSystem
+            - cell "\"plugin\" | \"request\" | \"fullAccess\"" [ref=e1059]:
+              - code [ref=e1061]: "\"plugin\" | \"request\" | \"fullAccess\""
+            - cell "optional" [ref=e1062]:
+              - generic [ref=e1063]: optional
+            - 'cell "Enables the plugin to access the file system. The file-operation recipe has a detailed example. Possible values: plugin : enables the plugin to access the file system in the plugin folder. request : enables the plugin to request access to the file system (user consent). fullAccess : enables the plugin to access the file system without requesting access. Default value \"plugin\"" [ref=e1064]':
+              - generic [ref=e1065]:
+                - paragraph [ref=e1066]:
+                  - text: Enables the plugin to access the file system. The
+                  - link "file-operation recipe" [ref=e1067] [cursor=pointer]:
+                    - /url: /indesign/uxp/resources/recipes/file-operation/
+                  - text: has a detailed example.
+                - paragraph [ref=e1068]: "Possible values:"
+                - list [ref=e1069]:
+                  - listitem [ref=e1070]:
+                    - code [ref=e1071]: plugin
+                    - text: ": enables the plugin to access the file system in the plugin folder."
+                  - listitem [ref=e1072]:
+                    - code [ref=e1073]: request
+                    - text: ": enables the plugin to request access to the file system (user consent)."
+                  - listitem [ref=e1074]:
+                    - code [ref=e1075]: fullAccess
+                    - text: ": enables the plugin to access the file system without requesting access."
+                - paragraph [ref=e1076]:
+                  - strong [ref=e1077]: Default value
+                - paragraph [ref=e1078]:
+                  - code [ref=e1079]: "\"plugin\""
+          - row "network NetworkPermission optional Enables the plugin to access the network. For example, to make HTTP requests (XHR, fetch, etc.), load images ( <img src=\"\" /> ), etc. Default value undefined (no network access)" [ref=e1080]:
+            - cell "network" [ref=e1081]:
+              - code [ref=e1083]: network
+            - cell "NetworkPermission" [ref=e1084]:
+              - code [ref=e1086]: NetworkPermission
+            - cell "optional" [ref=e1087]:
+              - generic [ref=e1088]: optional
+            - cell "Enables the plugin to access the network. For example, to make HTTP requests (XHR, fetch, etc.), load images ( <img src=\"\" /> ), etc. Default value undefined (no network access)" [ref=e1089]:
+              - generic [ref=e1090]:
+                - paragraph [ref=e1091]: Enables the plugin to access the network.
+                - paragraph [ref=e1092]:
+                  - text: For example, to make HTTP requests (XHR, fetch, etc.), load images (
+                  - code [ref=e1093]: <img src="" />
+                  - text: ), etc.
+                - paragraph [ref=e1094]:
+                  - strong [ref=e1095]: Default value
+                - paragraph [ref=e1096]:
+                  - code [ref=e1097]: undefined
+                  - text: (no network access)
+          - row "webview WebviewPermission optional Enables the plugin to use webviews in its UI to display web content or complex UI. Default value undefined (no webview usage)" [ref=e1098]:
+            - cell "webview" [ref=e1099]:
+              - code [ref=e1101]: webview
+            - cell "WebviewPermission" [ref=e1102]:
+              - code [ref=e1104]: WebviewPermission
+            - cell "optional" [ref=e1105]:
+              - generic [ref=e1106]: optional
+            - cell "Enables the plugin to use webviews in its UI to display web content or complex UI. Default value undefined (no webview usage)" [ref=e1107]:
+              - generic [ref=e1108]:
+                - paragraph [ref=e1109]: Enables the plugin to use webviews in its UI to display web content or complex UI.
+                - paragraph [ref=e1110]:
+                  - strong [ref=e1111]: Default value
+                - paragraph [ref=e1112]:
+                  - code [ref=e1113]: undefined
+                  - text: (no webview usage)
+          - row "launchProcess LaunchProcessPermission optional Enables the plugin to launch processes using APIs like require(\"uxp\").shell.openPath() or shell.openExternal() . Default value undefined (no process launching)" [ref=e1114]:
+            - cell "launchProcess" [ref=e1115]:
+              - code [ref=e1117]: launchProcess
+            - cell "LaunchProcessPermission" [ref=e1118]:
+              - code [ref=e1120]: LaunchProcessPermission
+            - cell "optional" [ref=e1121]:
+              - generic [ref=e1122]: optional
+            - cell "Enables the plugin to launch processes using APIs like require(\"uxp\").shell.openPath() or shell.openExternal() . Default value undefined (no process launching)" [ref=e1123]:
+              - generic [ref=e1124]:
+                - paragraph [ref=e1125]:
+                  - text: Enables the plugin to launch processes using APIs like
+                  - code [ref=e1126]: require("uxp").shell.openPath()
+                  - text: or
+                  - code [ref=e1127]: shell.openExternal()
+                  - text: .
+                - paragraph [ref=e1128]:
+                  - strong [ref=e1129]: Default value
+                - paragraph [ref=e1130]:
+                  - code [ref=e1131]: undefined
+                  - text: (no process launching)
+          - row "allowCodeGenerationFromStrings boolean optional Allows you to generate code from strings. You will need this while using inline event handlers for HTML elements, eval() , and new Function() syntax. Default value false" [ref=e1132]:
+            - cell "allowCodeGenerationFromStrings" [ref=e1133]:
+              - code [ref=e1135]: allowCodeGenerationFromStrings
+            - cell "boolean" [ref=e1136]:
+              - code [ref=e1138]: boolean
+            - cell "optional" [ref=e1139]:
+              - generic [ref=e1140]: optional
+            - cell "Allows you to generate code from strings. You will need this while using inline event handlers for HTML elements, eval() , and new Function() syntax. Default value false" [ref=e1141]:
+              - generic [ref=e1142]:
+                - paragraph [ref=e1143]:
+                  - text: Allows you to generate code from strings. You will need this while using inline event handlers for HTML elements,
+                  - code [ref=e1144]: eval()
+                  - text: ", and"
+                  - code [ref=e1145]: new Function()
+                  - text: syntax.
+                - paragraph [ref=e1146]:
+                  - strong [ref=e1147]: Default value
+                - paragraph [ref=e1148]:
+                  - code [ref=e1149]: "false"
+          - row "ipc IpcPermission optional Enables the plugin to communicate with other plugins. Default value undefined" [ref=e1150]:
+            - cell "ipc" [ref=e1151]:
+              - code [ref=e1153]: ipc
+            - cell "IpcPermission" [ref=e1154]:
+              - code [ref=e1156]: IpcPermission
+            - cell "optional" [ref=e1157]:
+              - generic [ref=e1158]: optional
+            - cell "Enables the plugin to communicate with other plugins. Default value undefined" [ref=e1159]:
+              - generic [ref=e1160]:
+                - paragraph [ref=e1161]: Enables the plugin to communicate with other plugins.
+                - paragraph [ref=e1162]:
+                  - strong [ref=e1163]: Default value
+                - paragraph [ref=e1164]:
+                  - code [ref=e1165]: undefined
+      - heading "NetworkPermission" [level=4] [ref=e1166]:
+        - text: NetworkPermission
+        - link [ref=e1168] [cursor=pointer]:
+          - /url: "#networkpermission"
+          - img [ref=e1169]
+      - paragraph [ref=e1171]: Specifies the domains that the plugin can access in network requests.
+      - paragraph [ref=e1172]:
+        - strong [ref=e1173]: Example
+      - generic [ref=e1174]:
+        - button "Copy" [ref=e1175] [cursor=pointer]
+        - textbox [ref=e1176]: "{ \"domains\": [ \"https://example.com\", \"https://*.adobe.com/\", \"wss://*.myplugin.com\" ] }"
+        - generic [ref=e1177]:
+          - generic [ref=e1178]:
+            - generic [ref=e1179]: "1"
+            - generic [ref=e1180]: "{"
+          - generic [ref=e1181]:
+            - generic [ref=e1182]: "2"
+            - generic [ref=e1183]: "\"domains\": ["
+          - generic [ref=e1184]:
+            - generic [ref=e1185]: "3"
+            - generic [ref=e1186]: "\"https://example.com\","
+          - generic [ref=e1187]:
+            - generic [ref=e1188]: "4"
+            - generic [ref=e1189]: "\"https://*.adobe.com/\","
+          - generic [ref=e1190]:
+            - generic [ref=e1191]: "5"
+            - generic [ref=e1192]: "\"wss://*.myplugin.com\""
+          - generic [ref=e1193]:
+            - generic [ref=e1194]: "6"
+            - generic [ref=e1195]: "]"
+          - generic [ref=e1196]:
+            - generic [ref=e1197]: "7"
+            - generic [ref=e1198]: "}"
+      - paragraph [ref=e1199]: "Then, in your plugin code, you can make network requests like this:"
+      - generic [ref=e1200]:
+        - button "Copy" [ref=e1201] [cursor=pointer]
+        - textbox [ref=e1202]: const response = await fetch("https://example.com");
+        - generic [ref=e1205]: const response = await fetch("https://example.com");
+      - paragraph [ref=e1206]: "Or load images like this:"
+      - generic [ref=e1207]:
+        - button "Copy" [ref=e1208] [cursor=pointer]
+        - textbox [ref=e1209]: <img src="https://example.com/image.png" />
+        - generic [ref=e1212]: <img src="https://example.com/image.png" />
+      - paragraph [ref=e1213]:
+        - text: You can also allow access to all domains by setting
+        - code [ref=e1214]: domains
+        - text: to
+        - code [ref=e1215]: "\"all\""
+        - text: .
+      - generic [ref=e1216]:
+        - button "Copy" [ref=e1217] [cursor=pointer]
+        - textbox [ref=e1218]: "{ \"domains\": \"all\" }"
+        - generic [ref=e1219]:
+          - generic [ref=e1220]:
+            - generic [ref=e1221]: "1"
+            - generic [ref=e1222]: "{"
+          - generic [ref=e1223]:
+            - generic [ref=e1224]: "2"
+            - generic [ref=e1225]: "\"domains\": \"all\""
+          - generic [ref=e1226]:
+            - generic [ref=e1227]: "3"
+            - generic [ref=e1228]: "}"
+      - heading "Properties" [level=4] [ref=e1229]:
+        - text: Properties
+        - link [ref=e1231] [cursor=pointer]:
+          - /url: "#undefined"
+          - img [ref=e1232]
+      - table [ref=e1234]:
+        - rowgroup [ref=e1235]:
+          - row "Name Type Required Description" [ref=e1236]:
+            - columnheader "Name" [ref=e1237]
+            - columnheader "Type" [ref=e1238]
+            - columnheader "Required" [ref=e1239]
+            - columnheader "Description" [ref=e1240]
+        - rowgroup [ref=e1241]:
+          - row "domains * string[] | \"all\" required The domains that the plugin can access. Can be a list of domains, or the string \"all\" to allow access to all domains." [ref=e1242]:
+            - cell "domains *" [ref=e1243]:
+              - generic [ref=e1244]:
+                - code [ref=e1245]: domains
+                - text: "*"
+            - cell "string[] | \"all\"" [ref=e1246]:
+              - code [ref=e1248]: string[] | "all"
+            - cell "required" [ref=e1249]:
+              - generic [ref=e1250]: required
+            - cell "The domains that the plugin can access. Can be a list of domains, or the string \"all\" to allow access to all domains." [ref=e1251]:
+              - paragraph [ref=e1253]: The domains that the plugin can access. Can be a list of domains, or the string "all" to allow access to all domains.
+      - paragraph [ref=e1254]:
+        - text: The
+        - link "network recipe" [ref=e1255] [cursor=pointer]:
+          - /url: /indesign/uxp/resources/recipes/network/
+        - text: has more details.
+      - heading "WebViewPermission" [level=4] [ref=e1256]:
+        - text: WebViewPermission
+        - link [ref=e1258] [cursor=pointer]:
+          - /url: "#webviewpermission"
+          - img [ref=e1259]
+      - paragraph [ref=e1261]: Enables the plugin to use webviews in its UI to display web content or complex UI.
+      - paragraph [ref=e1262]:
+        - strong [ref=e1263]: Example
+      - generic [ref=e1264]:
+        - button "Copy" [ref=e1265] [cursor=pointer]
+        - textbox [ref=e1266]: "{ \"allow\": \"yes\", \"domains\": [\"https://example.com\"], \"enableMessageBridge\": \"localAndRemote\" }"
+        - generic [ref=e1267]:
+          - generic [ref=e1268]:
+            - generic [ref=e1269]: "1"
+            - generic [ref=e1270]: "{"
+          - generic [ref=e1271]:
+            - generic [ref=e1272]: "2"
+            - generic [ref=e1273]: "\"allow\": \"yes\","
+          - generic [ref=e1274]:
+            - generic [ref=e1275]: "3"
+            - generic [ref=e1276]: "\"domains\": [\"https://example.com\"],"
+          - generic [ref=e1277]:
+            - generic [ref=e1278]: "4"
+            - generic [ref=e1279]: "\"enableMessageBridge\": \"localAndRemote\""
+          - generic [ref=e1280]:
+            - generic [ref=e1281]: "5"
+            - generic [ref=e1282]: "}"
+      - paragraph [ref=e1283]: "Then, in your plugin code, you can use a webview like this:"
+      - generic [ref=e1284]:
+        - button "Copy" [ref=e1285] [cursor=pointer]
+        - textbox [ref=e1286]: <webview src="https://example.com" />
+        - generic [ref=e1289]: <webview src="https://example.com" />
+      - paragraph [ref=e1290]: "To communicate between the webview and the plugin, you can use the message API:"
+      - generic [ref=e1291]:
+        - button "Copy" [ref=e1292] [cursor=pointer]
+        - textbox [ref=e1293]: "// In the plugin: const webview = document.querySelector(\"webview\"); webview.addEventListener(\"message\", (event) => { console.log(\"Received message from webview:\", event.data); webview.postMessage(\"Hello from the plugin!\"); }); // In the webview: window.addEventListener(\"message\", (event) => { console.log(\"Received message from plugin:\", event.data); window.uxpHost.postMessage(\"Hello from the webview!\"); });"
+        - generic [ref=e1294]:
+          - generic [ref=e1295]:
+            - generic [ref=e1296]: "1"
+            - generic [ref=e1297]: "// In the plugin:"
+          - generic [ref=e1298]:
+            - generic [ref=e1299]: "2"
+            - generic [ref=e1300]: const webview = document.querySelector("webview");
+          - generic [ref=e1301]:
+            - generic [ref=e1302]: "3"
+            - generic [ref=e1303]: "webview.addEventListener(\"message\", (event) => {"
+          - generic [ref=e1304]:
+            - generic [ref=e1305]: "4"
+            - generic [ref=e1306]: console.log("Received message from webview:", event.data);
+          - generic [ref=e1307]:
+            - generic [ref=e1308]: "5"
+            - generic [ref=e1309]: webview.postMessage("Hello from the plugin!");
+          - generic [ref=e1310]:
+            - generic [ref=e1311]: "6"
+            - generic [ref=e1312]: "});"
+          - generic [ref=e1314]: "7"
+          - generic [ref=e1315]:
+            - generic [ref=e1316]: "8"
+            - generic [ref=e1317]: "// In the webview:"
+          - generic [ref=e1318]:
+            - generic [ref=e1319]: "9"
+            - generic [ref=e1320]: "window.addEventListener(\"message\", (event) => {"
+          - generic [ref=e1321]:
+            - generic [ref=e1322]: "10"
+            - generic [ref=e1323]: console.log("Received message from plugin:", event.data);
+          - generic [ref=e1324]:
+            - generic [ref=e1325]: "11"
+            - generic [ref=e1326]: window.uxpHost.postMessage("Hello from the webview!");
+          - generic [ref=e1327]:
+            - generic [ref=e1328]: "12"
+            - generic [ref=e1329]: "});"
+      - heading "Properties" [level=4] [ref=e1330]:
+        - text: Properties
+        - link [ref=e1332] [cursor=pointer]:
+          - /url: "#undefined"
+          - img [ref=e1333]
+      - table [ref=e1335]:
+        - rowgroup [ref=e1336]:
+          - row "Name Type Required Description" [ref=e1337]:
+            - columnheader "Name" [ref=e1338]
+            - columnheader "Type" [ref=e1339]
+            - columnheader "Required" [ref=e1340]
+            - columnheader "Description" [ref=e1341]
+        - rowgroup [ref=e1342]:
+          - row "allow * \"yes\" required Must be set to \"yes\" to enable webviews." [ref=e1343]:
+            - cell "allow *" [ref=e1344]:
+              - generic [ref=e1345]:
+                - code [ref=e1346]: allow
+                - text: "*"
+            - cell "\"yes\"" [ref=e1347]:
+              - code [ref=e1349]: "\"yes\""
+            - cell "required" [ref=e1350]:
+              - generic [ref=e1351]: required
+            - cell "Must be set to \"yes\" to enable webviews." [ref=e1352]:
+              - paragraph [ref=e1354]: Must be set to "yes" to enable webviews.
+          - row "domains * string[] | \"all\" required The domains that the plugin can access. Can be a list of domains, or the string \"all\" to allow access to all domains." [ref=e1355]:
+            - cell "domains *" [ref=e1356]:
+              - generic [ref=e1357]:
+                - code [ref=e1358]: domains
+                - text: "*"
+            - cell "string[] | \"all\"" [ref=e1359]:
+              - code [ref=e1361]: string[] | "all"
+            - cell "required" [ref=e1362]:
+              - generic [ref=e1363]: required
+            - cell "The domains that the plugin can access. Can be a list of domains, or the string \"all\" to allow access to all domains." [ref=e1364]:
+              - paragraph [ref=e1366]: The domains that the plugin can access. Can be a list of domains, or the string "all" to allow access to all domains.
+          - row "enableMessageBridge \"no\" | \"localAndRemote\" optional Specifies whether the plugin can communicate with the webview using the message API. Default value \"no\"" [ref=e1367]:
+            - cell "enableMessageBridge" [ref=e1368]:
+              - code [ref=e1370]: enableMessageBridge
+            - cell "\"no\" | \"localAndRemote\"" [ref=e1371]:
+              - code [ref=e1373]: "\"no\" | \"localAndRemote\""
+            - cell "optional" [ref=e1374]:
+              - generic [ref=e1375]: optional
+            - cell "Specifies whether the plugin can communicate with the webview using the message API. Default value \"no\"" [ref=e1376]:
+              - generic [ref=e1377]:
+                - paragraph [ref=e1378]: Specifies whether the plugin can communicate with the webview using the message API.
+                - paragraph [ref=e1379]:
+                  - strong [ref=e1380]: Default value
+                - paragraph [ref=e1381]:
+                  - code [ref=e1382]: "\"no\""
+      - paragraph [ref=e1383]:
+        - text: Find the detailed
+        - link "WebView API reference" [ref=e1384] [cursor=pointer]:
+          - /url: /uxp-api/reference-js/Global%20Members/HTML%20Elements/HTMLWebViewElement/
+        - text: or use the webview-starter template plugin in UDT.
+      - heading "LaunchProcessPermission" [level=4] [ref=e1385]:
+        - text: LaunchProcessPermission
+        - link [ref=e1387] [cursor=pointer]:
+          - /url: "#launchprocesspermission"
+          - img [ref=e1388]
+      - paragraph [ref=e1390]: Specifies the schemes and extensions that the plugin can launch.
+      - paragraph [ref=e1391]:
+        - text: For example, if the plugin can launch a web browser, it should specify the
+        - code [ref=e1392]: http
+        - text: and
+        - code [ref=e1393]: https
+        - text: schemes.
+      - paragraph [ref=e1394]:
+        - strong [ref=e1395]: Example
+      - generic [ref=e1396]:
+        - button "Copy" [ref=e1397] [cursor=pointer]
+        - textbox [ref=e1398]: "{ \"schemes\": [\"http\", \"https\"], \"extensions\": [] }"
+        - generic [ref=e1399]:
+          - generic [ref=e1400]:
+            - generic [ref=e1401]: "1"
+            - generic [ref=e1402]: "{"
+          - generic [ref=e1403]:
+            - generic [ref=e1404]: "2"
+            - generic [ref=e1405]: "\"schemes\": [\"http\", \"https\"],"
+          - generic [ref=e1406]:
+            - generic [ref=e1407]: "3"
+            - generic [ref=e1408]: "\"extensions\": []"
+          - generic [ref=e1409]:
+            - generic [ref=e1410]: "4"
+            - generic [ref=e1411]: "}"
+      - heading "Properties" [level=4] [ref=e1412]:
+        - text: Properties
+        - link [ref=e1414] [cursor=pointer]:
+          - /url: "#undefined"
+          - img [ref=e1415]
+      - table [ref=e1417]:
+        - rowgroup [ref=e1418]:
+          - row "Name Type Required Description" [ref=e1419]:
+            - columnheader "Name" [ref=e1420]
+            - columnheader "Type" [ref=e1421]
+            - columnheader "Required" [ref=e1422]
+            - columnheader "Description" [ref=e1423]
+        - rowgroup [ref=e1424]:
+          - row "schemes * string[] required A set of schemes that the plugin can launch. Example [\"http\", \"https\", \"mailto\"]" [ref=e1425]:
+            - cell "schemes *" [ref=e1426]:
+              - generic [ref=e1427]:
+                - code [ref=e1428]: schemes
+                - text: "*"
+            - cell "string[]" [ref=e1429]:
+              - code [ref=e1431]: string[]
+            - cell "required" [ref=e1432]:
+              - generic [ref=e1433]: required
+            - cell "A set of schemes that the plugin can launch. Example [\"http\", \"https\", \"mailto\"]" [ref=e1434]:
+              - generic [ref=e1435]:
+                - paragraph [ref=e1436]: A set of schemes that the plugin can launch.
+                - paragraph [ref=e1437]:
+                  - strong [ref=e1438]: Example
+                - paragraph [ref=e1439]:
+                  - code [ref=e1440]: "[\"http\", \"https\", \"mailto\"]"
+          - row "extensions * string[] required A set of extensions that the plugin can launch. Only relevant for local files (using the file:// schema) Example [\"pdf\", \"png\", \"jpg\"]" [ref=e1441]:
+            - cell "extensions *" [ref=e1442]:
+              - generic [ref=e1443]:
+                - code [ref=e1444]: extensions
+                - text: "*"
+            - cell "string[]" [ref=e1445]:
+              - code [ref=e1447]: string[]
+            - cell "required" [ref=e1448]:
+              - generic [ref=e1449]: required
+            - cell "A set of extensions that the plugin can launch. Only relevant for local files (using the file:// schema) Example [\"pdf\", \"png\", \"jpg\"]" [ref=e1450]:
+              - generic [ref=e1451]:
+                - paragraph [ref=e1452]:
+                  - text: A set of extensions that the plugin can launch. Only relevant for local files (using the
+                  - code [ref=e1453]: file://
+                  - text: schema)
+                - paragraph [ref=e1454]:
+                  - strong [ref=e1455]: Example
+                - paragraph [ref=e1456]:
+                  - code [ref=e1457]: "[\"pdf\", \"png\", \"jpg\"]"
+      - paragraph [ref=e1458]:
+        - text: The
+        - link "launch process recipe" [ref=e1459] [cursor=pointer]:
+          - /url: /indesign/uxp/resources/recipes/launch-process/
+        - text: has more details.
+      - heading "IpcPermission" [level=4] [ref=e1460]:
+        - text: IpcPermission
+        - link [ref=e1462] [cursor=pointer]:
+          - /url: "#ipcpermission"
+          - img [ref=e1463]
+      - paragraph [ref=e1465]: Allows communication with other plugins.
+      - paragraph [ref=e1466]:
+        - strong [ref=e1467]: Example
+      - generic [ref=e1468]:
+        - button "Copy" [ref=e1469] [cursor=pointer]
+        - textbox [ref=e1470]: "{ \"enablePluginCommunication\": true }"
+        - generic [ref=e1471]:
+          - generic [ref=e1472]:
+            - generic [ref=e1473]: "1"
+            - generic [ref=e1474]: "{"
+          - generic [ref=e1475]:
+            - generic [ref=e1476]: "2"
+            - generic [ref=e1477]: "\"enablePluginCommunication\": true"
+          - generic [ref=e1478]:
+            - generic [ref=e1479]: "3"
+            - generic [ref=e1480]: "}"
+      - heading "Properties" [level=4] [ref=e1481]:
+        - text: Properties
+        - link [ref=e1483] [cursor=pointer]:
+          - /url: "#undefined"
+          - img [ref=e1484]
+      - table [ref=e1486]:
+        - rowgroup [ref=e1487]:
+          - row "Name Type Required Description" [ref=e1488]:
+            - columnheader "Name" [ref=e1489]
+            - columnheader "Type" [ref=e1490]
+            - columnheader "Required" [ref=e1491]
+            - columnheader "Description" [ref=e1492]
+        - rowgroup [ref=e1493]:
+          - row "enablePluginCommunication * boolean required Enables plugin communication." [ref=e1494]:
+            - cell "enablePluginCommunication *" [ref=e1495]:
+              - generic [ref=e1496]:
+                - code [ref=e1497]: enablePluginCommunication
+                - text: "*"
+            - cell "boolean" [ref=e1498]:
+              - code [ref=e1500]: boolean
+            - cell "required" [ref=e1501]:
+              - generic [ref=e1502]: required
+            - cell "Enables plugin communication." [ref=e1503]:
+              - paragraph [ref=e1505]: Enables plugin communication.
+      - paragraph [ref=e1506]:
+        - text: The
+        - link "inter-plugin communication example" [ref=e1507] [cursor=pointer]:
+          - /url: /indesign/uxp/plugins/tutorials/inter-plugin-comm/
+        - text: has more details.
+      - heading "FeatureFlags" [level=3] [ref=e1508]:
+        - text: FeatureFlags
+        - link [ref=e1510] [cursor=pointer]:
+          - /url: "#featureflags"
+          - img [ref=e1511]
+      - paragraph [ref=e1513]: Specifies which experimental features the plugin uses.
+      - paragraph [ref=e1514]:
+        - strong [ref=e1515]: Example
+      - generic [ref=e1516]:
+        - button "Copy" [ref=e1517] [cursor=pointer]
+        - textbox [ref=e1518]: "{ \"enableFillAsCustomAttribute\": true, \"enableSWCSupport\": true }"
+        - generic [ref=e1519]:
+          - generic [ref=e1520]:
+            - generic [ref=e1521]: "1"
+            - generic [ref=e1522]: "{"
+          - generic [ref=e1523]:
+            - generic [ref=e1524]: "2"
+            - generic [ref=e1525]: "\"enableFillAsCustomAttribute\": true,"
+          - generic [ref=e1526]:
+            - generic [ref=e1527]: "3"
+            - generic [ref=e1528]: "\"enableSWCSupport\": true"
+          - generic [ref=e1529]:
+            - generic [ref=e1530]: "4"
+            - generic [ref=e1531]: "}"
+      - heading "Properties" [level=4] [ref=e1532]:
+        - text: Properties
+        - link [ref=e1534] [cursor=pointer]:
+          - /url: "#undefined"
+          - img [ref=e1535]
+      - table [ref=e1537]:
+        - rowgroup [ref=e1538]:
+          - row "Name Type Required Description" [ref=e1539]:
+            - columnheader "Name" [ref=e1540]
+            - columnheader "Type" [ref=e1541]
+            - columnheader "Required" [ref=e1542]
+            - columnheader "Description" [ref=e1543]
+        - rowgroup [ref=e1544]:
+          - 'row "enableFillAsCustomAttribute boolean optional Enables the plugin to use CSS variable in the fill attribute on SVG elements. Example Copy 1 <svg width=\"100\" height=\"100\"> 2 <rect width=\"100\" 3 height=\"100\" 4 fill=\"var(--iconColor, red)\" 5 /> 6 </svg> With the following CSS: Copy 1 :root { 2 --iconColor: blue; 3 } Default value false" [ref=e1545]':
+            - cell "enableFillAsCustomAttribute" [ref=e1546]:
+              - code [ref=e1548]:
+                - text: enableFillAs
+                - text: CustomAttribute
+            - cell "boolean" [ref=e1549]:
+              - code [ref=e1551]: boolean
+            - cell "optional" [ref=e1552]:
+              - generic [ref=e1553]: optional
+            - 'cell "Enables the plugin to use CSS variable in the fill attribute on SVG elements. Example Copy 1 <svg width=\"100\" height=\"100\"> 2 <rect width=\"100\" 3 height=\"100\" 4 fill=\"var(--iconColor, red)\" 5 /> 6 </svg> With the following CSS: Copy 1 :root { 2 --iconColor: blue; 3 } Default value false" [ref=e1554]':
+              - generic [ref=e1555]:
+                - paragraph [ref=e1556]:
+                  - text: Enables the plugin to use CSS variable in the
+                  - code [ref=e1557]: fill
+                  - text: attribute on SVG elements.
+                - paragraph [ref=e1558]:
+                  - strong [ref=e1559]: Example
+                - generic [ref=e1560]:
+                  - button "Copy" [ref=e1561] [cursor=pointer]
+                  - textbox [ref=e1562]: <svg width="100" height="100"> <rect width="100" height="100" fill="var(--iconColor, red)" /> </svg>
+                  - generic [ref=e1563]:
+                    - generic [ref=e1564]:
+                      - generic [ref=e1565]: "1"
+                      - generic [ref=e1566]: <svg width="100" height="100">
+                    - generic [ref=e1567]:
+                      - generic [ref=e1568]: "2"
+                      - generic [ref=e1569]: <rect width="100"
+                    - generic [ref=e1570]:
+                      - generic [ref=e1571]: "3"
+                      - generic [ref=e1572]: height="100"
+                    - generic [ref=e1573]:
+                      - generic [ref=e1574]: "4"
+                      - generic [ref=e1575]: fill="var(--iconColor, red)"
+                    - generic [ref=e1576]:
+                      - generic [ref=e1577]: "5"
+                      - generic [ref=e1578]: />
+                    - generic [ref=e1579]:
+                      - generic [ref=e1580]: "6"
+                      - generic [ref=e1581]: </svg>
+                - paragraph [ref=e1582]: "With the following CSS:"
+                - generic [ref=e1583]:
+                  - button "Copy" [ref=e1584] [cursor=pointer]
+                  - textbox [ref=e1585]: ":root { --iconColor: blue; }"
+                  - generic [ref=e1586]:
+                    - generic [ref=e1587]:
+                      - generic [ref=e1588]: "1"
+                      - generic [ref=e1589]: ":root {"
+                    - generic [ref=e1590]:
+                      - generic [ref=e1591]: "2"
+                      - generic [ref=e1592]: "--iconColor: blue;"
+                    - generic [ref=e1593]:
+                      - generic [ref=e1594]: "3"
+                      - generic [ref=e1595]: "}"
+                - paragraph [ref=e1596]:
+                  - strong [ref=e1597]: Default value
+                - paragraph [ref=e1598]:
+                  - code [ref=e1599]: "false"
+          - row "enableSWCSupport boolean optional Enables the plugin to use Spectrum Web Components (requires installing and importing the components separately) Example Copy 1 <sp-button variant=\"primary\"> 2 Click me 3 </sp-button> Note that you will need to manually install the library, import it (for example import '@spectrum-web-components/button/sp-button.js' ), and bundle the code with a tool like webpack or esbuild so that it's included in your plugin. Default value false" [ref=e1600]:
+            - cell "enableSWCSupport" [ref=e1601]:
+              - code [ref=e1603]: enableSWCSupport
+            - cell "boolean" [ref=e1604]:
+              - code [ref=e1606]: boolean
+            - cell "optional" [ref=e1607]:
+              - generic [ref=e1608]: optional
+            - cell "Enables the plugin to use Spectrum Web Components (requires installing and importing the components separately) Example Copy 1 <sp-button variant=\"primary\"> 2 Click me 3 </sp-button> Note that you will need to manually install the library, import it (for example import '@spectrum-web-components/button/sp-button.js' ), and bundle the code with a tool like webpack or esbuild so that it's included in your plugin. Default value false" [ref=e1609]:
+              - generic [ref=e1610]:
+                - paragraph [ref=e1611]:
+                  - text: Enables the plugin to use
+                  - link "Spectrum Web Components" [ref=e1612] [cursor=pointer]:
+                    - /url: https://developer.adobe.com/indesign/uxp/reference/uxp-api/reference-spectrum/swc/
+                  - text: (requires installing and importing the components separately)
+                - paragraph [ref=e1613]:
+                  - strong [ref=e1614]: Example
+                - generic [ref=e1615]:
+                  - button "Copy" [ref=e1616] [cursor=pointer]
+                  - textbox [ref=e1617]: <sp-button variant="primary"> Click me </sp-button>
+                  - generic [ref=e1618]:
+                    - generic [ref=e1619]:
+                      - generic [ref=e1620]: "1"
+                      - generic [ref=e1621]: <sp-button variant="primary">
+                    - generic [ref=e1622]:
+                      - generic [ref=e1623]: "2"
+                      - generic [ref=e1624]: Click me
+                    - generic [ref=e1625]:
+                      - generic [ref=e1626]: "3"
+                      - generic [ref=e1627]: </sp-button>
+                - paragraph [ref=e1628]:
+                  - text: Note that you will need to manually install the library, import it (for example
+                  - code [ref=e1629]:
+                    - text: import '@spectrum-web-components/
+                    - text: button/sp-button.js'
+                  - text: ), and bundle the code with a tool like webpack or esbuild so that it's included in your plugin.
+                - paragraph [ref=e1630]:
+                  - strong [ref=e1631]: Default value
+                - paragraph [ref=e1632]:
+                  - code [ref=e1633]: "false"
+      - generic [ref=e1635]:
+        - link "Entry points" [ref=e1637] [cursor=pointer]:
+          - /url: /indesign/uxp/plugins/concepts/entry-points/
+          - generic [ref=e1638]:
+            - img
+            - generic [ref=e1639]: Entry points
+        - link "Tutorials" [ref=e1641] [cursor=pointer]:
+          - /url: /indesign/uxp/plugins/tutorials/
+          - generic [ref=e1642]:
+            - generic [ref=e1643]: Tutorials
+            - img
+      - generic [ref=e1644]:
+        - link "Zuri Klaschka Erin F. Padma Krishnamoorthy Last updated 10/9/2023" [ref=e1646] [cursor=pointer]:
+          - /url: https://github.com/AdobeDocs/uxp-indesign/commits/main/src/pages/plugins/concepts/manifest/index.md
+          - generic [ref=e1647]:
+            - generic [ref=e1648]:
+              - generic [ref=e1650]:
+                - img "Zuri Klaschka"
+              - generic [ref=e1652]:
+                - img "Erin F."
+              - generic [ref=e1654]:
+                - img "Padma Krishnamoorthy"
+            - generic [ref=e1655]: Last updated 10/9/2023
+        - generic [ref=e1657]:
+          - generic [ref=e1658]: Was this helpful?
+          - generic [ref=e1659]:
+            - button "Yes" [ref=e1661] [cursor=pointer]:
+              - generic [ref=e1662]: "Yes"
+            - button "No" [ref=e1664] [cursor=pointer]:
+              - generic [ref=e1665]: "No"
+    - generic [ref=e1667]:
+      - generic [ref=e1668]:
+        - generic [ref=e1671]:
+          - heading "APIs and Services" [level=3] [ref=e1672]
+          - list [ref=e1673]:
+            - listitem [ref=e1674]:
+              - link "Adobe Creative Cloud" [ref=e1675] [cursor=pointer]:
+                - /url: /creative-cloud
+            - listitem [ref=e1676]:
+              - link "Adobe Experience Platform" [ref=e1677] [cursor=pointer]:
+                - /url: /experience-platform-apis
+            - listitem [ref=e1678]:
+              - link "Adobe Document Cloud" [ref=e1679] [cursor=pointer]:
+                - /url: /document-services/homepage
+            - listitem [ref=e1680]:
+              - link "Adobe Cloud Manager" [ref=e1681] [cursor=pointer]:
+                - /url: /experience-cloud/cloud-manager
+            - listitem [ref=e1682]:
+              - link "Adobe Analytics" [ref=e1683] [cursor=pointer]:
+                - /url: /analytics-apis/docs/2.0
+            - listitem [ref=e1684]:
+              - link "App Builder" [ref=e1685] [cursor=pointer]:
+                - /url: /app-builder
+            - listitem [ref=e1686]:
+              - link "View all APIs and Services" [ref=e1687] [cursor=pointer]:
+                - /url: /apis
+                - strong [ref=e1688]: View all
+        - generic [ref=e1689]:
+          - heading "Community" [level=3] [ref=e1690]
+          - list [ref=e1691]:
+            - listitem [ref=e1692]:
+              - link "Adobe Tech Blog" [ref=e1693] [cursor=pointer]:
+                - /url: https://medium.com/adobetech
+            - listitem [ref=e1694]:
+              - link "Adobe on GitHub" [ref=e1695] [cursor=pointer]:
+                - /url: https://github.com/adobe
+            - listitem [ref=e1696]:
+              - link "Adobe Developer on YouTube" [ref=e1697] [cursor=pointer]:
+                - /url: https://youtube.com/channel/UCDtYqOjS9Eq9gacLcbMwhhQ
+            - listitem [ref=e1698]:
+              - link "Adobe Developer on X" [ref=e1699] [cursor=pointer]:
+                - /url: https://twitter.com/adobedevs
+            - listitem [ref=e1700]:
+              - link "Community Forums" [ref=e1701] [cursor=pointer]:
+                - /url: https://community.adobe.com/
+        - generic [ref=e1702]:
+          - heading "Support" [level=3] [ref=e1703]
+          - list [ref=e1704]:
+            - listitem [ref=e1705]:
+              - link "Adobe Developer support" [ref=e1706] [cursor=pointer]:
+                - /url: /developer-support
+            - listitem [ref=e1707]:
+              - link "Adobe Product support" [ref=e1708] [cursor=pointer]:
+                - /url: https://helpx.adobe.com/contact/enterprise-support.html
+        - generic [ref=e1709]:
+          - heading "Adobe Developer" [level=3] [ref=e1710]
+          - list [ref=e1711]:
+            - listitem [ref=e1712]:
+              - link "Adobe Developer Console" [ref=e1713] [cursor=pointer]:
+                - /url: /developer-console
+            - listitem [ref=e1714]:
+              - link "Developer Distribution" [ref=e1715] [cursor=pointer]:
+                - /url: /developer-distribution/
+            - listitem [ref=e1716]:
+              - link "Open source at Adobe" [ref=e1717] [cursor=pointer]:
+                - /url: /open
+            - listitem [ref=e1718]:
+              - link "Download SDKs" [ref=e1719] [cursor=pointer]:
+                - /url: /console/downloads
+            - listitem [ref=e1720]:
+              - link "Authentication" [ref=e1721] [cursor=pointer]:
+                - /url: /developer-console/docs/guides/authentication
+            - listitem [ref=e1722]:
+              - link "Careers" [ref=e1723] [cursor=pointer]:
+                - /url: https://adobe.com/careers.html
+      - separator [ref=e1724]
+      - generic [ref=e1725]:
+        - list [ref=e1727]:
+          - listitem [ref=e1728]:
+            - link "Privacy" [ref=e1729] [cursor=pointer]:
+              - /url: https://adobe.com/privacy.html
+          - listitem [ref=e1730]:
+            - link "Terms of Use" [ref=e1731] [cursor=pointer]:
+              - /url: https://adobe.com/legal/terms.html
+          - listitem [ref=e1732]:
+            - link "Cookie preferences" [ref=e1733] [cursor=pointer]:
+              - /url: "#/"
+          - listitem [ref=e1734]:
+            - link "Do not sell or share my personal information" [ref=e1735] [cursor=pointer]:
+              - /url: https://adobe.com/privacy/us-rights.html
+          - listitem [ref=e1736]:
+            - img [ref=e1737]
+            - link "AdChoices" [ref=e1740] [cursor=pointer]:
+              - /url: https://adobe.com/privacy/opt-out.html#interest-based-ads
+        - generic [ref=e1742]: Copyright © 2026 Adobe. All rights reserved.
