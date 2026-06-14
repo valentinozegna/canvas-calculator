@@ -16,6 +16,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
   4×6 … 24×36 in, EU A-series A1–A5 and 10×15 cm) and an in/cm/mm unit toggle.
 - Orientation picker (match photo / force landscape / force portrait) and an
   "Add canvas to" anchor (both sides / biased to one edge).
+- The added canvas is transparent; a locked Background is converted to a normal
+  layer first.
+- Expand is disabled when the canvas already matches the target ratio.
 - "Fill canvas" / "Fit to canvas" actions that scale the active layer
   aspect-locked (auto-promoting a locked Background layer).
 - "Resize to exact paper size" action that resamples to the literal paper

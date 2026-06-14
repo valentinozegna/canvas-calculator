@@ -51,6 +51,7 @@
   .ppirow sp-textfield { width: 80px; flex: 0 0 auto; }
 
   .mb { margin-bottom: 6px; }
+  .hint { font-size: 10px; opacity: 0.55; margin: -2px 0 8px; line-height: 1.35; }
 </style>
 
 <!-- Source document (read automatically) -->
@@ -112,18 +113,7 @@
     </sp-picker>
   </div>
 </div>
-<div class="row">
-  <div class="field">
-    <label>Border fill</label>
-    <sp-picker id="border" size="s">
-      <sp-menu slot="options">
-        <sp-menu-item value="white" selected>White</sp-menu-item>
-        <sp-menu-item value="transparent">Transparent</sp-menu-item>
-        <sp-menu-item value="black">Black</sp-menu-item>
-      </sp-menu>
-    </sp-picker>
-  </div>
-</div>
+<div class="hint">Added canvas is transparent. A locked Background is converted to a normal layer first.</div>
 
 <!-- 3. Preview the computed canvas before applying -->
 <div class="section">Preview</div>

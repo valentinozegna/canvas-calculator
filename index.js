@@ -7,7 +7,6 @@ const els = {
   unit: document.getElementById("unit"),
   orient: document.getElementById("orient"),
   anchor: document.getElementById("anchor"),
-  border: document.getElementById("border"),
   preset: document.getElementById("preset"),
   ppi: document.getElementById("ppi"),
   refresh: document.getElementById("refresh"),
@@ -169,8 +168,6 @@ async function expandCanvas() {
   const newWpx = Math.round(t.Cw * ppi);
   const newHpx = Math.round(t.Ch * ppi);
   const anc = anchorEnums(t.grow);
-  const border = els.border.value || "white"; // white | transparent | black
-
   const sizeDesc = {
     _obj: "canvasSize",
     width: { _unit: "pixelsUnit", _value: newWpx },
@@ -182,11 +179,9 @@ async function expandCanvas() {
 
   try {
     await core.executeAsModal(async () => {
-      // Promote any locked Background so the added canvas is transparent and a
-      // backing layer can sit behind everything (no-op if there is no Background).
-      // The canvasExtensionColorType fill only works for a locked Background, so
-      // we don't rely on it — we paint our own backing instead, which is reliable
-      // whether the doc started as a Background or as normal layers.
+      // Promote a locked Background to a normal layer so the added canvas is
+      // transparent rather than filled with a solid color (no-op if there is no
+      // Background layer to convert).
       try {
         await app.batchPlay([{
           _obj: "set",
@@ -197,32 +192,6 @@ async function expandCanvas() {
       } catch (e) { /* no Background layer to promote */ }
 
       await app.batchPlay([sizeDesc], {}); // adds transparent canvas
-
-      if (border !== "transparent") {
-        // Paint a full-canvas color backing behind the photo, using the Fill
-        // command's white/black presets (avoids RGB-channel naming quirks).
-        await app.batchPlay([{ _obj: "make", _target: [{ _ref: "layer" }], _options: { dialogOptions: "dontDisplay" } }], {});
-        await app.batchPlay([{
-          _obj: "move",
-          _target: [{ _ref: "layer", _enum: "ordinal", _value: "targetEnum" }],
-          to: { _ref: "layer", _enum: "ordinal", _value: "back" },
-          _options: { dialogOptions: "dontDisplay" }
-        }], {});
-        await app.batchPlay([{
-          _obj: "fill",
-          using: { _enum: "fillContents", _value: border },
-          opacity: { _unit: "percentUnit", _value: 100 },
-          mode: { _enum: "blendMode", _value: "normal" },
-          _options: { dialogOptions: "dontDisplay" }
-        }], {});
-        // Re-select the top (photo) layer so Fill/Fit act on it, not the backing.
-        await app.batchPlay([{
-          _obj: "select",
-          _target: [{ _ref: "layer", _enum: "ordinal", _value: "front" }],
-          makeVisible: false,
-          _options: { dialogOptions: "dontDisplay" }
-        }], {});
-      }
     }, { commandName: "Expand canvas to ratio" });
     readDoc();
   } catch (e) {
