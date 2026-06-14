@@ -23,12 +23,18 @@
       label: "US (inches)",
       unit: "in",
       papers: [
-        { name: "17 × 22", a: 17, b: 22, unit: "in" },
-        { name: "13 × 19", a: 13, b: 19, unit: "in" },
-        { name: "11 × 16", a: 11, b: 16, unit: "in" },
-        { name: "8.5 × 11", a: 8.5, b: 11, unit: "in" },
+        { name: "4 × 6", a: 4, b: 6, unit: "in" },
         { name: "5 × 7", a: 5, b: 7, unit: "in" },
-        { name: "4 × 6", a: 4, b: 6, unit: "in" }
+        { name: "8 × 10", a: 8, b: 10, unit: "in" },
+        { name: "8.5 × 11", a: 8.5, b: 11, unit: "in" },
+        { name: "11 × 14", a: 11, b: 14, unit: "in" },
+        { name: "12 × 18", a: 12, b: 18, unit: "in" },
+        { name: "13 × 19", a: 13, b: 19, unit: "in" },
+        { name: "16 × 20", a: 16, b: 20, unit: "in" },
+        { name: "17 × 22", a: 17, b: 22, unit: "in" },
+        { name: "18 × 24", a: 18, b: 24, unit: "in" },
+        { name: "20 × 24", a: 20, b: 24, unit: "in" },
+        { name: "24 × 36", a: 24, b: 36, unit: "in" }
       ]
     },
     eu: {

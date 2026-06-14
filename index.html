@@ -1,41 +1,69 @@
 <!-- Canvas Ratio — UXP panel -->
 <style>
-  body { font-family: var(--uxp-host-font-family, sans-serif); color: var(--uxp-host-text-color); margin: 0; padding: 10px; font-size: 12px; }
-  h1 { font-size: 13px; font-weight: 600; margin: 0 0 8px; }
-  .row { display: flex; gap: 8px; margin-bottom: 8px; }
-  .row > div { flex: 1; }
-  label { display: block; font-size: 11px; opacity: 0.7; margin-bottom: 2px; }
-  input[type="number"] { width: 100%; box-sizing: border-box; }
-  #docnote { font-size: 11px; opacity: 0.75; margin: 6px 0 10px; line-height: 1.4; }
-  .section { font-size: 11px; opacity: 0.55; text-transform: uppercase; letter-spacing: 0.04em; margin: 12px 0 6px; }
-  .card { border: 1px solid var(--uxp-host-border-color, rgba(128,128,128,0.3)); border-radius: 6px; padding: 8px; margin-bottom: 6px; }
-  .card .top { display: flex; justify-content: space-between; align-items: baseline; }
-  .card .name { font-weight: 600; font-size: 12px; }
-  .card .ratio { font-size: 10px; opacity: 0.6; }
-  .card .target { font-size: 14px; font-weight: 600; margin: 3px 0; }
-  .card .delta { font-size: 10px; opacity: 0.7; margin-bottom: 6px; }
-  .card .btns { display: flex; gap: 6px; }
-  .card .btns sp-button { flex: 1; }
-  .fitrow { display: flex; gap: 6px; margin: 8px 0; }
-  .fitrow sp-button { flex: 1; }
-  .checkrow { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
-  sp-button { width: 100%; }
+  body {
+    font-family: var(--uxp-host-font-family, sans-serif);
+    color: var(--uxp-host-text-color);
+    margin: 0;
+    padding: 12px;
+    font-size: 12px;
+  }
+  h1 { font-size: 14px; font-weight: 600; margin: 0 0 10px; }
+
+  /* Rows lay fields out side by side; bottom-align so labels (top) and
+     controls (bottom) line up across columns of equal control height. */
+  .row { display: flex; gap: 8px; margin-bottom: 10px; align-items: flex-end; }
+  .field { display: flex; flex-direction: column; flex: 1 1 0; min-width: 0; }
+  .field.narrow { flex: 0.6 1 0; }
+  .field > label { font-size: 11px; opacity: 0.7; margin-bottom: 3px; }
+  sp-textfield, sp-picker { width: 100%; }
+
+  .section {
+    font-size: 11px; opacity: 0.55; text-transform: uppercase;
+    letter-spacing: 0.04em; margin: 14px 0 8px;
+  }
+
+  #docnote { font-size: 11px; opacity: 0.85; margin: 2px 0 4px; line-height: 1.45; }
+
+  /* Preview card: original -> new canvas before applying. */
+  .preview {
+    border: 1px solid var(--uxp-host-border-color, rgba(128,128,128,0.35));
+    border-radius: 6px; padding: 10px; margin-bottom: 10px;
+  }
+  .prow { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 1px; }
+  .prow > span { opacity: 0.7; }
+  .prow > b { font-size: 13px; }
+  .psub { font-size: 10px; opacity: 0.55; margin: 0 0 6px; text-align: right; }
+  .arrow { text-align: center; opacity: 0.5; font-size: 11px; margin: 2px 0; }
+  .delta {
+    margin-top: 6px; padding-top: 6px;
+    border-top: 1px solid var(--uxp-host-border-color, rgba(128,128,128,0.25));
+    font-size: 11px;
+  }
+  .muted { opacity: 0.7; }
+
+  .fitrow { display: flex; gap: 8px; margin: 10px 0; }
+  .fitrow sp-button { flex: 1 1 0; min-width: 0; }
 </style>
 
 <h1>Canvas Ratio</h1>
 
+<div id="docnote">Open a document and tap “Re-read document”.</div>
+<sp-button id="refresh" variant="secondary" size="s" style="width:100%;">Re-read document</sp-button>
+
+<div class="section">Target paper size</div>
+
 <div class="row">
-  <div>
-    <label>Width</label>
-    <input type="number" id="iw" value="0" step="0.01" min="0.01" />
+  <div class="field">
+    <label>Paper width</label>
+    <sp-textfield id="pw" type="number" size="s" placeholder="16" step="0.01" min="0.01"></sp-textfield>
   </div>
-  <div>
-    <label>Height</label>
-    <input type="number" id="ih" value="0" step="0.01" min="0.01" />
+  <div class="field">
+    <label>Paper height</label>
+    <sp-textfield id="ph" type="number" size="s" placeholder="20" step="0.01" min="0.01"></sp-textfield>
   </div>
-  <div style="flex:0.7">
+  <div class="field narrow">
     <label>Unit</label>
-    <sp-picker id="unit" size="s" style="width:100%">
+    <sp-picker id="unit" size="s">
       <sp-menu slot="options">
         <sp-menu-item value="in" selected>in</sp-menu-item>
         <sp-menu-item value="cm">cm</sp-menu-item>
@@ -46,63 +74,57 @@
 </div>
 
 <div class="row">
-  <div>
+  <div class="field">
     <label>Orientation</label>
-    <sp-picker id="orient" size="s" style="width:100%">
+    <sp-picker id="orient" size="s">
       <sp-menu slot="options">
-        <sp-menu-item value="match" selected>Match image</sp-menu-item>
+        <sp-menu-item value="match" selected>Match photo</sp-menu-item>
         <sp-menu-item value="landscape">Force landscape</sp-menu-item>
         <sp-menu-item value="portrait">Force portrait</sp-menu-item>
       </sp-menu>
     </sp-picker>
   </div>
-  <div>
-    <label>Anchor</label>
-    <sp-picker id="anchor" size="s" style="width:100%">
+  <div class="field">
+    <label>Add canvas to</label>
+    <sp-picker id="anchor" size="s">
       <sp-menu slot="options">
-        <sp-menu-item value="center" selected>Center</sp-menu-item>
-        <sp-menu-item value="start">Top / Left</sp-menu-item>
-        <sp-menu-item value="end">Bottom / Right</sp-menu-item>
+        <sp-menu-item value="center" selected>Both sides</sp-menu-item>
+        <sp-menu-item value="start">Bottom / Right</sp-menu-item>
+        <sp-menu-item value="end">Top / Left</sp-menu-item>
       </sp-menu>
     </sp-picker>
   </div>
 </div>
 
-<div class="row">
-  <div>
-    <label>Paper system</label>
-    <sp-picker id="system" size="s" style="width:100%">
-      <sp-menu slot="options">
-        <sp-menu-item value="us" selected>US (inches)</sp-menu-item>
-        <sp-menu-item value="eu">EU (cm)</sp-menu-item>
-      </sp-menu>
-    </sp-picker>
-  </div>
-  <div style="flex:0.7">
-    <label>PPI</label>
-    <input type="number" id="ppi" value="300" step="1" min="1" />
-  </div>
+<div class="field" style="margin-bottom:10px;">
+  <label>Common sizes (quick fill)</label>
+  <sp-picker id="preset" size="s">
+    <sp-menu slot="options"></sp-menu>
+  </sp-picker>
 </div>
 
-<sp-button id="refresh" variant="secondary" quiet size="s" style="width:100%; margin-bottom:8px;">Read active document</sp-button>
+<div class="section">Preview</div>
+<div id="preview" class="preview muted">Enter a target paper size to see the computed canvas.</div>
 
-<div id="docnote">Open a document and tap “Read active document”.</div>
+<sp-button id="expand" variant="cta" style="width:100%;">Expand canvas</sp-button>
+
+<div class="section">After expanding (optional)</div>
 
 <div class="fitrow">
   <sp-button id="fill" variant="secondary" size="s">Fill canvas</sp-button>
   <sp-button id="fit" variant="secondary" size="s">Fit to canvas</sp-button>
 </div>
 
-<div class="checkrow">
-  <sp-checkbox id="usecustom" size="s"></sp-checkbox>
-  <label style="margin:0; opacity:1;">Custom size</label>
-  <input type="number" id="cw" value="0" step="0.01" min="0.01" style="flex:1" />
-  <span style="opacity:0.6">×</span>
-  <input type="number" id="ch" value="0" step="0.01" min="0.01" style="flex:1" />
+<div class="row">
+  <div class="field narrow">
+    <label>Resize PPI</label>
+    <sp-textfield id="ppi" type="number" size="s" value="300" step="1" min="1"></sp-textfield>
+  </div>
+  <div class="field">
+    <label>&nbsp;</label>
+    <sp-button id="resize" variant="secondary" size="s">Resize to exact paper size</sp-button>
+  </div>
 </div>
-
-<div class="section">Print sizes</div>
-<div id="results"></div>
 
 <script src="ratio.js"></script>
 <script src="index.js"></script>

@@ -8,16 +8,17 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ### Added
 - Initial release of the **Canvas Ratio** Photoshop UXP panel.
-- Expand the active document's canvas to a target print aspect ratio **without
-  clipping** the image (grows one dimension only; the Background layer stays put).
-- US print sizes (inches) and EU A-series sizes (cm), selectable by reference
-  system, plus a custom size row and an in/cm/mm unit toggle.
-- "Read active document" to populate dimensions from the open doc.
-- Orientation picker (match image / force landscape / force portrait).
-- Anchor picker (center / top-left / bottom-right) for where the added canvas goes.
+- Single-target flow: enter a **target paper size**, see the **original** canvas
+  (read from the active document) and the **computed new** canvas in a live
+  **preview**, then **Expand canvas** to apply — grows one dimension only, so the
+  image is never **clipped** and the Background layer stays put.
+- Any custom paper size, plus a **Common sizes** quick-fill list (US frame sizes
+  4×6 … 24×36 in, EU A-series A1–A5 and 10×15 cm) and an in/cm/mm unit toggle.
+- Orientation picker (match photo / force landscape / force portrait) and an
+  "Add canvas to" anchor (both sides / biased to one edge).
 - "Fill canvas" / "Fit to canvas" actions that scale the active layer
   aspect-locked (auto-promoting a locked Background layer).
-- "Resize → exact print size" action that resamples to the literal paper
+- "Resize to exact paper size" action that resamples to the literal paper
   dimensions at a configurable PPI (default 300).
 - Pure-math core (`ratio.js`) with Node unit tests, ESLint config, and panel
   icons.

@@ -1,152 +1,151 @@
 const { app, core, constants } = require("photoshop");
-const { PAPER_SETS, toInches, fromInches, paperInches, targetFor } = RatioCore;
+const { PAPER_SETS, toInches, fromInches, targetFor } = RatioCore;
 
 const els = {
-  iw: document.getElementById("iw"),
-  ih: document.getElementById("ih"),
+  pw: document.getElementById("pw"),
+  ph: document.getElementById("ph"),
   unit: document.getElementById("unit"),
   orient: document.getElementById("orient"),
   anchor: document.getElementById("anchor"),
-  system: document.getElementById("system"),
+  preset: document.getElementById("preset"),
   ppi: document.getElementById("ppi"),
   refresh: document.getElementById("refresh"),
   docnote: document.getElementById("docnote"),
+  preview: document.getElementById("preview"),
+  expand: document.getElementById("expand"),
   fill: document.getElementById("fill"),
   fit: document.getElementById("fit"),
-  usecustom: document.getElementById("usecustom"),
-  cw: document.getElementById("cw"),
-  ch: document.getElementById("ch"),
-  results: document.getElementById("results")
+  resize: document.getElementById("resize")
 };
 
-// Round to 2 decimals, dropping trailing zeros (e.g. 22, 8.5, 29.7).
-function fmt(n) {
-  return String(Math.round(n * 100) / 100);
-}
-function note(msg) { els.docnote.textContent = msg; }
+// Current document canvas, in pixels + inches (null when no doc is open).
+let docState = null;
+// Last computed target canvas (the thing the Expand button applies).
+let current = null;
 
-// ---- input helpers (unit-aware) -------------------------------------------
-
+// Round to 2 decimals, dropping trailing zeros (e.g. 22, 8.5, 21.6).
+function fmt(n) { return String(Math.round(n * 100) / 100); }
 function curUnit() { return els.unit.value || "in"; }
+function targetPpi() { const p = parseFloat(els.ppi.value); return p > 0 ? p : 300; }
+function errMsg(e) { return e && e.message ? e.message : String(e); }
+function status(msg) { els.docnote.textContent = msg; }
 
-// Image dimensions in inches, read from the (unit-bearing) inputs.
-function imageInches() {
+// ---- target paper size (from the inputs, converted to inches) -------------
+
+function paperInchesFromInputs() {
   const u = curUnit();
-  const W = toInches(parseFloat(els.iw.value), u);
-  const H = toInches(parseFloat(els.ih.value), u);
-  return { W, H, ok: W > 0 && H > 0 };
+  const pw = toInches(parseFloat(els.pw.value), u);
+  const ph = toInches(parseFloat(els.ph.value), u);
+  return { pw, ph, ok: pw > 0 && ph > 0 };
 }
 
-function targetPpi() {
-  const p = parseFloat(els.ppi.value);
-  return p > 0 ? p : 300;
+// ---- quick-fill presets ----------------------------------------------------
+
+function buildPresets() {
+  const menu = els.preset.querySelector("sp-menu");
+  const custom = document.createElement("sp-menu-item");
+  custom.setAttribute("value", "");
+  custom.setAttribute("selected", "");
+  custom.textContent = "Custom…";
+  menu.appendChild(custom);
+
+  ["us", "eu"].forEach((key) => {
+    PAPER_SETS[key].papers.forEach((p) => {
+      const item = document.createElement("sp-menu-item");
+      item.setAttribute("value", `${p.a}|${p.b}|${p.unit}`);
+      item.textContent = p.name.includes("×")
+        ? `${p.name} ${p.unit}`
+        : `${p.name} (${fmt(p.a)} × ${fmt(p.b)} ${p.unit})`;
+      menu.appendChild(item);
+    });
+  });
+}
+
+function onPresetChange() {
+  const v = els.preset.value;
+  if (!v) return;
+  const [a, b, u] = v.split("|");
+  els.unit.value = u;
+  els.unit.dataset.prev = u;
+  els.pw.value = a;
+  els.ph.value = b;
+  compute();
 }
 
 // ---- read active document --------------------------------------------------
 
-// Reads need no modal scope. Converts px -> inches via doc.resolution, then
-// displays in the currently selected unit.
 function readDoc() {
   let doc;
   try { doc = app.activeDocument; } catch (e) { doc = null; }
   if (!doc) {
-    note("No open document. Open one, then tap “Read active document”.");
+    docState = null;
+    status("No open document. Open one, then tap “Re-read document”.");
+    compute();
     return null;
   }
-  const ppi = doc.resolution; // pixels per inch
-  const wIn = doc.width / ppi;
-  const hIn = doc.height / ppi;
+  const ppi = doc.resolution;
+  docState = { wPx: doc.width, hPx: doc.height, ppi, wIn: doc.width / ppi, hIn: doc.height / ppi };
   const u = curUnit();
-  els.iw.value = fmt(fromInches(wIn, u));
-  els.ih.value = fmt(fromInches(hIn, u));
   els.docnote.innerHTML =
-    `Active doc: <b>${doc.width} × ${doc.height} px</b> @ ${Math.round(ppi)} ppi ` +
-    `(${fmt(fromInches(wIn, u))} × ${fmt(fromInches(hIn, u))} ${u})`;
-  render();
+    `Original document: <b>${fmt(fromInches(docState.wIn, u))} × ${fmt(fromInches(docState.hIn, u))} ${u}</b>` +
+    ` · ${docState.wPx} × ${docState.hPx} px @ ${Math.round(ppi)} ppi`;
+  compute();
   return doc;
 }
 
-// ---- rendering -------------------------------------------------------------
+// ---- compute + preview -----------------------------------------------------
 
-// Build the list of papers to show: the selected system's set, plus an
-// optional custom row driven by the cw/ch inputs.
-function activePapers() {
-  const set = PAPER_SETS[els.system.value] || PAPER_SETS.us;
-  const list = set.papers.slice();
-  if (els.usecustom.checked) {
-    const u = curUnit();
-    const a = parseFloat(els.cw.value);
-    const b = parseFloat(els.ch.value);
-    if (a > 0 && b > 0) list.push({ name: `Custom (${fmt(a)} × ${fmt(b)} ${u})`, a, b, unit: u });
+function compute() {
+  if (!docState) {
+    els.preview.className = "preview muted";
+    els.preview.textContent = "Open a document and tap “Re-read document”.";
+    current = null;
+    return;
   }
-  return list;
-}
-
-// Oriented native-unit labels for a paper, given the chosen orientation.
-function paperLabels(p, landscape) {
-  const lo = Math.max(p.a, p.b);
-  const sh = Math.min(p.a, p.b);
-  const ratioLabel = landscape ? `${fmt(lo)}:${fmt(sh)}` : `${fmt(sh)}:${fmt(lo)}`;
-  const sizeLabel = landscape
-    ? `${fmt(lo)} × ${fmt(sh)} ${p.unit}`
-    : `${fmt(sh)} × ${fmt(lo)} ${p.unit}`;
-  return { ratioLabel, sizeLabel };
-}
-
-function render() {
-  els.results.innerHTML = "";
-  const { W, H, ok } = imageInches();
+  const { pw, ph, ok } = paperInchesFromInputs();
   if (!ok) {
-    note("Enter image width and height (or tap “Read active document”).");
+    els.preview.className = "preview muted";
+    els.preview.textContent = "Enter a target paper size (e.g. 16 × 20).";
+    current = null;
     return;
   }
   const mode = els.orient.value || "match";
+  current = targetFor(docState.wIn, docState.hIn, [pw, ph], mode);
+  renderPreview(current);
+}
+
+function renderPreview(t) {
   const u = curUnit();
+  const ppi = docState.ppi;
+  const oW = fromInches(docState.wIn, u), oH = fromInches(docState.hIn, u);
+  const nW = fromInches(t.Cw, u), nH = fromInches(t.Ch, u);
+  const nWpx = Math.round(t.Cw * ppi), nHpx = Math.round(t.Ch * ppi);
+  const a = parseFloat(els.pw.value), b = parseFloat(els.ph.value);
+  const lo = Math.max(a, b), sh = Math.min(a, b);
+  const ratioLabel = t.paperLandscape ? `${fmt(lo)} : ${fmt(sh)}` : `${fmt(sh)} : ${fmt(lo)}`;
+  const deltaTxt = t.delta < 0.005
+    ? "Already matches this ratio — no expansion needed."
+    : `Grow <b>${t.grow}</b> by <b>${fmt(fromInches(t.delta, u))} ${u}</b> · nothing is clipped.`;
 
-  activePapers().forEach((p) => {
-    const t = targetFor(W, H, paperInches(p), mode);
-    const lab = paperLabels(p, t.paperLandscape);
-
-    const card = document.createElement("div");
-    card.className = "card";
-    const deltaIn = t.delta;
-    const deltaTxt = deltaIn < 0.005
-      ? "already matches ratio"
-      : `grow ${t.grow} +${fmt(fromInches(deltaIn, u))} ${u}`;
-    card.innerHTML =
-      `<div class="top"><span class="name">${p.name}</span><span class="ratio">${lab.ratioLabel}</span></div>` +
-      `<div class="target">${fmt(fromInches(t.Cw, u))} × ${fmt(fromInches(t.Ch, u))} ${u}</div>` +
-      `<div class="delta">${deltaTxt}</div>`;
-
-    const btns = document.createElement("div");
-    btns.className = "btns";
-
-    const expand = document.createElement("sp-button");
-    expand.setAttribute("size", "s");
-    expand.textContent = "Expand";
-    expand.addEventListener("click", () => expandCanvas(t, p.name));
-
-    const resize = document.createElement("sp-button");
-    resize.setAttribute("size", "s");
-    resize.setAttribute("variant", "secondary");
-    resize.textContent = `Resize → ${lab.sizeLabel}`;
-    resize.addEventListener("click", () => resizeExact(t, p.name));
-
-    btns.appendChild(expand);
-    btns.appendChild(resize);
-    card.appendChild(btns);
-    els.results.appendChild(card);
-  });
+  els.preview.className = "preview";
+  els.preview.innerHTML =
+    `<div class="prow"><span>Target ratio</span><b>${ratioLabel}</b></div>` +
+    `<div class="prow"><span>Original canvas</span><b>${fmt(oW)} × ${fmt(oH)} ${u}</b></div>` +
+    `<div class="psub">${docState.wPx} × ${docState.hPx} px</div>` +
+    `<div class="arrow">↓</div>` +
+    `<div class="prow"><span>New canvas</span><b>${fmt(nW)} × ${fmt(nH)} ${u}</b></div>` +
+    `<div class="psub">${nWpx} × ${nHpx} px @ ${Math.round(ppi)} ppi</div>` +
+    `<div class="delta">${deltaTxt}</div>`;
 }
 
 // ---- anchor mapping --------------------------------------------------------
 
-// The added canvas goes opposite the anchor. We only set the enum on the axis
-// that actually grows; the other axis stays centered.
+// The picker asks where the *added* canvas goes; Photoshop's canvasSize enum
+// wants where the existing content is anchored (the opposite side). We only set
+// the enum on the axis that actually grows.
 function anchorEnums(grow) {
-  const a = els.anchor.value || "center";
-  let horizontal = "center";
-  let vertical = "center";
+  const a = els.anchor.value || "center"; // center | start(add bottom/right) | end(add top/left)
+  let horizontal = "center", vertical = "center";
   if (grow === "height") {
     vertical = a === "start" ? "top" : a === "end" ? "bottom" : "center";
   } else {
@@ -157,14 +156,14 @@ function anchorEnums(grow) {
 
 // ---- mutations (all inside executeAsModal) --------------------------------
 
-// Resize canvas to the target inch dimensions. Convert to pixels via the doc's
+// Expand the canvas to the previewed target. Convert inches -> px via the doc
 // resolution and pass explicit pixel units so ruler settings can't interfere.
 // Growing-only, so no clipping and the Background layer stays fine.
-async function expandCanvas(t, name) {
-  let doc;
-  try { doc = app.activeDocument; } catch (e) { doc = null; }
-  if (!doc) { note("No open document."); return; }
-  const ppi = doc.resolution;
+async function expandCanvas() {
+  if (!docState) { status("No open document."); return; }
+  if (!current) { status("Enter a target paper size first."); return; }
+  const t = current;
+  const ppi = docState.ppi;
   const newWpx = Math.round(t.Cw * ppi);
   const newHpx = Math.round(t.Ch * ppi);
   const anc = anchorEnums(t.grow);
@@ -179,23 +178,20 @@ async function expandCanvas(t, name) {
         vertical: { _enum: "verticalLocation", _value: anc.vertical },
         _options: { dialogOptions: "dontDisplay" }
       }], {});
-    }, { commandName: `Expand canvas to ${name}` });
+    }, { commandName: "Expand canvas to ratio" });
     readDoc();
   } catch (e) {
-    note("Resize failed: " + errMsg(e));
+    status("Expand failed: " + errMsg(e));
   }
 }
 
 // Resample the whole image to the exact oriented paper size at the target PPI.
-// Pass explicit pixel dimensions + density so the result lands on the literal
-// print size regardless of ruler units.
-async function resizeExact(t, name) {
-  let doc;
-  try { doc = app.activeDocument; } catch (e) { doc = null; }
-  if (!doc) { note("No open document."); return; }
+async function resizeExact() {
+  if (!docState) { status("No open document."); return; }
+  if (!current) { status("Enter a target paper size first."); return; }
   const ppi = targetPpi();
-  const wPx = Math.round(t.paperW * ppi);
-  const hPx = Math.round(t.paperH * ppi);
+  const wPx = Math.round(current.paperW * ppi);
+  const hPx = Math.round(current.paperH * ppi);
 
   try {
     await core.executeAsModal(async () => {
@@ -209,21 +205,21 @@ async function resizeExact(t, name) {
         interpolation: { _enum: "interpolationType", _value: "automaticInterpolation" },
         _options: { dialogOptions: "dontDisplay" }
       }], {});
-    }, { commandName: `Resize to ${name}` });
+    }, { commandName: "Resize to exact paper size" });
     readDoc();
   } catch (e) {
-    note("Resize failed: " + errMsg(e));
+    status("Resize failed: " + errMsg(e));
   }
 }
 
-// Scale the active layer to FILL (cover, may overflow) or FIT (contain, leaves
-// margins) the current canvas, keeping aspect ratio locked, then recenter it.
+// Scale the active layer to FILL (cover) or FIT (contain) the current canvas,
+// aspect-locked, then recenter it.
 async function scaleLayer(fill) {
   let doc;
   try { doc = app.activeDocument; } catch (e) { doc = null; }
-  if (!doc) { note("No open document."); return; }
+  if (!doc) { status("No open document."); return; }
   const layer = (doc.activeLayers && doc.activeLayers[0]) || null;
-  if (!layer) { note("No active layer to scale. Select a layer first."); return; }
+  if (!layer) { status("No active layer to scale. Select a layer first."); return; }
 
   try {
     await core.executeAsModal(async () => {
@@ -236,63 +232,54 @@ async function scaleLayer(fill) {
           _options: { dialogOptions: "dontDisplay" }
         }], {});
       }
-
       const b = layer.bounds;
       const lw = b.right - b.left;
       const lh = b.bottom - b.top;
       if (lw <= 0 || lh <= 0) throw new Error("layer has no pixels");
-      const cw = doc.width;
-      const ch = doc.height;
+      const cw = doc.width, ch = doc.height;
       const factor = (fill ? Math.max(cw / lw, ch / lh) : Math.min(cw / lw, ch / lh)) * 100;
-
       await layer.scale(factor, factor, constants.AnchorPosition.MIDDLECENTER);
-
-      // Recenter on the canvas after scaling.
       const nb = layer.bounds;
-      const cx = (nb.left + nb.right) / 2;
-      const cy = (nb.top + nb.bottom) / 2;
-      await layer.translate(cw / 2 - cx, ch / 2 - cy);
+      await layer.translate(cw / 2 - (nb.left + nb.right) / 2, ch / 2 - (nb.top + nb.bottom) / 2);
     }, { commandName: fill ? "Fill canvas with layer" : "Fit layer to canvas" });
-    note(fill ? "Layer scaled to fill the canvas." : "Layer scaled to fit the canvas.");
+    status(fill ? "Layer scaled to fill the canvas." : "Layer scaled to fit the canvas.");
   } catch (e) {
-    note("Scale failed: " + errMsg(e));
+    status("Scale failed: " + errMsg(e));
   }
 }
 
-function errMsg(e) { return e && e.message ? e.message : String(e); }
-
 // ---- wiring ----------------------------------------------------------------
 
+buildPresets();
+
 els.refresh.addEventListener("click", readDoc);
+els.expand.addEventListener("click", expandCanvas);
+els.resize.addEventListener("click", resizeExact);
 els.fill.addEventListener("click", () => scaleLayer(true));
 els.fit.addEventListener("click", () => scaleLayer(false));
+els.preset.addEventListener("change", onPresetChange);
 
 ["input", "change"].forEach((ev) => {
-  els.iw.addEventListener(ev, render);
-  els.ih.addEventListener(ev, render);
-  els.cw.addEventListener(ev, render);
-  els.ch.addEventListener(ev, render);
+  els.pw.addEventListener(ev, compute);
+  els.ph.addEventListener(ev, compute);
 });
-els.orient.addEventListener("change", render);
-els.anchor.addEventListener("change", render);
-els.system.addEventListener("change", render);
-els.usecustom.addEventListener("change", render);
+els.orient.addEventListener("change", compute);
 
-// Switching display unit: convert the existing input values so the physical
-// size stays constant, then re-render.
+// Switching display unit converts the paper inputs so the physical size stays
+// constant, then re-reads the doc (which redraws the note + preview in the new unit).
 els.unit.addEventListener("change", () => {
   const prev = els.unit.dataset.prev || "in";
   const next = curUnit();
   if (prev !== next) {
-    [els.iw, els.ih, els.cw, els.ch].forEach((inp) => {
+    [els.pw, els.ph].forEach((inp) => {
       const v = parseFloat(inp.value);
       if (v > 0) inp.value = fmt(fromInches(toInches(v, prev), next));
     });
   }
   els.unit.dataset.prev = next;
-  render();
+  readDoc();
 });
 els.unit.dataset.prev = "in";
 
-// Try an initial read in case a doc is already open.
-try { readDoc(); } catch (e) { render(); }
+// Initial read in case a document is already open.
+try { readDoc(); } catch (e) { compute(); }

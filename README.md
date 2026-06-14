@@ -25,18 +25,28 @@ resamples to the literal print size.
 
 **Key principle:** the expand step grows one dimension only → **no clipping**.
 
+## How you use it
+
+1. **Tell it the target paper size** — type any size (16 × 20, 8 × 11, 20 × 24, …),
+   or pick one from the **Common sizes** quick-fill list.
+2. **It reads your open document** — the original canvas size is shown automatically.
+3. **It previews the result** — the computed new canvas size, the target ratio, and
+   how much (and which side) will grow, all *before* you change anything.
+4. **Apply** — tap **Expand canvas** to grow the canvas to that ratio without clipping.
+
 ## Features
 
-- **Expand to ratio** — grows the canvas to the matched paper ratio, never clipping.
-- **Paper systems** — US sizes in inches (17×22, 13×19, 11×16, 8.5×11, 5×7, 4×6)
-  and EU A-series in cm (A1–A5, 10×15), selectable; plus a **custom size** row.
-- **Units** — display/enter in `in`, `cm`, or `mm` (the math is unit-agnostic).
-- **Read active document** — fills width/height from the open doc via `doc.resolution`.
-- **Orientation** — match image / force landscape / force portrait.
-- **Anchor** — center / top-left / bottom-right for where the added canvas goes.
-- **Fill / Fit** — scale the active layer to cover or contain the canvas,
-  aspect-locked (a locked Background layer is auto-promoted first).
-- **Resize → exact size** — resample to the literal paper dimensions at a
+- **Expand to ratio** — grows the canvas to match the target paper ratio, never clipping.
+- **Preview before apply** — original canvas → new canvas (in your unit and in pixels)
+  with the grow direction and amount, computed live as you type.
+- **Any paper size** — type a custom size, or quick-fill from common US frame sizes
+  (4×6 … 24×36 in) and EU A-series (A1–A5, 10×15 cm).
+- **Units** — work in `in`, `cm`, or `mm` (the math is unit-agnostic).
+- **Orientation** — match photo / force landscape / force portrait.
+- **Add canvas to** — both sides, or biased to one edge (maps to the canvas anchor).
+- **Fill / Fit** (optional, after expanding) — scale the active layer to cover or
+  contain the canvas, aspect-locked (a locked Background layer is auto-promoted first).
+- **Resize → exact size** (optional) — resample to the literal paper dimensions at a
   configurable PPI (default 300).
 
 ## How it works
@@ -80,16 +90,18 @@ UXP CSS; VS Code will offer to install it from `.vscode/extensions.json`.
 The plugin can only be exercised inside Photoshop (it can't be auto-tested here).
 After sideloading:
 
-1. Open a wide landscape photo (e.g. **27.95 × 15.75 in @ 240 ppi**).
-2. Open the panel, tap **Read active document** → the inputs populate.
-3. On the **17 × 22** card (Match image), tap **Expand** → the canvas becomes a
-   22:17 landscape frame with a band added on the short axis; the image is
-   **uncropped**.
-4. Confirm **no clipping**, and that **Undo** (⌘Z) restores the original.
-5. Tap **Fill canvas** / **Fit to canvas** → the layer scales aspect-locked to
-   cover / contain the frame.
-6. Tap **Resize → 22 × 17 in** → the document lands on exactly 6600 × 5100 px @ 300 PPI.
-7. Switch **Paper system** to EU and confirm A-series cards appear in cm.
+1. Open a wide landscape photo (e.g. **27.95 × 15.75 in @ 240 ppi**). The panel shows
+   the **Original document** size automatically (tap **Re-read document** if needed).
+2. Type a target paper size, e.g. **16 × 20** (or pick it from **Common sizes**).
+3. The **Preview** updates: target ratio, original canvas, and the new canvas with the
+   grow direction/amount — confirm it only grows one side.
+4. Tap **Expand canvas** → the canvas grows to the ratio with a band on the short axis;
+   the image is **uncropped**. **Undo** (⌘Z) restores the original.
+5. (Optional) Tap **Fill canvas** / **Fit to canvas** → the active layer scales
+   aspect-locked to cover / contain the frame.
+6. (Optional) Set **Resize PPI** and tap **Resize to exact paper size** → the document
+   lands on the literal print dimensions (e.g. 20 × 16 in @ 300 PPI = 6000 × 4800 px).
+7. Switch **Unit** to cm and confirm values convert; try an EU A-size from Common sizes.
 
 ## Packaging to `.ccx`
 
