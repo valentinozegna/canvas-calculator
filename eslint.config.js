@@ -11,6 +11,7 @@ const panelGlobals = {
   console: "readonly",
   setTimeout: "readonly",
   clearTimeout: "readonly",
+  setInterval: "readonly",
   RatioCore: "readonly"
 };
 

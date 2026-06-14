@@ -72,17 +72,31 @@ function onPresetChange() {
 
 // ---- read active document --------------------------------------------------
 
+// Signature of the active document (id + size + resolution). Used to detect
+// document switches / canvas changes that fire no notification event.
+function docSignature() {
+  try {
+    const d = app.activeDocument;
+    return d ? `${d.id}:${d.width}:${d.height}:${d.resolution}` : "none";
+  } catch (e) {
+    return "none";
+  }
+}
+let lastSig = "";
+
 function readDoc() {
   let doc;
   try { doc = app.activeDocument; } catch (e) { doc = null; }
   if (!doc) {
     docState = null;
-    status("No open document. Open one, then tap “Re-read document”.");
+    lastSig = "none";
+    status("No open document. Open one to begin.");
     compute();
     return null;
   }
   const ppi = doc.resolution;
-  docState = { wPx: doc.width, hPx: doc.height, ppi, wIn: doc.width / ppi, hIn: doc.height / ppi };
+  docState = { id: doc.id, wPx: doc.width, hPx: doc.height, ppi, wIn: doc.width / ppi, hIn: doc.height / ppi };
+  lastSig = docSignature();
   const u = curUnit();
   els.docnote.innerHTML =
     `Original document: <b>${fmt(fromInches(docState.wIn, u))} × ${fmt(fromInches(docState.hIn, u))} ${u}</b>` +
@@ -350,8 +364,16 @@ try {
     () => scheduleSync()
   );
 } catch (e) {
-  // Notifications unavailable on this host — the manual Re-read button still works.
+  // Notifications unavailable on this host — the poll below still keeps it in sync.
 }
+
+// Switching to an already-open document (clicking another tab) fires no reliable
+// notification, so poll the active-document signature and re-read when it changes.
+setInterval(() => {
+  if (docSignature() !== lastSig) {
+    try { readDoc(); } catch (e) { /* ignore */ }
+  }
+}, 700);
 
 // Initial read in case a document is already open.
 try { readDoc(); } catch (e) { compute(); }
