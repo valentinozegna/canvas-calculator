@@ -21,6 +21,9 @@ const els = {
 let docState = null;
 // Last computed target canvas (the thing the Expand button applies).
 let current = null;
+// True while we fill the W/H fields programmatically (preset pick / unit change),
+// so the manual-edit handler doesn't wrongly reset the preset to "Custom…".
+let settingFields = false;
 
 // Round to 2 decimals, dropping trailing zeros (e.g. 22, 8.5, 21.6).
 function fmt(n) { return String(Math.round(n * 100) / 100); }
@@ -84,8 +87,10 @@ function onPresetChange() {
   // Fill the fields in the user's CURRENT display unit (convert from native).
   const [a, b, nativeUnit] = v.split("|");
   const u = curUnit();
+  settingFields = true;
   els.pw.value = fmt(fromInches(toInches(parseFloat(a), nativeUnit), u));
   els.ph.value = fmt(fromInches(toInches(parseFloat(b), nativeUnit), u));
+  settingFields = false;
   compute();
 }
 
@@ -345,9 +350,16 @@ const FIT_HINTS = {
   el.addEventListener("mouseleave", () => { els.fithint.textContent = FIT_DEFAULT; });
 });
 
+// Typing a custom width/height means the value no longer matches the picked
+// preset, so snap the dropdown back to "Custom…" (unless we set the field
+// programmatically). onPresetChange ignores the empty value, so this is safe.
+function onDimEdit() {
+  if (!settingFields && els.preset.value) els.preset.value = "";
+  compute();
+}
 ["input", "change"].forEach((ev) => {
-  els.pw.addEventListener(ev, compute);
-  els.ph.addEventListener(ev, compute);
+  els.pw.addEventListener(ev, onDimEdit);
+  els.ph.addEventListener(ev, onDimEdit);
 });
 els.orient.addEventListener("change", compute);
 
@@ -357,10 +369,12 @@ els.unit.addEventListener("change", () => {
   const prev = els.unit.dataset.prev || "in";
   const next = curUnit();
   if (prev !== next) {
+    settingFields = true;
     [els.pw, els.ph].forEach((inp) => {
       const v = parseFloat(inp.value);
       if (v > 0) inp.value = fmt(fromInches(toInches(v, prev), next));
     });
+    settingFields = false;
   }
   els.unit.dataset.prev = next;
   buildPresets(); // relabel every entry in the new unit
