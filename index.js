@@ -42,6 +42,18 @@ function paperInchesFromInputs() {
 
 // ---- quick-fill presets ----------------------------------------------------
 
+// Select a preset by value. Spectrum's sp-picker tracks selection via the
+// `selected` attribute on its items, so setting only .value leaves the old
+// item highlighted — toggle the attribute on every item explicitly.
+function setPreset(val) {
+  const menu = els.preset.querySelector("sp-menu");
+  Array.from(menu.children).forEach((it) => {
+    if (it.getAttribute("value") === val) it.setAttribute("selected", "");
+    else it.removeAttribute("selected");
+  });
+  els.preset.value = val;
+}
+
 // Build (or rebuild) the preset list, showing every paper's dimensions in the
 // currently selected display unit. The item value stays the paper's NATIVE
 // dims+unit (canonical), so a rebuild on unit change keeps the same selection.
@@ -76,9 +88,8 @@ function buildPresets() {
   });
 
   // Restore the previous selection (default to Custom…).
-  const match = items.find((it) => it.getAttribute("value") === prev) || custom;
-  match.setAttribute("selected", "");
-  els.preset.value = match.getAttribute("value");
+  const has = items.some((it) => it.getAttribute("value") === prev);
+  setPreset(has ? prev : "");
 }
 
 function onPresetChange() {
@@ -354,7 +365,7 @@ const FIT_HINTS = {
 // preset, so snap the dropdown back to "Custom…" (unless we set the field
 // programmatically). onPresetChange ignores the empty value, so this is safe.
 function onDimEdit() {
-  if (!settingFields && els.preset.value) els.preset.value = "";
+  if (!settingFields && els.preset.value) setPreset("");
   compute();
 }
 ["input", "change"].forEach((ev) => {
