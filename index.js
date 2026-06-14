@@ -119,7 +119,7 @@ function readDoc() {
   const u = curUnit();
   els.docnote.className = "";
   els.docnote.innerHTML =
-    `<div class="kv"><span class="k">Document</span><span class="v">${fmt(fromInches(docState.wIn, u))} × ${fmt(fromInches(docState.hIn, u))} ${u}</span></div>` +
+    `<div class="kv"><span class="k">Size</span><span class="v">${fmt(fromInches(docState.wIn, u))} × ${fmt(fromInches(docState.hIn, u))} ${u}</span></div>` +
     `<div class="kv"><span class="k">Pixels</span><span class="v">${docState.wPx} × ${docState.hPx} px</span></div>` +
     `<div class="kv"><span class="k">Resolution</span><span class="v">${Math.round(ppi)} ppi</span></div>`;
   compute();
