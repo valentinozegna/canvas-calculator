@@ -215,11 +215,17 @@ async function scaleLayer(mode) {
   let doc;
   try { doc = app.activeDocument; } catch (e) { doc = null; }
   if (!doc) { status("No open document."); return; }
-  const layer = (doc.activeLayers && doc.activeLayers[0]) || null;
-  if (!layer) { status("No active layer to scale. Select a layer first."); return; }
 
   try {
     await core.executeAsModal(async () => {
+      // Resolve the layer inside the modal — activeLayers can read empty
+      // outside one. Fall back to the topmost layer if nothing is selected.
+      const layer =
+        (doc.activeLayers && doc.activeLayers[0]) ||
+        (doc.layers && doc.layers[0]) ||
+        null;
+      if (!layer) throw new Error("no layer to scale");
+
       // A locked Background can't be transformed; promote it to a normal layer.
       if (layer.isBackgroundLayer) {
         await app.batchPlay([{
