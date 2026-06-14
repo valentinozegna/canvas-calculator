@@ -51,6 +51,8 @@
   .ppirow sp-textfield { width: 80px; flex: 0 0 auto; }
 
   .mb { margin-bottom: 6px; }
+  .hidden { display: none; }
+  #moreToggle { width: 100%; margin-top: 6px; }
 </style>
 
 <!-- Source document (read automatically) -->
@@ -120,19 +122,22 @@
 <!-- 4. Apply -->
 <sp-button id="expand" variant="cta" style="width:100%;">Expand canvas</sp-button>
 
-<!-- 5. Optional follow-up steps once the canvas is expanded -->
-<div class="section">After expanding (optional)</div>
+<!-- 5. Optional follow-up steps once the canvas is expanded — collapsed by
+     default so the core flow fits without scrolling. -->
+<sp-button id="moreToggle" variant="secondary" quiet size="s">More actions ▾</sp-button>
 
-<div class="fitrow">
-  <sp-button id="fill" variant="secondary" size="s">Fill canvas</sp-button>
-  <sp-button id="fit" variant="secondary" size="s">Fit to canvas</sp-button>
+<div id="more" class="hidden">
+  <div class="section">After expanding (optional)</div>
+  <div class="fitrow">
+    <sp-button id="fill" variant="secondary" size="s">Fill canvas</sp-button>
+    <sp-button id="fit" variant="secondary" size="s">Fit to canvas</sp-button>
+  </div>
+  <div class="ppirow">
+    <span class="ppilabel">Resize PPI</span>
+    <sp-textfield id="ppi" type="number" size="s" value="300" step="1" min="1"></sp-textfield>
+  </div>
+  <sp-button id="resize" variant="secondary" size="s" style="width:100%;">Resize to exact paper size</sp-button>
 </div>
-
-<div class="ppirow">
-  <span class="ppilabel">Resize PPI</span>
-  <sp-textfield id="ppi" type="number" size="s" value="300" step="1" min="1"></sp-textfield>
-</div>
-<sp-button id="resize" variant="secondary" size="s" style="width:100%;">Resize to exact paper size</sp-button>
 
 <script src="ratio.js"></script>
 <script src="index.js"></script>
