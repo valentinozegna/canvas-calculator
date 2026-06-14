@@ -1,0 +1,25 @@
+{
+  "manifestVersion": 5,
+  "id": "com.valentino.canvasratio",
+  "name": "Canvas Ratio",
+  "version": "0.1.0",
+  "main": "index.html",
+  "host": {
+    "app": "PS",
+    "minVersion": "24.0.0"
+  },
+  "entryPoints": [
+    {
+      "type": "panel",
+      "id": "canvasRatioPanel",
+      "label": { "default": "Canvas Ratio" },
+      "minimumSize": { "width": 230, "height": 300 },
+      "preferredDockedSize": { "width": 260, "height": 420 },
+      "preferredFloatingSize": { "width": 300, "height": 500 }
+    }
+  ],
+  "icons": [
+    { "width": 23, "height": 23, "path": "icons/light.png", "scale": [1, 2], "theme": ["lightest", "light", "medium"] },
+    { "width": 23, "height": 23, "path": "icons/dark.png", "scale": [1, 2], "theme": ["dark", "darkest"] }
+  ]
+}

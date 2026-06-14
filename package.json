@@ -1,0 +1,16 @@
+{
+  "name": "canvas-calculator",
+  "version": "0.1.0",
+  "description": "Photoshop UXP panel that expands the canvas to a target print aspect ratio without ever clipping the image.",
+  "private": true,
+  "license": "MIT",
+  "author": "Valentino Zegna",
+  "scripts": {
+    "test": "node --test",
+    "lint": "eslint .",
+    "icons": "node tools/build-icons.js"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  }
+}

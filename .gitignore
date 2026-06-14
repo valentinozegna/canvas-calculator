@@ -1,0 +1,17 @@
+# Dependencies
+node_modules/
+
+# macOS
+.DS_Store
+
+# Packaged plugin artifacts
+*.ccx
+
+# Editor / OS cruft
+.idea/
+*.swp
+*.log
+
+# Keep .vscode/extensions.json tracked, ignore the rest
+.vscode/*
+!.vscode/extensions.json
