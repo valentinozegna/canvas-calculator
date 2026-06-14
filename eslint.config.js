@@ -9,6 +9,8 @@ const panelGlobals = {
   window: "readonly",
   globalThis: "readonly",
   console: "readonly",
+  setTimeout: "readonly",
+  clearTimeout: "readonly",
   RatioCore: "readonly"
 };
 

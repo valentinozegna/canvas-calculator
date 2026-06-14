@@ -1,4 +1,4 @@
-const { app, core, constants } = require("photoshop");
+const { app, core, constants, action } = require("photoshop");
 const { PAPER_SETS, toInches, fromInches, targetFor } = RatioCore;
 
 const els = {
@@ -298,6 +298,28 @@ els.unit.addEventListener("change", () => {
   readDoc();
 });
 els.unit.dataset.prev = "in";
+
+// Keep the panel in sync with Photoshop automatically: re-read the document on
+// any history change (edits, undo, redo) and on document open/close/select, so
+// the Original-document line and Preview stay current without tapping Re-read.
+// A short debounce coalesces bursts of events. readDoc() never touches the typed
+// paper size, so this is safe to fire freely.
+let syncTimer = null;
+function scheduleSync() {
+  if (syncTimer) clearTimeout(syncTimer);
+  syncTimer = setTimeout(() => {
+    syncTimer = null;
+    try { readDoc(); } catch (e) { /* ignore */ }
+  }, 200);
+}
+try {
+  action.addNotificationListener(
+    ["historyStateChanged", "select", "open", "close"],
+    () => scheduleSync()
+  );
+} catch (e) {
+  // Notifications unavailable on this host — the manual Re-read button still works.
+}
 
 // Initial read in case a document is already open.
 try { readDoc(); } catch (e) { compute(); }
