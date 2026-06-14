@@ -1,131 +1,99 @@
 # Canvas Ratio
 
-A Photoshop **UXP** panel that expands the active document's canvas to a chosen
-print aspect ratio **without ever clipping the image**, then helps fit the photo
-to the new frame.
+A Photoshop panel that expands your photo's canvas to a chosen print paper ratio
+**without ever cropping the image** — then helps you fit the photo to the new frame.
 
-> Repo: `canvas-calculator` · Plugin id: `com.valentino.canvasratio` (placeholder — see [Distribution](#distribution))
+![The Canvas Ratio panel in Photoshop](docs/panel.jpg)
 
-![Panel screenshot placeholder](docs/screenshot.png)
-<!-- Drop a screenshot or GIF of the panel at docs/screenshot.png -->
+## Why you'd want it
 
-## The problem it solves
+When you mat a photo onto a fixed paper size (17×22, 16×20, A4, 5×7…), Photoshop's
+**Canvas Size crops** the moment a target dimension is smaller than your image. There's
+no built-in "just add canvas to reach this ratio" command.
 
-Photographers regularly need to mat a photo onto a fixed print paper size
-(17×22, A4, 5×7, …). Photoshop's **Canvas Size clips** whenever a new dimension
-is smaller than the current one — there is no "expand-only to a target ratio"
-command.
+Canvas Ratio does exactly that: it keeps your image's longer side fixed and grows **only
+the shorter side** until the canvas matches the paper ratio. Because it only ever *adds*
+canvas, **nothing is cropped** and the added border is transparent. You see the exact new
+size before you commit.
 
-The correct manual move is: keep the image's longer dimension fixed and grow
-**only the shorter dimension** until the canvas matches the target paper ratio.
-This only ever *adds* canvas, so nothing is clipped — and the locked Background
-layer doesn't need to be unlocked. Canvas Ratio automates that math and the
-canvas-expansion step, then optionally scales the photo to the frame and
-resamples to the literal print size.
+## How to use it
 
-**Key principle:** the expand step grows one dimension only → **no clipping**.
+1. **Open your photo.** The panel shows its current size at the top and keeps it up to
+   date as you work or switch documents.
+2. **Choose the paper size.** Pick from **Common sizes** (US frame sizes and EU A-series),
+   or type any **Width × Height** and choose your unit (in / cm / mm).
+3. **Set the options:**
+   - **Orientation** — match your photo, or force landscape / portrait.
+   - **Add canvas to** — center the photo (border on both sides) or push it to one edge.
+4. **Check the Preview.** It shows the target ratio, your original canvas, the computed
+   new canvas, and how much will be added — e.g. *"Grow width by 0.99 in · nothing is
+   clipped."* If your canvas already matches the ratio, **Expand canvas** is disabled.
+5. **Click Expand canvas.** The canvas grows to the ratio with a transparent border; your
+   image is untouched. (A locked *Background* becomes a normal layer so the border can be
+   transparent.) Undo (⌘Z) restores it.
 
-## How you use it
+### After expanding (optional)
 
-1. **Tell it the target paper size** — type any size (16 × 20, 8 × 11, 20 × 24, …),
-   or pick one from the **Common sizes** quick-fill list.
-2. **It reads your open document** — the original canvas size is shown automatically.
-3. **It previews the result** — the computed new canvas size, the target ratio, and
-   how much (and which side) will grow, all *before* you change anything.
-4. **Apply** — tap **Expand canvas** to grow the canvas to that ratio without clipping.
+Scale your photo within the new frame:
 
-## Features
+- **Fill** — enlarge to cover the whole canvas (edges may extend past the frame).
+- **Fit** — shrink to sit fully inside the canvas (transparent margins remain).
+- **Warp** — stretch to fill the canvas exactly (no cropping, slight distortion).
 
-- **Expand to ratio** — grows the canvas to match the target paper ratio, never clipping.
-- **Preview before apply** — original canvas → new canvas (in your unit and in pixels)
-  with the grow direction and amount, computed live as you type.
-- **Any paper size** — type a custom size, or quick-fill from common US frame sizes
-  (4×6 … 24×36 in) and EU A-series (A1–A5, 10×15 cm).
-- **Units** — work in `in`, `cm`, or `mm` (the math is unit-agnostic).
-- **Orientation** — match photo / force landscape / force portrait.
-- **Add canvas to** — both sides, or biased to one edge (maps to the canvas anchor).
-- **Fill / Fit** (optional, after expanding) — scale the active layer to cover or
-  contain the canvas, aspect-locked (a locked Background layer is auto-promoted first).
-- **Auto-sync** — the panel re-reads the document on edits, undo/redo, and document
-  open/close, so the original size and preview stay current automatically.
+Hover any of the three for a one-line description.
 
-## How it works
+## Installing
 
-- All document mutations run inside `core.executeAsModal` (required by Photoshop UXP).
-- Inches are converted to pixels with the document's `resolution`, and **explicit
-  pixel units** are passed to the resize actions so the user's ruler-unit
-  preference can't interfere.
-- The pure ratio math lives in [`ratio.js`](ratio.js) with no Photoshop
-  dependency, so it is unit-tested in plain Node.
+Canvas Ratio isn't on the Adobe Marketplace yet, so you install it manually with Adobe's
+free **UXP Developer Tool (UDT)**:
 
-## Install (sideload via the UXP Developer Tool)
+1. In the **Creative Cloud desktop app**, search for and install **UXP Developer Tool**.
+2. *(If your Photoshop has it)* enable **Settings → Plugins → Enable Developer Mode**.
+3. [Download this plugin](https://github.com/valentinozegna/canvas-calculator) (green
+   **Code → Download ZIP**) and unzip it somewhere permanent.
+4. Open **Photoshop**, then open **UDT** → **Add Plugin** → select the plugin's
+   `manifest.json`.
+5. Click **Load**. The **Canvas Ratio** panel appears under Photoshop's **Plugins** menu.
 
-1. Install the **UXP Developer Tool (UDT)** from the Creative Cloud desktop app.
-2. Open UDT → **Add Plugin** → select this folder's `manifest.json`.
-3. Make sure Photoshop (24.0.0+) is running, then click **Load** next to the plugin.
-4. The **Canvas Ratio** panel appears under *Plugins* in Photoshop.
+> Requires Photoshop 2024 (24.0) or newer.
 
-## Develop / debug
+Tip: dock the panel alongside your other panels — it sizes itself to show everything at once.
 
-- Edit the source, then click **Reload** in UDT to push changes to Photoshop.
-- Click **Debug** (the `•••` menu in UDT) to open Chrome DevTools for the panel
-  (console, DOM inspection, breakpoints).
-- The plugin is plain HTML/JS — no build step.
+## Good to know
 
-### Project tooling
-
-```bash
-npm install        # dev tooling only (ESLint); the plugin itself has no deps
-npm test           # run the pure-math unit tests (node --test)
-npm run lint       # ESLint over the panel + Node code
-npm run icons      # regenerate icons/*.png from tools/build-icons.js
-```
-
-The recommended **Validator for UXP** VS Code extension
-(`JaroslavBereza.uxpvalidator`, community-maintained) lints `manifest.json` and
-UXP CSS; VS Code will offer to install it from `.vscode/extensions.json`.
-
-## Manual test checklist
-
-The plugin can only be exercised inside Photoshop (it can't be auto-tested here).
-After sideloading:
-
-1. Open a wide landscape photo (e.g. **27.95 × 15.75 in @ 240 ppi**). The panel shows
-   the **Original document** size automatically.
-2. Type a target paper size, e.g. **16 × 20** (or pick it from **Common sizes**).
-3. The **Preview** updates: target ratio, original canvas, and the new canvas with the
-   grow direction/amount — confirm it only grows one side. **Expand canvas** is disabled
-   when the canvas already matches the target ratio.
-4. Tap **Expand canvas** → the canvas grows to the ratio with a transparent band on the
-   short axis; the image is **uncropped**. **Undo** (⌘Z) restores the original.
-5. (Optional) Tap **Fill canvas** / **Fit to canvas** → the active layer scales
-   aspect-locked to cover / contain the frame.
-6. **Undo** the expand, and confirm the panel's Original-document line and Preview
-   update on their own (auto-sync).
-7. Switch **Unit** to cm and confirm values convert; try an EU A-size from Common sizes.
-
-## Packaging to `.ccx`
-
-1. In UDT, use the plugin's **•••** menu → **Package**.
-2. UDT produces a signed `.ccx` file.
-3. Double-clicking a `.ccx` installs the plugin via the **Creative Cloud desktop app**.
-
-## Distribution
-
-Public listing on the Adobe Marketplace requires a **real plugin ID** issued by
-Adobe's [Developer Distribution](https://developer.adobe.com/distribution/)
-portal. Replace the placeholder `com.valentino.canvasratio` in
-[`manifest.json`](manifest.json) with that ID before submitting.
-
-## Constraints / notes
-
-- **UXP only** — CEP/ExtendScript is deprecated and intentionally not used.
-- `manifest.json` must stay **manifestVersion 5** with a `host.minVersion`, or a
-  `.ccx` install won't execute the panel's startup code.
-- `doc.width` / `doc.height` are **pixels** in the UXP DOM; convert with
-  `doc.resolution` for inches.
-- Scaling is always aspect-locked — the image is never distorted.
+- The added border is **transparent**. Flatten or add your own background layer if you
+  want a white (or colored) mat for printing.
+- Expanding changes only the canvas ratio, not your print resolution — your photo keeps its
+  original pixels and PPI.
+- Scaling (Fill / Fit / Warp) always keeps the photo from being cropped except **Fill**,
+  which intentionally covers the frame.
 
 ## License
 
 [MIT](LICENSE) © 2026 Valentino Zegna
+
+---
+
+<details>
+<summary>For developers</summary>
+
+Plain HTML/JS UXP plugin — no build step. The pure ratio math lives in
+[`ratio.js`](ratio.js) (no Photoshop dependency) and is unit-tested.
+
+```bash
+npm install     # dev tooling only (ESLint)
+npm test        # run the ratio math unit tests
+npm run lint    # ESLint
+npm run icons   # regenerate panel icons
+```
+
+- **Debug:** in UDT, use the plugin's ••• → **Debug** to open DevTools for the panel.
+- **Reload:** after editing source, click **Reload** in UDT (manifest changes need a full
+  unload/reload, and a workspace reset or relaunch to pick up new panel sizes).
+- **Package:** UDT ••• → **Package** produces a signed `.ccx`; double-clicking it installs
+  via the Creative Cloud desktop app.
+- **Publishing:** a public Marketplace listing needs a real plugin ID from Adobe's
+  [Developer Distribution](https://developer.adobe.com/distribution/) portal, replacing the
+  placeholder `com.valentino.canvasratio` in [`manifest.json`](manifest.json).
+
+</details>
