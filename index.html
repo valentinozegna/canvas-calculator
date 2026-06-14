@@ -34,8 +34,8 @@
   .prow { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
   .prow > span { opacity: 0.7; }
   .prow > b { font-size: 13px; }
-  .psub { font-size: 10px; opacity: 0.55; margin: 0 0 4px; text-align: right; }
-  .arrow { text-align: center; opacity: 0.5; font-size: 11px; margin: 1px 0; }
+  .pline { font-size: 13px; margin: 3px 0 1px; }
+  .psub { font-size: 10px; opacity: 0.55; margin: 0; }
   .delta {
     margin-top: 5px; padding-top: 5px;
     border-top: 1px solid var(--uxp-host-border-color, rgba(128,128,128,0.25));
@@ -45,6 +45,10 @@
 
   .fitrow { display: flex; gap: 8px; margin: 8px 0; }
   .fitrow sp-button { flex: 1 1 0; min-width: 0; }
+
+  .ppirow { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .ppilabel { font-size: 11px; opacity: 0.7; white-space: nowrap; }
+  .ppirow sp-textfield { width: 80px; flex: 0 0 auto; }
 </style>
 
 <div id="docnote">Open a document and tap “Re-read document”.</div>
@@ -115,16 +119,11 @@
   <sp-button id="fit" variant="secondary" size="s">Fit to canvas</sp-button>
 </div>
 
-<div class="row">
-  <div class="field narrow">
-    <label>Resize PPI</label>
-    <sp-textfield id="ppi" type="number" size="s" value="300" step="1" min="1"></sp-textfield>
-  </div>
-  <div class="field">
-    <label>&nbsp;</label>
-    <sp-button id="resize" variant="secondary" size="s">Resize to exact paper size</sp-button>
-  </div>
+<div class="ppirow">
+  <span class="ppilabel">Resize PPI</span>
+  <sp-textfield id="ppi" type="number" size="s" value="300" step="1" min="1"></sp-textfield>
 </div>
+<sp-button id="resize" variant="secondary" size="s" style="width:100%;">Resize to exact paper size</sp-button>
 
 <script src="ratio.js"></script>
 <script src="index.js"></script>

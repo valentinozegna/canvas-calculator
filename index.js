@@ -130,11 +130,8 @@ function renderPreview(t) {
   els.preview.className = "preview";
   els.preview.innerHTML =
     `<div class="prow"><span>Target ratio</span><b>${ratioLabel}</b></div>` +
-    `<div class="prow"><span>Original canvas</span><b>${fmt(oW)} × ${fmt(oH)} ${u}</b></div>` +
-    `<div class="psub">${docState.wPx} × ${docState.hPx} px</div>` +
-    `<div class="arrow">↓</div>` +
-    `<div class="prow"><span>New canvas</span><b>${fmt(nW)} × ${fmt(nH)} ${u}</b></div>` +
-    `<div class="psub">${nWpx} × ${nHpx} px @ ${Math.round(ppi)} ppi</div>` +
+    `<div class="pline"><b>${fmt(oW)} × ${fmt(oH)}</b> → <b>${fmt(nW)} × ${fmt(nH)} ${u}</b></div>` +
+    `<div class="psub">${docState.wPx} × ${docState.hPx} → ${nWpx} × ${nHpx} px @ ${Math.round(ppi)} ppi</div>` +
     `<div class="delta">${deltaTxt}</div>`;
 }
 
