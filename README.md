@@ -34,6 +34,10 @@ size before you commit.
    image is untouched. (A locked *Background* becomes a normal layer so the border can be
    transparent.) Undo (⌘Z) restores it.
 
+Good to know: the added border is **transparent**, so flatten or add your own background
+layer if you want a white (or colored) mat for printing. Expanding changes only the canvas
+ratio, not your print resolution; your photo keeps its original pixels and PPI.
+
 ### After expanding (optional)
 
 Scale your photo within the new frame:
@@ -65,13 +69,6 @@ Tip: dock the panel alongside your other Photoshop panels.
 4. Click **Load**. The panel appears under Photoshop's **Plugins** menu.
 
 </details>
-
-## Good to know
-
-- The added border is **transparent**. Flatten or add your own background layer if you want
-  a white (or colored) mat for printing.
-- Expanding changes only the canvas ratio, not your print resolution. Your photo keeps its
-  original pixels and PPI.
 
 ## License
 
