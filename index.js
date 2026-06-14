@@ -1,4 +1,4 @@
-const { app, core, constants, action } = require("photoshop");
+const { app, core, action } = require("photoshop");
 const { PAPER_SETS, toInches, fromInches, targetFor } = RatioCore;
 
 const els = {
@@ -235,25 +235,54 @@ async function scaleLayer(mode) {
           _options: { dialogOptions: "dontDisplay" }
         }], {});
       }
+
+      // Make this layer the transform target.
+      await app.batchPlay([{
+        _obj: "select",
+        _target: [{ _ref: "layer", _id: layer.id }],
+        makeVisible: false,
+        _options: { dialogOptions: "dontDisplay" }
+      }], {});
+
       const b = layer.bounds;
       const lw = b.right - b.left;
       const lh = b.bottom - b.top;
-      if (lw <= 0 || lh <= 0) throw new Error("layer has no pixels");
       const cw = doc.width, ch = doc.height;
+      if (lw <= 0 || lh <= 0) throw new Error("layer has no pixels");
 
       let fx, fy;
       if (mode === "warp") {
-        // Non-uniform: stretch each axis to the canvas exactly.
-        fx = (cw / lw) * 100;
+        fx = (cw / lw) * 100;   // stretch each axis to the canvas exactly
         fy = (ch / lh) * 100;
       } else {
-        // Uniform: cover (max) for fill, contain (min) for fit.
         const f = (mode === "fill" ? Math.max(cw / lw, ch / lh) : Math.min(cw / lw, ch / lh)) * 100;
         fx = fy = f;
       }
-      await layer.scale(fx, fy, constants.AnchorPosition.MIDDLECENTER);
+      // eslint-disable-next-line no-console
+      console.log("[CanvasRatio] scale", mode, { layer: layer.name, lw, lh, cw, ch, fx, fy });
+
+      // Scale around the layer's own center via batchPlay (reliable across hosts).
+      await app.batchPlay([{
+        _obj: "transform",
+        _target: [{ _ref: "layer", _enum: "ordinal", _value: "targetEnum" }],
+        freeTransformCenterState: { _enum: "quadCenterState", _value: "QCSAverage" },
+        width: { _unit: "percentUnit", _value: fx },
+        height: { _unit: "percentUnit", _value: fy },
+        _options: { dialogOptions: "dontDisplay" }
+      }], {});
+
+      // Recenter the layer on the canvas.
       const nb = layer.bounds;
-      await layer.translate(cw / 2 - (nb.left + nb.right) / 2, ch / 2 - (nb.top + nb.bottom) / 2);
+      const dx = cw / 2 - (nb.left + nb.right) / 2;
+      const dy = ch / 2 - (nb.top + nb.bottom) / 2;
+      if (Math.abs(dx) > 0.5 || Math.abs(dy) > 0.5) {
+        await app.batchPlay([{
+          _obj: "move",
+          _target: [{ _ref: "layer", _enum: "ordinal", _value: "targetEnum" }],
+          to: { _obj: "offset", horizontal: { _unit: "pixelsUnit", _value: dx }, vertical: { _unit: "pixelsUnit", _value: dy } },
+          _options: { dialogOptions: "dontDisplay" }
+        }], {});
+      }
     }, { commandName: (SCALE[mode] || SCALE.fill).command });
     status((SCALE[mode] || SCALE.fill).done);
   } catch (e) {
