@@ -39,36 +39,53 @@ function paperInchesFromInputs() {
 
 // ---- quick-fill presets ----------------------------------------------------
 
+// Build (or rebuild) the preset list, showing every paper's dimensions in the
+// currently selected display unit. The item value stays the paper's NATIVE
+// dims+unit (canonical), so a rebuild on unit change keeps the same selection.
 function buildPresets() {
   const menu = els.preset.querySelector("sp-menu");
+  const prev = els.preset.value || "";
+  while (menu.firstChild) menu.removeChild(menu.firstChild);
+  const u = curUnit();
+
+  const items = [];
   const custom = document.createElement("sp-menu-item");
   custom.setAttribute("value", "");
-  custom.setAttribute("selected", "");
   custom.textContent = "Custom…";
   menu.appendChild(custom);
+  items.push(custom);
 
   ["us", "eu"].forEach((key) => {
     PAPER_SETS[key].papers.forEach((p) => {
       const item = document.createElement("sp-menu-item");
       item.setAttribute("value", `${p.a}|${p.b}|${p.unit}`);
-      const ratio = aspectRatioLabel(p.a, p.b);
-      const dims = p.name.includes("×")
-        ? `${p.name} ${p.unit}`
-        : `${p.name} · ${fmt(p.a)} × ${fmt(p.b)} ${p.unit}`;
-      item.textContent = `${dims} (${ratio})`;
+      // Convert native dims -> display unit; ratio is dimensionless so it uses
+      // the native values directly.
+      const da = fmt(fromInches(toInches(p.a, p.unit), u));
+      const db = fmt(fromInches(toInches(p.b, p.unit), u));
+      const dims = `${da} × ${db} ${u}`;
+      // Named papers (A4 …) keep the name; US sizes are named by their dims.
+      const label = p.name.includes("×") ? dims : `${p.name} · ${dims}`;
+      item.textContent = `${label} (${aspectRatioLabel(p.a, p.b)})`;
       menu.appendChild(item);
+      items.push(item);
     });
   });
+
+  // Restore the previous selection (default to Custom…).
+  const match = items.find((it) => it.getAttribute("value") === prev) || custom;
+  match.setAttribute("selected", "");
+  els.preset.value = match.getAttribute("value");
 }
 
 function onPresetChange() {
   const v = els.preset.value;
   if (!v) return;
-  const [a, b, u] = v.split("|");
-  els.unit.value = u;
-  els.unit.dataset.prev = u;
-  els.pw.value = a;
-  els.ph.value = b;
+  // Fill the fields in the user's CURRENT display unit (convert from native).
+  const [a, b, nativeUnit] = v.split("|");
+  const u = curUnit();
+  els.pw.value = fmt(fromInches(toInches(parseFloat(a), nativeUnit), u));
+  els.ph.value = fmt(fromInches(toInches(parseFloat(b), nativeUnit), u));
   compute();
 }
 
@@ -343,6 +360,7 @@ els.unit.addEventListener("change", () => {
     });
   }
   els.unit.dataset.prev = next;
+  buildPresets(); // relabel every entry in the new unit
   readDoc();
 });
 els.unit.dataset.prev = "in";
