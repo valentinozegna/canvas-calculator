@@ -13,10 +13,10 @@
       "type": "panel",
       "id": "canvasRatioPanel",
       "label": { "default": "Canvas Ratio" },
-      "minimumSize": { "width": 250, "height": 700 },
+      "minimumSize": { "width": 250, "height": 460 },
       "maximumSize": { "width": 2000, "height": 2000 },
-      "preferredDockedSize": { "width": 280, "height": 720 },
-      "preferredFloatingSize": { "width": 300, "height": 720 }
+      "preferredDockedSize": { "width": 280, "height": 600 },
+      "preferredFloatingSize": { "width": 300, "height": 600 }
     }
   ],
   "icons": [
