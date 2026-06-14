@@ -120,9 +120,11 @@
 <!-- 5. Optional follow-up: scale the photo within the expanded canvas -->
 <div class="section">After expanding (optional)</div>
 <div class="fitrow">
-  <sp-button id="fill" variant="secondary" size="s">Fill canvas</sp-button>
-  <sp-button id="fit" variant="secondary" size="s">Fit to canvas</sp-button>
+  <sp-button id="fill" variant="secondary" size="s">Fill</sp-button>
+  <sp-button id="fit" variant="secondary" size="s">Fit</sp-button>
+  <sp-button id="warp" variant="secondary" size="s">Warp</sp-button>
 </div>
+<div class="hint">Fill = cover (crops overflow) · Fit = contain (leaves margins) · Warp = stretch to fill exactly (distorts, no crop).</div>
 
 <script src="ratio.js"></script>
 <script src="index.js"></script>

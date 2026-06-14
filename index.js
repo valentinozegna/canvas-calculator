@@ -12,7 +12,8 @@ const els = {
   preview: document.getElementById("preview"),
   expand: document.getElementById("expand"),
   fill: document.getElementById("fill"),
-  fit: document.getElementById("fit")
+  fit: document.getElementById("fit"),
+  warp: document.getElementById("warp")
 };
 
 // Current document canvas, in pixels + inches (null when no doc is open).
@@ -200,8 +201,16 @@ async function expandCanvas() {
 }
 
 // Scale the active layer to FILL (cover) or FIT (contain) the current canvas,
-// aspect-locked, then recenter it.
-async function scaleLayer(fill) {
+// "fill" (cover) and "fit" (contain) keep aspect ratio; "warp" stretches the
+// layer non-uniformly to fill the canvas exactly (no crop, but distorts). All
+// three recenter the layer afterward.
+const SCALE = {
+  fill: { command: "Fill canvas with layer", done: "Layer scaled to fill the canvas." },
+  fit: { command: "Fit layer to canvas", done: "Layer scaled to fit the canvas." },
+  warp: { command: "Warp layer to canvas", done: "Layer warped to fill the canvas." }
+};
+
+async function scaleLayer(mode) {
   let doc;
   try { doc = app.activeDocument; } catch (e) { doc = null; }
   if (!doc) { status("No open document."); return; }
@@ -224,12 +233,22 @@ async function scaleLayer(fill) {
       const lh = b.bottom - b.top;
       if (lw <= 0 || lh <= 0) throw new Error("layer has no pixels");
       const cw = doc.width, ch = doc.height;
-      const factor = (fill ? Math.max(cw / lw, ch / lh) : Math.min(cw / lw, ch / lh)) * 100;
-      await layer.scale(factor, factor, constants.AnchorPosition.MIDDLECENTER);
+
+      let fx, fy;
+      if (mode === "warp") {
+        // Non-uniform: stretch each axis to the canvas exactly.
+        fx = (cw / lw) * 100;
+        fy = (ch / lh) * 100;
+      } else {
+        // Uniform: cover (max) for fill, contain (min) for fit.
+        const f = (mode === "fill" ? Math.max(cw / lw, ch / lh) : Math.min(cw / lw, ch / lh)) * 100;
+        fx = fy = f;
+      }
+      await layer.scale(fx, fy, constants.AnchorPosition.MIDDLECENTER);
       const nb = layer.bounds;
       await layer.translate(cw / 2 - (nb.left + nb.right) / 2, ch / 2 - (nb.top + nb.bottom) / 2);
-    }, { commandName: fill ? "Fill canvas with layer" : "Fit layer to canvas" });
-    status(fill ? "Layer scaled to fill the canvas." : "Layer scaled to fit the canvas.");
+    }, { commandName: (SCALE[mode] || SCALE.fill).command });
+    status((SCALE[mode] || SCALE.fill).done);
   } catch (e) {
     status("Scale failed: " + errMsg(e));
   }
@@ -240,8 +259,9 @@ async function scaleLayer(fill) {
 buildPresets();
 
 els.expand.addEventListener("click", expandCanvas);
-els.fill.addEventListener("click", () => scaleLayer(true));
-els.fit.addEventListener("click", () => scaleLayer(false));
+els.fill.addEventListener("click", () => scaleLayer("fill"));
+els.fit.addEventListener("click", () => scaleLayer("fit"));
+els.warp.addEventListener("click", () => scaleLayer("warp"));
 els.preset.addEventListener("change", onPresetChange);
 
 ["input", "change"].forEach((ev) => {
