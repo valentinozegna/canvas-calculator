@@ -7,6 +7,7 @@ const els = {
   unit: document.getElementById("unit"),
   orient: document.getElementById("orient"),
   anchor: document.getElementById("anchor"),
+  border: document.getElementById("border"),
   preset: document.getElementById("preset"),
   ppi: document.getElementById("ppi"),
   refresh: document.getElementById("refresh"),
@@ -164,17 +165,38 @@ async function expandCanvas() {
   const newWpx = Math.round(t.Cw * ppi);
   const newHpx = Math.round(t.Ch * ppi);
   const anc = anchorEnums(t.grow);
+  const border = els.border.value || "white"; // white | transparent | black
+
+  const sizeDesc = {
+    _obj: "canvasSize",
+    width: { _unit: "pixelsUnit", _value: newWpx },
+    height: { _unit: "pixelsUnit", _value: newHpx },
+    horizontal: { _enum: "horizontalLocation", _value: anc.horizontal },
+    vertical: { _enum: "verticalLocation", _value: anc.vertical },
+    _options: { dialogOptions: "dontDisplay" }
+  };
+  // White/black fill the added canvas with that solid color (valid
+  // canvasExtensionColorType values). Transparent has no extension color and
+  // requires a non-Background layer, handled below.
+  if (border !== "transparent") {
+    sizeDesc.canvasExtensionColorType = { _enum: "canvasExtensionColorType", _value: border };
+  }
 
   try {
     await core.executeAsModal(async () => {
-      await app.batchPlay([{
-        _obj: "canvasSize",
-        width: { _unit: "pixelsUnit", _value: newWpx },
-        height: { _unit: "pixelsUnit", _value: newHpx },
-        horizontal: { _enum: "horizontalLocation", _value: anc.horizontal },
-        vertical: { _enum: "verticalLocation", _value: anc.vertical },
-        _options: { dialogOptions: "dontDisplay" }
-      }], {});
+      if (border === "transparent") {
+        // A solid Background can't hold transparency — promote it to a normal
+        // layer first so the added canvas is transparent (no-op if no Background).
+        try {
+          await app.batchPlay([{
+            _obj: "set",
+            _target: [{ _ref: "layer", _property: "background" }],
+            to: { _obj: "layer" },
+            _options: { dialogOptions: "dontDisplay" }
+          }], {});
+        } catch (e) { /* no Background layer to promote */ }
+      }
+      await app.batchPlay([sizeDesc], {});
     }, { commandName: "Expand canvas to ratio" });
     readDoc();
   } catch (e) {
