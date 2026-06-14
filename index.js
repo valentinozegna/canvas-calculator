@@ -121,7 +121,7 @@ function readDoc() {
   els.docnote.innerHTML =
     `<div class="kv"><span class="k">Size</span><span class="v">${fmt(fromInches(docState.wIn, u))} × ${fmt(fromInches(docState.hIn, u))} ${u}</span></div>` +
     `<div class="kv"><span class="k">Pixels</span><span class="v">${docState.wPx} × ${docState.hPx} px</span></div>` +
-    `<div class="kv"><span class="k">Resolution</span><span class="v">${Math.round(ppi)} ppi</span></div>`;
+    `<div class="kv"><span class="k">Pixel density</span><span class="v">${Math.round(ppi)} ppi</span></div>`;
   compute();
   return doc;
 }
@@ -169,7 +169,7 @@ function renderPreview(t) {
     `<div class="kv"><span class="k">Target ratio</span><span class="v">${ratioLabel}</span></div>` +
     `<div class="kv"><span class="k">Current size</span><span class="v">${fmt(oW)} × ${fmt(oH)} ${u}<small>${docState.wPx} × ${docState.hPx} px</small></span></div>` +
     `<div class="kv"><span class="k">New size</span><span class="v">${fmt(nW)} × ${fmt(nH)} ${u}<small>${nWpx} × ${nHpx} px</small></span></div>` +
-    `<div class="kv"><span class="k">Resolution</span><span class="v">${Math.round(ppi)} ppi</span></div>` +
+    `<div class="kv"><span class="k">Pixel density</span><span class="v">${Math.round(ppi)} ppi</span></div>` +
     `<div class="delta">${deltaTxt}</div>`;
 }
 
