@@ -117,9 +117,11 @@ function readDoc() {
   docState = { id: doc.id, wPx: doc.width, hPx: doc.height, ppi, wIn: doc.width / ppi, hIn: doc.height / ppi };
   lastSig = docSignature();
   const u = curUnit();
+  els.docnote.className = "";
   els.docnote.innerHTML =
-    `Original document: <b>${fmt(fromInches(docState.wIn, u))} × ${fmt(fromInches(docState.hIn, u))} ${u}</b>` +
-    ` · ${docState.wPx} × ${docState.hPx} px @ ${Math.round(ppi)} ppi`;
+    `<div class="kv"><span class="k">Document</span><span class="v">${fmt(fromInches(docState.wIn, u))} × ${fmt(fromInches(docState.hIn, u))} ${u}</span></div>` +
+    `<div class="kv"><span class="k">Pixels</span><span class="v">${docState.wPx} × ${docState.hPx} px</span></div>` +
+    `<div class="kv"><span class="k">Resolution</span><span class="v">${Math.round(ppi)} ppi</span></div>`;
   compute();
   return doc;
 }
@@ -159,14 +161,15 @@ function renderPreview(t) {
   const lo = Math.max(a, b), sh = Math.min(a, b);
   const ratioLabel = t.paperLandscape ? `${fmt(lo)} : ${fmt(sh)}` : `${fmt(sh)} : ${fmt(lo)}`;
   const deltaTxt = t.delta < 0.005
-    ? "Already matches this ratio — no expansion needed."
-    : `Grow <b>${t.grow}</b> by <b>${fmt(fromInches(t.delta, u))} ${u}</b> · nothing is clipped.`;
+    ? "Already matches this ratio. No expansion needed."
+    : `Grow <b>${t.grow}</b> by <b>${fmt(fromInches(t.delta, u))} ${u}</b>. Nothing is clipped.`;
 
   els.preview.className = "preview";
   els.preview.innerHTML =
-    `<div class="prow"><span>Target ratio</span><b>${ratioLabel}</b></div>` +
-    `<div class="pline"><b>${fmt(oW)} × ${fmt(oH)}</b> → <b>${fmt(nW)} × ${fmt(nH)} ${u}</b></div>` +
-    `<div class="psub">${docState.wPx} × ${docState.hPx} → ${nWpx} × ${nHpx} px @ ${Math.round(ppi)} ppi</div>` +
+    `<div class="kv"><span class="k">Target ratio</span><span class="v">${ratioLabel}</span></div>` +
+    `<div class="kv"><span class="k">Current size</span><span class="v">${fmt(oW)} × ${fmt(oH)} ${u}<small>${docState.wPx} × ${docState.hPx} px</small></span></div>` +
+    `<div class="kv"><span class="k">New size</span><span class="v">${fmt(nW)} × ${fmt(nH)} ${u}<small>${nWpx} × ${nHpx} px</small></span></div>` +
+    `<div class="kv"><span class="k">Resolution</span><span class="v">${Math.round(ppi)} ppi</span></div>` +
     `<div class="delta">${deltaTxt}</div>`;
 }
 

@@ -33,20 +33,22 @@
     letter-spacing: 0.04em; margin: 9px 0 5px;
   }
 
-  #docnote { font-size: 11px; opacity: 0.85; margin: 0 0 4px; line-height: 1.4; }
+  #docnote { font-size: 12px; margin: 0 0 4px; }
+
+  /* Key/value row: muted label on the left, value (with optional px subline)
+     on the right. Used for the document info and the preview card. */
+  .kv { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin: 3px 0; }
+  .kv > .k { opacity: 0.6; font-size: 11px; white-space: nowrap; }
+  .kv > .v { font-weight: 600; text-align: right; }
+  .kv > .v small { display: block; font-weight: 400; opacity: 0.55; font-size: 10px; margin-top: 1px; }
 
   /* Preview card: original -> new canvas before applying. */
   .preview {
     border: 1px solid var(--uxp-host-border-color, rgba(128,128,128,0.35));
     border-radius: 6px; padding: 8px 10px; margin-bottom: 8px;
   }
-  .prow { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
-  .prow > span { opacity: 0.7; }
-  .prow > b { font-size: 13px; }
-  .pline { font-size: 13px; margin: 3px 0 1px; }
-  .psub { font-size: 10px; opacity: 0.55; margin: 0; }
   .delta {
-    margin-top: 5px; padding-top: 5px;
+    margin-top: 6px; padding-top: 6px;
     border-top: 1px solid var(--uxp-host-border-color, rgba(128,128,128,0.25));
     font-size: 11px;
   }
