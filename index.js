@@ -178,9 +178,9 @@ function renderPreview(t) {
   const ratioLabel = `${fmt(a)}:${fmt(b)} (${aspectRatioLabel(a, b)})`;
   const pxDelta = Math.round(t.delta * ppi);
   const deltaTxt = t.delta < 0.005
-    ? "Already matches this ratio. No expansion needed."
-    : `Grow <b>${t.grow}</b> by <b>${fmt(fromInches(t.delta, u))} ${u}</b> (${pxDelta} px). Nothing is clipped.` +
-      `<br><span class="muted">Added canvas is transparent; a locked Background becomes a normal layer.</span>`;
+    ? "Already matches this ratio, so no expansion is needed."
+    : `Adds <b>${fmt(fromInches(t.delta, u))} ${u}</b> (${pxDelta} px) of <b>${t.grow}</b>, with nothing cropped.` +
+      `<br><span class="muted">The added canvas is transparent, and a locked Background is converted to a normal layer first.</span>`;
 
   els.preview.className = "preview";
   els.preview.innerHTML =
