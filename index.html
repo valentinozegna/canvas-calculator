@@ -19,6 +19,15 @@
   .field > label { font-size: 11px; opacity: 0.7; margin-bottom: 2px; }
   sp-textfield, sp-picker { width: 100%; }
 
+  /* Top-level grouping: the controls you set (Input) vs. the result and
+     actions (Output). Stronger than .section, with a divider rule. */
+  .group {
+    font-size: 12px; font-weight: 600; letter-spacing: 0.02em;
+    margin: 13px 0 6px; padding-bottom: 4px;
+    border-bottom: 1px solid var(--uxp-host-border-color, rgba(128,128,128,0.35));
+  }
+  .group.first { margin-top: 2px; }
+
   .section {
     font-size: 11px; opacity: 0.55; text-transform: uppercase;
     letter-spacing: 0.04em; margin: 9px 0 5px;
@@ -50,6 +59,9 @@
   .hint { font-size: 10px; opacity: 0.55; margin: -2px 0 8px; line-height: 1.35; }
   #fithint { min-height: 26px; }
 </style>
+
+<!-- ======================= INPUT ======================= -->
+<div class="group first">Input</div>
 
 <!-- Source document (read automatically and kept in sync) -->
 <div id="docnote">Open a document to begin.</div>
@@ -109,6 +121,9 @@
   </div>
 </div>
 <div class="hint">Added canvas is transparent. A locked Background is converted to a normal layer first.</div>
+
+<!-- ======================= OUTPUT ======================= -->
+<div class="group">Output</div>
 
 <!-- 3. Preview the computed canvas before applying -->
 <div class="section">Preview</div>
