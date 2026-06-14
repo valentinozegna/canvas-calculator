@@ -172,10 +172,14 @@ function renderPreview(t) {
   const ppi = docState.ppi;
   const nW = fromInches(t.Cw, u), nH = fromInches(t.Ch, u);
   const nWpx = Math.round(t.Cw * ppi), nHpx = Math.round(t.Ch * ppi);
-  // Raw paper ratio plus its reduced form, e.g. "16:20 (4:5)". The reduced
-  // part is the same aspectRatioLabel the dropdown shows.
+  // Raw paper ratio plus its reduced form, e.g. "16:20 (4:5)", oriented to the
+  // actual target (force landscape/portrait swaps the order, matching New size).
   const a = parseFloat(els.pw.value), b = parseFloat(els.ph.value);
-  const ratioLabel = `${fmt(a)}:${fmt(b)} (${aspectRatioLabel(a, b)})`;
+  const lo = Math.max(a, b), sh = Math.min(a, b);
+  const rawLabel = t.paperLandscape ? `${fmt(lo)}:${fmt(sh)}` : `${fmt(sh)}:${fmt(lo)}`;
+  let reduced = aspectRatioLabel(a, b); // short:long
+  if (t.paperLandscape) { const [x, y] = reduced.split(":"); reduced = `${y}:${x}`; }
+  const ratioLabel = `${rawLabel} (${reduced})`;
   const pxDelta = Math.round(t.delta * ppi);
   const deltaTxt = t.delta < 0.005
     ? "Already matches this ratio, so no expansion is needed."
