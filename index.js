@@ -135,7 +135,7 @@ function readDoc() {
 
 function compute() {
   if (!docState) {
-    els.preview.className = "preview muted";
+    els.preview.className = "muted mb";
     els.preview.textContent = "No document open.";
     current = null;
     els.expand.disabled = true;
@@ -143,7 +143,7 @@ function compute() {
   }
   const { pw, ph, ok } = paperInchesFromInputs();
   if (!ok) {
-    els.preview.className = "preview muted";
+    els.preview.className = "muted mb";
     els.preview.textContent = "No paper size selected.";
     current = null;
     els.expand.disabled = true;
