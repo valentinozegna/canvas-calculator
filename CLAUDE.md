@@ -22,7 +22,7 @@ A UXP panel that expands a photo's canvas to a print paper ratio without croppin
 - **All document mutations run inside `core.executeAsModal`;** property reads don't.
 - **inches→px via `doc.resolution`;** pass explicit `{_unit:"pixelsUnit"}`.
 - **Resolve the active layer INSIDE the modal** — `doc.activeLayers` reads empty outside it; fall back to `doc.layers[0]`.
-- **DOM `layer.scale()`/`translate()` were no-ops on this host** → use `batchPlay` `transform` (percent w/h, `QCSAverage`) + `move` by offset; select the layer by `_id` first.
+- **DOM `layer.scale()`/`translate()` were no-ops on this host** → use `batchPlay` `transform` (percent w/h, `QCSCorner0`) + `move` by offset; select the layer by `_id` first.
 - **Active-document switch (tab change) fires NO reliable event** → poll `docSignature()` (id+w+h+res) every 700ms. Use `action.addNotificationListener(["historyStateChanged","select","open","close"])` for edits/undo (debounced).
 - **`canvasSize` border fill:** added canvas takes the foreground swatch unless `canvasExtensionColorType` is set, and that only works for a locked **Background**. We chose transparent-only: promote Background→layer, then `canvasSize`. **Only promote if a Background exists** (`set` on a non-Background throws "command Set is not currently available" and aborts).
 - Valid `canvasExtensionColorType`: `foregroundColor|backgroundColor|white|black|grey|color`. `RGBColor` green key is `grain` (charID quirk). Verify enums via grep.app / `adobe-uxp-types-crawler`.
@@ -30,7 +30,8 @@ A UXP panel that expands a photo's canvas to a print paper ratio without croppin
 ## UI conventions
 - Use Spectrum `sp-textfield`/`sp-picker size="s"` (raw `<input>` mismatches picker height); flex children need `min-width:0` or they clip.
 - Theme via `--uxp-host-*` CSS vars. `body{height:100%;overflow-y:auto}` as a scroll fallback.
-- Disable **Expand** when `delta<0.005` (ratio already matches).
+- Canvas pixels come from `pixelTarget()`, not `Math.round(Cw*ppi)`: rounding drifts off the ratio (3406×4408 ≠ 17:22) and Lightroom shows a white sliver. Small-integer ratios use `(p·k, q·k)`, so the non-growing axis can gain < p px. Disable **Expand** when the doc already has those exact pixels.
+- Fill/Fit/Warp scale from `QCSCorner0` then move by whole pixels; scaling around `QCSAverage` left half-pixel edges (a half-transparent row) when the layer was 0.5 px off-center.
 
 ## Design decisions (don't re-litigate)
 - Single-target flow: panel reads the doc itself; user only enters the target paper size; preview before apply.

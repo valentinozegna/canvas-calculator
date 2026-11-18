@@ -13,8 +13,10 @@ When you mat a photo onto a fixed paper size (17×22, 16×20, A4, 5×7…), Phot
 **Canvas Size crops** the moment a target dimension is smaller than your image. There's
 no built-in "just add canvas to reach this ratio" command.
 
-Canvas Ratio does exactly that: it keeps your image as-is and grows **only the one side**
-needed to reach the paper ratio. Because it only ever *adds* canvas, **nothing is cropped**
+Canvas Ratio does exactly that: it keeps your image as-is and grows the side needed to
+reach the paper ratio. The new size is a whole number of pixels at **exactly** the paper
+ratio (for US sizes like 8.5 × 11 or 16 × 20), so Lightroom's print cell fills edge to
+edge with no white sliver; that can add a few pixels to the other side too. Because it only ever *adds* canvas, **nothing is cropped**
 and the added border is transparent. You see the exact new size before you commit.
 
 ## How to use it
@@ -30,7 +32,7 @@ and the added border is transparent. You see the exact new size before you commi
 4. **Read the Output preview.** It shows the **target ratio** as raw plus reduced
    (e.g. `20:16 (5:4)`), the **new size** in your unit and pixels, and how much canvas will
    be added, e.g. *"Adds 0.99 in (238 px) of width, with nothing cropped."* If your canvas
-   already matches the ratio, **Expand canvas** is disabled.
+   already has the exact target pixels, **Expand canvas** is disabled.
 5. **Click Expand canvas.** The canvas grows to the ratio with a transparent border and your
    image is untouched. (A locked *Background* becomes a normal layer so the border can be
    transparent.) Undo (⌘Z) restores it.

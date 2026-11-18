@@ -1,6 +1,6 @@
 const { test } = require("node:test");
 const assert = require("node:assert/strict");
-const { PAPER_SETS, paperInches, targetFor, toInches, fromInches, aspectRatioLabel } = require("../ratio.js");
+const { PAPER_SETS, paperInches, targetFor, pixelTarget, toInches, fromInches, aspectRatioLabel } = require("../ratio.js");
 
 // Every (paper, orientation) combo across both systems must produce a canvas
 // that CONTAINS the image — the no-clip contract.
@@ -77,4 +77,34 @@ test("unit conversion round-trips", () => {
   assert.ok(Math.abs(toInches(25.4, "mm") - 1) < 1e-9);
   assert.ok(Math.abs(fromInches(1, "cm") - 2.54) < 1e-9);
   assert.ok(Math.abs(fromInches(toInches(7.3, "cm"), "cm") - 7.3) < 1e-9);
+});
+
+// Regression: 3406 x 3717 px onto 8.5 x 11 used to round to 3406 x 4408, which
+// is not 17:22 and left a white sliver in Lightroom's 8.5 x 11 print cell.
+test("pixelTarget hits small-integer paper ratios exactly and never shrinks", () => {
+  const t = targetFor(3406 / 240, 3717 / 240, paperInches({ a: 8.5, b: 11, unit: "in" }), "match");
+  assert.deepEqual(pixelTarget(3406, 3717, t), { w: 3417, h: 4422 });
+  // The old, rounded canvas is not exact either, so it must expand again.
+  assert.deepEqual(pixelTarget(3406, 4408, t), { w: 3417, h: 4422 });
+  // Already exact: no change.
+  assert.deepEqual(pixelTarget(3417, 4422, t), { w: 3417, h: 4422 });
+
+  const sizes = [[3406, 3717], [6000, 4000], [4000, 6000], [5000, 5000], [1234, 987]];
+  const allPapers = [...PAPER_SETS.us.papers, ...PAPER_SETS.eu.papers];
+  for (const [w, h] of sizes) {
+    for (const p of allPapers) {
+      for (const mode of ["match", "landscape", "portrait"]) {
+        const tt = targetFor(w, h, paperInches(p), mode);
+        const px = pixelTarget(w, h, tt);
+        assert.ok(px.w >= w && px.h >= h, `clips for ${p.name} ${mode}`);
+        assert.ok(Number.isInteger(px.w) && Number.isInteger(px.h));
+        if (p.unit === "in") {
+          // Every US paper reduces to small integers, so the ratio is exact.
+          assert.equal(px.w * tt.paperH, px.h * tt.paperW, `inexact for ${p.name} ${mode}`);
+        } else {
+          assert.ok(Math.abs(px.w / px.h - tt.paperW / tt.paperH) < 1 / Math.min(px.w, px.h));
+        }
+      }
+    }
+  }
 });

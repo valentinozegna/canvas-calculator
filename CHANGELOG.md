@@ -4,6 +4,18 @@ All notable changes to this project are documented here. The format is based on
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project
 adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Fixed
+- **White sliver in Lightroom prints.** The expanded canvas was rounded to whole
+  pixels, which drifted slightly off the paper ratio (e.g. 3406 × 4408 px is not
+  quite 8.5:11), so Lightroom's print cell showed a thin white strip unless you
+  used Zoom to Fill. The canvas now lands on the exact ratio for US paper sizes,
+  sometimes adding a few pixels to the other side.
+- **Faint transparent edge after Warp/Fill/Fit** when the layer was half a pixel
+  off-center. The layer now scales from a whole-pixel corner and recenters by
+  whole pixels.
+
 ## [1.0.0] - 2026-06-14
 
 ### Added

@@ -96,7 +96,34 @@
     return { Cw, Ch, grow, delta, label, ratioLabel, paperW, paperH, paperLandscape };
   }
 
-  const api = { PAPER_SETS, UNIT_TO_IN, toInches, fromInches, paperInches, targetFor, aspectRatioLabel };
+  // Smallest integers [p, q] (both <= 30) with p/q === r, or null. 17:22, 4:5,
+  // 2:3 qualify; the A-series (~1:1.414) does not.
+  function smallRatio(r) {
+    for (let q = 1; q <= 30; q++) {
+      const p = Math.round(r * q);
+      if (p >= 1 && p <= 30 && Math.abs(p - r * q) < 1e-6 * q) return [p, q];
+    }
+    return null;
+  }
+
+  // Integer pixel canvas for a targetFor() result. Rounding Cw/Ch to whole
+  // pixels drifts off the paper ratio (3406 x 4408 is not 8.5:11), which leaves
+  // a sliver in Lightroom's print cell. When the paper ratio reduces to small
+  // integers p:q, use (p*k, q*k) so the pixels hit it exactly; that can add a
+  // few px (< p or q) to the other axis too. Never smaller than the image.
+  function pixelTarget(wPx, hPx, t) {
+    const r = t.paperW / t.paperH;
+    const pq = smallRatio(r);
+    if (pq) {
+      const k = Math.ceil(Math.max(wPx / pq[0], hPx / pq[1]) - 1e-9);
+      return { w: pq[0] * k, h: pq[1] * k };
+    }
+    return t.grow === "height"
+      ? { w: wPx, h: Math.max(hPx, Math.round(wPx / r)) }
+      : { w: Math.max(wPx, Math.round(hPx * r)), h: hPx };
+  }
+
+  const api = { PAPER_SETS, UNIT_TO_IN, toInches, fromInches, paperInches, targetFor, pixelTarget, aspectRatioLabel };
 
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else root.RatioCore = api;

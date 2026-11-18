@@ -1,5 +1,5 @@
 const { app, core, action } = require("photoshop");
-const { PAPER_SETS, toInches, fromInches, targetFor, aspectRatioLabel } = RatioCore;
+const { PAPER_SETS, toInches, fromInches, targetFor, pixelTarget, aspectRatioLabel } = RatioCore;
 
 const els = {
   pw: document.getElementById("pw"),
@@ -162,16 +162,17 @@ function compute() {
   }
   const mode = els.orient.value || "match";
   current = targetFor(docState.wIn, docState.hIn, [pw, ph], mode);
+  current.px = pixelTarget(docState.wPx, docState.hPx, current);
   renderPreview(current);
-  // Nothing to do when the canvas already matches the target ratio.
-  els.expand.disabled = current.delta < 0.005;
+  // Nothing to do when the canvas already has the exact target pixels.
+  els.expand.disabled = current.px.w === docState.wPx && current.px.h === docState.hPx;
 }
 
 function renderPreview(t) {
   const u = curUnit();
   const ppi = docState.ppi;
-  const nW = fromInches(t.Cw, u), nH = fromInches(t.Ch, u);
-  const nWpx = Math.round(t.Cw * ppi), nHpx = Math.round(t.Ch * ppi);
+  const nWpx = t.px.w, nHpx = t.px.h;
+  const nW = fromInches(nWpx / ppi, u), nH = fromInches(nHpx / ppi, u);
   // Raw paper ratio plus its reduced form, e.g. "16:20 (4:5)", oriented to the
   // actual target (force landscape/portrait swaps the order, matching New size).
   const a = parseFloat(els.pw.value), b = parseFloat(els.ph.value);
@@ -180,10 +181,13 @@ function renderPreview(t) {
   let reduced = aspectRatioLabel(a, b); // short:long
   if (t.paperLandscape) { const [x, y] = reduced.split(":"); reduced = `${y}:${x}`; }
   const ratioLabel = `${rawLabel} (${reduced})`;
-  const pxDelta = Math.round(t.delta * ppi);
-  const deltaTxt = t.delta < 0.005
+  const adds = [["height", nHpx - docState.hPx], ["width", nWpx - docState.wPx]]
+    .filter(([, d]) => d > 0)
+    .sort((a, b) => b[1] - a[1])
+    .map(([axis, d]) => `<b>${fmt(fromInches(d / ppi, u))} ${u}</b> (${d} px) of <b>${axis}</b>`);
+  const deltaTxt = !adds.length
     ? "Already matches this ratio, so no expansion is needed."
-    : `Adds <b>${fmt(fromInches(t.delta, u))} ${u}</b> (${pxDelta} px) of <b>${t.grow}</b>, with nothing cropped. ` +
+    : `Adds ${adds.join(" and ")}, with nothing cropped. ` +
       `<span class="muted">The added canvas is transparent, and a locked Background is converted to a normal layer first.</span>`;
 
   els.preview.className = "preview";
@@ -218,9 +222,8 @@ async function expandCanvas() {
   if (!docState) { status("No open document."); return; }
   if (!current) { status("Enter a target paper size first."); return; }
   const t = current;
-  const ppi = docState.ppi;
-  const newWpx = Math.round(t.Cw * ppi);
-  const newHpx = Math.round(t.Ch * ppi);
+  const newWpx = t.px.w;
+  const newHpx = t.px.h;
   const anc = anchorEnums(t.grow);
   const sizeDesc = {
     _obj: "canvasSize",
@@ -314,21 +317,23 @@ async function scaleLayer(mode) {
         const f = (mode === "fill" ? Math.max(cw / lw, ch / lh) : Math.min(cw / lw, ch / lh)) * 100;
         fx = fy = f;
       }
-      // Scale around the layer's own center via batchPlay (reliable across hosts).
+      // Scale from the layer's top-left corner, which sits on a whole pixel.
+      // Scaling around the center put the edges on half pixels when the layer
+      // was off-center by 0.5 px, leaving a half-transparent row after Warp.
       await app.batchPlay([{
         _obj: "transform",
         _target: [{ _ref: "layer", _enum: "ordinal", _value: "targetEnum" }],
-        freeTransformCenterState: { _enum: "quadCenterState", _value: "QCSAverage" },
+        freeTransformCenterState: { _enum: "quadCenterState", _value: "QCSCorner0" },
         width: { _unit: "percentUnit", _value: fx },
         height: { _unit: "percentUnit", _value: fy },
         _options: { dialogOptions: "dontDisplay" }
       }], {});
 
-      // Recenter the layer on the canvas.
+      // Recenter by whole pixels, so an axis that matches the canvas lands on 0.
       const nb = layer.bounds;
-      const dx = cw / 2 - (nb.left + nb.right) / 2;
-      const dy = ch / 2 - (nb.top + nb.bottom) / 2;
-      if (Math.abs(dx) > 0.5 || Math.abs(dy) > 0.5) {
+      const dx = Math.round((cw - (nb.right - nb.left)) / 2) - nb.left;
+      const dy = Math.round((ch - (nb.bottom - nb.top)) / 2) - nb.top;
+      if (dx || dy) {
         await app.batchPlay([{
           _obj: "move",
           _target: [{ _ref: "layer", _enum: "ordinal", _value: "targetEnum" }],
